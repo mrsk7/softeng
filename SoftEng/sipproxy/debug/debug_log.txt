@@ -8069,3 +8069,847 @@ Exiting provider
 Stopped event scanner!!
 UDPMessageProcessor: Stopping
 exitting pendingRecordScanner!!
+<debug>
+<![CDATA[ 
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= 147.102.179.196
+javax.sip.IP_ADDRESS= nist-proxy
+javax.sip.ROUTER_PATH= gov.nist.sip.proxy.router.ProxyRouter
+javax.sip.OUTBOUND_PROXY= null
+javax.sip.RETRANSMISSION_FILTER= on
+gov.nist.javax.sip.CACHE_CLIENT_CONNECTIONS= null
+gov.nist.javax.sip.CACHE_SERVER_CONNECTIONS= null
+gov.nist.javax.sip.REENTRANT_LISTENER= null
+gov.nist.javax.sip.THREAD_POOL_SIZE= 20
+
+ ]]>
+</debug>
+<description
+ logDescription="nist-proxy"
+ name="147.102.179.196" />
+
+<debug>
+<![CDATA[ 
+add SipListener gov.nist.sip.proxy.Proxy@d39df8
+add SipListener gov.nist.sip.proxy.Proxy@d39df8
+UDPMessageChannel: peerAddress = 147.102.179.196/5060
+Length = 467
+REGISTER sip:147.102.179.196:5060;transport=udp SIP/2.0
+Call-ID: 6d79daae480d3c43cff63bdf1eed87e8@147.102.179.196
+CSeq: 1 REGISTER
+From: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>;tag=3224332
+To: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>
+Via: SIP/2.0/UDP 147.102.179.196:5060;branch=z9hG4bK680b6e94db22248d9d033c08a25c3df9
+Max-Forwards: 70
+Expires: 3600
+Contact: "Takeo" <sip:147.102.179.196:5060;transport=udp>
+Content-Length: 0
+
+
+UDPMessageChannel: peerAddress = 147.102.179.196/5060
+Length = 447
+MESSAGE sip:147.102.179.196:4000@147.102.179.196:4000 SIP/2.0
+Call-ID: e4b060d69aad486ec52486ea4dcd499d@147.102.179.196
+CSeq: 1 MESSAGE
+From: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>;tag=3224332
+To: <sip:147.102.179.196:4000@147.102.179.196:4000>
+Via: SIP/2.0/UDP 147.102.179.196:5060;branch=z9hG4bKe48cfd4f6284c8e39515f209407e6757
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 11
+
+hello world
+UDPMessageChannel: peerAddress = 147.102.179.196/5060
+Length = 467
+REGISTER sip:147.102.179.196:5060;transport=udp SIP/2.0
+Call-ID: 6d79daae480d3c43cff63bdf1eed87e8@147.102.179.196
+CSeq: 1 REGISTER
+From: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>;tag=3224332
+To: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>
+Via: SIP/2.0/UDP 147.102.179.196:5060;branch=z9hG4bKe48cfd4f6284c8e39515f209407e6757
+Max-Forwards: 70
+Expires: 3600
+Contact: "Takeo" <sip:147.102.179.196:5060;transport=udp>
+Content-Length: 0
+
+
+UDPMessageChannel: peerAddress = 147.102.179.196/5060
+Length = 447
+MESSAGE sip:147.102.179.196:4000@147.102.179.196:4000 SIP/2.0
+Call-ID: e4b060d69aad486ec52486ea4dcd499d@147.102.179.196
+CSeq: 1 MESSAGE
+From: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>;tag=3224332
+To: <sip:147.102.179.196:4000@147.102.179.196:4000>
+Via: SIP/2.0/UDP 147.102.179.196:5060;branch=z9hG4bKe48cfd4f6284c8e39515f209407e6757
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 11
+
+hello world
+Creating Server Transactiongov.nist.javax.sip.stack.SIPServerTransaction@ffffffff
+------------ Traceback ------
+java.lang.Exception
+	at gov.nist.core.LogWriter.logStackTrace(LogWriter.java:80)
+	at gov.nist.javax.sip.stack.SIPServerTransaction.<init>(SIPServerTransaction.java:319)
+	at gov.nist.javax.sip.stack.SIPTransactionStack.createServerTransaction(SIPTransactionStack.java:739)
+	at gov.nist.javax.sip.stack.SIPTransactionStack.newSIPServerRequest(SIPTransactionStack.java:505)
+	at gov.nist.javax.sip.stack.UDPMessageChannel.run(UDPMessageChannel.java:367)
+	at java.lang.Thread.run(Unknown Source)
+
+----------- End Traceback ------
+Setting Branch id : z9hG4bKe48cfd4f6284c8e39515f209407e6757
+Getting dialog for 6d79daae480d3c43cff63bdf1eed87e8@147.102.179.196:takeo@147.102.179.196:4000:takeo@147.102.179.196:4000:3224332
+Returning request interface for REGISTER sip:147.102.179.196:5060;transport=udp SIP/2.0
+ gov.nist.javax.sip.NistSipMessageHandlerImpl@195033d messageChannel = gov.nist.javax.sip.stack.SIPServerTransaction@391ab6e6
+About to process REGISTER sip:147.102.179.196:5060;transport=udp SIP/2.0
+/gov.nist.javax.sip.stack.SIPServerTransaction@391ab6e6
+Setting Branch id : z9hG4bKe48cfd4f6284c8e39515f209407e6757
+Transaction:setState Trying Transaction gov.nist.javax.sip.stack.SIPServerTransaction@391ab6e6
+------------ Traceback ------
+java.lang.Exception
+	at gov.nist.core.LogWriter.logStackTrace(LogWriter.java:80)
+	at gov.nist.javax.sip.stack.SIPTransaction.setState(SIPTransaction.java:477)
+	at gov.nist.javax.sip.stack.SIPServerTransaction.setState(SIPServerTransaction.java:1168)
+	at gov.nist.javax.sip.stack.SIPServerTransaction.processRequest(SIPServerTransaction.java:523)
+	at gov.nist.javax.sip.stack.UDPMessageChannel.run(UDPMessageChannel.java:383)
+	at java.lang.Thread.run(Unknown Source)
+
+----------- End Traceback ------
+PROCESSING INCOMING REQUEST REGISTER sip:147.102.179.196:5060;transport=udp SIP/2.0
+
+-----------------
+REGISTER sip:147.102.179.196:5060;transport=udp SIP/2.0
+Call-ID: 6d79daae480d3c43cff63bdf1eed87e8@147.102.179.196
+CSeq: 1 REGISTER
+From: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>;tag=3224332
+To: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>
+Via: SIP/2.0/UDP 147.102.179.196:5060;branch=z9hG4bKe48cfd4f6284c8e39515f209407e6757
+Max-Forwards: 70
+Expires: 3600
+Contact: "Takeo" <sip:147.102.179.196:5060;transport=udp>
+Content-Length: 0
+
+
+Getting dialog for 6d79daae480d3c43cff63bdf1eed87e8@147.102.179.196:takeo@147.102.179.196:4000:takeo@147.102.179.196:4000:3224332
+handleEvent javax.sip.RequestEvent[source=gov.nist.javax.sip.SipProviderImpl@3b8477]currentTransaction = gov.nist.javax.sip.stack.SIPServerTransaction@391ab6e6this.sipListener = gov.nist.sip.proxy.Proxy@d39df8sipEvent.source = gov.nist.javax.sip.SipProviderImpl@3b8477
+------------ Traceback ------
+java.lang.Exception
+	at gov.nist.core.LogWriter.logStackTrace(LogWriter.java:80)
+	at gov.nist.javax.sip.stack.SIPMessageStack.logStackTrace(SIPMessageStack.java:202)
+	at gov.nist.javax.sip.SipProviderImpl.handleEvent(SipProviderImpl.java:72)
+	at gov.nist.javax.sip.NistSipMessageHandlerImpl.processRequest(NistSipMessageHandlerImpl.java:470)
+	at gov.nist.javax.sip.stack.SIPServerTransaction.processRequest(SIPServerTransaction.java:598)
+	at gov.nist.javax.sip.stack.UDPMessageChannel.run(UDPMessageChannel.java:383)
+	at java.lang.Thread.run(Unknown Source)
+
+----------- End Traceback ------
+Done processing REGISTER sip:147.102.179.196:5060;transport=udp SIP/2.0
+/gov.nist.javax.sip.stack.SIPServerTransaction@391ab6e6
+Processing gov.nist.javax.sip.EventWrapper@eede54nevents 1
+deliverEvent : REGISTER sip:147.102.179.196:5060;transport=udp SIP/2.0
+ transaction gov.nist.javax.sip.stack.SIPServerTransaction@391ab6e6
+Getting dialog for 6d79daae480d3c43cff63bdf1eed87e8@147.102.179.196:takeo@147.102.179.196:4000:takeo@147.102.179.196:4000:3224332
+ ]]>
+</debug>
+<message
+from="147.102.179.196:5060" 
+to="147.102.179.196:4000" 
+time="1431004809082" 
+isSender="false" 
+transactionId="z9hg4bke48cfd4f6284c8e39515f209407e6757" 
+callId="6d79daae480d3c43cff63bdf1eed87e8@147.102.179.196" 
+firstLine="REGISTER sip:147.102.179.196:5060;transport=udp SIP/2.0" 
+debugLine="139" 
+>
+<![CDATA[REGISTER sip:147.102.179.196:5060;transport=udp SIP/2.0
+Call-ID: 6d79daae480d3c43cff63bdf1eed87e8@147.102.179.196
+CSeq: 1 REGISTER
+From: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>;tag=3224332
+To: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>
+Via: SIP/2.0/UDP 147.102.179.196:5060;branch=z9hG4bKe48cfd4f6284c8e39515f209407e6757
+Max-Forwards: 70
+Expires: 3600
+Contact: "Takeo" <sip:147.102.179.196:5060;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<debug>
+<![CDATA[ 
+Creating Server Transactiongov.nist.javax.sip.stack.SIPServerTransaction@ffffffff
+------------ Traceback ------
+java.lang.Exception
+	at gov.nist.core.LogWriter.logStackTrace(LogWriter.java:80)
+	at gov.nist.javax.sip.stack.SIPServerTransaction.<init>(SIPServerTransaction.java:319)
+	at gov.nist.javax.sip.stack.SIPTransactionStack.createServerTransaction(SIPTransactionStack.java:739)
+	at gov.nist.javax.sip.stack.SIPTransactionStack.newSIPServerRequest(SIPTransactionStack.java:505)
+	at gov.nist.javax.sip.stack.UDPMessageChannel.run(UDPMessageChannel.java:367)
+	at java.lang.Thread.run(Unknown Source)
+
+----------- End Traceback ------
+Setting Branch id : z9hG4bKe48cfd4f6284c8e39515f209407e6757
+Getting dialog for e4b060d69aad486ec52486ea4dcd499d@147.102.179.196:147.102.179.196@147.102.179.196:4000:takeo@147.102.179.196:4000:3224332
+Creating Server Transactiongov.nist.javax.sip.stack.SIPServerTransaction@ffffffff
+------------ Traceback ------
+java.lang.Exception
+	at gov.nist.core.LogWriter.logStackTrace(LogWriter.java:80)
+	at gov.nist.javax.sip.stack.SIPServerTransaction.<init>(SIPServerTransaction.java:319)
+	at gov.nist.javax.sip.stack.SIPTransactionStack.createServerTransaction(SIPTransactionStack.java:739)
+	at gov.nist.javax.sip.stack.SIPTransactionStack.newSIPServerRequest(SIPTransactionStack.java:505)
+	at gov.nist.javax.sip.stack.UDPMessageChannel.run(UDPMessageChannel.java:367)
+	at java.lang.Thread.run(Unknown Source)
+
+----------- End Traceback ------
+Returning request interface for MESSAGE sip:147.102.179.196:4000@147.102.179.196:4000 SIP/2.0
+ gov.nist.javax.sip.NistSipMessageHandlerImpl@14f8c3b messageChannel = gov.nist.javax.sip.stack.SIPServerTransaction@391ab6e6
+Setting Branch id : z9hG4bK680b6e94db22248d9d033c08a25c3df9
+About to process MESSAGE sip:147.102.179.196:4000@147.102.179.196:4000 SIP/2.0
+/gov.nist.javax.sip.stack.SIPServerTransaction@391ab6e6
+Setting Branch id : z9hG4bKe48cfd4f6284c8e39515f209407e6757
+Transaction:setState Trying Transaction gov.nist.javax.sip.stack.SIPServerTransaction@391ab6e6
+------------ Traceback ------
+java.lang.Exception
+	at gov.nist.core.LogWriter.logStackTrace(LogWriter.java:80)
+	at gov.nist.javax.sip.stack.SIPTransaction.setState(SIPTransaction.java:477)
+	at gov.nist.javax.sip.stack.SIPServerTransaction.setState(SIPServerTransaction.java:1168)
+	at gov.nist.javax.sip.stack.SIPServerTransaction.processRequest(SIPServerTransaction.java:523)
+	at gov.nist.javax.sip.stack.UDPMessageChannel.run(UDPMessageChannel.java:383)
+	at java.lang.Thread.run(Unknown Source)
+
+----------- End Traceback ------
+PROCESSING INCOMING REQUEST MESSAGE sip:147.102.179.196:4000@147.102.179.196:4000 SIP/2.0
+
+Getting dialog for 6d79daae480d3c43cff63bdf1eed87e8@147.102.179.196:takeo@147.102.179.196:4000:takeo@147.102.179.196:4000:3224332
+-----------------
+Returning request interface for REGISTER sip:147.102.179.196:5060;transport=udp SIP/2.0
+ gov.nist.javax.sip.NistSipMessageHandlerImpl@d99020 messageChannel = gov.nist.javax.sip.stack.SIPServerTransaction@baf4ba72
+Creating Server Transactiongov.nist.javax.sip.stack.SIPServerTransaction@ffffffff
+------------ Traceback ------
+About to process REGISTER sip:147.102.179.196:5060;transport=udp SIP/2.0
+/gov.nist.javax.sip.stack.SIPServerTransaction@baf4ba72
+Setting Branch id : z9hG4bK680b6e94db22248d9d033c08a25c3df9
+Transaction:setState Trying Transaction gov.nist.javax.sip.stack.SIPServerTransaction@baf4ba72
+------------ Traceback ------
+java.lang.Exception
+	at gov.nist.core.LogWriter.logStackTrace(LogWriter.java:80)
+	at gov.nist.javax.sip.stack.SIPTransaction.setState(SIPTransaction.java:477)
+	at gov.nist.javax.sip.stack.SIPServerTransaction.setState(SIPServerTransaction.java:1168)
+	at gov.nist.javax.sip.stack.SIPServerTransaction.processRequest(SIPServerTransaction.java:523)
+	at gov.nist.javax.sip.stack.UDPMessageChannel.run(UDPMessageChannel.java:383)
+	at java.lang.Thread.run(Unknown Source)
+
+----------- End Traceback ------
+PROCESSING INCOMING REQUEST REGISTER sip:147.102.179.196:5060;transport=udp SIP/2.0
+
+-----------------
+java.lang.Exception
+	at gov.nist.core.LogWriter.logStackTrace(LogWriter.java:80)
+	at gov.nist.javax.sip.stack.SIPServerTransaction.<init>(SIPServerTransaction.java:319)
+	at gov.nist.javax.sip.stack.SIPTransactionStack.createServerTransaction(SIPTransactionStack.java:739)
+	at gov.nist.javax.sip.stack.SIPTransactionStack.newSIPServerRequest(SIPTransactionStack.java:505)
+	at gov.nist.javax.sip.stack.UDPMessageChannel.run(UDPMessageChannel.java:367)
+	at java.lang.Thread.run(Unknown Source)
+
+----------- End Traceback ------
+Setting Branch id : z9hG4bKe48cfd4f6284c8e39515f209407e6757
+Getting dialog for e4b060d69aad486ec52486ea4dcd499d@147.102.179.196:147.102.179.196@147.102.179.196:4000:takeo@147.102.179.196:4000:3224332
+Returning request interface for MESSAGE sip:147.102.179.196:4000@147.102.179.196:4000 SIP/2.0
+ gov.nist.javax.sip.NistSipMessageHandlerImpl@131cfde messageChannel = gov.nist.javax.sip.stack.SIPServerTransaction@391ab6e6
+About to process MESSAGE sip:147.102.179.196:4000@147.102.179.196:4000 SIP/2.0
+/gov.nist.javax.sip.stack.SIPServerTransaction@391ab6e6
+Setting Branch id : z9hG4bKe48cfd4f6284c8e39515f209407e6757
+Transaction:setState Trying Transaction gov.nist.javax.sip.stack.SIPServerTransaction@391ab6e6
+------------ Traceback ------
+java.lang.Exception
+	at gov.nist.core.LogWriter.logStackTrace(LogWriter.java:80)
+	at gov.nist.javax.sip.stack.SIPTransaction.setState(SIPTransaction.java:477)
+	at gov.nist.javax.sip.stack.SIPServerTransaction.setState(SIPServerTransaction.java:1168)
+	at gov.nist.javax.sip.stack.SIPServerTransaction.processRequest(SIPServerTransaction.java:523)
+	at gov.nist.javax.sip.stack.UDPMessageChannel.run(UDPMessageChannel.java:383)
+	at java.lang.Thread.run(Unknown Source)
+
+----------- End Traceback ------
+PROCESSING INCOMING REQUEST MESSAGE sip:147.102.179.196:4000@147.102.179.196:4000 SIP/2.0
+
+-----------------
+MESSAGE sip:147.102.179.196:4000@147.102.179.196:4000 SIP/2.0
+Call-ID: e4b060d69aad486ec52486ea4dcd499d@147.102.179.196
+CSeq: 1 MESSAGE
+From: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>;tag=3224332
+To: <sip:147.102.179.196:4000@147.102.179.196:4000>
+Via: SIP/2.0/UDP 147.102.179.196:5060;branch=z9hG4bKe48cfd4f6284c8e39515f209407e6757
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 11
+
+
+Getting dialog for e4b060d69aad486ec52486ea4dcd499d@147.102.179.196:147.102.179.196@147.102.179.196:4000:takeo@147.102.179.196:4000:3224332
+handleEvent javax.sip.RequestEvent[source=gov.nist.javax.sip.SipProviderImpl@3b8477]currentTransaction = gov.nist.javax.sip.stack.SIPServerTransaction@391ab6e6this.sipListener = gov.nist.sip.proxy.Proxy@d39df8sipEvent.source = gov.nist.javax.sip.SipProviderImpl@3b8477
+------------ Traceback ------
+java.lang.Exception
+	at gov.nist.core.LogWriter.logStackTrace(LogWriter.java:80)
+	at gov.nist.javax.sip.stack.SIPMessageStack.logStackTrace(SIPMessageStack.java:202)
+	at gov.nist.javax.sip.SipProviderImpl.handleEvent(SipProviderImpl.java:72)
+	at gov.nist.javax.sip.NistSipMessageHandlerImpl.processRequest(NistSipMessageHandlerImpl.java:470)
+	at gov.nist.javax.sip.stack.SIPServerTransaction.processRequest(SIPServerTransaction.java:598)
+	at gov.nist.javax.sip.stack.UDPMessageChannel.run(UDPMessageChannel.java:383)
+	at java.lang.Thread.run(Unknown Source)
+
+----------- End Traceback ------
+Done processing MESSAGE sip:147.102.179.196:4000@147.102.179.196:4000 SIP/2.0
+/gov.nist.javax.sip.stack.SIPServerTransaction@391ab6e6
+REGISTER sip:147.102.179.196:5060;transport=udp SIP/2.0
+Call-ID: 6d79daae480d3c43cff63bdf1eed87e8@147.102.179.196
+CSeq: 1 REGISTER
+From: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>;tag=3224332
+To: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>
+Via: SIP/2.0/UDP 147.102.179.196:5060;branch=z9hG4bK680b6e94db22248d9d033c08a25c3df9
+Max-Forwards: 70
+Expires: 3600
+Contact: "Takeo" <sip:147.102.179.196:5060;transport=udp>
+Content-Length: 0
+
+
+ ]]>
+</debug>
+Getting dialog for 6d79daae480d3c43cff63bdf1eed87e8@147.102.179.196:takeo@147.102.179.196:4000:takeo@147.102.179.196:4000:3224332
+<message
+from="147.102.179.196:5060" 
+to="147.102.179.196:4000" 
+time="1431004809106" 
+isSender="false" 
+transactionId="z9hg4bke48cfd4f6284c8e39515f209407e6757" 
+callId="e4b060d69aad486ec52486ea4dcd499d@147.102.179.196" 
+firstLine="MESSAGE sip:147.102.179.196:4000@147.102.179.196:4000 SIP/2.0" 
+debugLine="291" 
+>
+<![CDATA[MESSAGE sip:147.102.179.196:4000@147.102.179.196:4000 SIP/2.0
+Call-ID: e4b060d69aad486ec52486ea4dcd499d@147.102.179.196
+CSeq: 1 MESSAGE
+From: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>;tag=3224332
+To: <sip:147.102.179.196:4000@147.102.179.196:4000>
+Via: SIP/2.0/UDP 147.102.179.196:5060;branch=z9hG4bKe48cfd4f6284c8e39515f209407e6757
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 11
+
+]]>
+</message>
+
+<debug>
+<![CDATA[ 
+handleEvent javax.sip.RequestEvent[source=gov.nist.javax.sip.SipProviderImpl@3b8477]currentTransaction = gov.nist.javax.sip.stack.SIPServerTransaction@baf4ba72this.sipListener = gov.nist.sip.proxy.Proxy@d39df8sipEvent.source = gov.nist.javax.sip.SipProviderImpl@3b8477
+------------ Traceback ------
+MESSAGE sip:147.102.179.196:4000@147.102.179.196:4000 SIP/2.0
+Call-ID: e4b060d69aad486ec52486ea4dcd499d@147.102.179.196
+CSeq: 1 MESSAGE
+From: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>;tag=3224332
+To: <sip:147.102.179.196:4000@147.102.179.196:4000>
+Via: SIP/2.0/UDP 147.102.179.196:5060;branch=z9hG4bKe48cfd4f6284c8e39515f209407e6757
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 11
+
+
+Getting dialog for e4b060d69aad486ec52486ea4dcd499d@147.102.179.196:147.102.179.196@147.102.179.196:4000:takeo@147.102.179.196:4000:3224332
+handleEvent javax.sip.RequestEvent[source=gov.nist.javax.sip.SipProviderImpl@3b8477]currentTransaction = gov.nist.javax.sip.stack.SIPServerTransaction@391ab6e6this.sipListener = gov.nist.sip.proxy.Proxy@d39df8sipEvent.source = gov.nist.javax.sip.SipProviderImpl@3b8477
+------------ Traceback ------
+java.lang.Exception
+	at gov.nist.core.LogWriter.logStackTrace(LogWriter.java:80)
+	at gov.nist.javax.sip.stack.SIPMessageStack.logStackTrace(SIPMessageStack.java:202)
+	at gov.nist.javax.sip.SipProviderImpl.handleEvent(SipProviderImpl.java:72)
+	at gov.nist.javax.sip.NistSipMessageHandlerImpl.processRequest(NistSipMessageHandlerImpl.java:470)
+	at gov.nist.javax.sip.stack.SIPServerTransaction.processRequest(SIPServerTransaction.java:598)
+	at gov.nist.javax.sip.stack.UDPMessageChannel.run(UDPMessageChannel.java:383)
+	at java.lang.Thread.run(Unknown Source)
+
+looking for key z9hg4bke48cfd4f6284c8e39515f209407e6757
+java.lang.Exception
+	at gov.nist.core.LogWriter.logStackTrace(LogWriter.java:80)
+	at gov.nist.javax.sip.stack.SIPMessageStack.logStackTrace(SIPMessageStack.java:202)
+	at gov.nist.javax.sip.SipProviderImpl.handleEvent(SipProviderImpl.java:72)
+	at gov.nist.javax.sip.NistSipMessageHandlerImpl.processRequest(NistSipMessageHandlerImpl.java:470)
+	at gov.nist.javax.sip.stack.SIPServerTransaction.processRequest(SIPServerTransaction.java:598)
+	at gov.nist.javax.sip.stack.UDPMessageChannel.run(UDPMessageChannel.java:383)
+	at java.lang.Thread.run(Unknown Source)
+
+----------- End Traceback ------
+----------- End Traceback ------
+Done processing REGISTER sip:147.102.179.196:5060;transport=udp SIP/2.0
+/gov.nist.javax.sip.stack.SIPServerTransaction@baf4ba72
+Done processing MESSAGE sip:147.102.179.196:4000@147.102.179.196:4000 SIP/2.0
+/gov.nist.javax.sip.stack.SIPServerTransaction@391ab6e6
+Calling listener REGISTER sip:147.102.179.196:5060;transport=udp SIP/2.0
+
+Calling listener gov.nist.javax.sip.stack.SIPServerTransaction@391ab6e6
+ ]]>
+</debug>
+<message
+from="147.102.179.196:5060" 
+to="147.102.179.196:4000" 
+time="1431004808582" 
+isSender="false" 
+transactionId="z9hg4bk680b6e94db22248d9d033c08a25c3df9" 
+callId="6d79daae480d3c43cff63bdf1eed87e8@147.102.179.196" 
+firstLine="REGISTER sip:147.102.179.196:5060;transport=udp SIP/2.0" 
+debugLine="372" 
+>
+<![CDATA[REGISTER sip:147.102.179.196:5060;transport=udp SIP/2.0
+Call-ID: 6d79daae480d3c43cff63bdf1eed87e8@147.102.179.196
+CSeq: 1 REGISTER
+From: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>;tag=3224332
+To: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>
+Via: SIP/2.0/UDP 147.102.179.196:5060;branch=z9hG4bK680b6e94db22248d9d033c08a25c3df9
+Max-Forwards: 70
+Expires: 3600
+Contact: "Takeo" <sip:147.102.179.196:5060;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<debug>
+<![CDATA[ 
+ ]]>
+</debug>
+<message
+from="147.102.179.196:5060" 
+to="147.102.179.196:4000" 
+time="1431004808612" 
+isSender="false" 
+transactionId="z9hg4bke48cfd4f6284c8e39515f209407e6757" 
+callId="e4b060d69aad486ec52486ea4dcd499d@147.102.179.196" 
+firstLine="MESSAGE sip:147.102.179.196:4000@147.102.179.196:4000 SIP/2.0" 
+debugLine="405" 
+>
+<![CDATA[MESSAGE sip:147.102.179.196:4000@147.102.179.196:4000 SIP/2.0
+Call-ID: e4b060d69aad486ec52486ea4dcd499d@147.102.179.196
+CSeq: 1 MESSAGE
+From: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>;tag=3224332
+To: <sip:147.102.179.196:4000@147.102.179.196:4000>
+Via: SIP/2.0/UDP 147.102.179.196:5060;branch=z9hG4bKe48cfd4f6284c8e39515f209407e6757
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 11
+
+]]>
+</message>
+
+<debug>
+<![CDATA[ 
+Creating message channel 147.102.179.196/5060
+------------ Traceback ------
+java.lang.Exception
+	at gov.nist.core.LogWriter.logStackTrace(LogWriter.java:80)
+	at gov.nist.javax.sip.stack.UDPMessageChannel.sendMessage(UDPMessageChannel.java:482)
+	at gov.nist.javax.sip.SipProviderImpl.sendResponse(SipProviderImpl.java:622)
+	at gov.nist.sip.proxy.registrar.Registrar.processRegister(Registrar.java:495)
+	at gov.nist.sip.proxy.Proxy.processRequest(Proxy.java:494)
+	at gov.nist.javax.sip.EventScanner.deliverEvent(EventScanner.java:185)
+	at gov.nist.javax.sip.EventScanner.run(EventScanner.java:324)
+	at java.lang.Thread.run(Unknown Source)
+
+----------- End Traceback ------
+gov.nist.javax.sip.stack.UDPMessageChannel:sendMessage 147.102.179.196/5060
+SIP/2.0 200 OK
+Call-ID: 6d79daae480d3c43cff63bdf1eed87e8@147.102.179.196
+CSeq: 1 REGISTER
+From: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>;tag=3224332
+To: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>
+Via: SIP/2.0/UDP 147.102.179.196:5060;branch=z9hG4bKe48cfd4f6284c8e39515f209407e6757
+Max-Forwards: 70
+Contact: "Takeo" <sip:147.102.179.196:5060;transport=udp>;expires=3600
+Content-Length: 0
+
+
+*******************
+
+ ]]>
+</debug>
+<message
+from="147.102.179.196:4000" 
+to="147.102.179.196:5060" 
+time="1431004809429" 
+isSender="true" 
+transactionId="z9hg4bke48cfd4f6284c8e39515f209407e6757" 
+callId="6d79daae480d3c43cff63bdf1eed87e8@147.102.179.196" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="460" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 6d79daae480d3c43cff63bdf1eed87e8@147.102.179.196
+CSeq: 1 REGISTER
+From: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>;tag=3224332
+To: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>
+Via: SIP/2.0/UDP 147.102.179.196:5060;branch=z9hG4bKe48cfd4f6284c8e39515f209407e6757
+Max-Forwards: 70
+Contact: "Takeo" <sip:147.102.179.196:5060;transport=udp>;expires=3600
+Content-Length: 0
+
+]]>
+</message>
+
+<debug>
+<![CDATA[ 
+Done processing Message REGISTER sip:147.102.179.196:5060;transport=udp SIP/2.0
+
+Processing gov.nist.javax.sip.EventWrapper@111634fnevents 3
+deliverEvent : MESSAGE sip:147.102.179.196:4000@147.102.179.196:4000 SIP/2.0
+ transaction gov.nist.javax.sip.stack.SIPServerTransaction@391ab6e6
+Getting dialog for e4b060d69aad486ec52486ea4dcd499d@147.102.179.196:147.102.179.196@147.102.179.196:4000:takeo@147.102.179.196:4000:3224332
+looking for key z9hg4bke48cfd4f6284c8e39515f209407e6757
+Calling listener MESSAGE sip:147.102.179.196:4000@147.102.179.196:4000 SIP/2.0
+
+Calling listener gov.nist.javax.sip.stack.SIPServerTransaction@391ab6e6
+Creating message channel 147.102.179.196/5060
+------------ Traceback ------
+java.lang.Exception
+	at gov.nist.core.LogWriter.logStackTrace(LogWriter.java:80)
+	at gov.nist.javax.sip.stack.UDPMessageChannel.sendMessage(UDPMessageChannel.java:482)
+	at gov.nist.javax.sip.SipProviderImpl.sendResponse(SipProviderImpl.java:622)
+	at gov.nist.sip.proxy.Proxy.processRequest(Proxy.java:275)
+	at gov.nist.javax.sip.EventScanner.deliverEvent(EventScanner.java:185)
+	at gov.nist.javax.sip.EventScanner.run(EventScanner.java:324)
+	at java.lang.Thread.run(Unknown Source)
+
+----------- End Traceback ------
+gov.nist.javax.sip.stack.UDPMessageChannel:sendMessage 147.102.179.196/5060
+SIP/2.0 200 OK
+Call-ID: e4b060d69aad486ec52486ea4dcd499d@147.102.179.196
+CSeq: 1 MESSAGE
+From: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>;tag=3224332
+To: <sip:147.102.179.196:4000@147.102.179.196:4000>
+Via: SIP/2.0/UDP 147.102.179.196:5060;branch=z9hG4bKe48cfd4f6284c8e39515f209407e6757
+Max-Forwards: 70
+Content-Length: 0
+
+
+*******************
+
+ ]]>
+</debug>
+<message
+from="147.102.179.196:4000" 
+to="147.102.179.196:5060" 
+time="1431004809460" 
+isSender="true" 
+transactionId="z9hg4bke48cfd4f6284c8e39515f209407e6757" 
+callId="e4b060d69aad486ec52486ea4dcd499d@147.102.179.196" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="522" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: e4b060d69aad486ec52486ea4dcd499d@147.102.179.196
+CSeq: 1 MESSAGE
+From: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>;tag=3224332
+To: <sip:147.102.179.196:4000@147.102.179.196:4000>
+Via: SIP/2.0/UDP 147.102.179.196:5060;branch=z9hG4bKe48cfd4f6284c8e39515f209407e6757
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<debug>
+<![CDATA[ 
+Done processing Message MESSAGE sip:147.102.179.196:4000@147.102.179.196:4000 SIP/2.0
+
+Processing gov.nist.javax.sip.EventWrapper@d4ab23nevents 3
+deliverEvent : MESSAGE sip:147.102.179.196:4000@147.102.179.196:4000 SIP/2.0
+ transaction gov.nist.javax.sip.stack.SIPServerTransaction@391ab6e6
+Getting dialog for e4b060d69aad486ec52486ea4dcd499d@147.102.179.196:147.102.179.196@147.102.179.196:4000:takeo@147.102.179.196:4000:3224332
+looking for key z9hg4bke48cfd4f6284c8e39515f209407e6757
+Calling listener MESSAGE sip:147.102.179.196:4000@147.102.179.196:4000 SIP/2.0
+
+Calling listener gov.nist.javax.sip.stack.SIPServerTransaction@391ab6e6
+Creating message channel 147.102.179.196/5060
+------------ Traceback ------
+java.lang.Exception
+	at gov.nist.core.LogWriter.logStackTrace(LogWriter.java:80)
+	at gov.nist.javax.sip.stack.UDPMessageChannel.sendMessage(UDPMessageChannel.java:482)
+	at gov.nist.javax.sip.SipProviderImpl.sendResponse(SipProviderImpl.java:622)
+	at gov.nist.sip.proxy.Proxy.processRequest(Proxy.java:275)
+	at gov.nist.javax.sip.EventScanner.deliverEvent(EventScanner.java:185)
+	at gov.nist.javax.sip.EventScanner.run(EventScanner.java:324)
+	at java.lang.Thread.run(Unknown Source)
+
+----------- End Traceback ------
+gov.nist.javax.sip.stack.UDPMessageChannel:sendMessage 147.102.179.196/5060
+SIP/2.0 200 OK
+Call-ID: e4b060d69aad486ec52486ea4dcd499d@147.102.179.196
+CSeq: 1 MESSAGE
+From: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>;tag=3224332
+To: <sip:147.102.179.196:4000@147.102.179.196:4000>
+Via: SIP/2.0/UDP 147.102.179.196:5060;branch=z9hG4bKe48cfd4f6284c8e39515f209407e6757
+Max-Forwards: 70
+Content-Length: 0
+
+
+*******************
+
+ ]]>
+</debug>
+<message
+from="147.102.179.196:4000" 
+to="147.102.179.196:5060" 
+time="1431004809468" 
+isSender="true" 
+transactionId="z9hg4bke48cfd4f6284c8e39515f209407e6757" 
+callId="e4b060d69aad486ec52486ea4dcd499d@147.102.179.196" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="583" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: e4b060d69aad486ec52486ea4dcd499d@147.102.179.196
+CSeq: 1 MESSAGE
+From: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>;tag=3224332
+To: <sip:147.102.179.196:4000@147.102.179.196:4000>
+Via: SIP/2.0/UDP 147.102.179.196:5060;branch=z9hG4bKe48cfd4f6284c8e39515f209407e6757
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<debug>
+<![CDATA[ 
+Done processing Message MESSAGE sip:147.102.179.196:4000@147.102.179.196:4000 SIP/2.0
+
+Processing gov.nist.javax.sip.EventWrapper@9df921nevents 3
+deliverEvent : REGISTER sip:147.102.179.196:5060;transport=udp SIP/2.0
+ transaction gov.nist.javax.sip.stack.SIPServerTransaction@baf4ba72
+Getting dialog for 6d79daae480d3c43cff63bdf1eed87e8@147.102.179.196:takeo@147.102.179.196:4000:takeo@147.102.179.196:4000:3224332
+looking for key z9hg4bk680b6e94db22248d9d033c08a25c3df9
+Calling listener REGISTER sip:147.102.179.196:5060;transport=udp SIP/2.0
+
+Calling listener gov.nist.javax.sip.stack.SIPServerTransaction@baf4ba72
+Creating message channel 147.102.179.196/5060
+------------ Traceback ------
+java.lang.Exception
+	at gov.nist.core.LogWriter.logStackTrace(LogWriter.java:80)
+	at gov.nist.javax.sip.stack.UDPMessageChannel.sendMessage(UDPMessageChannel.java:482)
+	at gov.nist.javax.sip.SipProviderImpl.sendResponse(SipProviderImpl.java:622)
+	at gov.nist.sip.proxy.registrar.Registrar.processRegister(Registrar.java:427)
+	at gov.nist.sip.proxy.Proxy.processRequest(Proxy.java:494)
+	at gov.nist.javax.sip.EventScanner.deliverEvent(EventScanner.java:185)
+	at gov.nist.javax.sip.EventScanner.run(EventScanner.java:324)
+	at java.lang.Thread.run(Unknown Source)
+
+----------- End Traceback ------
+gov.nist.javax.sip.stack.UDPMessageChannel:sendMessage 147.102.179.196/5060
+SIP/2.0 200 OK
+Call-ID: 6d79daae480d3c43cff63bdf1eed87e8@147.102.179.196
+CSeq: 1 REGISTER
+From: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>;tag=3224332
+To: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>
+Via: SIP/2.0/UDP 147.102.179.196:5060;branch=z9hG4bK680b6e94db22248d9d033c08a25c3df9
+Max-Forwards: 70
+Contact: "Takeo" <sip:147.102.179.196:5060;transport=udp>;expires=3600
+Content-Length: 0
+
+
+*******************
+
+ ]]>
+</debug>
+<message
+from="147.102.179.196:4000" 
+to="147.102.179.196:5060" 
+time="1431004809527" 
+isSender="true" 
+transactionId="z9hg4bk680b6e94db22248d9d033c08a25c3df9" 
+callId="6d79daae480d3c43cff63bdf1eed87e8@147.102.179.196" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="646" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 6d79daae480d3c43cff63bdf1eed87e8@147.102.179.196
+CSeq: 1 REGISTER
+From: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>;tag=3224332
+To: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>
+Via: SIP/2.0/UDP 147.102.179.196:5060;branch=z9hG4bK680b6e94db22248d9d033c08a25c3df9
+Max-Forwards: 70
+Contact: "Takeo" <sip:147.102.179.196:5060;transport=udp>;expires=3600
+Content-Length: 0
+
+]]>
+</message>
+
+<debug>
+<![CDATA[ 
+Done processing Message REGISTER sip:147.102.179.196:5060;transport=udp SIP/2.0
+
+UDPMessageChannel: peerAddress = 147.102.179.196/5060
+Length = 439
+MESSAGE sip:147.102.179.196:4000@147.102.179.196:4000 SIP/2.0
+Call-ID: d8f6d8ce2ec8300d03123aade18928df@147.102.179.196
+CSeq: 1 MESSAGE
+From: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>;tag=3224332
+To: <sip:147.102.179.196:4000@147.102.179.196:4000>
+Via: SIP/2.0/UDP 147.102.179.196:5060;branch=z9hG4bK9b1937ce4e07f9db1223491797302946
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 4
+
+1278
+Creating Server Transactiongov.nist.javax.sip.stack.SIPServerTransaction@ffffffff
+------------ Traceback ------
+java.lang.Exception
+	at gov.nist.core.LogWriter.logStackTrace(LogWriter.java:80)
+	at gov.nist.javax.sip.stack.SIPServerTransaction.<init>(SIPServerTransaction.java:319)
+	at gov.nist.javax.sip.stack.SIPTransactionStack.createServerTransaction(SIPTransactionStack.java:739)
+	at gov.nist.javax.sip.stack.SIPTransactionStack.newSIPServerRequest(SIPTransactionStack.java:505)
+	at gov.nist.javax.sip.stack.UDPMessageChannel.run(UDPMessageChannel.java:367)
+	at java.lang.Thread.run(Unknown Source)
+
+----------- End Traceback ------
+Setting Branch id : z9hG4bK9b1937ce4e07f9db1223491797302946
+Getting dialog for d8f6d8ce2ec8300d03123aade18928df@147.102.179.196:147.102.179.196@147.102.179.196:4000:takeo@147.102.179.196:4000:3224332
+Returning request interface for MESSAGE sip:147.102.179.196:4000@147.102.179.196:4000 SIP/2.0
+ gov.nist.javax.sip.NistSipMessageHandlerImpl@1ed501b messageChannel = gov.nist.javax.sip.stack.SIPServerTransaction@95417dd0
+About to process MESSAGE sip:147.102.179.196:4000@147.102.179.196:4000 SIP/2.0
+/gov.nist.javax.sip.stack.SIPServerTransaction@95417dd0
+Setting Branch id : z9hG4bK9b1937ce4e07f9db1223491797302946
+Transaction:setState Trying Transaction gov.nist.javax.sip.stack.SIPServerTransaction@95417dd0
+------------ Traceback ------
+java.lang.Exception
+	at gov.nist.core.LogWriter.logStackTrace(LogWriter.java:80)
+	at gov.nist.javax.sip.stack.SIPTransaction.setState(SIPTransaction.java:477)
+	at gov.nist.javax.sip.stack.SIPServerTransaction.setState(SIPServerTransaction.java:1168)
+	at gov.nist.javax.sip.stack.SIPServerTransaction.processRequest(SIPServerTransaction.java:523)
+	at gov.nist.javax.sip.stack.UDPMessageChannel.run(UDPMessageChannel.java:383)
+	at java.lang.Thread.run(Unknown Source)
+
+----------- End Traceback ------
+PROCESSING INCOMING REQUEST MESSAGE sip:147.102.179.196:4000@147.102.179.196:4000 SIP/2.0
+
+-----------------
+MESSAGE sip:147.102.179.196:4000@147.102.179.196:4000 SIP/2.0
+Call-ID: d8f6d8ce2ec8300d03123aade18928df@147.102.179.196
+CSeq: 1 MESSAGE
+From: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>;tag=3224332
+To: <sip:147.102.179.196:4000@147.102.179.196:4000>
+Via: SIP/2.0/UDP 147.102.179.196:5060;branch=z9hG4bK9b1937ce4e07f9db1223491797302946
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 4
+
+
+Getting dialog for d8f6d8ce2ec8300d03123aade18928df@147.102.179.196:147.102.179.196@147.102.179.196:4000:takeo@147.102.179.196:4000:3224332
+handleEvent javax.sip.RequestEvent[source=gov.nist.javax.sip.SipProviderImpl@3b8477]currentTransaction = gov.nist.javax.sip.stack.SIPServerTransaction@95417dd0this.sipListener = gov.nist.sip.proxy.Proxy@d39df8sipEvent.source = gov.nist.javax.sip.SipProviderImpl@3b8477
+------------ Traceback ------
+java.lang.Exception
+	at gov.nist.core.LogWriter.logStackTrace(LogWriter.java:80)
+	at gov.nist.javax.sip.stack.SIPMessageStack.logStackTrace(SIPMessageStack.java:202)
+	at gov.nist.javax.sip.SipProviderImpl.handleEvent(SipProviderImpl.java:72)
+	at gov.nist.javax.sip.NistSipMessageHandlerImpl.processRequest(NistSipMessageHandlerImpl.java:470)
+	at gov.nist.javax.sip.stack.SIPServerTransaction.processRequest(SIPServerTransaction.java:598)
+	at gov.nist.javax.sip.stack.UDPMessageChannel.run(UDPMessageChannel.java:383)
+	at java.lang.Thread.run(Unknown Source)
+
+----------- End Traceback ------
+Done processing MESSAGE sip:147.102.179.196:4000@147.102.179.196:4000 SIP/2.0
+/gov.nist.javax.sip.stack.SIPServerTransaction@95417dd0
+Processing gov.nist.javax.sip.EventWrapper@8c5eaanevents 1
+deliverEvent : MESSAGE sip:147.102.179.196:4000@147.102.179.196:4000 SIP/2.0
+ transaction gov.nist.javax.sip.stack.SIPServerTransaction@95417dd0
+Getting dialog for d8f6d8ce2ec8300d03123aade18928df@147.102.179.196:147.102.179.196@147.102.179.196:4000:takeo@147.102.179.196:4000:3224332
+looking for key z9hg4bk9b1937ce4e07f9db1223491797302946
+Calling listener MESSAGE sip:147.102.179.196:4000@147.102.179.196:4000 SIP/2.0
+
+Calling listener gov.nist.javax.sip.stack.SIPServerTransaction@95417dd0
+ ]]>
+</debug>
+<message
+from="147.102.179.196:5060" 
+to="147.102.179.196:4000" 
+time="1431004833237" 
+isSender="false" 
+transactionId="z9hg4bk9b1937ce4e07f9db1223491797302946" 
+callId="d8f6d8ce2ec8300d03123aade18928df@147.102.179.196" 
+firstLine="MESSAGE sip:147.102.179.196:4000@147.102.179.196:4000 SIP/2.0" 
+debugLine="756" 
+>
+<![CDATA[MESSAGE sip:147.102.179.196:4000@147.102.179.196:4000 SIP/2.0
+Call-ID: d8f6d8ce2ec8300d03123aade18928df@147.102.179.196
+CSeq: 1 MESSAGE
+From: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>;tag=3224332
+To: <sip:147.102.179.196:4000@147.102.179.196:4000>
+Via: SIP/2.0/UDP 147.102.179.196:5060;branch=z9hG4bK9b1937ce4e07f9db1223491797302946
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 4
+
+]]>
+</message>
+
+<debug>
+<![CDATA[ 
+Creating message channel 147.102.179.196/5060
+------------ Traceback ------
+java.lang.Exception
+	at gov.nist.core.LogWriter.logStackTrace(LogWriter.java:80)
+	at gov.nist.javax.sip.stack.UDPMessageChannel.sendMessage(UDPMessageChannel.java:482)
+	at gov.nist.javax.sip.SipProviderImpl.sendResponse(SipProviderImpl.java:622)
+	at gov.nist.sip.proxy.Proxy.processRequest(Proxy.java:275)
+	at gov.nist.javax.sip.EventScanner.deliverEvent(EventScanner.java:185)
+	at gov.nist.javax.sip.EventScanner.run(EventScanner.java:324)
+	at java.lang.Thread.run(Unknown Source)
+
+----------- End Traceback ------
+gov.nist.javax.sip.stack.UDPMessageChannel:sendMessage 147.102.179.196/5060
+SIP/2.0 200 OK
+Call-ID: d8f6d8ce2ec8300d03123aade18928df@147.102.179.196
+CSeq: 1 MESSAGE
+From: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>;tag=3224332
+To: <sip:147.102.179.196:4000@147.102.179.196:4000>
+Via: SIP/2.0/UDP 147.102.179.196:5060;branch=z9hG4bK9b1937ce4e07f9db1223491797302946
+Max-Forwards: 70
+Content-Length: 0
+
+
+*******************
+
+ ]]>
+</debug>
+<message
+from="147.102.179.196:4000" 
+to="147.102.179.196:5060" 
+time="1431004833258" 
+isSender="true" 
+transactionId="z9hg4bk9b1937ce4e07f9db1223491797302946" 
+callId="d8f6d8ce2ec8300d03123aade18928df@147.102.179.196" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="809" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: d8f6d8ce2ec8300d03123aade18928df@147.102.179.196
+CSeq: 1 MESSAGE
+From: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>;tag=3224332
+To: <sip:147.102.179.196:4000@147.102.179.196:4000>
+Via: SIP/2.0/UDP 147.102.179.196:5060;branch=z9hG4bK9b1937ce4e07f9db1223491797302946
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<debug>
+<![CDATA[ 
+Done processing Message MESSAGE sip:147.102.179.196:4000@147.102.179.196:4000 SIP/2.0
+
+Exiting provider
+Exiting provider
+exitting pendingRecordScanner!!
+Stopped event scanner!!
+UDPMessageProcessor: Stopping

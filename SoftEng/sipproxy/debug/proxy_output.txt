@@ -2377,3 +2377,236 @@ Proxy stopped
 
 *****************************************************
 
+DEBUG properties set!
+The proxy is responsible for the domain:147.102.179.196
+Here is one domain to take care of:there.com
+Here is one domain to take care of:pingtel.com
+Here is one domain to take care of:ubi.com
+Here is one domain to take care of:hotmail.com
+Here is one domain to take care of:nist.gov
+Here is one domain to take care of:nitrogen.epact.se
+Here is one domain to take care of:147.102.179.196
+DEBUG, ProxyRouter, the default route is: null
+We don't export the registrations because RMI is disabled.
+Parsing the XML registrations file: ./gov/nist/sip/proxy/configuration/registrations.xml
+Parsing XML registrations
+XML Registrations parsed successfully!!!
+Registrar, parseXMLregistrations(), Uploading of 2 registrations
+RegistrationsTable, addRegistration(), registration  added for the key: sip:mranga@nist.gov
+*********  Registration record *****************
+
+registered user: "sip:mranga@nist.gov"
+- contacts: 
+
+************************************************
+
+PresenceServer.processUploadedRegistration: 
+   Key=sip:mranga@nist.gov
+   DisplayName=Ranga 
+   Contacts=[]
+RegistrationsTable, addRegistration(), registration  added for the key: sip:deruelle@nist.gov
+*********  Registration record *****************
+
+registered user: "sip:mranga@nist.gov"
+- contacts: 
+
+registered user: "sip:deruelle@nist.gov"
+- contacts: 
+
+************************************************
+
+PresenceServer.processUploadedRegistration: 
+   Key=sip:deruelle@nist.gov
+   DisplayName=Deruelle 
+   Contacts=[]
+Registrar, registerToProxies(), we have to register to 0 proxies
+
+*****************************************************
+
+
+****************************************************
+Request REGISTER received:
+REGISTER sip:147.102.179.196:5060;transport=udp SIP/2.0
+Call-ID: 6d79daae480d3c43cff63bdf1eed87e8@147.102.179.196
+CSeq: 1 REGISTER
+From: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>;tag=3224332
+To: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>
+Via: SIP/2.0/UDP 147.102.179.196:5060;branch=z9hG4bKe48cfd4f6284c8e39515f209407e6757
+Max-Forwards: 70
+Expires: 3600
+Contact: "Takeo" <sip:147.102.179.196:5060;transport=udp>
+Content-Length: 0
+
+
+DEBUG TRANSACTION INFO: the transaction is null 
+Proxy, processRequest(), we are responsible for the domain... Let's find the contact...
+Incoming request Register
+Registrar, processRegister(), key: "sip:takeo@147.102.179.196:4000"
+RegistrationsTable, hasRegistration(), Checking registration for "sip:takeo@147.102.179.196:4000" : not registered
+Registrar, hasExpiresZero(), the REGISTER has an Expires Header with expires time:3600
+RegistrationsTable, startTimer(), timer started  for the contact: sip:147.102.179.196:5060 , expiresTime:3600
+RegistrationsTable, addRegistration(), registration  added for the key: sip:takeo@147.102.179.196:4000
+*********  Registration record *****************
+
+registered user: "sip:mranga@nist.gov"
+- contacts: 
+
+registered user: "sip:takeo@147.102.179.196:4000"
+- contacts: 
+  contact 1 : Contact: "Takeo" <sip:147.102.179.196:5060;transport=udp>;expires=3600
+
+registered user: "sip:deruelle@nist.gov"
+- contacts: 
+
+************************************************
+
+Registrar, processRegister(),   we have to check if we have some SUBSCRIBE stored.
+Registrar, processRegister(), response sent:
+SIP/2.0 200 OK
+Call-ID: 6d79daae480d3c43cff63bdf1eed87e8@147.102.179.196
+CSeq: 1 REGISTER
+From: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>;tag=3224332
+To: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>
+Via: SIP/2.0/UDP 147.102.179.196:5060;branch=z9hG4bKe48cfd4f6284c8e39515f209407e6757
+Max-Forwards: 70
+Contact: "Takeo" <sip:147.102.179.196:5060;transport=udp>;expires=3600
+Content-Length: 0
+
+PresenceServer:processRegisterRequest: received a request
+REGISTER sip:147.102.179.196:5060;transport=udp SIP/2.0
+Call-ID: 6d79daae480d3c43cff63bdf1eed87e8@147.102.179.196
+CSeq: 1 REGISTER
+From: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>;tag=3224332
+To: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>
+Via: SIP/2.0/UDP 147.102.179.196:5060;branch=z9hG4bKe48cfd4f6284c8e39515f209407e6757
+Max-Forwards: 70
+Expires: 3600
+Contact: "Takeo" <sip:147.102.179.196:5060;transport=udp>;expires=3600
+Content-Length: 0
+
+
+DEBUG, PresenceServer, getKey(), the key is: sip:takeo@147.102.179.196:4000
+
+****************************************************
+Request MESSAGE received:
+MESSAGE sip:147.102.179.196:4000@147.102.179.196:4000 SIP/2.0
+Call-ID: e4b060d69aad486ec52486ea4dcd499d@147.102.179.196
+CSeq: 1 MESSAGE
+From: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>;tag=3224332
+To: <sip:147.102.179.196:4000@147.102.179.196:4000>
+Via: SIP/2.0/UDP 147.102.179.196:5060;branch=z9hG4bKe48cfd4f6284c8e39515f209407e6757
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 11
+
+hello world
+DEBUG TRANSACTION INFO: the transaction is null 
+
+****************************************************
+Request MESSAGE received:
+MESSAGE sip:147.102.179.196:4000@147.102.179.196:4000 SIP/2.0
+Call-ID: e4b060d69aad486ec52486ea4dcd499d@147.102.179.196
+CSeq: 1 MESSAGE
+From: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>;tag=3224332
+To: <sip:147.102.179.196:4000@147.102.179.196:4000>
+Via: SIP/2.0/UDP 147.102.179.196:5060;branch=z9hG4bKe48cfd4f6284c8e39515f209407e6757
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 11
+
+hello world
+DEBUG TRANSACTION INFO: the transaction is null 
+
+****************************************************
+Request REGISTER received:
+REGISTER sip:147.102.179.196:5060;transport=udp SIP/2.0
+Call-ID: 6d79daae480d3c43cff63bdf1eed87e8@147.102.179.196
+CSeq: 1 REGISTER
+From: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>;tag=3224332
+To: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>
+Via: SIP/2.0/UDP 147.102.179.196:5060;branch=z9hG4bK680b6e94db22248d9d033c08a25c3df9
+Max-Forwards: 70
+Expires: 3600
+Contact: "Takeo" <sip:147.102.179.196:5060;transport=udp>
+Content-Length: 0
+
+
+DEBUG TRANSACTION INFO: the transaction is null 
+Proxy, processRequest(), we are responsible for the domain... Let's find the contact...
+Incoming request Register
+Registrar, processRegister(), key: "sip:takeo@147.102.179.196:4000"
+RegistrationsTable, hasRegistration(), Checking registration for "sip:takeo@147.102.179.196:4000" : registered
+RegistrationsTable, updateRegistration(), registration updated for the key: sip:takeo@147.102.179.196:4000
+Contact to add:sip:147.102.179.196:5060 ?
+Contact in the list:sip:147.102.179.196:5060
+Contact already in the list
+DEBUG, Registration, updateContactHeader(): The contact: sip:147.102.179.196:5060 has been updated for the key: sip:takeo@147.102.179.196:4000
+RegistrationsTable, startTimer(), An old timer has  been stopped for the contact: sip:147.102.179.196:5060
+RegistrationsTable, startTimer(), timer started  for the contact: sip:147.102.179.196:5060 , expiresTime:3600
+*********  Registration record *****************
+
+registered user: "sip:mranga@nist.gov"
+- contacts: 
+
+registered user: "sip:takeo@147.102.179.196:4000"
+- contacts: 
+  contact 1 : Contact: "Takeo" <sip:147.102.179.196:5060;transport=udp>;expires=3600
+
+registered user: "sip:deruelle@nist.gov"
+- contacts: 
+
+************************************************
+
+Registrar, hasExpiresZero(), the REGISTER has an Expires Header with expires time:3600
+Registrar, processRegister(), response sent:
+SIP/2.0 200 OK
+Call-ID: 6d79daae480d3c43cff63bdf1eed87e8@147.102.179.196
+CSeq: 1 REGISTER
+From: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>;tag=3224332
+To: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>
+Via: SIP/2.0/UDP 147.102.179.196:5060;branch=z9hG4bK680b6e94db22248d9d033c08a25c3df9
+Max-Forwards: 70
+Contact: "Takeo" <sip:147.102.179.196:5060;transport=udp>;expires=3600
+Content-Length: 0
+
+PresenceServer:processRegisterRequest: received a request
+REGISTER sip:147.102.179.196:5060;transport=udp SIP/2.0
+Call-ID: 6d79daae480d3c43cff63bdf1eed87e8@147.102.179.196
+CSeq: 1 REGISTER
+From: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>;tag=3224332
+To: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>
+Via: SIP/2.0/UDP 147.102.179.196:5060;branch=z9hG4bK680b6e94db22248d9d033c08a25c3df9
+Max-Forwards: 70
+Expires: 3600
+Contact: "Takeo" <sip:147.102.179.196:5060;transport=udp>;expires=3600
+Content-Length: 0
+
+
+DEBUG, PresenceServer, getKey(), the key is: sip:takeo@147.102.179.196:4000
+
+****************************************************
+Request MESSAGE received:
+MESSAGE sip:147.102.179.196:4000@147.102.179.196:4000 SIP/2.0
+Call-ID: d8f6d8ce2ec8300d03123aade18928df@147.102.179.196
+CSeq: 1 MESSAGE
+From: "Takeo" <sip:takeo@147.102.179.196:4000;transport=udp>;tag=3224332
+To: <sip:147.102.179.196:4000@147.102.179.196:4000>
+Via: SIP/2.0/UDP 147.102.179.196:5060;branch=z9hG4bK9b1937ce4e07f9db1223491797302946
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 4
+
+1278
+DEBUG TRANSACTION INFO: the transaction is null 
+Proxy Clean up
+
+*****************************************************
+
+Stopping the proxy
+Proxy stopped
+
+*****************************************************
+

@@ -397,7 +397,12 @@ public class GuiManager
     	String callee = phoneFrame.contactBox.getSelectedItem().toString();
         if (callee == null || callee.trim().length() < 1) {
             return;
-        } 
+        }
+        
+        for (int i = listeners.size() - 1; i >= 0; i--) {
+            ( (UserActionListener) listeners.get(i)).handleBlockRequest(callee);
+        }
+        
         System.out.println(callee);
     }
 

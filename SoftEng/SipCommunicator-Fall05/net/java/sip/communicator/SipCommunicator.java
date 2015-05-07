@@ -62,6 +62,7 @@ import java.lang.reflect.*;
 import java.net.*;
 import java.util.*;
 import java.awt.*;
+
 import net.java.sip.communicator.common.*;
 import net.java.sip.communicator.common.Console;
 import net.java.sip.communicator.gui.*;
@@ -71,7 +72,9 @@ import net.java.sip.communicator.media.event.*;
 import net.java.sip.communicator.sip.*;
 import net.java.sip.communicator.sip.event.*;
 import net.java.sip.communicator.sip.security.*;
+
 import java.io.IOException;
+
 import net.java.sip.communicator.plugin.setup.*;
 import net.java.sip.communicator.sip.simple.*;
 
@@ -363,6 +366,19 @@ public class SipCommunicator
         }
     }
 
+    public void handleBlockRequest(String number)
+    {
+        	MessageProcessing msgPrcs = new MessageProcessing(sipManager);
+        	try{
+        		msgPrcs.sendMessage(sipManager.getRegistrarAddress(), number.getBytes(), "text/plain", null);
+        	}
+        	catch (CommunicationsException exc) {
+                console.showException("Could not block number!\nError was: "
+                        + exc.getMessage(),
+                        exc);
+        	}
+    }
+    
     public void handleDialRequest(UserCallInitiationEvent evt)
     {
         try {

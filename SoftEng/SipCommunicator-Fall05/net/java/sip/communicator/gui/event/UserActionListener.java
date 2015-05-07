@@ -77,6 +77,8 @@ public interface UserActionListener
 
     public void handleAnswerRequest(UserCallControlEvent evt);
 
+    public void handleBlockRequest(String s);
+    
     public void handleExitRequest();
 
 /** @todo remove after testing */
