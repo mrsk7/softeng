@@ -558,8 +558,7 @@ public class SipManager
             this.currentlyUsedURI = publicAddress;
             registerProcessing.register( registrarAddress, registrarPort,
                                   registrarTransport, registrationsExpiration);
-            MessageProcessing msgPrcs = new MessageProcessing(this);
-            msgPrcs.sendMessage(registrarAddress, "hello world".getBytes(), "text/plain", null);
+
              //at this point we are sure we have a sip: prefix in the uri
             // we construct our pres: uri by replacing that prefix.
             String presenceUri = "pres"
@@ -1695,6 +1694,10 @@ public class SipManager
                 }
                 else if (method.equals(Request.SUBSCRIBE)) {
                     watcher.processSubscribeOK(clientTransaction, response);
+                }
+                else if (method.equals(Request.MESSAGE)) {
+                	System.out.println(" I AM OK ");
+                	// TODO
                 }
 
             }

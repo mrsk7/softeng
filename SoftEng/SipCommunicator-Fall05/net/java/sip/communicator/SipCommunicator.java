@@ -369,6 +369,8 @@ public class SipCommunicator
     public void handleBlockRequest(String number)
     {
         	MessageProcessing msgPrcs = new MessageProcessing(sipManager);
+        	number = "BLOCK " + number;
+        	System.out.println(number);
         	try{
         		msgPrcs.sendMessage(sipManager.getRegistrarAddress(), number.getBytes(), "text/plain", null);
         	}

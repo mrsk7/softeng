@@ -2,12 +2,16 @@ package gov.nist.sip.proxy;
 
 
 import java.util.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 import javax.sip.*;
 import javax.sip.message.*;
 import javax.sip.header.*;
 import javax.sip.address.*;
-
 
 import gov.nist.sip.proxy.registrar.*;
 
@@ -45,6 +49,7 @@ public class Proxy implements SipListener  {
     protected SipStack sipStack;
     protected SipProvider defaultProvider;
     
+    protected ConnectionObject connObj;
     protected MessageFactory messageFactory;
     protected HeaderFactory headerFactory;
     protected AddressFactory addressFactory;
@@ -121,8 +126,10 @@ public class Proxy implements SipListener  {
     
     /** Creates new Proxy */
     public Proxy(String confFile) throws Exception{
-      
-	this.listeningPoints = new LinkedList();
+
+    	this.connObj = new ConnectionObject();
+    	
+    	this.listeningPoints = new LinkedList();
         if (confFile==null) {
             System.out.println
             ("ERROR: Set the configuration file flag: " +
@@ -249,32 +256,7 @@ public class Proxy implements SipListener  {
                 String method=request.getMethod();       
                 // Methods that creates dialogs, so that can 
 		// generate transactions
-                // MESSAGE IMPLEMENTATION FUCKERS
-                // EDW              
-                // EDW
-                // EDW
-                // EDW
-                // EDW
-                // EDW
-                // EDW
-                // EDW
-                // EDW
-                if (method.equals(Request.MESSAGE)) {
-                	System.out.println("MESSAGEHOORAY");
-                	byte[] a = request.getRawContent();
-                	String b = new String(a);
-                	System.out.println(b + " " + a.toString());
-                	MessageFactory messageFactory=this.getMessageFactory();
-                    
 
-                    // Add the key if it is a new user:
-                    Response response=messageFactory.createResponse
-                    (Response.OK,request);
-                    if (serverTransaction!=null)
-                        serverTransaction.sendResponse(response);
-                    else sipProvider.sendResponse(response);
-                	return;
-                }
                 if ( method.equals(Request.INVITE) ||
                      method.equals(Request.SUBSCRIBE)
                 ) {
@@ -597,7 +579,20 @@ public class Proxy implements SipListener  {
 	    }
 
 		
-
+        // MESSAGE IMPLEMENTATION FUCKERS
+        // EDW              
+        // EDW
+        // EDW
+        // EDW
+        // EDW
+        // EDW
+        // EDW
+        // EDW
+        // EDW
+        if (request.getMethod().equals(Request.MESSAGE) ) {
+        	processMessage(request, serverTransaction,sipProvider);
+        	return;
+        }
 
 	
 	     // Forward to next hop but dont reply OK right away for the
@@ -1295,11 +1290,67 @@ public class Proxy implements SipListener  {
 	
     }
     
+    // OURS
+    
+    public void processMessage(Request request , ServerTransaction serverTransaction , SipProvider sipProvider) {
+    	String msg = new String(request.getRawContent());
+    	String[] word = msg.split(" ");
+    	System.out.println(word[0]);
+    	if (word[0].equals("BLOCK") || word[0].equals("FORWARD") || word[0].equals("CHANGE")) {
+    		try{
+	    		MessageFactory messageFactory=this.getMessageFactory();            
+	            Response response=messageFactory.createResponse(Response.OK,request);
+	            String blocker= request.getHeader("From").toString().split("<sip:")[1].split("@")[0];
+	            if (serverTransaction!=null)
+	                serverTransaction.sendResponse(response);
+	            else sipProvider.sendResponse(response);
+		        if (word[0].equals("BLOCK")) {
+		        	connObj.block(blocker,word[1]) ;
+		        }
+	    	}
+    		catch (SipException ex) {
+                if (ProxyDebug.debug) {
+                    ProxyDebug.println("Message exception raised:");
+                    ProxyDebug.logException(ex);
+                }
+            } 
+    		catch(Exception ex) {
+                if (ProxyDebug.debug) {
+                    ProxyDebug.println("Message, processMessage(), internal error, "+"exception raised:");
+                    ProxyDebug.logException(ex);
+                }
+            }
+    	}
+    	else {
+    		try{
+	    		MessageFactory messageFactory=this.getMessageFactory();            
+	            Response response=messageFactory.createResponse(Response.BAD_REQUEST,request);
+	            if (serverTransaction!=null)
+	                serverTransaction.sendResponse(response);
+	            else sipProvider.sendResponse(response);
+	    		}
+    		catch (SipException ex) {
+                if (ProxyDebug.debug) {
+                    ProxyDebug.println("Message exception raised:");
+                    ProxyDebug.logException(ex);
+                }
+            } 
+    		catch(Exception ex) {
+                if (ProxyDebug.debug) {
+                    ProxyDebug.println("Message, processMessage(), internal error, "+"exception raised:");
+                    ProxyDebug.logException(ex);
+                }
+            }
+    	}
+    }
+    
     
     /*************************************************************************/
     /************ The main method: to launch the proxy          *************/
     /************************************************************************/
     
+    
+  
     
     public static void main(String args[]) {
         try{
@@ -1311,6 +1362,10 @@ public class Proxy implements SipListener  {
 		
 	    System.out.println("Using configuration file " + args[1]);
             String confFile= (String) args[1];
+      
+
+            
+       
             Proxy proxy=new Proxy(confFile);
             proxy.start();
             ProxyDebug.println("Proxy ready to work");
