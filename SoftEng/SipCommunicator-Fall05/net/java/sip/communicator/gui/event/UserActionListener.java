@@ -79,6 +79,8 @@ public interface UserActionListener
 
     public void handleBlockRequest(String s);
     
+    public void handleForwardRequest(String s);
+    
     public void handleExitRequest();
 
 /** @todo remove after testing */

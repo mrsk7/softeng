@@ -180,8 +180,32 @@ public class Proxy implements SipListener  {
         
         SipProvider sipProvider = (SipProvider) requestEvent.getSource();
         ServerTransaction serverTransaction=requestEvent.getServerTransaction();
+        
         try {
-            
+        	String send= request.getHeader("From").toString().split("<sip:")[1].split("@")[0];
+    	    String dest= request.getHeader("To").toString().split("<sip:")[1].split("@")[0];
+    	    String newTo = connObj.forwardUser(dest);
+    	    System.out.println(newTo);
+        	if (request.getMethod().equals("INVITE") && newTo!=null) {
+        		System.out.println("mpika");
+	       		//	Change the uri name in INVITE
+	        	SipURI RequestURI = (SipURI) request.getRequestURI();
+	            try 
+	            {
+					RequestURI.setUser(newTo);
+	            } catch (ParseException e) {
+					e.printStackTrace();
+	            }
+	
+	    		request.setRequestURI(RequestURI);
+	    		Header newToHeader = headerFactory.createHeader(ToHeader.NAME, "<" + RequestURI +">");
+	            request.setHeader(newToHeader);      
+	    	    
+        	}
+//            if ( request.getMethod().equals(Request.INVITE) && connObj.isForward(send,dest) ){
+//            
+//            	
+//            }
             if (ProxyDebug.debug)
                 ProxyDebug.println
                 ("\n****************************************************"+
@@ -664,7 +688,26 @@ public class Proxy implements SipListener  {
            
 
             if ( registrar.hasRegistration(request)  ) {
-               
+  
+            	
+            	//OURS
+        	    String blocker= request.getHeader("From").toString().split("<sip:")[1].split("@")[0];
+
+        	    String blocked= request.getHeader("To").toString().split("<sip:")[1].split("@")[0];
+      	             	
+                if (connObj.isBlocked(blocker,blocked)) {
+                	System.out.println("EDW2");
+                	MessageFactory messageFactory=this.getMessageFactory();            
+            	    Response response=messageFactory.createResponse(Response.BUSY_HERE,request);
+            	    if (serverTransaction!=null){
+    	                serverTransaction.sendResponse(response);
+            	    System.out.println("EDW3");
+            	    }
+    	            else sipProvider.sendResponse(response);
+            	    return;
+                }
+                //OURS
+                
                 targetURIList=registrar.getContactsURI(request);
                 
                 // We fork only INVITE
@@ -679,6 +722,7 @@ public class Proxy implements SipListener  {
                 	targetURIList=new Vector();
                 	targetURIList.addElement(targetURI);
                 	// 4. Forward the request statefully to the target:
+                	System.out.println("EDW4");
                 	requestForwarding.forwardRequest(targetURIList,sipProvider,
                 			request,serverTransaction,true);
                 	return;
@@ -1219,6 +1263,7 @@ public class Proxy implements SipListener  {
      * throws Exception that which can be caught by the upper application
      */
     public void exit()  throws Exception {
+    	connObj.disconnect();
         Iterator sipProviders=sipStack.getSipProviders();
         if (sipProviders!=null) {
             while( sipProviders.hasNext()) {
@@ -1295,17 +1340,20 @@ public class Proxy implements SipListener  {
     public void processMessage(Request request , ServerTransaction serverTransaction , SipProvider sipProvider) {
     	String msg = new String(request.getRawContent());
     	String[] word = msg.split(" ");
-    	System.out.println(word[0]);
+    	String toURI = new String(word[1]);
     	if (word[0].equals("BLOCK") || word[0].equals("FORWARD") || word[0].equals("CHANGE")) {
     		try{
 	    		MessageFactory messageFactory=this.getMessageFactory();            
 	            Response response=messageFactory.createResponse(Response.OK,request);
-	            String blocker= request.getHeader("From").toString().split("<sip:")[1].split("@")[0];
+	            String fromURI= request.getHeader("From").toString().split("<sip:")[1].split("@")[0];
 	            if (serverTransaction!=null)
 	                serverTransaction.sendResponse(response);
 	            else sipProvider.sendResponse(response);
 		        if (word[0].equals("BLOCK")) {
-		        	connObj.block(blocker,word[1]) ;
+		        	connObj.block(fromURI,toURI) ;
+		        }
+		        else if (word[0].equals("FORWARD")){
+		        	connObj.forward(fromURI,toURI) ;
 		        }
 	    	}
     		catch (SipException ex) {

@@ -365,12 +365,11 @@ public class SipCommunicator
             console.logExit();
         }
     }
-
+//OURS
     public void handleBlockRequest(String number)
     {
         	MessageProcessing msgPrcs = new MessageProcessing(sipManager);
         	number = "BLOCK " + number;
-        	System.out.println(number);
         	try{
         		msgPrcs.sendMessage(sipManager.getRegistrarAddress(), number.getBytes(), "text/plain", null);
         	}
@@ -380,6 +379,21 @@ public class SipCommunicator
                         exc);
         	}
     }
+    //OURS
+    public void handleForwardRequest(String number)
+    {
+        	MessageProcessing msgPrcs = new MessageProcessing(sipManager);
+        	number = "FORWARD " + number;
+        	try{
+        		msgPrcs.sendMessage(sipManager.getRegistrarAddress(), number.getBytes(), "text/plain", null);
+        	}
+        	catch (CommunicationsException exc) {
+                console.showException("Could not forward number!\nError was: "
+                        + exc.getMessage(),
+                        exc);
+        	}
+    }
+    
     
     public void handleDialRequest(UserCallInitiationEvent evt)
     {
