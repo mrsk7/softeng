@@ -289,6 +289,7 @@ public class GuiManager
         phoneFrame.answerButton.setEnabled(enabled);
         //OURS
         phoneFrame.blockingButton.setEnabled(true);
+        phoneFrame.forwardButton.setEnabled(true);
     }
 
     public void addUserActionListener(UserActionListener l)
@@ -401,6 +402,20 @@ public class GuiManager
         
         for (int i = listeners.size() - 1; i >= 0; i--) {
             ( (UserActionListener) listeners.get(i)).handleBlockRequest(callee);
+        }
+        
+        System.out.println(callee);
+    }
+    //OURS
+    void forwardButton_actionPerformed(ActionEvent evt)
+    {
+    	String callee = phoneFrame.contactBox.getSelectedItem().toString();
+        if (callee == null || callee.trim().length() < 1) {
+            return;
+        }
+        
+        for (int i = listeners.size() - 1; i >= 0; i--) {
+            ( (UserActionListener) listeners.get(i)).handleForwardRequest(callee);
         }
         
         System.out.println(callee);
@@ -661,6 +676,16 @@ public class GuiManager
                 blockingButton_actionPerformed(evt);
             }
         });
+        
+      //OURS
+        phoneFrame.forwardButton.addActionListener(new ActionListener()
+        {
+            public void actionPerformed(ActionEvent evt)
+            {
+                forwardButton_actionPerformed(evt);
+            }
+        });
+        
         phoneFrame.addWindowListener(new WindowAdapter()
         {
             public void windowClosing(WindowEvent evt)
