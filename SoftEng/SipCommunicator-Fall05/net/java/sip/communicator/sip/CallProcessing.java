@@ -314,6 +314,23 @@ public class CallProcessing
      * @param clientTransaction the corresponding transaction
      * @param response the challenge
      */
+    
+    void processForward(ClientTransaction clientTransaction, Response response)
+    {
+    	 try {
+             console.logEntry();
+             Call call = callDispatcher.findCall(clientTransaction.getDialog());
+             call.setState(Call.DISCONNECTED);
+             sipManCallback.fireForwardMessageReceived(response);
+             return;
+    	 }
+         finally {
+             console.logExit();
+         }
+    	
+    }
+    
+    
     void processAuthenticationChallenge(ClientTransaction clientTransaction,
                                         Response response)
     {
@@ -352,7 +369,9 @@ public class CallProcessing
         }
     }
 
-    //-------------------------- Requests ---------------------------------
+    //-------------------------- Requests ---------------------------------    
+    
+    
     void processInvite(ServerTransaction serverTransaction, Request invite)
     {
         try {

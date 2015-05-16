@@ -765,6 +765,34 @@ public class SipCommunicator
             console.logExit();
         }
     }
+    
+    public void receivedForwardMessage(String callee)
+    {
+        try {
+            console.logEntry();
+            String sdpData = null;
+            try {
+                sdpData = mediaManager.generateSdpDescription();
+            }
+            catch (MediaException ex) {
+                console.debug("Failed to Generate an SDP description", ex);
+                return;
+            }
+            try {
+                Call call = sipManager.establishCall(callee, sdpData);
+                call.addStateChangeListener(this);
+                Interlocutor interlocutor = new Interlocutor();
+                interlocutor.setCall(call);
+                guiManager.addInterlocutor(interlocutor);
+            }
+            catch (CommunicationsException exc) {
+                console.debug("Could not forward call");
+            }
+        }
+        finally {
+            console.logExit();
+        }
+    }
 
     public void communicationsErrorOccurred(CommunicationsErrorEvent evt)
     {

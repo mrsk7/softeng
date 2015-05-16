@@ -187,20 +187,48 @@ public class Proxy implements SipListener  {
     	    String newTo = connObj.forwardUser(dest);
     	    System.out.println(newTo);
         	if (request.getMethod().equals("INVITE") && newTo!=null) {
-        		System.out.println("mpika");
 	       		//	Change the uri name in INVITE
-	        	SipURI RequestURI = (SipURI) request.getRequestURI();
-	            try 
+//	        	SipURI RequestURI = (SipURI) request.getRequestURI();
+//	            try 
+//	            {
+//					RequestURI.setUser(newTo);
+//	            } catch (ParseException e) {
+//					e.printStackTrace();
+//	            }
+//	
+//	    		request.setRequestURI(RequestURI);
+//	    		Header newToHeader = headerFactory.createHeader(ToHeader.NAME, "<" + RequestURI +">");
+//	            request.s	etHeader(newToHeader);      
+	    	    Response response = null;
+	    	    Request cr = (Request) request.clone();
+	    	    SipURI RequestURI = (SipURI) cr.getRequestURI();
+	    	    try 
 	            {
 					RequestURI.setUser(newTo);
 	            } catch (ParseException e) {
 					e.printStackTrace();
 	            }
-	
-	    		request.setRequestURI(RequestURI);
-	    		Header newToHeader = headerFactory.createHeader(ToHeader.NAME, "<" + RequestURI +">");
-	            request.setHeader(newToHeader);      
+	    	    response = messageFactory.createResponse(Response.CALL_IS_BEING_FORWARDED, cr);
 	    	    
+	    	    Header newToHeader = headerFactory.createHeader("T","<"+RequestURI+">");
+	            response.addHeader(newToHeader);
+	            
+	            String sdpData = new String(request.getRawContent());
+	            ContentTypeHeader cth =  new ContentType("text", "plain");
+	            response.setContent(sdpData, cth);
+
+	            try {
+	              	if (serverTransaction!=null)
+	      			     serverTransaction.sendResponse(response);
+	      			 else 
+	      			     sipProvider.sendResponse(response);
+	              	System.out.println("...Just sent response");
+	              	System.out.println("****************");
+	            }
+	            catch (SipException ex) {
+	                   System.out.println("Failed to send the fwd response");
+	            }           		
+	    		return;   		
         	}
 //            if ( request.getMethod().equals(Request.INVITE) && connObj.isForward(send,dest) ){
 //            
