@@ -3,3 +3,9 @@
 /Registrations.class
 /RegistrationsTable.class
 /XMLRegistrationsParser.class
+/Binding.class
+/Domain.class
+/ExpiresTask.class
+/ExportedBinding.class
+/Registrar.class
+/RegistrarAccess.class
