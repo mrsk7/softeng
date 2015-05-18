@@ -96,4 +96,6 @@ public interface CommunicationsListener
 //    public void callRinging(CommunicationsEvent evt);
 //    public void callTrying(CommunicationsEvent evt);
 //    public void callEnded(CommunicationsEvent evt);
+
+	public void receivedForwardMessage(String newTo);
 }

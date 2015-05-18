@@ -1318,7 +1318,7 @@ public class SipManager
     	try{
     		console.logEntry();
     		
-    		String newTo = response.getHeader(ToHeader.NAME).toString().split("<sip:")[1].split("@")[0];
+    		String newTo = response.getHeader("Fwd").toString().split("<sip:")[1].split("@")[0];
     		System.out.println("Trying to establish call with " + newTo + " After forwarding");
     		System.out.println(newTo);
     		for (int i = listeners.size() - 1; i >= 0; i--) {
@@ -1723,6 +1723,10 @@ public class SipManager
                 }
 
             }
+            else if (response.getStatusCode() ==
+                     Response.CALL_IS_BEING_FORWARDED) {
+            	callProcessing.processForward(clientTransaction, response);
+            }
             //ACCEPTED
             else if (response.getStatusCode() == Response.ACCEPTED) {
                 //SUBSCRIBE
@@ -1863,10 +1867,6 @@ public class SipManager
             else if (response.getStatusCode() == Response.BUSY_EVERYWHERE) {
                 /** @todo add proper request handling */
                 fireUnknownMessageReceived(response);
-            }
-            else if (response.getStatusCode() ==
-                     Response.CALL_IS_BEING_FORWARDED) {
-            	callProcessing.processForward(clientTransaction, response);
             }
             else if (response.getStatusCode() ==
                      Response.CALL_OR_TRANSACTION_DOES_NOT_EXIST) {

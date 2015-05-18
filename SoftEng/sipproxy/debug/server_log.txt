@@ -2292,3 +2292,2144 @@ Content-Length: 0
 ]]>
 </message>
 
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= 147.102.179.196
+javax.sip.STACK_NAME= nist-proxy
+javax.sip.ROUTER_PATH= gov.nist.sip.proxy.router.ProxyRouter
+javax.sip.OUTBOUND_PROXY= null
+javax.sip.RETRANSMISSION_FILTER= on
+-->
+<description
+ logDescription="nist-proxy"
+ name="147.102.179.196" />
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= 147.102.179.196
+javax.sip.STACK_NAME= nist-proxy
+javax.sip.ROUTER_PATH= gov.nist.sip.proxy.router.ProxyRouter
+javax.sip.OUTBOUND_PROXY= null
+javax.sip.RETRANSMISSION_FILTER= on
+-->
+<description
+ logDescription="nist-proxy"
+ name="147.102.179.196" />
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= 192.168.1.2
+javax.sip.STACK_NAME= nist-proxy
+javax.sip.ROUTER_PATH= gov.nist.sip.proxy.router.ProxyRouter
+javax.sip.OUTBOUND_PROXY= null
+javax.sip.RETRANSMISSION_FILTER= on
+-->
+<description
+ logDescription="nist-proxy"
+ name="192.168.1.2" />
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= 192.168.1.2
+javax.sip.STACK_NAME= nist-proxy
+javax.sip.ROUTER_PATH= gov.nist.sip.proxy.router.ProxyRouter
+javax.sip.OUTBOUND_PROXY= null
+javax.sip.RETRANSMISSION_FILTER= on
+-->
+<description
+ logDescription="nist-proxy"
+ name="192.168.1.2" />
+
+<message
+from="192.168.1.2:5060" 
+to="192.168.1.2:4000" 
+time="1431957982992" 
+isSender="false" 
+transactionId="z9hg4bk168c2f9a31c79b0107767289906a5419" 
+callId="a7f2a9edbf923670011b3b5d9cac3560@192.168.1.2" 
+firstLine="REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0" 
+debugLine="102" 
+>
+<![CDATA[REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0
+Call-ID: a7f2a9edbf923670011b3b5d9cac3560@192.168.1.2
+CSeq: 1 REGISTER
+From: "Takeo" <sip:takeo@192.168.1.2:4000;transport=udp>;tag=26375716
+To: "Takeo" <sip:takeo@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:5060;branch=z9hG4bK168c2f9a31c79b0107767289906a5419
+Max-Forwards: 70
+Expires: 3600
+Contact: "Takeo" <sip:192.168.1.2:5060;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:5060" 
+time="1431957983126" 
+isSender="true" 
+transactionId="z9hg4bk168c2f9a31c79b0107767289906a5419" 
+callId="a7f2a9edbf923670011b3b5d9cac3560@192.168.1.2" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="157" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: a7f2a9edbf923670011b3b5d9cac3560@192.168.1.2
+CSeq: 1 REGISTER
+From: "Takeo" <sip:takeo@192.168.1.2:4000;transport=udp>;tag=26375716
+To: "Takeo" <sip:takeo@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:5060;branch=z9hG4bK168c2f9a31c79b0107767289906a5419
+Max-Forwards: 70
+Contact: "Takeo" <sip:192.168.1.2:5060;transport=udp>;expires=3600
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:30653" 
+to="192.168.1.2:4000" 
+time="1431957992634" 
+isSender="false" 
+transactionId="z9hg4bk2b244e3090c032e20868690f50491b13" 
+callId="589491f1e4d146ca2234c9326384df10@192.168.1.2" 
+firstLine="REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0" 
+debugLine="259" 
+>
+<![CDATA[REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0
+Call-ID: 589491f1e4d146ca2234c9326384df10@192.168.1.2
+CSeq: 1 REGISTER
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=12494161
+To: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:30653;branch=z9hG4bK2b244e3090c032e20868690f50491b13
+Max-Forwards: 70
+Expires: 3600
+Contact: "Takeo" <sip:192.168.1.2:30653;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:30653" 
+time="1431957992672" 
+isSender="true" 
+transactionId="z9hg4bk2b244e3090c032e20868690f50491b13" 
+callId="589491f1e4d146ca2234c9326384df10@192.168.1.2" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="322" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 589491f1e4d146ca2234c9326384df10@192.168.1.2
+CSeq: 1 REGISTER
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=12494161
+To: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:30653;branch=z9hG4bK2b244e3090c032e20868690f50491b13
+Max-Forwards: 70
+Contact: "Takeo" <sip:192.168.1.2:30653;transport=udp>;expires=3600
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:36364" 
+to="192.168.1.2:4000" 
+time="1431958004900" 
+isSender="false" 
+transactionId="z9hg4bk1ccd064209ab8d9203e351377fafcc19" 
+callId="13d4208299236e93964f3bec58e970ea@192.168.1.2" 
+firstLine="REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0" 
+debugLine="424" 
+>
+<![CDATA[REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0
+Call-ID: 13d4208299236e93964f3bec58e970ea@192.168.1.2
+CSeq: 1 REGISTER
+From: "Takeo" <sip:callee@192.168.1.2:4000;transport=udp>;tag=1958577
+To: "Takeo" <sip:callee@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:36364;branch=z9hG4bK1ccd064209ab8d9203e351377fafcc19
+Max-Forwards: 70
+Expires: 3600
+Contact: "Takeo" <sip:192.168.1.2:36364;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:36364" 
+time="1431958004940" 
+isSender="true" 
+transactionId="z9hg4bk1ccd064209ab8d9203e351377fafcc19" 
+callId="13d4208299236e93964f3bec58e970ea@192.168.1.2" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="487" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 13d4208299236e93964f3bec58e970ea@192.168.1.2
+CSeq: 1 REGISTER
+From: "Takeo" <sip:callee@192.168.1.2:4000;transport=udp>;tag=1958577
+To: "Takeo" <sip:callee@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:36364;branch=z9hG4bK1ccd064209ab8d9203e351377fafcc19
+Max-Forwards: 70
+Contact: "Takeo" <sip:192.168.1.2:36364;transport=udp>;expires=3600
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:36364" 
+to="192.168.1.2:4000" 
+time="1431958009614" 
+isSender="false" 
+transactionId="z9hg4bkc720ccaaf922ebbd3c46fa565a417a28" 
+callId="06713ccb3865822220002104ebf8d6bf@192.168.1.2" 
+firstLine="MESSAGE sip:192.168.1.2:4000@192.168.1.2:4000 SIP/2.0" 
+debugLine="589" 
+>
+<![CDATA[MESSAGE sip:192.168.1.2:4000@192.168.1.2:4000 SIP/2.0
+Call-ID: 06713ccb3865822220002104ebf8d6bf@192.168.1.2
+CSeq: 1 MESSAGE
+From: "Takeo" <sip:callee@192.168.1.2:4000;transport=udp>;tag=1958577
+To: <sip:192.168.1.2:4000@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:36364;branch=z9hG4bKc720ccaaf922ebbd3c46fa565a417a28
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:36364" 
+time="1431958009652" 
+isSender="true" 
+transactionId="z9hg4bkc720ccaaf922ebbd3c46fa565a417a28" 
+callId="06713ccb3865822220002104ebf8d6bf@192.168.1.2" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="651" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 06713ccb3865822220002104ebf8d6bf@192.168.1.2
+CSeq: 1 MESSAGE
+From: "Takeo" <sip:callee@192.168.1.2:4000;transport=udp>;tag=1958577
+To: <sip:192.168.1.2:4000@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:36364;branch=z9hG4bKc720ccaaf922ebbd3c46fa565a417a28
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:30653" 
+to="192.168.1.2:4000" 
+time="1431958027248" 
+isSender="false" 
+transactionId="z9hg4bk9a0e7f644d429bca9dde051ae8cea35b" 
+callId="124816fc0fd1409053f5a50836aea3b2@192.168.1.2" 
+firstLine="INVITE sip:callee@192.168.1.2:4000 SIP/2.0" 
+debugLine="760" 
+>
+<![CDATA[INVITE sip:callee@192.168.1.2:4000 SIP/2.0
+Call-ID: 124816fc0fd1409053f5a50836aea3b2@192.168.1.2
+CSeq: 1 INVITE
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=12494161
+To: <sip:callee@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:30653;branch=z9hG4bK9a0e7f644d429bca9dde051ae8cea35b
+Max-Forwards: 70
+Contact: "Takeo" <sip:192.168.1.2:30653;transport=udp>
+Content-Type: application/sdp
+Content-Length: 147
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:30653" 
+time="1431958027279" 
+isSender="true" 
+transactionId="z9hg4bk9a0e7f644d429bca9dde051ae8cea35b" 
+callId="124816fc0fd1409053f5a50836aea3b2@192.168.1.2" 
+firstLine="SIP/2.0 181 Call is being forwarded" 
+debugLine="829" 
+>
+<![CDATA[SIP/2.0 181 Call is being forwarded
+Call-ID: 124816fc0fd1409053f5a50836aea3b2@192.168.1.2
+CSeq: 1 INVITE
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=12494161
+To: <sip:callee@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:30653;branch=z9hG4bK9a0e7f644d429bca9dde051ae8cea35b
+Max-Forwards: 70
+Content-Type: text/plain
+Content-Length: 147
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:30653" 
+to="192.168.1.2:4000" 
+time="1431958039421" 
+isSender="false" 
+transactionId="z9hg4bk9a0e7f644d429bca9dde051ae8cea35b" 
+callId="124816fc0fd1409053f5a50836aea3b2@192.168.1.2" 
+firstLine="CANCEL sip:callee@192.168.1.2:4000 SIP/2.0" 
+debugLine="945" 
+>
+<![CDATA[CANCEL sip:callee@192.168.1.2:4000 SIP/2.0
+Call-ID: 124816fc0fd1409053f5a50836aea3b2@192.168.1.2
+CSeq: 1 CANCEL
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=12494161
+To: <sip:callee@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:30653;branch=z9hG4bK9a0e7f644d429bca9dde051ae8cea35b
+Max-Forwards: 70
+Contact: "Takeo" <sip:192.168.1.2:30653;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:30653" 
+to="192.168.1.2:4000" 
+time="1431958039919" 
+isSender="false" 
+transactionId="z9hg4bk9a0e7f644d429bca9dde051ae8cea35b" 
+callId="124816fc0fd1409053f5a50836aea3b2@192.168.1.2" 
+firstLine="CANCEL sip:callee@192.168.1.2:4000 SIP/2.0" 
+debugLine="1082" 
+>
+<![CDATA[CANCEL sip:callee@192.168.1.2:4000 SIP/2.0
+Call-ID: 124816fc0fd1409053f5a50836aea3b2@192.168.1.2
+CSeq: 1 CANCEL
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=12494161
+To: <sip:callee@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:30653;branch=z9hG4bK9a0e7f644d429bca9dde051ae8cea35b
+Max-Forwards: 70
+Contact: "Takeo" <sip:192.168.1.2:30653;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:30653" 
+to="192.168.1.2:4000" 
+time="1431958040924" 
+isSender="false" 
+transactionId="z9hg4bk9a0e7f644d429bca9dde051ae8cea35b" 
+callId="124816fc0fd1409053f5a50836aea3b2@192.168.1.2" 
+firstLine="CANCEL sip:callee@192.168.1.2:4000 SIP/2.0" 
+debugLine="1222" 
+>
+<![CDATA[CANCEL sip:callee@192.168.1.2:4000 SIP/2.0
+Call-ID: 124816fc0fd1409053f5a50836aea3b2@192.168.1.2
+CSeq: 1 CANCEL
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=12494161
+To: <sip:callee@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:30653;branch=z9hG4bK9a0e7f644d429bca9dde051ae8cea35b
+Max-Forwards: 70
+Contact: "Takeo" <sip:192.168.1.2:30653;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:30653" 
+to="192.168.1.2:4000" 
+time="1431958042924" 
+isSender="false" 
+transactionId="z9hg4bk9a0e7f644d429bca9dde051ae8cea35b" 
+callId="124816fc0fd1409053f5a50836aea3b2@192.168.1.2" 
+firstLine="CANCEL sip:callee@192.168.1.2:4000 SIP/2.0" 
+debugLine="1356" 
+>
+<![CDATA[CANCEL sip:callee@192.168.1.2:4000 SIP/2.0
+Call-ID: 124816fc0fd1409053f5a50836aea3b2@192.168.1.2
+CSeq: 1 CANCEL
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=12494161
+To: <sip:callee@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:30653;branch=z9hG4bK9a0e7f644d429bca9dde051ae8cea35b
+Max-Forwards: 70
+Contact: "Takeo" <sip:192.168.1.2:30653;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:30653" 
+to="192.168.1.2:4000" 
+time="1431958046924" 
+isSender="false" 
+transactionId="z9hg4bk9a0e7f644d429bca9dde051ae8cea35b" 
+callId="124816fc0fd1409053f5a50836aea3b2@192.168.1.2" 
+firstLine="CANCEL sip:callee@192.168.1.2:4000 SIP/2.0" 
+debugLine="1493" 
+>
+<![CDATA[CANCEL sip:callee@192.168.1.2:4000 SIP/2.0
+Call-ID: 124816fc0fd1409053f5a50836aea3b2@192.168.1.2
+CSeq: 1 CANCEL
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=12494161
+To: <sip:callee@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:30653;branch=z9hG4bK9a0e7f644d429bca9dde051ae8cea35b
+Max-Forwards: 70
+Contact: "Takeo" <sip:192.168.1.2:30653;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:30653" 
+to="192.168.1.2:4000" 
+time="1431958050924" 
+isSender="false" 
+transactionId="z9hg4bk9a0e7f644d429bca9dde051ae8cea35b" 
+callId="124816fc0fd1409053f5a50836aea3b2@192.168.1.2" 
+firstLine="CANCEL sip:callee@192.168.1.2:4000 SIP/2.0" 
+debugLine="1650" 
+>
+<![CDATA[CANCEL sip:callee@192.168.1.2:4000 SIP/2.0
+Call-ID: 124816fc0fd1409053f5a50836aea3b2@192.168.1.2
+CSeq: 1 CANCEL
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=12494161
+To: <sip:callee@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:30653;branch=z9hG4bK9a0e7f644d429bca9dde051ae8cea35b
+Max-Forwards: 70
+Contact: "Takeo" <sip:192.168.1.2:30653;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:30653" 
+to="192.168.1.2:4000" 
+time="1431958054924" 
+isSender="false" 
+transactionId="z9hg4bk9a0e7f644d429bca9dde051ae8cea35b" 
+callId="124816fc0fd1409053f5a50836aea3b2@192.168.1.2" 
+firstLine="CANCEL sip:callee@192.168.1.2:4000 SIP/2.0" 
+debugLine="1767" 
+>
+<![CDATA[CANCEL sip:callee@192.168.1.2:4000 SIP/2.0
+Call-ID: 124816fc0fd1409053f5a50836aea3b2@192.168.1.2
+CSeq: 1 CANCEL
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=12494161
+To: <sip:callee@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:30653;branch=z9hG4bK9a0e7f644d429bca9dde051ae8cea35b
+Max-Forwards: 70
+Contact: "Takeo" <sip:192.168.1.2:30653;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:30653" 
+to="192.168.1.2:4000" 
+time="1431958058926" 
+isSender="false" 
+transactionId="z9hg4bk9a0e7f644d429bca9dde051ae8cea35b" 
+callId="124816fc0fd1409053f5a50836aea3b2@192.168.1.2" 
+firstLine="CANCEL sip:callee@192.168.1.2:4000 SIP/2.0" 
+debugLine="1904" 
+>
+<![CDATA[CANCEL sip:callee@192.168.1.2:4000 SIP/2.0
+Call-ID: 124816fc0fd1409053f5a50836aea3b2@192.168.1.2
+CSeq: 1 CANCEL
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=12494161
+To: <sip:callee@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:30653;branch=z9hG4bK9a0e7f644d429bca9dde051ae8cea35b
+Max-Forwards: 70
+Contact: "Takeo" <sip:192.168.1.2:30653;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:30653" 
+to="192.168.1.2:4000" 
+time="1431958062925" 
+isSender="false" 
+transactionId="z9hg4bk9a0e7f644d429bca9dde051ae8cea35b" 
+callId="124816fc0fd1409053f5a50836aea3b2@192.168.1.2" 
+firstLine="CANCEL sip:callee@192.168.1.2:4000 SIP/2.0" 
+debugLine="2041" 
+>
+<![CDATA[CANCEL sip:callee@192.168.1.2:4000 SIP/2.0
+Call-ID: 124816fc0fd1409053f5a50836aea3b2@192.168.1.2
+CSeq: 1 CANCEL
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=12494161
+To: <sip:callee@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:30653;branch=z9hG4bK9a0e7f644d429bca9dde051ae8cea35b
+Max-Forwards: 70
+Contact: "Takeo" <sip:192.168.1.2:30653;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:30653" 
+to="192.168.1.2:4000" 
+time="1431958066926" 
+isSender="false" 
+transactionId="z9hg4bk9a0e7f644d429bca9dde051ae8cea35b" 
+callId="124816fc0fd1409053f5a50836aea3b2@192.168.1.2" 
+firstLine="CANCEL sip:callee@192.168.1.2:4000 SIP/2.0" 
+debugLine="2199" 
+>
+<![CDATA[CANCEL sip:callee@192.168.1.2:4000 SIP/2.0
+Call-ID: 124816fc0fd1409053f5a50836aea3b2@192.168.1.2
+CSeq: 1 CANCEL
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=12494161
+To: <sip:callee@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:30653;branch=z9hG4bK9a0e7f644d429bca9dde051ae8cea35b
+Max-Forwards: 70
+Contact: "Takeo" <sip:192.168.1.2:30653;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:30653" 
+to="192.168.1.2:4000" 
+time="1431958070925" 
+isSender="false" 
+transactionId="z9hg4bk9a0e7f644d429bca9dde051ae8cea35b" 
+callId="124816fc0fd1409053f5a50836aea3b2@192.168.1.2" 
+firstLine="CANCEL sip:callee@192.168.1.2:4000 SIP/2.0" 
+debugLine="2334" 
+>
+<![CDATA[CANCEL sip:callee@192.168.1.2:4000 SIP/2.0
+Call-ID: 124816fc0fd1409053f5a50836aea3b2@192.168.1.2
+CSeq: 1 CANCEL
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=12494161
+To: <sip:callee@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:30653;branch=z9hG4bK9a0e7f644d429bca9dde051ae8cea35b
+Max-Forwards: 70
+Contact: "Takeo" <sip:192.168.1.2:30653;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:5060" 
+to="192.168.1.2:4000" 
+time="1431958073167" 
+isSender="false" 
+transactionId="z9hg4bk4146ec18b328009ef8dfb556f8be19b9" 
+callId="a7f2a9edbf923670011b3b5d9cac3560@192.168.1.2" 
+firstLine="REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0" 
+debugLine="2438" 
+>
+<![CDATA[REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0
+Call-ID: a7f2a9edbf923670011b3b5d9cac3560@192.168.1.2
+CSeq: 2 REGISTER
+From: "Takeo" <sip:takeo@192.168.1.2:4000;transport=udp>;tag=26375716
+To: "Takeo" <sip:takeo@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:5060;branch=z9hG4bK4146ec18b328009ef8dfb556f8be19b9
+Max-Forwards: 70
+Expires: 0
+Contact: "Takeo" <sip:192.168.1.2:5060;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:5060" 
+time="1431958073220" 
+isSender="true" 
+transactionId="z9hg4bk4146ec18b328009ef8dfb556f8be19b9" 
+callId="a7f2a9edbf923670011b3b5d9cac3560@192.168.1.2" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="2501" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: a7f2a9edbf923670011b3b5d9cac3560@192.168.1.2
+CSeq: 2 REGISTER
+From: "Takeo" <sip:takeo@192.168.1.2:4000;transport=udp>;tag=26375716
+To: "Takeo" <sip:takeo@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:5060;branch=z9hG4bK4146ec18b328009ef8dfb556f8be19b9
+Max-Forwards: 70
+Expires: 0
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:30653" 
+to="192.168.1.2:4000" 
+time="1431958078017" 
+isSender="false" 
+transactionId="z9hg4bkc8f2cb5913d278acdea8933f0799d0b3" 
+callId="589491f1e4d146ca2234c9326384df10@192.168.1.2" 
+firstLine="REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0" 
+debugLine="2603" 
+>
+<![CDATA[REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0
+Call-ID: 589491f1e4d146ca2234c9326384df10@192.168.1.2
+CSeq: 2 REGISTER
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=12494161
+To: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:30653;branch=z9hG4bKc8f2cb5913d278acdea8933f0799d0b3
+Max-Forwards: 70
+Expires: 0
+Contact: "Takeo" <sip:192.168.1.2:30653;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:30653" 
+time="1431958078067" 
+isSender="true" 
+transactionId="z9hg4bkc8f2cb5913d278acdea8933f0799d0b3" 
+callId="589491f1e4d146ca2234c9326384df10@192.168.1.2" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="2666" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 589491f1e4d146ca2234c9326384df10@192.168.1.2
+CSeq: 2 REGISTER
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=12494161
+To: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:30653;branch=z9hG4bKc8f2cb5913d278acdea8933f0799d0b3
+Max-Forwards: 70
+Expires: 0
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:36364" 
+to="192.168.1.2:4000" 
+time="1431958081681" 
+isSender="false" 
+transactionId="z9hg4bk5370bb7d4a48cd518695e05d70209ae5" 
+callId="13d4208299236e93964f3bec58e970ea@192.168.1.2" 
+firstLine="REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0" 
+debugLine="2768" 
+>
+<![CDATA[REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0
+Call-ID: 13d4208299236e93964f3bec58e970ea@192.168.1.2
+CSeq: 2 REGISTER
+From: "Takeo" <sip:callee@192.168.1.2:4000;transport=udp>;tag=1958577
+To: "Takeo" <sip:callee@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:36364;branch=z9hG4bK5370bb7d4a48cd518695e05d70209ae5
+Max-Forwards: 70
+Expires: 0
+Contact: "Takeo" <sip:192.168.1.2:36364;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:36364" 
+time="1431958081732" 
+isSender="true" 
+transactionId="z9hg4bk5370bb7d4a48cd518695e05d70209ae5" 
+callId="13d4208299236e93964f3bec58e970ea@192.168.1.2" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="2831" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 13d4208299236e93964f3bec58e970ea@192.168.1.2
+CSeq: 2 REGISTER
+From: "Takeo" <sip:callee@192.168.1.2:4000;transport=udp>;tag=1958577
+To: "Takeo" <sip:callee@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:36364;branch=z9hG4bK5370bb7d4a48cd518695e05d70209ae5
+Max-Forwards: 70
+Expires: 0
+Content-Length: 0
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= 192.168.1.2
+javax.sip.STACK_NAME= nist-proxy
+javax.sip.ROUTER_PATH= gov.nist.sip.proxy.router.ProxyRouter
+javax.sip.OUTBOUND_PROXY= null
+javax.sip.RETRANSMISSION_FILTER= on
+-->
+<description
+ logDescription="nist-proxy"
+ name="192.168.1.2" />
+
+<message
+from="192.168.1.2:5060" 
+to="192.168.1.2:4000" 
+time="1431958368595" 
+isSender="false" 
+transactionId="z9hg4bkb33e7cc5444a97de7bea286fdacd9fbc" 
+callId="8929c9ec2fdcfe770b24665c69349915@192.168.1.2" 
+firstLine="REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0" 
+debugLine="102" 
+>
+<![CDATA[REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0
+Call-ID: 8929c9ec2fdcfe770b24665c69349915@192.168.1.2
+CSeq: 1 REGISTER
+From: "Takeo" <sip:callee@192.168.1.2:4000;transport=udp>;tag=32381798
+To: "Takeo" <sip:callee@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:5060;branch=z9hG4bKb33e7cc5444a97de7bea286fdacd9fbc
+Max-Forwards: 70
+Expires: 3600
+Contact: "Takeo" <sip:192.168.1.2:5060;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:5060" 
+time="1431958368739" 
+isSender="true" 
+transactionId="z9hg4bkb33e7cc5444a97de7bea286fdacd9fbc" 
+callId="8929c9ec2fdcfe770b24665c69349915@192.168.1.2" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="157" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 8929c9ec2fdcfe770b24665c69349915@192.168.1.2
+CSeq: 1 REGISTER
+From: "Takeo" <sip:callee@192.168.1.2:4000;transport=udp>;tag=32381798
+To: "Takeo" <sip:callee@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:5060;branch=z9hG4bKb33e7cc5444a97de7bea286fdacd9fbc
+Max-Forwards: 70
+Contact: "Takeo" <sip:192.168.1.2:5060;transport=udp>;expires=3600
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:41025" 
+to="192.168.1.2:4000" 
+time="1431958380583" 
+isSender="false" 
+transactionId="z9hg4bk75fa4a334a8625be059282f3a4961787" 
+callId="8033e7283bbbd57d800bd8925e08c805@192.168.1.2" 
+firstLine="REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0" 
+debugLine="262" 
+>
+<![CDATA[REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0
+Call-ID: 8033e7283bbbd57d800bd8925e08c805@192.168.1.2
+CSeq: 1 REGISTER
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=26879823
+To: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:41025;branch=z9hG4bK75fa4a334a8625be059282f3a4961787
+Max-Forwards: 70
+Expires: 3600
+Contact: "Takeo" <sip:192.168.1.2:41025;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:41025" 
+time="1431958380623" 
+isSender="true" 
+transactionId="z9hg4bk75fa4a334a8625be059282f3a4961787" 
+callId="8033e7283bbbd57d800bd8925e08c805@192.168.1.2" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="322" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 8033e7283bbbd57d800bd8925e08c805@192.168.1.2
+CSeq: 1 REGISTER
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=26879823
+To: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:41025;branch=z9hG4bK75fa4a334a8625be059282f3a4961787
+Max-Forwards: 70
+Contact: "Takeo" <sip:192.168.1.2:41025;transport=udp>;expires=3600
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:33429" 
+to="192.168.1.2:4000" 
+time="1431958394122" 
+isSender="false" 
+transactionId="z9hg4bkf586a2e6986e60ae62c5eccdb60e60bc" 
+callId="0b940f9a3d9d3320d9d90b1d0a213642@192.168.1.2" 
+firstLine="REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0" 
+debugLine="424" 
+>
+<![CDATA[REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0
+Call-ID: 0b940f9a3d9d3320d9d90b1d0a213642@192.168.1.2
+CSeq: 1 REGISTER
+From: "Takeo" <sip:takeo@192.168.1.2:4000;transport=udp>;tag=20626140
+To: "Takeo" <sip:takeo@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:33429;branch=z9hG4bKf586a2e6986e60ae62c5eccdb60e60bc
+Max-Forwards: 70
+Expires: 3600
+Contact: "Takeo" <sip:192.168.1.2:33429;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:33429" 
+time="1431958394163" 
+isSender="true" 
+transactionId="z9hg4bkf586a2e6986e60ae62c5eccdb60e60bc" 
+callId="0b940f9a3d9d3320d9d90b1d0a213642@192.168.1.2" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="487" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 0b940f9a3d9d3320d9d90b1d0a213642@192.168.1.2
+CSeq: 1 REGISTER
+From: "Takeo" <sip:takeo@192.168.1.2:4000;transport=udp>;tag=20626140
+To: "Takeo" <sip:takeo@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:33429;branch=z9hG4bKf586a2e6986e60ae62c5eccdb60e60bc
+Max-Forwards: 70
+Contact: "Takeo" <sip:192.168.1.2:33429;transport=udp>;expires=3600
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:5060" 
+to="192.168.1.2:4000" 
+time="1431958408863" 
+isSender="false" 
+transactionId="z9hg4bkc0d8c3198b6af0377c007424ce73edc1" 
+callId="3c73ace279c8c09172770f61aeb4fe98@192.168.1.2" 
+firstLine="MESSAGE sip:192.168.1.2:4000@192.168.1.2:4000 SIP/2.0" 
+debugLine="589" 
+>
+<![CDATA[MESSAGE sip:192.168.1.2:4000@192.168.1.2:4000 SIP/2.0
+Call-ID: 3c73ace279c8c09172770f61aeb4fe98@192.168.1.2
+CSeq: 1 MESSAGE
+From: "Takeo" <sip:callee@192.168.1.2:4000;transport=udp>;tag=32381798
+To: <sip:192.168.1.2:4000@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:5060;branch=z9hG4bKc0d8c3198b6af0377c007424ce73edc1
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:5060" 
+time="1431958408898" 
+isSender="true" 
+transactionId="z9hg4bkc0d8c3198b6af0377c007424ce73edc1" 
+callId="3c73ace279c8c09172770f61aeb4fe98@192.168.1.2" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="651" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 3c73ace279c8c09172770f61aeb4fe98@192.168.1.2
+CSeq: 1 MESSAGE
+From: "Takeo" <sip:callee@192.168.1.2:4000;transport=udp>;tag=32381798
+To: <sip:192.168.1.2:4000@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:5060;branch=z9hG4bKc0d8c3198b6af0377c007424ce73edc1
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:41025" 
+to="192.168.1.2:4000" 
+time="1431958424629" 
+isSender="false" 
+transactionId="z9hg4bk7e774e59c2c8666eb983c71e8ce5611f" 
+callId="5507f24c9914003ab0569185b3c15f27@192.168.1.2" 
+firstLine="INVITE sip:callee@192.168.1.2:4000 SIP/2.0" 
+debugLine="763" 
+>
+<![CDATA[INVITE sip:callee@192.168.1.2:4000 SIP/2.0
+Call-ID: 5507f24c9914003ab0569185b3c15f27@192.168.1.2
+CSeq: 1 INVITE
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=26879823
+To: <sip:callee@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:41025;branch=z9hG4bK7e774e59c2c8666eb983c71e8ce5611f
+Max-Forwards: 70
+Contact: "Takeo" <sip:192.168.1.2:41025;transport=udp>
+Content-Type: application/sdp
+Content-Length: 147
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:41025" 
+time="1431958424661" 
+isSender="true" 
+transactionId="z9hg4bk7e774e59c2c8666eb983c71e8ce5611f" 
+callId="5507f24c9914003ab0569185b3c15f27@192.168.1.2" 
+firstLine="SIP/2.0 181 Call is being forwarded" 
+debugLine="830" 
+>
+<![CDATA[SIP/2.0 181 Call is being forwarded
+Call-ID: 5507f24c9914003ab0569185b3c15f27@192.168.1.2
+CSeq: 1 INVITE
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=26879823
+To: <sip:callee@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:41025;branch=z9hG4bK7e774e59c2c8666eb983c71e8ce5611f
+Max-Forwards: 70
+Fwd: <sip:takeo@192.168.1.2:4000>
+Content-Type: text/plain
+Content-Length: 147
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:41025" 
+to="192.168.1.2:4000" 
+time="1431958428701" 
+isSender="false" 
+transactionId="z9hg4bk7e774e59c2c8666eb983c71e8ce5611f" 
+callId="5507f24c9914003ab0569185b3c15f27@192.168.1.2" 
+firstLine="CANCEL sip:callee@192.168.1.2:4000 SIP/2.0" 
+debugLine="950" 
+>
+<![CDATA[CANCEL sip:callee@192.168.1.2:4000 SIP/2.0
+Call-ID: 5507f24c9914003ab0569185b3c15f27@192.168.1.2
+CSeq: 1 CANCEL
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=26879823
+To: <sip:callee@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:41025;branch=z9hG4bK7e774e59c2c8666eb983c71e8ce5611f
+Max-Forwards: 70
+Contact: "Takeo" <sip:192.168.1.2:41025;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:41025" 
+to="192.168.1.2:4000" 
+time="1431958429199" 
+isSender="false" 
+transactionId="z9hg4bk7e774e59c2c8666eb983c71e8ce5611f" 
+callId="5507f24c9914003ab0569185b3c15f27@192.168.1.2" 
+firstLine="CANCEL sip:callee@192.168.1.2:4000 SIP/2.0" 
+debugLine="1084" 
+>
+<![CDATA[CANCEL sip:callee@192.168.1.2:4000 SIP/2.0
+Call-ID: 5507f24c9914003ab0569185b3c15f27@192.168.1.2
+CSeq: 1 CANCEL
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=26879823
+To: <sip:callee@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:41025;branch=z9hG4bK7e774e59c2c8666eb983c71e8ce5611f
+Max-Forwards: 70
+Contact: "Takeo" <sip:192.168.1.2:41025;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:41025" 
+to="192.168.1.2:4000" 
+time="1431958430199" 
+isSender="false" 
+transactionId="z9hg4bk7e774e59c2c8666eb983c71e8ce5611f" 
+callId="5507f24c9914003ab0569185b3c15f27@192.168.1.2" 
+firstLine="CANCEL sip:callee@192.168.1.2:4000 SIP/2.0" 
+debugLine="1224" 
+>
+<![CDATA[CANCEL sip:callee@192.168.1.2:4000 SIP/2.0
+Call-ID: 5507f24c9914003ab0569185b3c15f27@192.168.1.2
+CSeq: 1 CANCEL
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=26879823
+To: <sip:callee@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:41025;branch=z9hG4bK7e774e59c2c8666eb983c71e8ce5611f
+Max-Forwards: 70
+Contact: "Takeo" <sip:192.168.1.2:41025;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:41025" 
+to="192.168.1.2:4000" 
+time="1431958432202" 
+isSender="false" 
+transactionId="z9hg4bk7e774e59c2c8666eb983c71e8ce5611f" 
+callId="5507f24c9914003ab0569185b3c15f27@192.168.1.2" 
+firstLine="CANCEL sip:callee@192.168.1.2:4000 SIP/2.0" 
+debugLine="1379" 
+>
+<![CDATA[CANCEL sip:callee@192.168.1.2:4000 SIP/2.0
+Call-ID: 5507f24c9914003ab0569185b3c15f27@192.168.1.2
+CSeq: 1 CANCEL
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=26879823
+To: <sip:callee@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:41025;branch=z9hG4bK7e774e59c2c8666eb983c71e8ce5611f
+Max-Forwards: 70
+Contact: "Takeo" <sip:192.168.1.2:41025;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:41025" 
+to="192.168.1.2:4000" 
+time="1431958436201" 
+isSender="false" 
+transactionId="z9hg4bk7e774e59c2c8666eb983c71e8ce5611f" 
+callId="5507f24c9914003ab0569185b3c15f27@192.168.1.2" 
+firstLine="CANCEL sip:callee@192.168.1.2:4000 SIP/2.0" 
+debugLine="1495" 
+>
+<![CDATA[CANCEL sip:callee@192.168.1.2:4000 SIP/2.0
+Call-ID: 5507f24c9914003ab0569185b3c15f27@192.168.1.2
+CSeq: 1 CANCEL
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=26879823
+To: <sip:callee@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:41025;branch=z9hG4bK7e774e59c2c8666eb983c71e8ce5611f
+Max-Forwards: 70
+Contact: "Takeo" <sip:192.168.1.2:41025;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:41025" 
+to="192.168.1.2:4000" 
+time="1431958440201" 
+isSender="false" 
+transactionId="z9hg4bk7e774e59c2c8666eb983c71e8ce5611f" 
+callId="5507f24c9914003ab0569185b3c15f27@192.168.1.2" 
+firstLine="CANCEL sip:callee@192.168.1.2:4000 SIP/2.0" 
+debugLine="1650" 
+>
+<![CDATA[CANCEL sip:callee@192.168.1.2:4000 SIP/2.0
+Call-ID: 5507f24c9914003ab0569185b3c15f27@192.168.1.2
+CSeq: 1 CANCEL
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=26879823
+To: <sip:callee@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:41025;branch=z9hG4bK7e774e59c2c8666eb983c71e8ce5611f
+Max-Forwards: 70
+Contact: "Takeo" <sip:192.168.1.2:41025;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:41025" 
+to="192.168.1.2:4000" 
+time="1431958444202" 
+isSender="false" 
+transactionId="z9hg4bk7e774e59c2c8666eb983c71e8ce5611f" 
+callId="5507f24c9914003ab0569185b3c15f27@192.168.1.2" 
+firstLine="CANCEL sip:callee@192.168.1.2:4000 SIP/2.0" 
+debugLine="1769" 
+>
+<![CDATA[CANCEL sip:callee@192.168.1.2:4000 SIP/2.0
+Call-ID: 5507f24c9914003ab0569185b3c15f27@192.168.1.2
+CSeq: 1 CANCEL
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=26879823
+To: <sip:callee@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:41025;branch=z9hG4bK7e774e59c2c8666eb983c71e8ce5611f
+Max-Forwards: 70
+Contact: "Takeo" <sip:192.168.1.2:41025;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:33429" 
+to="192.168.1.2:4000" 
+time="1431958903415" 
+isSender="false" 
+transactionId="z9hg4bkfbc341b1979625d762cdcb5c4537906e" 
+callId="0b940f9a3d9d3320d9d90b1d0a213642@192.168.1.2" 
+firstLine="REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0" 
+debugLine="1900" 
+>
+<![CDATA[REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0
+Call-ID: 0b940f9a3d9d3320d9d90b1d0a213642@192.168.1.2
+CSeq: 2 REGISTER
+From: "Takeo" <sip:takeo@192.168.1.2:4000;transport=udp>;tag=20626140
+To: "Takeo" <sip:takeo@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:33429;branch=z9hG4bKfbc341b1979625d762cdcb5c4537906e
+Max-Forwards: 70
+Expires: 0
+Contact: "Takeo" <sip:192.168.1.2:33429;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:33429" 
+time="1431958903473" 
+isSender="true" 
+transactionId="z9hg4bkfbc341b1979625d762cdcb5c4537906e" 
+callId="0b940f9a3d9d3320d9d90b1d0a213642@192.168.1.2" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="1955" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 0b940f9a3d9d3320d9d90b1d0a213642@192.168.1.2
+CSeq: 2 REGISTER
+From: "Takeo" <sip:takeo@192.168.1.2:4000;transport=udp>;tag=20626140
+To: "Takeo" <sip:takeo@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:33429;branch=z9hG4bKfbc341b1979625d762cdcb5c4537906e
+Max-Forwards: 70
+Expires: 0
+Content-Length: 0
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= 192.168.1.2
+javax.sip.STACK_NAME= nist-proxy
+javax.sip.ROUTER_PATH= gov.nist.sip.proxy.router.ProxyRouter
+javax.sip.OUTBOUND_PROXY= null
+javax.sip.RETRANSMISSION_FILTER= on
+-->
+<description
+ logDescription="nist-proxy"
+ name="192.168.1.2" />
+
+<message
+from="192.168.1.2:63839" 
+to="192.168.1.2:4000" 
+time="1431958915590" 
+isSender="false" 
+transactionId="z9hg4bk6ebe24a2df43915f8fc3f664338fe46d" 
+callId="b7048d4906e62ac415979ddaaf7b8804@192.168.1.2" 
+firstLine="REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0" 
+debugLine="2057" 
+>
+<![CDATA[REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0
+Call-ID: b7048d4906e62ac415979ddaaf7b8804@192.168.1.2
+CSeq: 1 REGISTER
+From: "Takeo" <sip:takeo@192.168.1.2:4000;transport=udp>;tag=1915915
+To: "Takeo" <sip:takeo@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:63839;branch=z9hG4bK6ebe24a2df43915f8fc3f664338fe46d
+Max-Forwards: 70
+Expires: 3600
+Contact: "Takeo" <sip:192.168.1.2:63839;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:63839" 
+time="1431958915630" 
+isSender="true" 
+transactionId="z9hg4bk6ebe24a2df43915f8fc3f664338fe46d" 
+callId="b7048d4906e62ac415979ddaaf7b8804@192.168.1.2" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="2120" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: b7048d4906e62ac415979ddaaf7b8804@192.168.1.2
+CSeq: 1 REGISTER
+From: "Takeo" <sip:takeo@192.168.1.2:4000;transport=udp>;tag=1915915
+To: "Takeo" <sip:takeo@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:63839;branch=z9hG4bK6ebe24a2df43915f8fc3f664338fe46d
+Max-Forwards: 70
+Contact: "Takeo" <sip:192.168.1.2:63839;transport=udp>;expires=3600
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:63602" 
+to="192.168.1.2:4000" 
+time="1431958932258" 
+isSender="false" 
+transactionId="z9hg4bk5998593c235c14359d16bcb040138a89" 
+callId="b373055ccba57d2feb202fe44bbb6490@192.168.1.2" 
+firstLine="REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0" 
+debugLine="2222" 
+>
+<![CDATA[REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0
+Call-ID: b373055ccba57d2feb202fe44bbb6490@192.168.1.2
+CSeq: 1 REGISTER
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=347201
+To: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:63602;branch=z9hG4bK5998593c235c14359d16bcb040138a89
+Max-Forwards: 70
+Expires: 3600
+Contact: "Takeo" <sip:192.168.1.2:63602;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:63602" 
+time="1431958932296" 
+isSender="true" 
+transactionId="z9hg4bk5998593c235c14359d16bcb040138a89" 
+callId="b373055ccba57d2feb202fe44bbb6490@192.168.1.2" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="2285" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: b373055ccba57d2feb202fe44bbb6490@192.168.1.2
+CSeq: 1 REGISTER
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=347201
+To: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:63602;branch=z9hG4bK5998593c235c14359d16bcb040138a89
+Max-Forwards: 70
+Contact: "Takeo" <sip:192.168.1.2:41025;transport=udp>;expires=3600,"Takeo" <sip:192.168.1.2:63602;transport=udp>;expires=3600
+Content-Length: 0
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= 192.168.1.2
+javax.sip.STACK_NAME= nist-proxy
+javax.sip.ROUTER_PATH= gov.nist.sip.proxy.router.ProxyRouter
+javax.sip.OUTBOUND_PROXY= null
+javax.sip.RETRANSMISSION_FILTER= on
+-->
+<description
+ logDescription="nist-proxy"
+ name="192.168.1.2" />
+
+<message
+from="192.168.1.2:5060" 
+to="192.168.1.2:4000" 
+time="1431958985404" 
+isSender="false" 
+transactionId="z9hg4bk0185a6985c788cb3ef600dd22218bb83" 
+callId="5ff12459d83e78eafb15201377d720ed@192.168.1.2" 
+firstLine="REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0" 
+debugLine="102" 
+>
+<![CDATA[REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0
+Call-ID: 5ff12459d83e78eafb15201377d720ed@192.168.1.2
+CSeq: 1 REGISTER
+From: "Takeo" <sip:callee@192.168.1.2:4000;transport=udp>;tag=29347182
+To: "Takeo" <sip:callee@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:5060;branch=z9hG4bK0185a6985c788cb3ef600dd22218bb83
+Max-Forwards: 70
+Expires: 3600
+Contact: "Takeo" <sip:192.168.1.2:5060;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:5060" 
+time="1431958985553" 
+isSender="true" 
+transactionId="z9hg4bk0185a6985c788cb3ef600dd22218bb83" 
+callId="5ff12459d83e78eafb15201377d720ed@192.168.1.2" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="157" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 5ff12459d83e78eafb15201377d720ed@192.168.1.2
+CSeq: 1 REGISTER
+From: "Takeo" <sip:callee@192.168.1.2:4000;transport=udp>;tag=29347182
+To: "Takeo" <sip:callee@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:5060;branch=z9hG4bK0185a6985c788cb3ef600dd22218bb83
+Max-Forwards: 70
+Contact: "Takeo" <sip:192.168.1.2:5060;transport=udp>;expires=3600
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:8806" 
+to="192.168.1.2:4000" 
+time="1431958993785" 
+isSender="false" 
+transactionId="z9hg4bk63b4be0db162527c082a89723a32a751" 
+callId="b475e746b07ec875786978d014aad744@192.168.1.2" 
+firstLine="REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0" 
+debugLine="259" 
+>
+<![CDATA[REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0
+Call-ID: b475e746b07ec875786978d014aad744@192.168.1.2
+CSeq: 1 REGISTER
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=33197940
+To: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:8806;branch=z9hG4bK63b4be0db162527c082a89723a32a751
+Max-Forwards: 70
+Expires: 3600
+Contact: "Takeo" <sip:192.168.1.2:8806;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:8806" 
+time="1431958993824" 
+isSender="true" 
+transactionId="z9hg4bk63b4be0db162527c082a89723a32a751" 
+callId="b475e746b07ec875786978d014aad744@192.168.1.2" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="322" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: b475e746b07ec875786978d014aad744@192.168.1.2
+CSeq: 1 REGISTER
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=33197940
+To: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:8806;branch=z9hG4bK63b4be0db162527c082a89723a32a751
+Max-Forwards: 70
+Contact: "Takeo" <sip:192.168.1.2:8806;transport=udp>;expires=3600
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:30885" 
+to="192.168.1.2:4000" 
+time="1431959005809" 
+isSender="false" 
+transactionId="z9hg4bkc0e53bb320876c6d8f4a573c00bc8d12" 
+callId="70ca9ccf90393b16df0f7d1f22e6ad3d@192.168.1.2" 
+firstLine="REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0" 
+debugLine="428" 
+>
+<![CDATA[REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0
+Call-ID: 70ca9ccf90393b16df0f7d1f22e6ad3d@192.168.1.2
+CSeq: 1 REGISTER
+From: "Takeo" <sip:takeo@192.168.1.2:4000;transport=udp>;tag=10352157
+To: "Takeo" <sip:takeo@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:30885;branch=z9hG4bKc0e53bb320876c6d8f4a573c00bc8d12
+Max-Forwards: 70
+Expires: 3600
+Contact: "Takeo" <sip:192.168.1.2:30885;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:30885" 
+time="1431959005848" 
+isSender="true" 
+transactionId="z9hg4bkc0e53bb320876c6d8f4a573c00bc8d12" 
+callId="70ca9ccf90393b16df0f7d1f22e6ad3d@192.168.1.2" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="487" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 70ca9ccf90393b16df0f7d1f22e6ad3d@192.168.1.2
+CSeq: 1 REGISTER
+From: "Takeo" <sip:takeo@192.168.1.2:4000;transport=udp>;tag=10352157
+To: "Takeo" <sip:takeo@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:30885;branch=z9hG4bKc0e53bb320876c6d8f4a573c00bc8d12
+Max-Forwards: 70
+Contact: "Takeo" <sip:192.168.1.2:30885;transport=udp>;expires=3600
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:5060" 
+to="192.168.1.2:4000" 
+time="1431959019838" 
+isSender="false" 
+transactionId="z9hg4bkcd8c7163466dfe3c8f5f0b9052ed2d2a" 
+callId="07bdb0b2ded35230a7a0dcacc0e1056a@192.168.1.2" 
+firstLine="MESSAGE sip:192.168.1.2:4000@192.168.1.2:4000 SIP/2.0" 
+debugLine="589" 
+>
+<![CDATA[MESSAGE sip:192.168.1.2:4000@192.168.1.2:4000 SIP/2.0
+Call-ID: 07bdb0b2ded35230a7a0dcacc0e1056a@192.168.1.2
+CSeq: 1 MESSAGE
+From: "Takeo" <sip:callee@192.168.1.2:4000;transport=udp>;tag=29347182
+To: <sip:192.168.1.2:4000@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:5060;branch=z9hG4bKcd8c7163466dfe3c8f5f0b9052ed2d2a
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:5060" 
+time="1431959019872" 
+isSender="true" 
+transactionId="z9hg4bkcd8c7163466dfe3c8f5f0b9052ed2d2a" 
+callId="07bdb0b2ded35230a7a0dcacc0e1056a@192.168.1.2" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="651" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 07bdb0b2ded35230a7a0dcacc0e1056a@192.168.1.2
+CSeq: 1 MESSAGE
+From: "Takeo" <sip:callee@192.168.1.2:4000;transport=udp>;tag=29347182
+To: <sip:192.168.1.2:4000@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:5060;branch=z9hG4bKcd8c7163466dfe3c8f5f0b9052ed2d2a
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:8806" 
+to="192.168.1.2:4000" 
+time="1431959025871" 
+isSender="false" 
+transactionId="z9hg4bk33ca808fd21d36369c406c773e5c7751" 
+callId="77c6a98a51b7378439c322a58424f7b6@192.168.1.2" 
+firstLine="INVITE sip:callee@192.168.1.2:4000 SIP/2.0" 
+debugLine="760" 
+>
+<![CDATA[INVITE sip:callee@192.168.1.2:4000 SIP/2.0
+Call-ID: 77c6a98a51b7378439c322a58424f7b6@192.168.1.2
+CSeq: 1 INVITE
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=33197940
+To: <sip:callee@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:8806;branch=z9hG4bK33ca808fd21d36369c406c773e5c7751
+Max-Forwards: 70
+Contact: "Takeo" <sip:192.168.1.2:8806;transport=udp>
+Content-Type: application/sdp
+Content-Length: 147
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:8806" 
+time="1431959025903" 
+isSender="true" 
+transactionId="z9hg4bk33ca808fd21d36369c406c773e5c7751" 
+callId="77c6a98a51b7378439c322a58424f7b6@192.168.1.2" 
+firstLine="SIP/2.0 181 Call is being forwarded" 
+debugLine="830" 
+>
+<![CDATA[SIP/2.0 181 Call is being forwarded
+Call-ID: 77c6a98a51b7378439c322a58424f7b6@192.168.1.2
+CSeq: 1 INVITE
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=33197940
+To: <sip:callee@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:8806;branch=z9hG4bK33ca808fd21d36369c406c773e5c7751
+Max-Forwards: 70
+Fwd: <sip:takeo@192.168.1.2:4000>
+Content-Type: text/plain
+Content-Length: 147
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:8806" 
+to="192.168.1.2:4000" 
+time="1431959026709" 
+isSender="false" 
+transactionId="z9hg4bkcdc3b9635790cf56ccfd24f1269ded61" 
+callId="b913fdda5a8baa9b1f987592013821a7@192.168.1.2" 
+firstLine="INVITE sip:takeo@192.168.1.2:4000 SIP/2.0" 
+debugLine="941" 
+>
+<![CDATA[INVITE sip:takeo@192.168.1.2:4000 SIP/2.0
+Call-ID: b913fdda5a8baa9b1f987592013821a7@192.168.1.2
+CSeq: 1 INVITE
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=33197940
+To: <sip:takeo@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:8806;branch=z9hG4bKcdc3b9635790cf56ccfd24f1269ded61
+Max-Forwards: 70
+Contact: "Takeo" <sip:192.168.1.2:8806;transport=udp>
+Content-Type: application/sdp
+Content-Length: 147
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:30885" 
+time="1431959026816" 
+isSender="true" 
+transactionId="z9hg4bkcc1364d31e3d4f1ae33e27b48c0d4d79" 
+callId="b913fdda5a8baa9b1f987592013821a7@192.168.1.2" 
+firstLine="INVITE sip:192.168.1.2:30885 SIP/2.0" 
+debugLine="1107" 
+>
+<![CDATA[INVITE sip:192.168.1.2:30885 SIP/2.0
+Call-ID: b913fdda5a8baa9b1f987592013821a7@192.168.1.2
+CSeq: 1 INVITE
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=33197940
+To: <sip:takeo@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:4000;branch=z9hG4bKcc1364d31e3d4f1ae33e27b48c0d4d79,SIP/2.0/UDP 192.168.1.2:8806;branch=z9hG4bKcdc3b9635790cf56ccfd24f1269ded61
+Max-Forwards: 69
+Contact: "Takeo" <sip:192.168.1.2:8806;transport=udp>
+Content-Type: application/sdp
+Record-Route: <sip:192.168.1.2:4000>
+Content-Length: 147
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:8806" 
+time="1431959026941" 
+isSender="true" 
+transactionId="z9hg4bkcdc3b9635790cf56ccfd24f1269ded61" 
+callId="b913fdda5a8baa9b1f987592013821a7@192.168.1.2" 
+firstLine="SIP/2.0 100 Trying" 
+debugLine="1177" 
+>
+<![CDATA[SIP/2.0 100 Trying
+Call-ID: b913fdda5a8baa9b1f987592013821a7@192.168.1.2
+CSeq: 1 INVITE
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=33197940
+To: <sip:takeo@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:8806;branch=z9hG4bKcdc3b9635790cf56ccfd24f1269ded61
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:30885" 
+to="192.168.1.2:4000" 
+time="1431959027037" 
+isSender="false" 
+statusMessage="normal processing" 
+transactionId="z9hg4bkcc1364d31e3d4f1ae33e27b48c0d4d79" 
+firstLine="SIP/2.0 100 Trying" 
+callId="b913fdda5a8baa9b1f987592013821a7@192.168.1.2" 
+debugLine="1228" 
+>
+<![CDATA[SIP/2.0 100 Trying
+Call-ID: b913fdda5a8baa9b1f987592013821a7@192.168.1.2
+CSeq: 1 INVITE
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=33197940
+To: <sip:takeo@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:4000;branch=z9hG4bKcc1364d31e3d4f1ae33e27b48c0d4d79,SIP/2.0/UDP 192.168.1.2:8806;branch=z9hG4bKcdc3b9635790cf56ccfd24f1269ded61
+Max-Forwards: 69
+Record-Route: <sip:192.168.1.2:4000>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:30885" 
+to="192.168.1.2:4000" 
+time="1431959027172" 
+isSender="false" 
+statusMessage="normal processing" 
+transactionId="z9hg4bkcc1364d31e3d4f1ae33e27b48c0d4d79" 
+firstLine="SIP/2.0 180 Ringing" 
+callId="b913fdda5a8baa9b1f987592013821a7@192.168.1.2" 
+debugLine="1345" 
+>
+<![CDATA[SIP/2.0 180 Ringing
+Call-ID: b913fdda5a8baa9b1f987592013821a7@192.168.1.2
+CSeq: 1 INVITE
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=33197940
+To: <sip:takeo@192.168.1.2:4000>;tag=10086040
+Via: SIP/2.0/UDP 192.168.1.2:4000;branch=z9hG4bKcc1364d31e3d4f1ae33e27b48c0d4d79,SIP/2.0/UDP 192.168.1.2:8806;branch=z9hG4bKcdc3b9635790cf56ccfd24f1269ded61
+Max-Forwards: 69
+Record-Route: <sip:192.168.1.2:4000>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:8806" 
+time="1431959027176" 
+isSender="true" 
+transactionId="z9hg4bkcdc3b9635790cf56ccfd24f1269ded61" 
+callId="b913fdda5a8baa9b1f987592013821a7@192.168.1.2" 
+firstLine="SIP/2.0 180 Ringing" 
+debugLine="1454" 
+>
+<![CDATA[SIP/2.0 180 Ringing
+Call-ID: b913fdda5a8baa9b1f987592013821a7@192.168.1.2
+CSeq: 1 INVITE
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=33197940
+To: <sip:takeo@192.168.1.2:4000>;tag=10086040
+Via: SIP/2.0/UDP 192.168.1.2:8806;branch=z9hG4bKcdc3b9635790cf56ccfd24f1269ded61
+Max-Forwards: 69
+Record-Route: <sip:192.168.1.2:4000>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:30885" 
+to="192.168.1.2:4000" 
+time="1431959032472" 
+isSender="false" 
+statusMessage="normal processing" 
+transactionId="z9hg4bkcc1364d31e3d4f1ae33e27b48c0d4d79" 
+firstLine="SIP/2.0 200 OK" 
+callId="b913fdda5a8baa9b1f987592013821a7@192.168.1.2" 
+debugLine="1574" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: b913fdda5a8baa9b1f987592013821a7@192.168.1.2
+CSeq: 1 INVITE
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=33197940
+To: <sip:takeo@192.168.1.2:4000>;tag=10086040
+Via: SIP/2.0/UDP 192.168.1.2:4000;branch=z9hG4bKcc1364d31e3d4f1ae33e27b48c0d4d79,SIP/2.0/UDP 192.168.1.2:8806;branch=z9hG4bKcdc3b9635790cf56ccfd24f1269ded61
+Max-Forwards: 69
+Record-Route: <sip:192.168.1.2:4000>
+Content-Type: application/sdp
+Contact: "Takeo" <sip:192.168.1.2:30885;transport=udp>
+Content-Length: 147
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:8806" 
+time="1431959032477" 
+isSender="true" 
+transactionId="z9hg4bkcdc3b9635790cf56ccfd24f1269ded61" 
+callId="b913fdda5a8baa9b1f987592013821a7@192.168.1.2" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="1726" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: b913fdda5a8baa9b1f987592013821a7@192.168.1.2
+CSeq: 1 INVITE
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=33197940
+To: <sip:takeo@192.168.1.2:4000>;tag=10086040
+Via: SIP/2.0/UDP 192.168.1.2:8806;branch=z9hG4bKcdc3b9635790cf56ccfd24f1269ded61
+Max-Forwards: 69
+Record-Route: <sip:192.168.1.2:4000>
+Content-Type: application/sdp
+Contact: "Takeo" <sip:192.168.1.2:30885;transport=udp>
+Content-Length: 147
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:8806" 
+to="192.168.1.2:4000" 
+time="1431959032490" 
+isSender="false" 
+transactionId="-2105455790" 
+callId="b913fdda5a8baa9b1f987592013821a7@192.168.1.2" 
+firstLine="ACK sip:192.168.1.2:4000;transport=udp SIP/2.0" 
+debugLine="1852" 
+>
+<![CDATA[ACK sip:192.168.1.2:4000;transport=udp SIP/2.0
+Call-ID: b913fdda5a8baa9b1f987592013821a7@192.168.1.2
+CSeq: 1 ACK
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=33197940
+To: <sip:takeo@192.168.1.2:4000>;tag=10086040
+Via: SIP/2.0/UDP 192.168.1.2:8806;branch=3139322e3136382e312e323a3838303
+Max-Forwards: 70
+Route: "Takeo" <sip:192.168.1.2:30885;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:30885" 
+time="1431959032584" 
+isSender="true" 
+transactionId="z9hg4bk6df4a752917b010e78f6897e549ae3bf" 
+callId="b913fdda5a8baa9b1f987592013821a7@192.168.1.2" 
+firstLine="ACK sip:192.168.1.2:30885 SIP/2.0" 
+debugLine="1967" 
+>
+<![CDATA[ACK sip:192.168.1.2:30885 SIP/2.0
+Call-ID: b913fdda5a8baa9b1f987592013821a7@192.168.1.2
+CSeq: 1 ACK
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=33197940
+To: <sip:takeo@192.168.1.2:4000>;tag=10086040
+Via: SIP/2.0/UDP 192.168.1.2:4000;branch=z9hG4bK6df4a752917b010e78f6897e549ae3bf,SIP/2.0/UDP 192.168.1.2:8806;branch=3139322e3136382e312e323a3838303
+Max-Forwards: 69
+Route: "Takeo" <sip:192.168.1.2:30885;transport=udp>
+Record-Route: <sip:192.168.1.2:4000>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:8806" 
+to="192.168.1.2:4000" 
+time="1431959070417" 
+isSender="false" 
+transactionId="z9hg4bk7b34ae18ef15d7cbd12b807730a86f6c" 
+callId="b913fdda5a8baa9b1f987592013821a7@192.168.1.2" 
+firstLine="BYE sip:192.168.1.2:4000;transport=udp SIP/2.0" 
+debugLine="2122" 
+>
+<![CDATA[BYE sip:192.168.1.2:4000;transport=udp SIP/2.0
+Call-ID: b913fdda5a8baa9b1f987592013821a7@192.168.1.2
+CSeq: 2 BYE
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=33197940
+To: <sip:takeo@192.168.1.2:4000>;tag=10086040
+Via: SIP/2.0/UDP 192.168.1.2:8806;branch=z9hG4bK7b34ae18ef15d7cbd12b807730a86f6c
+Max-Forwards: 70
+Route: "Takeo" <sip:192.168.1.2:30885;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:8806" 
+to="192.168.1.2:4000" 
+time="1431959070422" 
+isSender="false" 
+transactionId="z9hg4bk7c8793fdbe8226946b8c855164fd0b50" 
+callId="b475e746b07ec875786978d014aad744@192.168.1.2" 
+firstLine="REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0" 
+debugLine="2226" 
+>
+<![CDATA[REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0
+Call-ID: b475e746b07ec875786978d014aad744@192.168.1.2
+CSeq: 2 REGISTER
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=33197940
+To: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:8806;branch=z9hG4bK7c8793fdbe8226946b8c855164fd0b50
+Max-Forwards: 70
+Expires: 0
+Contact: "Takeo" <sip:192.168.1.2:8806;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:30885" 
+time="1431959070455" 
+isSender="true" 
+transactionId="z9hg4bk02cd6ace18201c05fe61d19ccce80f84" 
+callId="b913fdda5a8baa9b1f987592013821a7@192.168.1.2" 
+firstLine="BYE sip:192.168.1.2:4000;transport=udp SIP/2.0" 
+debugLine="2370" 
+>
+<![CDATA[BYE sip:192.168.1.2:4000;transport=udp SIP/2.0
+Call-ID: b913fdda5a8baa9b1f987592013821a7@192.168.1.2
+CSeq: 2 BYE
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=33197940
+To: <sip:takeo@192.168.1.2:4000>;tag=10086040
+Via: SIP/2.0/UDP 192.168.1.2:4000;branch=z9hG4bK02cd6ace18201c05fe61d19ccce80f84,SIP/2.0/UDP 192.168.1.2:8806;branch=z9hG4bK7b34ae18ef15d7cbd12b807730a86f6c
+Max-Forwards: 70
+Route: "Takeo" <sip:192.168.1.2:30885;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:8806" 
+time="1431959070515" 
+isSender="true" 
+transactionId="z9hg4bk7c8793fdbe8226946b8c855164fd0b50" 
+callId="b475e746b07ec875786978d014aad744@192.168.1.2" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="2447" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: b475e746b07ec875786978d014aad744@192.168.1.2
+CSeq: 2 REGISTER
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=33197940
+To: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:8806;branch=z9hG4bK7c8793fdbe8226946b8c855164fd0b50
+Max-Forwards: 70
+Expires: 0
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:30885" 
+time="1431959070952" 
+isSender="true" 
+transactionId="z9hg4bk02cd6ace18201c05fe61d19ccce80f84" 
+callId="b913fdda5a8baa9b1f987592013821a7@192.168.1.2" 
+firstLine="BYE sip:192.168.1.2:4000;transport=udp SIP/2.0" 
+debugLine="2504" 
+>
+<![CDATA[BYE sip:192.168.1.2:4000;transport=udp SIP/2.0
+Call-ID: b913fdda5a8baa9b1f987592013821a7@192.168.1.2
+CSeq: 2 BYE
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=33197940
+To: <sip:takeo@192.168.1.2:4000>;tag=10086040
+Via: SIP/2.0/UDP 192.168.1.2:4000;branch=z9hG4bK02cd6ace18201c05fe61d19ccce80f84,SIP/2.0/UDP 192.168.1.2:8806;branch=z9hG4bK7b34ae18ef15d7cbd12b807730a86f6c
+Max-Forwards: 70
+Route: "Takeo" <sip:192.168.1.2:30885;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:5060" 
+to="192.168.1.2:4000" 
+time="1431959071437" 
+isSender="false" 
+transactionId="z9hg4bk1d0932f26a5174789605c113c3d6674c" 
+callId="5ff12459d83e78eafb15201377d720ed@192.168.1.2" 
+firstLine="REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0" 
+debugLine="2608" 
+>
+<![CDATA[REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0
+Call-ID: 5ff12459d83e78eafb15201377d720ed@192.168.1.2
+CSeq: 2 REGISTER
+From: "Takeo" <sip:callee@192.168.1.2:4000;transport=udp>;tag=29347182
+To: "Takeo" <sip:callee@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:5060;branch=z9hG4bK1d0932f26a5174789605c113c3d6674c
+Max-Forwards: 70
+Expires: 0
+Contact: "Takeo" <sip:192.168.1.2:5060;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:5060" 
+time="1431959071487" 
+isSender="true" 
+transactionId="z9hg4bk1d0932f26a5174789605c113c3d6674c" 
+callId="5ff12459d83e78eafb15201377d720ed@192.168.1.2" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="2668" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 5ff12459d83e78eafb15201377d720ed@192.168.1.2
+CSeq: 2 REGISTER
+From: "Takeo" <sip:callee@192.168.1.2:4000;transport=udp>;tag=29347182
+To: "Takeo" <sip:callee@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:5060;branch=z9hG4bK1d0932f26a5174789605c113c3d6674c
+Max-Forwards: 70
+Expires: 0
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:30885" 
+time="1431959071952" 
+isSender="true" 
+transactionId="z9hg4bk02cd6ace18201c05fe61d19ccce80f84" 
+callId="b913fdda5a8baa9b1f987592013821a7@192.168.1.2" 
+firstLine="BYE sip:192.168.1.2:4000;transport=udp SIP/2.0" 
+debugLine="2725" 
+>
+<![CDATA[BYE sip:192.168.1.2:4000;transport=udp SIP/2.0
+Call-ID: b913fdda5a8baa9b1f987592013821a7@192.168.1.2
+CSeq: 2 BYE
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=33197940
+To: <sip:takeo@192.168.1.2:4000>;tag=10086040
+Via: SIP/2.0/UDP 192.168.1.2:4000;branch=z9hG4bK02cd6ace18201c05fe61d19ccce80f84,SIP/2.0/UDP 192.168.1.2:8806;branch=z9hG4bK7b34ae18ef15d7cbd12b807730a86f6c
+Max-Forwards: 70
+Route: "Takeo" <sip:192.168.1.2:30885;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:30885" 
+time="1431959073952" 
+isSender="true" 
+transactionId="z9hg4bk02cd6ace18201c05fe61d19ccce80f84" 
+callId="b913fdda5a8baa9b1f987592013821a7@192.168.1.2" 
+firstLine="BYE sip:192.168.1.2:4000;transport=udp SIP/2.0" 
+debugLine="2783" 
+>
+<![CDATA[BYE sip:192.168.1.2:4000;transport=udp SIP/2.0
+Call-ID: b913fdda5a8baa9b1f987592013821a7@192.168.1.2
+CSeq: 2 BYE
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=33197940
+To: <sip:takeo@192.168.1.2:4000>;tag=10086040
+Via: SIP/2.0/UDP 192.168.1.2:4000;branch=z9hG4bK02cd6ace18201c05fe61d19ccce80f84,SIP/2.0/UDP 192.168.1.2:8806;branch=z9hG4bK7b34ae18ef15d7cbd12b807730a86f6c
+Max-Forwards: 70
+Route: "Takeo" <sip:192.168.1.2:30885;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:30885" 
+to="192.168.1.2:4000" 
+time="1431959074545" 
+isSender="false" 
+transactionId="z9hg4bkb95371b9ba446cff67a72063d97c50b0" 
+callId="70ca9ccf90393b16df0f7d1f22e6ad3d@192.168.1.2" 
+firstLine="REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0" 
+debugLine="2884" 
+>
+<![CDATA[REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0
+Call-ID: 70ca9ccf90393b16df0f7d1f22e6ad3d@192.168.1.2
+CSeq: 2 REGISTER
+From: "Takeo" <sip:takeo@192.168.1.2:4000;transport=udp>;tag=10352157
+To: "Takeo" <sip:takeo@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:30885;branch=z9hG4bKb95371b9ba446cff67a72063d97c50b0
+Max-Forwards: 70
+Expires: 0
+Contact: "Takeo" <sip:192.168.1.2:30885;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:30885" 
+time="1431959074583" 
+isSender="true" 
+transactionId="z9hg4bkb95371b9ba446cff67a72063d97c50b0" 
+callId="70ca9ccf90393b16df0f7d1f22e6ad3d@192.168.1.2" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="2947" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 70ca9ccf90393b16df0f7d1f22e6ad3d@192.168.1.2
+CSeq: 2 REGISTER
+From: "Takeo" <sip:takeo@192.168.1.2:4000;transport=udp>;tag=10352157
+To: "Takeo" <sip:takeo@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:30885;branch=z9hG4bKb95371b9ba446cff67a72063d97c50b0
+Max-Forwards: 70
+Expires: 0
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:30885" 
+time="1431959077955" 
+isSender="true" 
+transactionId="z9hg4bk02cd6ace18201c05fe61d19ccce80f84" 
+callId="b913fdda5a8baa9b1f987592013821a7@192.168.1.2" 
+firstLine="BYE sip:192.168.1.2:4000;transport=udp SIP/2.0" 
+debugLine="3010" 
+>
+<![CDATA[BYE sip:192.168.1.2:4000;transport=udp SIP/2.0
+Call-ID: b913fdda5a8baa9b1f987592013821a7@192.168.1.2
+CSeq: 2 BYE
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=33197940
+To: <sip:takeo@192.168.1.2:4000>;tag=10086040
+Via: SIP/2.0/UDP 192.168.1.2:4000;branch=z9hG4bK02cd6ace18201c05fe61d19ccce80f84,SIP/2.0/UDP 192.168.1.2:8806;branch=z9hG4bK7b34ae18ef15d7cbd12b807730a86f6c
+Max-Forwards: 70
+Route: "Takeo" <sip:192.168.1.2:30885;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:30885" 
+time="1431959081955" 
+isSender="true" 
+transactionId="z9hg4bk02cd6ace18201c05fe61d19ccce80f84" 
+callId="b913fdda5a8baa9b1f987592013821a7@192.168.1.2" 
+firstLine="BYE sip:192.168.1.2:4000;transport=udp SIP/2.0" 
+debugLine="3072" 
+>
+<![CDATA[BYE sip:192.168.1.2:4000;transport=udp SIP/2.0
+Call-ID: b913fdda5a8baa9b1f987592013821a7@192.168.1.2
+CSeq: 2 BYE
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=33197940
+To: <sip:takeo@192.168.1.2:4000>;tag=10086040
+Via: SIP/2.0/UDP 192.168.1.2:4000;branch=z9hG4bK02cd6ace18201c05fe61d19ccce80f84,SIP/2.0/UDP 192.168.1.2:8806;branch=z9hG4bK7b34ae18ef15d7cbd12b807730a86f6c
+Max-Forwards: 70
+Route: "Takeo" <sip:192.168.1.2:30885;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:30885" 
+time="1431959085955" 
+isSender="true" 
+transactionId="z9hg4bk02cd6ace18201c05fe61d19ccce80f84" 
+callId="b913fdda5a8baa9b1f987592013821a7@192.168.1.2" 
+firstLine="BYE sip:192.168.1.2:4000;transport=udp SIP/2.0" 
+debugLine="3134" 
+>
+<![CDATA[BYE sip:192.168.1.2:4000;transport=udp SIP/2.0
+Call-ID: b913fdda5a8baa9b1f987592013821a7@192.168.1.2
+CSeq: 2 BYE
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=33197940
+To: <sip:takeo@192.168.1.2:4000>;tag=10086040
+Via: SIP/2.0/UDP 192.168.1.2:4000;branch=z9hG4bK02cd6ace18201c05fe61d19ccce80f84,SIP/2.0/UDP 192.168.1.2:8806;branch=z9hG4bK7b34ae18ef15d7cbd12b807730a86f6c
+Max-Forwards: 70
+Route: "Takeo" <sip:192.168.1.2:30885;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:30885" 
+time="1431959089955" 
+isSender="true" 
+transactionId="z9hg4bk02cd6ace18201c05fe61d19ccce80f84" 
+callId="b913fdda5a8baa9b1f987592013821a7@192.168.1.2" 
+firstLine="BYE sip:192.168.1.2:4000;transport=udp SIP/2.0" 
+debugLine="3196" 
+>
+<![CDATA[BYE sip:192.168.1.2:4000;transport=udp SIP/2.0
+Call-ID: b913fdda5a8baa9b1f987592013821a7@192.168.1.2
+CSeq: 2 BYE
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=33197940
+To: <sip:takeo@192.168.1.2:4000>;tag=10086040
+Via: SIP/2.0/UDP 192.168.1.2:4000;branch=z9hG4bK02cd6ace18201c05fe61d19ccce80f84,SIP/2.0/UDP 192.168.1.2:8806;branch=z9hG4bK7b34ae18ef15d7cbd12b807730a86f6c
+Max-Forwards: 70
+Route: "Takeo" <sip:192.168.1.2:30885;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:30885" 
+time="1431959093957" 
+isSender="true" 
+transactionId="z9hg4bk02cd6ace18201c05fe61d19ccce80f84" 
+callId="b913fdda5a8baa9b1f987592013821a7@192.168.1.2" 
+firstLine="BYE sip:192.168.1.2:4000;transport=udp SIP/2.0" 
+debugLine="3258" 
+>
+<![CDATA[BYE sip:192.168.1.2:4000;transport=udp SIP/2.0
+Call-ID: b913fdda5a8baa9b1f987592013821a7@192.168.1.2
+CSeq: 2 BYE
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=33197940
+To: <sip:takeo@192.168.1.2:4000>;tag=10086040
+Via: SIP/2.0/UDP 192.168.1.2:4000;branch=z9hG4bK02cd6ace18201c05fe61d19ccce80f84,SIP/2.0/UDP 192.168.1.2:8806;branch=z9hG4bK7b34ae18ef15d7cbd12b807730a86f6c
+Max-Forwards: 70
+Route: "Takeo" <sip:192.168.1.2:30885;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:30885" 
+time="1431959097969" 
+isSender="true" 
+transactionId="z9hg4bk02cd6ace18201c05fe61d19ccce80f84" 
+callId="b913fdda5a8baa9b1f987592013821a7@192.168.1.2" 
+firstLine="BYE sip:192.168.1.2:4000;transport=udp SIP/2.0" 
+debugLine="3320" 
+>
+<![CDATA[BYE sip:192.168.1.2:4000;transport=udp SIP/2.0
+Call-ID: b913fdda5a8baa9b1f987592013821a7@192.168.1.2
+CSeq: 2 BYE
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=33197940
+To: <sip:takeo@192.168.1.2:4000>;tag=10086040
+Via: SIP/2.0/UDP 192.168.1.2:4000;branch=z9hG4bK02cd6ace18201c05fe61d19ccce80f84,SIP/2.0/UDP 192.168.1.2:8806;branch=z9hG4bK7b34ae18ef15d7cbd12b807730a86f6c
+Max-Forwards: 70
+Route: "Takeo" <sip:192.168.1.2:30885;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:30885" 
+time="1431959101969" 
+isSender="true" 
+transactionId="z9hg4bk02cd6ace18201c05fe61d19ccce80f84" 
+callId="b913fdda5a8baa9b1f987592013821a7@192.168.1.2" 
+firstLine="BYE sip:192.168.1.2:4000;transport=udp SIP/2.0" 
+debugLine="3382" 
+>
+<![CDATA[BYE sip:192.168.1.2:4000;transport=udp SIP/2.0
+Call-ID: b913fdda5a8baa9b1f987592013821a7@192.168.1.2
+CSeq: 2 BYE
+From: "Takeo" <sip:caller@192.168.1.2:4000;transport=udp>;tag=33197940
+To: <sip:takeo@192.168.1.2:4000>;tag=10086040
+Via: SIP/2.0/UDP 192.168.1.2:4000;branch=z9hG4bK02cd6ace18201c05fe61d19ccce80f84,SIP/2.0/UDP 192.168.1.2:8806;branch=z9hG4bK7b34ae18ef15d7cbd12b807730a86f6c
+Max-Forwards: 70
+Route: "Takeo" <sip:192.168.1.2:30885;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+

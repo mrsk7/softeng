@@ -210,7 +210,7 @@ public class Proxy implements SipListener  {
 	            }
 	    	    response = messageFactory.createResponse(Response.CALL_IS_BEING_FORWARDED, cr);
 	    	    
-	    	    Header newToHeader = headerFactory.createHeader("T","<"+RequestURI+">");
+	    	    Header newToHeader = headerFactory.createHeader("Fwd","<"+RequestURI+">");
 	            response.addHeader(newToHeader);
 	            
 	            String sdpData = new String(request.getRawContent());
