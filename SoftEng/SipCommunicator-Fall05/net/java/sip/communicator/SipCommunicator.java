@@ -860,9 +860,22 @@ public class SipCommunicator
                                              defaultValues.getPassword());
 
             UserCredentials credentials = new UserCredentials();
+            if (guiManager.registerOrSignup() == 0) {
+            	System.out.println("LOGIN");
+            	credentials.setUserName(guiManager.getAuthenticationUserName());
+                credentials.setPassword(guiManager.getAuthenticationPassword());
+                credentials.setFlag(0);
 
-            credentials.setUserName(guiManager.getAuthenticationUserName());
-            credentials.setPassword(guiManager.getAuthenticationPassword());
+            }
+            else if(guiManager.registerOrSignup() == 1) {
+            	System.out.println("SIGNUP");
+            	credentials.setFirstLastName(guiManager.getAuthenticationFirstName(), guiManager.getAuthenticationLastName());
+            	 credentials.setUserName(guiManager.getAuthenticationUserName());
+                 credentials.setPassword(guiManager.getAuthenticationPassword());
+                 credentials.setFlag(1);
+            }
+            else System.out.println("ERROR");
+            
 
             return credentials;
         }

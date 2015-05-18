@@ -77,10 +77,13 @@ public class AuthenticationSplash
     extends JDialog
 {
     String userName = null;
+    String firstName = null;
+    String lastName = null;
     char[] password = null;
     JTextField userNameTextField = null;
     JLabel     realmValueLabel = null;
     JPasswordField passwordTextField = null;
+    int flag = -1;
 
     /**
      * Resource bundle with default locale
@@ -112,11 +115,15 @@ public class AuthenticationSplash
      * not be internationalized.
      */
     private String CMD_LOGIN = "cmd.login" /*NOI18N*/;
+    private String CMD_SIGNUP = "cmd.signup";
 
     // Components we need to manipulate after creation
     private JButton loginButton = null;
+    private JButton signupButton = null;
     private JButton cancelButton = null;
     private JButton helpButton = null;
+    private Frame myparent = null;
+    private RegistrationSplash reg = null;
 
     /**
      * Creates new form AuthenticationSplash
@@ -128,6 +135,7 @@ public class AuthenticationSplash
         initComponents();
         pack();
         centerWindow();
+        myparent=parent;
     }
 
     /**
@@ -340,6 +348,24 @@ public class AuthenticationSplash
 
         // space
         buttonPanel.add(Box.createRigidArea(new Dimension(5, 0)));
+        
+        JPanel signupPanel = new JPanel();
+        buttonPanel.setLayout(new BoxLayout(buttonPanel, 0));
+        signupButton = new JButton();
+        signupButton.setText("Sign up");
+        signupButton.setActionCommand(CMD_SIGNUP);
+        signupButton.addActionListener(new ActionListener()
+        {
+            public void actionPerformed(ActionEvent event)
+            {
+                dialogDone(event);
+            }
+        });
+        buttonPanel.add(signupButton); 
+        		
+        		
+        		
+        		
 
         cancelButton = new JButton();
         cancelButton.setText("Cancel");
@@ -459,8 +485,19 @@ public class AuthenticationSplash
             System.out.println("your help code here...");
         }
         else if (cmd.equals(CMD_LOGIN)) {
+        	flag = 0;
             userName = userNameTextField.getText();
             password = passwordTextField.getPassword();
+        }
+        //OURS
+        else if (cmd.equals(CMD_SIGNUP)) {
+        	flag = 1;
+        	reg = new RegistrationSplash(myparent,true);
+        	reg.setVisible(true);
+        	userName= reg.userName;
+        	password = reg.password;
+        	firstName = reg.firstName;
+        	lastName = reg.lastName;
         }
         setVisible(false);
         dispose();

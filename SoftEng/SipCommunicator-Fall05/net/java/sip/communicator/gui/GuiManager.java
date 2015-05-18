@@ -737,14 +737,27 @@ public class GuiManager
 
     public String getAuthenticationUserName()
     {
-    	console.debug("2");
         return authenticationSplash.userName;
     }
 
     public char[] getAuthenticationPassword()
     {
-    	console.debug("3");
         return authenticationSplash.password;
+    }
+    
+    public String getAuthenticationFirstName()
+    {
+        return authenticationSplash.firstName;
+    }
+    
+    public String getAuthenticationLastName()
+    {
+        return authenticationSplash.lastName;
+    }
+    
+    public int registerOrSignup() {
+    	if (authenticationSplash.flag == 1) return 1;
+    	else return 0;
     }
 
     /**

@@ -68,7 +68,19 @@ public class UserCredentials
 {
     private String userName = null;
     private char[] password =  null;
+    private int flag = -1;
+    private String firstName = null;
+    private String lastName = null;
 
+    
+    public void setFlag(int flag) {
+    	this.flag = flag;
+    }
+    
+    public int getFlag() {
+    	return this.flag;
+    }
+    
     /**
      * Sets the user name.
      * @param userName The user name to set.
@@ -86,7 +98,17 @@ public class UserCredentials
     {
         return this.userName;
     }
+    
+    public String getFirstName()
+    {
+        return this.firstName;
+    }
 
+    public String getLastName()
+    {
+        return this.lastName;
+    }
+    
     /**
      * Sets the user password.
      *
@@ -97,6 +119,12 @@ public class UserCredentials
         this.password = passwd;
     }
 
+    
+    public void setFirstLastName(String firstName,String lastName) {
+    	this.firstName = firstName;
+    	this.lastName = lastName;
+    }
+    
     /**
      * Returns these credentials' password
      *

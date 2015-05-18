@@ -185,7 +185,6 @@ public class Proxy implements SipListener  {
         	String send= request.getHeader("From").toString().split("<sip:")[1].split("@")[0];
     	    String dest= request.getHeader("To").toString().split("<sip:")[1].split("@")[0];
     	    String newTo = connObj.forwardUser(dest);
-    	    System.out.println(newTo);
         	if (request.getMethod().equals("INVITE") && newTo!=null) {
 	       		//	Change the uri name in INVITE
 //	        	SipURI RequestURI = (SipURI) request.getRequestURI();
@@ -230,10 +229,6 @@ public class Proxy implements SipListener  {
 	            }           		
 	    		return;   		
         	}
-//            if ( request.getMethod().equals(Request.INVITE) && connObj.isForward(send,dest) ){
-//            
-//            	
-//            }
             if (ProxyDebug.debug)
                 ProxyDebug.println
                 ("\n****************************************************"+
@@ -642,6 +637,7 @@ public class Proxy implements SipListener  {
         // EDW
         // EDW
         if (request.getMethod().equals(Request.MESSAGE) ) {
+        	System.out.println("HELLO");
         	processMessage(request, serverTransaction,sipProvider);
         	return;
         }
@@ -1369,7 +1365,7 @@ public class Proxy implements SipListener  {
     	String msg = new String(request.getRawContent());
     	String[] word = msg.split(" ");
     	String toURI = new String(word[1]);
-    	if (word[0].equals("BLOCK") || word[0].equals("FORWARD") || word[0].equals("CHANGE")) {
+    	if (word[0].equals("BLOCK") || word[0].equals("FORWARD") || word[0].equals("CHANGE") || word[0].equals("SIGNUP")) {
     		try{
 	    		MessageFactory messageFactory=this.getMessageFactory();            
 	            Response response=messageFactory.createResponse(Response.OK,request);
@@ -1382,6 +1378,13 @@ public class Proxy implements SipListener  {
 		        }
 		        else if (word[0].equals("FORWARD")){
 		        	connObj.forward(fromURI,toURI) ;
+		        }
+		        else if (word[0].equals("SIGNUP")){
+		        	String[] credentials = word[1].split(":");
+		        	System.out.println(credentials);
+		        	connObj.checkAndSignup(credentials);
+		        	
+		        	
 		        }
 	    	}
     		catch (SipException ex) {

@@ -161,6 +161,7 @@ public class IdentityPage
         namePane.setBackground(nameHelpMessage.getBackground());
         addressPane.setBackground(addressHelpMessage.getBackground());
 
+        
         String displayName = PropertiesDepot.getProperty(DISPLAY_NAME_PROPERTY_NAME);
         String address     = PropertiesDepot.getProperty(PUBLIC_ADDRESS_PROPERTY_NAME);
 

@@ -49,6 +49,39 @@ public class ConnectionObject {
 		return res;
 	}
 	
+	public int checkAndSignup(String[] credentials) {
+		String userName = credentials[0];
+		String firstName = credentials[1];
+		String lastName = credentials[2];
+		String password = credentials[3];
+		Statement s;
+		int res;
+		try {
+			s = con.createStatement();
+
+			s.executeQuery ("SELECT * FROM users "
+					+ "WHERE userName='"+ userName +"'");
+			ResultSet rs = s.getResultSet ();
+			if (rs.next ()) {
+				 s.close();
+				return 0;
+			}
+			
+			s.executeUpdate(" INSERT INTO users (userName,firstName,lastName,password)" +
+					" VALUES " +
+					" ('" + userName + "', '" + firstName + "', '" + lastName + "', '" + password + "')"
+					);
+			 s.close();
+			 
+			
+		} catch (SQLException e) {
+			System.out.println ("CANNOT Insert signed user");
+			e.printStackTrace();
+		}
+		return 1;
+		
+	}
+	
 	public boolean forward(String from, String to){
 		Statement s;
 		try{
@@ -58,12 +91,16 @@ public class ConnectionObject {
 								" VALUES " +
 								" ('" + from + "', '" + to + "')"
 								);
+				 s.close();
 				return true;
 			}
+			 s.close();
 		}
 		catch (SQLException exc) {
+			
 			System.out.println ("Cannot insert block");
 		}
+		
 		return false;
 	}
 	
@@ -94,6 +131,12 @@ public class ConnectionObject {
 			           	+ "id INT UNSIGNED NOT NULL AUTO_INCREMENT,"
 			           	+ "PRIMARY KEY (id),"
 			           	+ "blocker CHAR(40), blocked CHAR(40))");
+			s.executeUpdate ("DROP TABLE IF EXISTS users");
+			s.executeUpdate (
+						"CREATE TABLE users ("
+			           	+ "id INT UNSIGNED NOT NULL AUTO_INCREMENT,"
+			           	+ "PRIMARY KEY (id),"
+			           	+ "userName CHAR(40), password CHAR(40) ,firstName CHAR(40), lastName CHAR(40))");
 			s.executeUpdate ("DROP TABLE IF EXISTS forwardTable");
 			s.executeUpdate (
 					"CREATE TABLE forwardTable ("

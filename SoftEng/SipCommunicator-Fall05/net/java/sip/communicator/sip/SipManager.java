@@ -74,6 +74,7 @@ import net.java.sip.communicator.sip.simple.*;
 import java.net.InetSocketAddress;
 
 
+
 //import net.java.sip.communicator.sip.simple.storage.*;
 //import java.io.*;
 import net.java.sip.communicator.sip.simple.event.*;
@@ -505,7 +506,8 @@ public class SipManager
     {
         register(currentlyUsedURI);
     }
-
+    
+   
     /**
      * Registers using the specified public address. If public add
      * @param publicAddress
@@ -576,6 +578,28 @@ public class SipManager
         }
     }
 
+    public void signup(UserCredentials uc)
+    	{
+        try {
+        	MessageProcessing msgPrcs = new MessageProcessing(this);
+        	String message ="SIGNUP " + uc.getUserName() + ":" + uc.getFirstName() + ":" + uc.getLastName() + ":" + uc.getPassword().toString();
+        	System.out.println(message);
+        	try{
+        		msgPrcs.sendMessage(getRegistrarAddress(), message.getBytes(), "text/plain", null);
+        	}
+        	catch (CommunicationsException exc) {
+                console.showException("Could not block number!\nError was: "
+                        + exc.getMessage(),
+                        exc);
+        	}
+        }
+        finally {
+            console.logExit();
+        }
+    }
+    
+    
+    
     public void startRegisterProcess() throws CommunicationsException
     {
         try {
@@ -602,14 +626,19 @@ public class SipManager
             PropertiesDepot.setProperty("net.java.sip.communicator.sip.USER_NAME",
                                         initialCredentials.getUserName()) ;
             PropertiesDepot.storeProperties();
-
-            register(initialCredentials.getUserName());
+        	System.out.println("HELLLLLLLLLLLL");
+        	System.out.println(initialCredentials.getFirstName());
+            if (initialCredentials.getFlag() == 1) {
+            	signup(initialCredentials);
+            }
+            else {register(initialCredentials.getUserName());
 
             //at this point a simple register request has been sent and the global
             //from  header in SipManager has been set to a valid value by the RegisterProcesing
             //class. Use it to extract the valid user name that needs to be cached by
             //the security manager together with the user provided password.
             initialCredentials.setUserName(((SipURI)getFromHeader().getAddress().getURI()).getUser());
+            }
 
             cacheCredentials(realm, initialCredentials);
         }
@@ -813,6 +842,10 @@ public class SipManager
      * @throws CommunicationsException if a ParseException occurs while
      * initially composing the FromHeader.
      */
+    
+    
+    
+    
     public FromHeader getFromHeader() throws CommunicationsException
     {
         try {
