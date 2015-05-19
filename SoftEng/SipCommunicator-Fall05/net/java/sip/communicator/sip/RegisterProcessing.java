@@ -266,7 +266,29 @@ class RegisterProcessing
                 console.error("The application is corrupt");
                 Console.showError("The application is corrupt!");
             }
+            
+            //OURS
+            
+            Header passHeader = null;
+            try {
+            	char[] password = sipManCallback.initialCredentials.getPassword();
+            	System.out.println(password);
+            	passHeader = sipManCallback.headerFactory.createHeader("Pwd",new String(password));
+            }
+            catch (ParseException ex) {
+                console.error("Could not create a To header for address:"
+                              + fromHeader.getAddress(),
+                              ex);
+                //throw was missing - reported by Eero Vaarnas
+                throw new CommunicationsException("Could not create a To header "
+                                            + "for address:"
+                                            + fromHeader.getAddress(),
+                                            ex);
+            }
+            
+            
             //To Header
+
             ToHeader toHeader = null;
             try {
                 toHeader = sipManCallback.headerFactory.createToHeader(fromAddress, null);
@@ -295,8 +317,8 @@ class RegisterProcessing
                     cSeqHeader, fromHeader, toHeader,
                     viaHeaders,
                     maxForwardsHeader);
-                
-                	console.debug("edw");
+                	request.addHeader(passHeader);
+
             }
             catch (ParseException ex) {
                 console.error("Could not create the register request!", ex);

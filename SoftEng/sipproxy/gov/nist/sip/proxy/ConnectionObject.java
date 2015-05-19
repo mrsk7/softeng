@@ -82,6 +82,28 @@ public class ConnectionObject {
 		
 	}
 	
+	public boolean isSigned(String userName, String password) {
+		Statement s;
+		try {
+			s = con.createStatement();
+			System.out.println(userName + " " + password);
+			s.executeQuery ("SELECT password FROM users WHERE " + "userName='"+userName+"' AND password='"+ password+"'");	
+			ResultSet rs = s.getResultSet ();
+			if (!rs.next ()) {
+				System.out.println("Not in databasessss");
+				s.close();
+				return false;
+			}
+		} catch (SQLException e) {
+			System.out.println("Exception");
+
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return true;
+		
+	}
+	
 	public boolean forward(String from, String to){
 		Statement s;
 		try{

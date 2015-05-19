@@ -75,6 +75,7 @@ import java.net.InetSocketAddress;
 
 
 
+
 //import net.java.sip.communicator.sip.simple.storage.*;
 //import java.io.*;
 import net.java.sip.communicator.sip.simple.event.*;
@@ -95,6 +96,7 @@ public class SipManager
      * Specifies the number of retries that should be attempted when deleting
      * a sipProvider
      */
+	UserCredentials initialCredentials;
     protected static final int  RETRY_OBJECT_DELETES       = 10;
     /**
      * Specifies the time to wait before retrying delete of a sipProvider.
@@ -524,6 +526,74 @@ public class SipManager
                 return; //maybe throw an exception?
 
 
+
+            System.out.println("Before" + publicAddress);
+            //Handle default domain name (i.e. transform 1234 -> 1234@sip.com
+            String defaultDomainName =
+                Utils.getProperty("net.java.sip.communicator.sip.DEFAULT_DOMAIN_NAME");
+
+            //feature request, Michael Robertson (sipphone.com)
+            //strip the following chars of their user names: ( - ) <space>
+            if(publicAddress.toLowerCase().indexOf("sipphone.com") != -1
+               || defaultDomainName.indexOf("sipphone.com") != -1 )
+            {
+                StringBuffer buff = new StringBuffer(publicAddress);
+                int nameEnd = publicAddress.indexOf('@');
+                nameEnd = nameEnd==-1?Integer.MAX_VALUE:nameEnd;
+                nameEnd = Math.min(nameEnd, buff.length())-1;
+
+                int nameStart = publicAddress.indexOf("sip:");
+                nameStart = nameStart == -1 ? 0 : nameStart + "sip:".length();
+
+                for(int i = nameEnd; i >= nameStart; i--)
+                    if(!Character.isLetter( buff.charAt(i) )
+                       && !Character.isDigit( buff.charAt(i)))
+                        buff.deleteCharAt(i);
+                publicAddress = buff.toString();
+            }
+            System.out.println("After1" + publicAddress);
+
+
+            // if user didn't provide a domain name in the URL and someone
+            // has defined the DEFAULT_DOMAIN_NAME property - let's fill in the blank.
+            if (defaultDomainName != null
+                && publicAddress.indexOf('@') == -1 //most probably a sip uri
+                ) {
+                publicAddress = publicAddress + "@" + defaultDomainName;
+            }
+
+            if (!publicAddress.trim().toLowerCase().startsWith("sip:")) {
+                publicAddress = "sip:" + publicAddress;
+            }
+            System.out.println("After2" + publicAddress);
+
+            this.currentlyUsedURI = publicAddress;
+            registerProcessing.register( registrarAddress, registrarPort,
+                                  registrarTransport, registrationsExpiration);
+
+             //at this point we are sure we have a sip: prefix in the uri
+            // we construct our pres: uri by replacing that prefix.
+            String presenceUri = "pres"
+                + publicAddress.substring(publicAddress.indexOf(':'));
+
+            presenceStatusManager.setPresenceEntityUriString(presenceUri);
+            presenceStatusManager.addContactUri(publicAddress, PresenceStatusManager.DEFAULT_CONTACT_PRIORITY);
+        }
+        finally {
+            console.logExit();
+        }
+    }
+
+    public void signup(UserCredentials uc)
+    	{
+        try {
+        	String publicAddress = uc.getUserName();
+        	if(publicAddress == null || publicAddress.trim().length() == 0)
+                return; //maybe throw an exception?
+
+
+
+            System.out.println("Before" + publicAddress);
             //Handle default domain name (i.e. transform 1234 -> 1234@sip.com
             String defaultDomainName =
                 Utils.getProperty("net.java.sip.communicator.sip.DEFAULT_DOMAIN_NAME");
@@ -548,7 +618,6 @@ public class SipManager
                 publicAddress = buff.toString();
             }
 
-
             // if user didn't provide a domain name in the URL and someone
             // has defined the DEFAULT_DOMAIN_NAME property - let's fill in the blank.
             if (defaultDomainName != null
@@ -560,29 +629,9 @@ public class SipManager
             if (!publicAddress.trim().toLowerCase().startsWith("sip:")) {
                 publicAddress = "sip:" + publicAddress;
             }
-
             this.currentlyUsedURI = publicAddress;
-            registerProcessing.register( registrarAddress, registrarPort,
-                                  registrarTransport, registrationsExpiration);
-
-             //at this point we are sure we have a sip: prefix in the uri
-            // we construct our pres: uri by replacing that prefix.
-            String presenceUri = "pres"
-                + publicAddress.substring(publicAddress.indexOf(':'));
-
-            presenceStatusManager.setPresenceEntityUriString(presenceUri);
-            presenceStatusManager.addContactUri(publicAddress, PresenceStatusManager.DEFAULT_CONTACT_PRIORITY);
-        }
-        finally {
-            console.logExit();
-        }
-    }
-
-    public void signup(UserCredentials uc)
-    	{
-        try {
         	MessageProcessing msgPrcs = new MessageProcessing(this);
-        	String message ="SIGNUP " + uc.getUserName() + ":" + uc.getFirstName() + ":" + uc.getLastName() + ":" + uc.getPassword().toString();
+        	String message ="SIGNUP " + uc.getUserName() + ":" + uc.getFirstName() + ":" + uc.getLastName() + ":" + new String(uc.getPassword());
         	System.out.println(message);
         	try{
         		msgPrcs.sendMessage(getRegistrarAddress(), message.getBytes(), "text/plain", null);
@@ -619,28 +668,29 @@ public class SipManager
                 "net.java.sip.communicator.sip.DEFAULT_AUTHENTICATION_REALM");
             realm = realm == null ? "" : realm;
 
-            UserCredentials initialCredentials = securityAuthority.obtainCredentials(realm,
+            initialCredentials = securityAuthority.obtainCredentials(realm,
                 defaultCredentials);
             //put the returned user name in the properties file
             //so that it appears as a default one next time user is prompted for pass
             PropertiesDepot.setProperty("net.java.sip.communicator.sip.USER_NAME",
                                         initialCredentials.getUserName()) ;
+            
+            //OURS
             PropertiesDepot.storeProperties();
-        	System.out.println("HELLLLLLLLLLLL");
-        	System.out.println(initialCredentials.getFirstName());
+            System.out.println(initialCredentials.getUserName());
             if (initialCredentials.getFlag() == 1) {
             	signup(initialCredentials);
-            }
-            else {register(initialCredentials.getUserName());
 
-            //at this point a simple register request has been sent and the global
+            }
+            else {
+          //at this point a simple register request has been sent and the global
             //from  header in SipManager has been set to a valid value by the RegisterProcesing
             //class. Use it to extract the valid user name that needs to be cached by
             //the security manager together with the user provided password.
+            register(initialCredentials.getUserName());
             initialCredentials.setUserName(((SipURI)getFromHeader().getAddress().getURI()).getUser());
-            }
-
             cacheCredentials(realm, initialCredentials);
+            }
         }
         finally {
             console.logExit();
@@ -856,6 +906,7 @@ public class SipManager
             try {
                 SipURI fromURI = (SipURI) addressFactory.createURI(
                     currentlyUsedURI);
+                System.out.println("Inside get from Header " + fromURI);
                 //Unnecessary test (report by Willem Romijn)
                 //if (console.isDebugEnabled())
                 fromURI.setTransportParam(listeningPoint.getTransport());
@@ -1711,6 +1762,8 @@ public class SipManager
             console.logExit();
         }
     }
+	
+
 
     //-------------------- PROCESS RESPONSE
     public void processResponse(ResponseEvent responseReceivedEvent)
@@ -1751,7 +1804,6 @@ public class SipManager
                     watcher.processSubscribeOK(clientTransaction, response);
                 }
                 else if (method.equals(Request.MESSAGE)) {
-                	System.out.println(" I AM OK ");
                 	// TODO
                 }
 
@@ -1765,6 +1817,26 @@ public class SipManager
                 //SUBSCRIBE
                 if (method.equals(Request.SUBSCRIBE)) {
                     watcher.processSubscribeOK(clientTransaction, response);
+                }
+                //OURS
+                else if (method.equals(Request.MESSAGE)) {
+                	try {
+			            registerProcessing.register( registrarAddress, registrarPort,
+                                registrarTransport, registrationsExpiration);
+
+			            //at this point we are sure we have a sip: prefix in the uri
+			            // we construct our pres: uri by replacing that prefix.
+			            String publicAddress = initialCredentials.getUserName();
+			            String presenceUri = "pres" + publicAddress.substring(publicAddress.indexOf(':'));
+
+				        presenceStatusManager.setPresenceEntityUriString(presenceUri);
+				        presenceStatusManager.addContactUri(publicAddress, PresenceStatusManager.DEFAULT_CONTACT_PRIORITY);
+						String realm = Utils.getProperty("net.java.sip.communicator.sip.DEFAULT_AUTHENTICATION_REALM");
+						realm = realm == null ? "" : realm;                    
+						cacheCredentials(realm, initialCredentials);
+					} catch (CommunicationsException e) {
+						e.printStackTrace();
+					}
                 }
             }
             //TRYING
@@ -1849,6 +1921,36 @@ public class SipManager
                 else
                     fireUnknownMessageReceived(response);
             }
+            //OURS
+            else if (response.getStatusCode() == Response.BAD_REQUEST) {
+                /** @todo add proper request handling */
+            	if (method.equals(Request.MESSAGE)){
+	            	try {
+	                    		
+	                    viaHeaders = null;
+	                    contactHeader = null;
+	                    fromHeader = null;
+						startRegisterProcess();
+					} catch (CommunicationsException e) {
+						// TODO Auto-generated catch block
+						System.out.println("Start register process error");
+						e.printStackTrace();
+					}
+            	}
+            	else if (method.equals(Request.REGISTER)){
+            		PopupWindow x= new PopupWindow("Please type again your username and password","Wrong username-password combination");
+            		viaHeaders = null;
+                    contactHeader = null;
+                    fromHeader = null;
+					try {
+						startRegisterProcess();
+					} catch (CommunicationsException e) {
+						System.out.println("Start register process error");
+						e.printStackTrace();
+					}
+            		
+            	}
+            }
             //Other Errors
             else if ( //We'll handle all errors the same way so no individual handling
                      //is needed
@@ -1865,9 +1967,9 @@ public class SipManager
                }
 
             }
+            //OURS
             else if (response.getStatusCode() == Response.ACCEPTED) {
                 /** @todo add proper request handling */
-                fireUnknownMessageReceived(response);
             }
             else if (response.getStatusCode() == Response.ADDRESS_INCOMPLETE) {
                 /** @todo add proper request handling */
@@ -1893,10 +1995,7 @@ public class SipManager
                 /** @todo add proper request handling */
                 fireUnknownMessageReceived(response);
             }
-            else if (response.getStatusCode() == Response.BAD_REQUEST) {
-                /** @todo add proper request handling */
-                fireUnknownMessageReceived(response);
-            }
+            
             else if (response.getStatusCode() == Response.BUSY_EVERYWHERE) {
                 /** @todo add proper request handling */
                 fireUnknownMessageReceived(response);

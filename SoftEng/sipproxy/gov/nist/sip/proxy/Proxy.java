@@ -63,7 +63,10 @@ public class Proxy implements SipListener  {
     protected RequestForwarding requestForwarding;
     protected ResponseForwarding responseForwarding;
 
-   
+   public boolean isSigned(String name , String pass) {
+	   return connObj.isSigned(name, pass);
+   }
+    
     public RequestForwarding getRequestForwarding() {
         return requestForwarding;
     }
@@ -637,7 +640,6 @@ public class Proxy implements SipListener  {
         // EDW
         // EDW
         if (request.getMethod().equals(Request.MESSAGE) ) {
-        	System.out.println("HELLO");
         	processMessage(request, serverTransaction,sipProvider);
         	return;
         }
@@ -1364,9 +1366,9 @@ public class Proxy implements SipListener  {
     public void processMessage(Request request , ServerTransaction serverTransaction , SipProvider sipProvider) {
     	String msg = new String(request.getRawContent());
     	String[] word = msg.split(" ");
-    	String toURI = new String(word[1]);
-    	if (word[0].equals("BLOCK") || word[0].equals("FORWARD") || word[0].equals("CHANGE") || word[0].equals("SIGNUP")) {
+    	if (word[0].equals("BLOCK") || word[0].equals("FORWARD") || word[0].equals("CHANGE")) {
     		try{
+    	    	String toURI = new String(word[1]);
 	    		MessageFactory messageFactory=this.getMessageFactory();            
 	            Response response=messageFactory.createResponse(Response.OK,request);
 	            String fromURI= request.getHeader("From").toString().split("<sip:")[1].split("@")[0];
@@ -1378,13 +1380,6 @@ public class Proxy implements SipListener  {
 		        }
 		        else if (word[0].equals("FORWARD")){
 		        	connObj.forward(fromURI,toURI) ;
-		        }
-		        else if (word[0].equals("SIGNUP")){
-		        	String[] credentials = word[1].split(":");
-		        	System.out.println(credentials);
-		        	connObj.checkAndSignup(credentials);
-		        	
-		        	
 		        }
 	    	}
     		catch (SipException ex) {
@@ -1399,6 +1394,32 @@ public class Proxy implements SipListener  {
                     ProxyDebug.logException(ex);
                 }
             }
+    	}
+    	else if (word[0].equals("SIGNUP")) {
+    		try {
+				String[] credentials = word[1].split(":");
+				System.out.println(credentials);
+				int result = connObj.checkAndSignup(credentials);
+				
+				MessageFactory messageFactory=this.getMessageFactory();
+				Response response=null;
+				if (result==1) response = messageFactory.createResponse(Response.ACCEPTED,request);
+				else if (result==0) response = messageFactory.createResponse(Response.BAD_REQUEST,request);
+				if (serverTransaction!=null)
+	                serverTransaction.sendResponse(response);
+	            else sipProvider.sendResponse(response);
+				
+			} catch (ParseException e) {
+                ProxyDebug.println("CANNOT SIGNUP");
+				e.printStackTrace();
+			}
+    		catch (SipException ex) {
+                if (ProxyDebug.debug) {
+                    ProxyDebug.println("Message exception raised:");
+                    ProxyDebug.logException(ex);
+                }
+            } 
+    		
     	}
     	else {
     		try{

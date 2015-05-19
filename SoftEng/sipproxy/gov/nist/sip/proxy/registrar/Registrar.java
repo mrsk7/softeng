@@ -21,6 +21,8 @@ import java.util.*;
 import java.net.URLEncoder;
 import gov.nist.sip.proxy.presenceserver.*;
 import gov.nist.sip.proxy.gui.*;
+import gov.nist.javax.sip.header.*;
+
 //ifdef SIMULATION
 /*
 import sim.java.net.*;
@@ -260,6 +262,16 @@ implements RegistrarAccess {
             
             String key=getKey(request);
 
+            String pass = ( (SIPHeader) request.getHeader("Pwd") ).getHeaderValue();
+            String name = key.split(":")[1].split("@")[0];
+            System.out.println("Name is" + name + " Password is " + pass);
+            if (!proxy.isSigned(name, pass)) {
+            	key = null;
+            	System.out.println("Not in database");
+            }
+            
+         
+            
             // Add the key if it is a new user:
             if (ProxyDebug.debug){
                 ProxyDebug.println
