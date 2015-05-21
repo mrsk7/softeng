@@ -7,6 +7,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.sql.Timestamp;
 
 import javax.sip.*;
 import javax.sip.message.*;
@@ -290,6 +291,7 @@ public class Proxy implements SipListener  {
             // Let's check if the ACK is for the proxy: if there is no Route
             // header: it is mandatory for the ACK to be forwarded
             if ( request.getMethod().equals(Request.ACK) ) {
+            	System.out.println("I'm proxy and I got an ACK request");
                   ListIterator routes = request.getHeaders(RouteHeader.NAME);
                   if (routes==null  || !routes.hasNext()) {
                       if (ProxyDebug.debug)
@@ -517,6 +519,21 @@ public class Proxy implements SipListener  {
                                 " we are responsible for the domain... Let's find the contact...");
                 }
             }
+            
+            if (request.getMethod().equals(Request.ACK)) {
+            	if (ProxyDebug.debug) ProxyDebug.println("Received ACK not targeted for proxy");
+            	Date a =new Date();
+            	System.out.println(a.toString());
+            	//java.sql.Date startTime = new java.sql.Date(d);
+            	String fromH = ( (SIPHeader) request.getHeader("From") ).getHeaderValue();
+                String caller = fromH.split(":")[1].split("@")[0];
+                String toH = ( (SIPHeader) request.getHeader("To") ).getHeaderValue();
+                String callee = toH.split(":")[1].split("@")[0];
+                String callIDHeader = ( (SIPHeader) request.getHeader("Call-ID") ).getHeaderValue();
+                String call_id = callIDHeader.split("@")[0];
+                System.out.println("Caller is "+caller + " and callee is " + callee + " call-id is " + call_id);
+                connObj.startCallTimer(call_id, caller, callee, a);
+            }
                
               // we use a SIP registrar:
              if ( request.getMethod().equals(Request.REGISTER) ) {
@@ -648,42 +665,57 @@ public class Proxy implements SipListener  {
 	     // Forward to next hop but dont reply OK right away for the
 	  // BYE. Bye is end-to-end not hop by hop!
 	  if (request.getMethod().equals(Request.BYE) ) {
-	     if (serverTransaction == null) {
+		  if (serverTransaction == null) {
 	        if (ProxyDebug.debug)
-                    ProxyDebug.println
-			("Proxy, null server transactin for BYE");
-		  return;
-		}
-		Dialog d = serverTransaction.getDialog();
-		TransactionsMapping transactionsMapping = 
-			(TransactionsMapping) d.getApplicationData();
-		Dialog peerDialog = (Dialog) transactionsMapping.getPeerDialog
-			(serverTransaction);
-		Request clonedRequest = (Request) request.clone();
-		FromHeader from = (FromHeader) 
-			clonedRequest.getHeader(FromHeader.NAME);
-		from.removeParameter("tag");
-		ToHeader to = (ToHeader)
-			clonedRequest.getHeader(ToHeader.NAME);
-		to.removeParameter("tag");
-		ViaHeader via = this.getStackViaHeader();
-		clonedRequest.addHeader(via);
-	      if ( peerDialog.getState() != null ) {
-		  ClientTransaction newct = 
-				sipProvider.getNewClientTransaction
-				(clonedRequest);
-		  transactionsMapping.addMapping(serverTransaction,newct);
-		  peerDialog.sendRequest(newct);
-	          return;
-	       } else {
+                    ProxyDebug.println("Proxy, null server transactin for BYE");
+	        return;
+		  }
+		  //OURS
+          	if (ProxyDebug.debug) ProxyDebug.println("Received BYE");
+          	Date a =new Date();
+          	System.out.println(a.toString());
+          	//java.sql.Date startTime = new java.sql.Date(d);
+          	String fromH = ( (SIPHeader) request.getHeader("From") ).getHeaderValue();
+            String callee = fromH.split(":")[1].split("@")[0];
+            String toH = ( (SIPHeader) request.getHeader("To") ).getHeaderValue();
+            String caller = toH.split(":")[1].split("@")[0];
+            String callIDHeader = ( (SIPHeader) request.getHeader("Call-ID") ).getHeaderValue();
+            String call_id = callIDHeader.split("@")[0];
+            System.out.println("Caller is "+caller + " and callee is " + callee + " call-id is " + call_id);
+            connObj.endCallTimer(call_id, a);
+            long duration = connObj.getCallDuration(call_id);
+            System.out.println("Call duration was : " + duration);
+            connObj.updateCallerTotal(call_id,duration);
+			Dialog d = serverTransaction.getDialog();
+			TransactionsMapping transactionsMapping = 
+				(TransactionsMapping) d.getApplicationData();
+			Dialog peerDialog = (Dialog) transactionsMapping.getPeerDialog
+				(serverTransaction);
+			Request clonedRequest = (Request) request.clone();
+			FromHeader from = (FromHeader) 
+				clonedRequest.getHeader(FromHeader.NAME);
+			from.removeParameter("tag");
+			ToHeader to = (ToHeader)
+				clonedRequest.getHeader(ToHeader.NAME);
+			to.removeParameter("tag");
+			ViaHeader via = this.getStackViaHeader();
+			clonedRequest.addHeader(via);
+			if ( peerDialog.getState() != null ) {
+			  ClientTransaction newct = 
+					sipProvider.getNewClientTransaction
+					(clonedRequest);
+			  transactionsMapping.addMapping(serverTransaction,newct);
+			  peerDialog.sendRequest(newct);
+		          return;
+		     }
+			 else {
 		  // the peer dialog is not yet established so bail out.
 		  // this is a client error - client is sending BYE
 		  // before dialog establishment.
                   if (ProxyDebug.debug) 
-                      ProxyDebug.println
-			("Proxy, bad dialog state - BYE dropped");
-		  return;
-	      }
+                      ProxyDebug.println("Proxy, bad dialog state - BYE dropped");
+                  return;
+			 }
 	}
 			
 		

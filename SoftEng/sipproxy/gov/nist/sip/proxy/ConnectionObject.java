@@ -5,11 +5,48 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.sql.Timestamp;
+import java.util.Date;
 
 public class ConnectionObject {
 	
 	protected Connection con;
 	
+	public void createTables() {
+		Statement s;
+		try {
+			s = con.createStatement();
+			s.executeUpdate ("DROP TABLE IF EXISTS blockTable");
+			s.executeUpdate (
+						"CREATE TABLE blockTable ("
+			           	+ "id INT UNSIGNED NOT NULL AUTO_INCREMENT,"
+			           	+ "PRIMARY KEY (id),"
+			           	+ "blocker CHAR(40), blocked CHAR(40))");
+			s.executeUpdate ("DROP TABLE IF EXISTS users");
+			s.executeUpdate (
+						"CREATE TABLE users ("
+			           	+ "id INT UNSIGNED NOT NULL AUTO_INCREMENT,"
+			           	+ "PRIMARY KEY (id),"
+			           	+ "userName CHAR(40), password CHAR(40) ,firstName CHAR(40), lastName CHAR(40), total REAL)");
+			s.executeUpdate ("DROP TABLE IF EXISTS forwardTable");
+			s.executeUpdate (
+					"CREATE TABLE forwardTable ("
+		           	+ "id INT UNSIGNED NOT NULL AUTO_INCREMENT,"
+		           	+ "PRIMARY KEY (id),"
+		           	+ "departure CHAR(40), destination CHAR(40))");
+			s.executeUpdate ("DROP TABLE IF EXISTS callTable");
+			s.executeUpdate (
+					"CREATE TABLE callTable ("
+		           	+ "id INT UNSIGNED NOT NULL AUTO_INCREMENT,"
+		           	+ "PRIMARY KEY (id),"
+		           	+ "caller CHAR(40), callee CHAR(40), callid CHAR(40),startTime CHAR(40),endTime CHAR(40))");
+		     s.close();
+		}
+		catch (SQLException exc) {
+			System.out.println ("Cannot create TABLE");
+		}
+	}
+
 	public ConnectionObject() {
 		connect();
 		createTables();
@@ -67,9 +104,9 @@ public class ConnectionObject {
 				return 0;
 			}
 			
-			s.executeUpdate(" INSERT INTO users (userName,firstName,lastName,password)" +
+			s.executeUpdate(" INSERT INTO users (userName,firstName,lastName,password,total)" +
 					" VALUES " +
-					" ('" + userName + "', '" + firstName + "', '" + lastName + "', '" + password + "')"
+					" ('" + userName + "', '" + firstName + "', '" + lastName + "', '" + password + "',0)"
 					);
 			 s.close();
 			 
@@ -143,33 +180,88 @@ public class ConnectionObject {
 		this.con = con;
 	}
 	
-	public void createTables() {
+	public void startCallTimer(String callID,String caller,String callee,Date startTime) {
+		Statement s;
+		Timestamp sqlstartTime = new Timestamp(startTime.getTime());
+		try {
+			s = con.createStatement();
+			s.executeUpdate("INSERT INTO callTable (caller,"
+						+ "callee, callid, startTime) VALUES "
+						+ "('"+ caller+"', '"+callee+"', '"+callID+"' , '"+ sqlstartTime +"')" );
+		} catch (SQLException e) {
+			System.out.println("Error inserting startTime to callTable");
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public void endCallTimer(String callID,Date endTime) {
+		Statement s;
+		Timestamp sqlendTime = new Timestamp(endTime.getTime());
+		try {
+			s = con.createStatement();
+			s.executeUpdate("UPDATE callTable SET endTime='" + sqlendTime + "' WHERE callid='"
+					+ callID + "'");
+		} catch (SQLException e) {
+			System.out.println("Error inserting endTime to callTable");
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public void updateCallerTotal(String callid,long cost) {
 		Statement s;
 		try {
 			s = con.createStatement();
-			s.executeUpdate ("DROP TABLE IF EXISTS blockTable");
-			s.executeUpdate (
-						"CREATE TABLE blockTable ("
-			           	+ "id INT UNSIGNED NOT NULL AUTO_INCREMENT,"
-			           	+ "PRIMARY KEY (id),"
-			           	+ "blocker CHAR(40), blocked CHAR(40))");
-			s.executeUpdate ("DROP TABLE IF EXISTS users");
-			s.executeUpdate (
-						"CREATE TABLE users ("
-			           	+ "id INT UNSIGNED NOT NULL AUTO_INCREMENT,"
-			           	+ "PRIMARY KEY (id),"
-			           	+ "userName CHAR(40), password CHAR(40) ,firstName CHAR(40), lastName CHAR(40))");
-			s.executeUpdate ("DROP TABLE IF EXISTS forwardTable");
-			s.executeUpdate (
-					"CREATE TABLE forwardTable ("
-		           	+ "id INT UNSIGNED NOT NULL AUTO_INCREMENT,"
-		           	+ "PRIMARY KEY (id),"
-		           	+ "departure CHAR(40), destination CHAR(40))");
-		     s.close();
+			s.executeQuery("SELECT * FROM callTable "
+						+ "WHERE callid = '" + callid + "'");
+			ResultSet rs = s.getResultSet ();
+			if (!rs.next() ) {
+				System.out.println("Didn't find the call");
+			}
+			String caller = rs.getString("caller");
+			
+			if (rs.next()) {
+				System.out.println("Found Second call");
+				return ;
+			}
+			s.executeUpdate("UPDATE users SET total= total +'" + cost + "' WHERE userName='"
+					+ caller + "'");
+			
+		} catch (SQLException e) {
+			System.out.println("Error updating total");
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-		catch (SQLException exc) {
-			System.out.println ("Cannot create TABLE");
+		
+	}
+	
+	public long getCallDuration(String callID) {
+		Statement s;
+		long duration =0;
+		try {
+			s = con.createStatement();
+			s.executeQuery("SELECT * FROM callTable "
+						+ "WHERE callid = '" + callID + "'");
+			ResultSet rs = s.getResultSet ();
+			if (!rs.next() ) {
+				System.out.println("Didn't find the call");
+				return -1;
+			}
+			Date start = new Date(rs.getTimestamp("startTime").getTime());
+			Date end = new Date(rs.getTimestamp("endTime").getTime());
+			duration = end.getSeconds() - start.getSeconds();
+			if (rs.next()) {
+				System.out.println("Found Second call");
+				return -1;
+			}
+		} catch (SQLException e) {
+			System.out.println("Error calculating duration");
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
+		return duration;
+
 	}
 	
 	public void disconnect() {
