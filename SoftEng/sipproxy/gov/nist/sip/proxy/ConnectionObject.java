@@ -292,7 +292,7 @@ public class ConnectionObject {
 			}
 			Date start = new Date(rs.getTimestamp("startTime").getTime());
 			Date end = new Date(rs.getTimestamp("endTime").getTime());
-			duration = end.getSeconds() - start.getSeconds();
+			duration = (end.getTime() - start.getTime())/1000;
 			if (rs.next()) {
 				System.out.println("Found Second call");
 				return -1;

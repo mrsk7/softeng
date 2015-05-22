@@ -366,6 +366,20 @@ public class SipCommunicator
         }
     }
 //OURS
+    
+    public String[] getPoliciesFromProxy() {
+    	String[] ret= {"Basic","Premium"};
+    	return ret;
+    }
+    
+    
+    public void handleManageRequest()
+    {
+    	UserCredentials uc = sipManager.getCredentials();
+    	String[] policyList = getPoliciesFromProxy();
+    	guiManager.manageAccount(policyList,uc.getPolicy());
+}
+    
     public void handleBlockRequest(String number)
     {
         	MessageProcessing msgPrcs = new MessageProcessing(sipManager);

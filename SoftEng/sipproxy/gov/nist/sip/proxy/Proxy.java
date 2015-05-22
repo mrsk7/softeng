@@ -690,8 +690,11 @@ public class Proxy implements SipListener  {
             long duration = connObj.getCallDuration(call_id);
             System.out.println("Call duration was : " + duration);
             String userName = connObj.getUsername(call_id);
+            System.out.println("Usename of caller is : " + userName);
             String policy = connObj.getPolicy(userName);
+            System.out.println("Policy of caller is : " + policy);
             double cost = billingObj.calculateCost(policy, duration);
+            System.out.println("Calculated cost : " + cost);
             connObj.updateCost(userName,cost);
 			Dialog d = serverTransaction.getDialog();
 			TransactionsMapping transactionsMapping = 

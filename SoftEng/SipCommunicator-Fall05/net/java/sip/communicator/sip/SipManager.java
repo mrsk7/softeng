@@ -2212,6 +2212,11 @@ public class SipManager
         }
 
     }
+    
+    public UserCredentials getCredentials() {
+    	return initialCredentials;
+    }
+    
 
     /**
      * Returns an iterator over strings representing supported

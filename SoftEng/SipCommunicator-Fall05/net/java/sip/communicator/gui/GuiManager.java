@@ -127,6 +127,7 @@ public class GuiManager
     VoiceMailAction voiceMailAction = null;
     MySipphoneAction mySipphoneAction = null;
     private AuthenticationSplash authenticationSplash = null;
+    private ManageSplash manageSplash = null;
 
     static boolean isThisSipphoneAnywhere = false;
 
@@ -288,8 +289,7 @@ public class GuiManager
         phoneFrame.hangupButton.setEnabled(enabled);
         phoneFrame.answerButton.setEnabled(enabled);
         //OURS
-        phoneFrame.blockingButton.setEnabled(true);
-        phoneFrame.forwardButton.setEnabled(true);
+        phoneFrame.manageButton.setEnabled(enabled);
     }
 
     public void addUserActionListener(UserActionListener l)
@@ -393,6 +393,15 @@ public class GuiManager
         }
     }
     //OURS
+    void manageButton_actionPerformed(ActionEvent evt)
+    {
+           
+        for (int i = listeners.size() - 1; i >= 0; i--) {
+            ( (UserActionListener) listeners.get(i)).handleManageRequest();
+        }
+    }
+    
+    
     void blockingButton_actionPerformed(ActionEvent evt)
     {
     	String callee = phoneFrame.contactBox.getSelectedItem().toString();
@@ -668,7 +677,16 @@ public class GuiManager
                 hangupButton_actionPerformed(evt);
             }
         });
+        
         //OURS
+        phoneFrame.manageButton.addActionListener(new ActionListener()
+        {
+            public void actionPerformed(ActionEvent evt)
+            {
+                manageButton_actionPerformed(evt);
+            }
+        });
+       /* 
         phoneFrame.blockingButton.addActionListener(new ActionListener()
         {
             public void actionPerformed(ActionEvent evt)
@@ -685,7 +703,7 @@ public class GuiManager
                 forwardButton_actionPerformed(evt);
             }
         });
-        
+        */
         phoneFrame.addWindowListener(new WindowAdapter()
         {
             public void windowClosing(WindowEvent evt)
@@ -716,6 +734,11 @@ public class GuiManager
         }
     }
 
+    public void manageAccount(String[] policyList,String policy) {
+    	manageSplash = new ManageSplash(phoneFrame, true, policyList, policy);
+    	manageSplash.show();
+    }
+    
     public void requestAuthentication(String realm,
                                       String userName,
                                       char[] password)
