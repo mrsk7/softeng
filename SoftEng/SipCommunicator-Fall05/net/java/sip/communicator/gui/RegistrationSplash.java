@@ -45,6 +45,8 @@ public class RegistrationSplash extends JDialog
     JTextField lastNameTextField = null;
     JTextField userNameTextField = null;
     JPasswordField passwordTextField = null;
+    JComboBox policylist = null;
+    String policyChoice = null;
 
 
     private JButton registerButton = null;
@@ -195,6 +197,29 @@ public class RegistrationSplash extends JDialog
         c.insets = new Insets(11, 7, 0, 11);
         centerPane.add(passwordTextField, c);
         
+        //OURS
+        //Added policies option button
+        String[] policies = {"Basic","Premium"};
+        policylist = new JComboBox(policies);
+        policylist.setSelectedIndex(0);
+        policylist.addActionListener(null);
+        JLabel policyLabel = new JLabel();
+        policyLabel.setText("Policy*");
+        policyLabel.setLabelFor(policylist);
+        c = new GridBagConstraints();
+        c.gridx = 0;
+        c.gridy = gridy;
+        c.anchor = GridBagConstraints.WEST;
+        c.insets = new Insets(11, 12, 0, 0);
+        centerPane.add(policyLabel, c);
+        
+        c = new GridBagConstraints();
+        c.gridx=1;
+        c.gridy=gridy++;
+        c.fill=GridBagConstraints.HORIZONTAL;
+        c.weightx=1.0;
+        c.insets=new Insets(12,7,0,11);
+        centerPane.add(policylist,c);
 
         
         firstNameTextField = new JTextField();
@@ -394,6 +419,8 @@ public class RegistrationSplash extends JDialog
         		password = passwordTextField.getPassword();
         		firstName = firstNameTextField.getText();
         		lastName = lastNameTextField.getText();
+        		policyChoice = (String) policylist.getSelectedItem(); 
+        		System.out.println("Policy is " + policyChoice);
 
             }
             catch (Exception e)

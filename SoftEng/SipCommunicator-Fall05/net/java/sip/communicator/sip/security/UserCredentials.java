@@ -71,25 +71,13 @@ public class UserCredentials
     private int flag = -1;
     private String firstName = null;
     private String lastName = null;
+    private String policy = null;
 
-    
-    public void setFlag(int flag) {
-    	this.flag = flag;
-    }
     
     public int getFlag() {
     	return this.flag;
     }
     
-    /**
-     * Sets the user name.
-     * @param userName The user name to set.
-     */
-    public void setUserName(String userName)
-    {
-        this.userName = userName;
-    }
-
     /**
      * Returns the user name.
      * @return the user name.
@@ -99,7 +87,17 @@ public class UserCredentials
         return this.userName;
     }
     
-    public String getFirstName()
+    /**
+	 * Returns these credentials' password
+	 *
+	 * @return these credentials' password
+	 */
+	public char[] getPassword()
+	{
+	    return password;
+	}
+
+	public String getFirstName()
     {
         return this.firstName;
     }
@@ -109,7 +107,21 @@ public class UserCredentials
         return this.lastName;
     }
     
-    /**
+    public String getPolicy()
+	{
+	    return policy;
+	}
+	
+	/**
+	 * Sets the user name.
+	 * @param userName The user name to set.
+	 */
+	public void setUserName(String userName)
+	{
+	    this.userName = userName;
+	}
+	
+	/**
      * Sets the user password.
      *
      * @param passwd The password associated with username
@@ -124,14 +136,13 @@ public class UserCredentials
     	this.firstName = firstName;
     	this.lastName = lastName;
     }
-    
-    /**
-     * Returns these credentials' password
-     *
-     * @return these credentials' password
-     */
-    public char[] getPassword()
-    {
-        return password;
-    }
+
+	public void setPolicy(String policy)
+	{
+	    this.policy = policy;
+	}
+
+	public void setFlag(int flag) {
+		this.flag = flag;
+	}
 }

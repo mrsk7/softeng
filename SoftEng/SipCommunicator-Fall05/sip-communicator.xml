@@ -33,10 +33,10 @@
             <PUBLIC_ADDRESS value="sip:Takeo"/>
             <TRANSPORT value=""/>
             <REGISTRAR_ADDRESS value="192.168.1.2:4000"/>
-            <USER_NAME value=""/>
+            <USER_NAME value="Nikos"/>
             <STACK_PATH value="gov.nist"/>
             <PREFERRED_LOCAL_PORT value="5060"/>
-            <DISPLAY_NAME value="Ntomata"/>
+            <DISPLAY_NAME value="KLOUP"/>
             <REGISTRAR_TRANSPORT value="UDP"/>
             <REGISTRATIONS_EXPIRATION value="3600"/>
             <REGISTRAR_PORT value="5060"/>

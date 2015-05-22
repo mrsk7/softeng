@@ -89,8 +89,8 @@ public class ProxyLauncher extends JFrame{
    
   
     public ProxyLauncher(String configFile) {
-        super("Askisoules με ελληνικά");
-        System.out.println("Initialiation Proxy Interface");
+        super("Proxy Server");
+        System.out.println("Starting Proxy Interface...");
         
         try {
             if (configFile==null) {
@@ -98,10 +98,10 @@ public class ProxyLauncher extends JFrame{
                 " command line.");
             }
             else configurationFile=configFile;
-              
+            System.out.println("Trying to create new proxy");
             // First thing to do, get the configurations.
             proxy=new Proxy(configurationFile);
-            
+            System.out.println("Created new proxy");
             listenerProxy=new ListenerProxy(this);
             initComponents();
             
@@ -345,7 +345,6 @@ public class ProxyLauncher extends JFrame{
             ProxyLauncher proxyLauncher= new ProxyLauncher(confFile);
             //proxyLauncher.start();
             //ProxyDebug.println("Proxy ready to work");
-            System.out.println("in main ProxyLauncher");
         }
         catch(Exception e) {
             System.out.println

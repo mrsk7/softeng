@@ -50,7 +50,10 @@ public class Proxy implements SipListener  {
     protected SipStack sipStack;
     protected SipProvider defaultProvider;
     
+    //OURS
     protected ConnectionObject connObj;
+    protected BillingObject billingObj; 
+    
     protected MessageFactory messageFactory;
     protected HeaderFactory headerFactory;
     protected AddressFactory addressFactory;
@@ -132,6 +135,7 @@ public class Proxy implements SipListener  {
     public Proxy(String confFile) throws Exception{
 
     	this.connObj = new ConnectionObject();
+    	this.billingObj = new BillingObject();
     	
     	this.listeningPoints = new LinkedList();
         if (confFile==null) {
@@ -685,7 +689,10 @@ public class Proxy implements SipListener  {
             connObj.endCallTimer(call_id, a);
             long duration = connObj.getCallDuration(call_id);
             System.out.println("Call duration was : " + duration);
-            connObj.updateCallerTotal(call_id,duration);
+            String userName = connObj.getUsername(call_id);
+            String policy = connObj.getPolicy(userName);
+            double cost = billingObj.calculateCost(policy, duration);
+            connObj.updateCost(userName,cost);
 			Dialog d = serverTransaction.getDialog();
 			TransactionsMapping transactionsMapping = 
 				(TransactionsMapping) d.getApplicationData();
@@ -754,12 +761,10 @@ public class Proxy implements SipListener  {
         	    String blocked= request.getHeader("To").toString().split("<sip:")[1].split("@")[0];
       	             	
                 if (connObj.isBlocked(blocker,blocked)) {
-                	System.out.println("EDW2");
                 	MessageFactory messageFactory=this.getMessageFactory();            
             	    Response response=messageFactory.createResponse(Response.BUSY_HERE,request);
             	    if (serverTransaction!=null){
     	                serverTransaction.sendResponse(response);
-            	    System.out.println("EDW3");
             	    }
     	            else sipProvider.sendResponse(response);
             	    return;
@@ -780,7 +785,6 @@ public class Proxy implements SipListener  {
                 	targetURIList=new Vector();
                 	targetURIList.addElement(targetURI);
                 	// 4. Forward the request statefully to the target:
-                	System.out.println("EDW4");
                 	requestForwarding.forwardRequest(targetURIList,sipProvider,
                 			request,serverTransaction,true);
                 	return;
@@ -1442,7 +1446,7 @@ public class Proxy implements SipListener  {
 	            else sipProvider.sendResponse(response);
 				
 			} catch (ParseException e) {
-                ProxyDebug.println("CANNOT SIGNUP");
+                ProxyDebug.println("Error signing up new user");
 				e.printStackTrace();
 			}
     		catch (SipException ex) {

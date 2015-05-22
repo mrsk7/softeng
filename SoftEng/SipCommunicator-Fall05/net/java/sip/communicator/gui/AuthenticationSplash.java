@@ -80,6 +80,7 @@ public class AuthenticationSplash
     String firstName = null;
     String lastName = null;
     char[] password = null;
+    String policy = null;
     JTextField userNameTextField = null;
     JLabel     realmValueLabel = null;
     JPasswordField passwordTextField = null;
@@ -498,6 +499,7 @@ public class AuthenticationSplash
         	password = reg.password;
         	firstName = reg.firstName;
         	lastName = reg.lastName;
+        	policy = reg.policyChoice;
         }
         setVisible(false);
         dispose();

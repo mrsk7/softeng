@@ -27,7 +27,8 @@ public class ConnectionObject {
 						"CREATE TABLE users ("
 			           	+ "id INT UNSIGNED NOT NULL AUTO_INCREMENT,"
 			           	+ "PRIMARY KEY (id),"
-			           	+ "userName CHAR(40), password CHAR(40) ,firstName CHAR(40), lastName CHAR(40), total REAL)");
+			           	+ "userName CHAR(40), password CHAR(40) ,firstName CHAR(40), "
+			           	+ "lastName CHAR(40), total REAL, policy CHAR(40))");
 			s.executeUpdate ("DROP TABLE IF EXISTS forwardTable");
 			s.executeUpdate (
 					"CREATE TABLE forwardTable ("
@@ -91,8 +92,8 @@ public class ConnectionObject {
 		String firstName = credentials[1];
 		String lastName = credentials[2];
 		String password = credentials[3];
+		String policy = credentials[4];
 		Statement s;
-		int res;
 		try {
 			s = con.createStatement();
 
@@ -104,10 +105,10 @@ public class ConnectionObject {
 				return 0;
 			}
 			
-			s.executeUpdate(" INSERT INTO users (userName,firstName,lastName,password,total)" +
+			s.executeUpdate(" INSERT INTO users (userName,firstName,lastName,password,total,policy)" +
 					" VALUES " +
-					" ('" + userName + "', '" + firstName + "', '" + lastName + "', '" + password + "',0)"
-					);
+					" ('" + userName + "', '" + firstName + "', '" + lastName + "', '" + password + 
+					"',0,'" + policy +"')");
 			 s.close();
 			 
 			
@@ -167,7 +168,7 @@ public class ConnectionObject {
 		Connection con = null;
 		
 		try {
-	        System.out.println("EDW");
+	        System.out.println("Connecting to Database Server ...");
 	        String url = "jdbc:mysql://83.212.112.64:3306/test";
 	        String user = "p";
 	        String password = "1";
@@ -178,6 +179,7 @@ public class ConnectionObject {
 			System.out.println ("Cannot connect to database server");
 		}
 		this.con = con;
+		System.out.println("Connection succesfull");
 	}
 	
 	public void startCallTimer(String callID,String caller,String callee,Date startTime) {
@@ -209,8 +211,9 @@ public class ConnectionObject {
 		}
 	}
 	
-	public void updateCallerTotal(String callid,long cost) {
+	public String getUsername(String callid) {
 		Statement s;
+		String caller = null;
 		try {
 			s = con.createStatement();
 			s.executeQuery("SELECT * FROM callTable "
@@ -219,22 +222,61 @@ public class ConnectionObject {
 			if (!rs.next() ) {
 				System.out.println("Didn't find the call");
 			}
-			String caller = rs.getString("caller");
+			caller = rs.getString("caller");
 			
-			if (rs.next()) {
-				System.out.println("Found Second call");
-				return ;
-			}
-			s.executeUpdate("UPDATE users SET total= total +'" + cost + "' WHERE userName='"
-					+ caller + "'");
-			
-		} catch (SQLException e) {
+		}
+		catch (SQLException e) {
 			System.out.println("Error updating total");
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+		return caller;
 	}
+	
+	public String getPolicy(String userName) {
+		Statement s;
+		String policy = null;
+		try {
+			s = con.createStatement();
+			s.executeQuery("SELECT * FROM users "
+					+ "WHERE userName = '" + userName + "'");
+			ResultSet rs = s.getResultSet ();
+			if (!rs.next() ) {
+				System.out.println("Didn't find the user");
+			}
+			policy = rs.getString("policy");
+			
+			if (rs.next()) {
+				System.out.println("Found Second user");
+				return null;
+			}
+			
+		}
+		catch (SQLException e) {
+			System.out.println("Error updating total");
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return policy;
+	}
+	
+	
+	public void updateCost(String userName,double cost) {
+		Statement s;
+		try {
+			s = con.createStatement();
+			s.executeUpdate("UPDATE users SET total= total +'" + cost + "' WHERE userName='"
+			+ userName + "'");
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			System.out.println("Error updating cost");
+			e.printStackTrace();
+		}
+			
+} 
+	
+
 	
 	public long getCallDuration(String callID) {
 		Statement s;

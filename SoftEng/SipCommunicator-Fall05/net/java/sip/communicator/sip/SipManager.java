@@ -631,7 +631,8 @@ public class SipManager
             }
             this.currentlyUsedURI = publicAddress;
         	MessageProcessing msgPrcs = new MessageProcessing(this);
-        	String message ="SIGNUP " + uc.getUserName() + ":" + uc.getFirstName() + ":" + uc.getLastName() + ":" + new String(uc.getPassword());
+        	String message ="SIGNUP " + uc.getUserName() + ":" + uc.getFirstName() + ":" +
+        			uc.getLastName() + ":" + new String(uc.getPassword()) + ":" + uc.getPolicy();
         	System.out.println(message);
         	try{
         		msgPrcs.sendMessage(getRegistrarAddress(), message.getBytes(), "text/plain", null);

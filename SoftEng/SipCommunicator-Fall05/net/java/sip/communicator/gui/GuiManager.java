@@ -720,7 +720,6 @@ public class GuiManager
                                       String userName,
                                       char[] password)
     {
-    	console.debug("1");
         if (authenticationSplash != null)
             authenticationSplash.dispose();
         authenticationSplash = new AuthenticationSplash(phoneFrame, true);
@@ -753,6 +752,11 @@ public class GuiManager
     public String getAuthenticationLastName()
     {
         return authenticationSplash.lastName;
+    }
+    
+    public String getAuthenticationPolicy()
+    {
+        return authenticationSplash.policy;
     }
     
     public int registerOrSignup() {

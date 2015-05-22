@@ -873,6 +873,7 @@ public class SipCommunicator
             	 credentials.setUserName(guiManager.getAuthenticationUserName());
                  credentials.setPassword(guiManager.getAuthenticationPassword());
                  credentials.setFlag(1);
+                 credentials.setPolicy(guiManager.getAuthenticationPolicy());
             }
             else System.out.println("ERROR");
             
