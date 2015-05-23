@@ -1405,7 +1405,7 @@ public class Proxy implements SipListener  {
     public void processMessage(Request request , ServerTransaction serverTransaction , SipProvider sipProvider) {
     	String msg = new String(request.getRawContent());
     	String[] word = msg.split(" ");
-    	if (word[0].equals("BLOCK") || word[0].equals("FORWARD") || word[0].equals("CHANGE")) {
+    	if (word[0].equals("BLOCK") || word[0].equals("FORWARD") || word[0].equals("POLICY")) {
     		try{
     	    	String toURI = new String(word[1]);
 	    		MessageFactory messageFactory=this.getMessageFactory();  
@@ -1435,6 +1435,24 @@ public class Proxy implements SipListener  {
 					} catch (SQLException e) {
 						System.out.println("Error inserting "
 								+ "forward user in database. Response will be SERVER_INTERNAL_ERROR");
+						response=messageFactory.createResponse(Response.SERVER_INTERNAL_ERROR,request);
+					}
+		        	finally {
+			        	if (serverTransaction!=null)
+			                serverTransaction.sendResponse(response);
+			            else sipProvider.sendResponse(response);
+		        	}
+		        }
+		        else if (word[0].equals("POLICY")){
+		        	try {
+		        		String policy = toURI;
+		        		String userName = fromURI;
+						connObj.changePolicy(userName,policy);
+						response=messageFactory.createResponse(Response.OK,request);
+						
+					} catch (SQLException e) {
+						System.out.println("Error updating "
+								+ "policy in database. Response will be SERVER_INTERNAL_ERROR");
 						response=messageFactory.createResponse(Response.SERVER_INTERNAL_ERROR,request);
 					}
 		        	finally {

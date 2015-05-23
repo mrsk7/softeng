@@ -244,7 +244,13 @@ public class ManageSplash extends JDialog
         {
             public void actionPerformed(ActionEvent event)
             {
-            		dialogDone(event);
+            	policyChoice = (String) policyBox.getSelectedItem();
+            	if (currentPolicy.equals(policyChoice)) {
+            		PopupWindow x = new PopupWindow("You didn't change your billing policy. Please select other policy","Same policy");
+            	}
+            	else {
+            		guiManCallback.changePolicyButton_actionPerformed(event);
+            	}
             }
         });
         buttonPanel.add(changeButton);
@@ -354,15 +360,6 @@ public class ManageSplash extends JDialog
         }
         else if (cmd.equals(CMD_CANCEL)) {
             setVisible(false);
-        }
-        else if (cmd.equals(CMD_CHANGE)) {
-        	policyChoice = (String) policyBox.getSelectedItem();
-        	if (currentPolicy.equals(policyChoice)) {
-        		PopupWindow x = new PopupWindow("You didn't change your billing policy. Please select other policy","Same policy");
-        	}
-        	else {
-        		
-        	}
         }
         
         //dispose();

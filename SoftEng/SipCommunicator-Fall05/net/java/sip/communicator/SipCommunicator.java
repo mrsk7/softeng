@@ -408,6 +408,20 @@ public class SipCommunicator
         	}
     }
     
+  //OURS
+    public void handleChangePolicyRequest(String newPolicy)
+    {
+        	MessageProcessing msgPrcs = new MessageProcessing(sipManager);
+        	newPolicy = "POLICY " + newPolicy;
+        	try{
+        		msgPrcs.sendMessage(sipManager.getRegistrarAddress(), newPolicy.getBytes(), "text/plain", null);
+        	}
+        	catch (CommunicationsException exc) {
+                console.showException("Could not forward number!\nError was: "
+                        + exc.getMessage(),
+                        exc);
+        	}
+    }
     
     public void handleDialRequest(UserCallInitiationEvent evt)
     {

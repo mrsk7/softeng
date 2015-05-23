@@ -150,6 +150,17 @@ public class ConnectionObject {
 		}
 	}
 	
+	public void changePolicy(String userName, String policy) throws SQLException{
+		Statement s;
+		s = con.createStatement();
+		try {
+			s.executeUpdate("UPDATE users SET policy='" + policy + "' WHERE userName='"
+					+ userName + "'");
+		} finally {
+			s.close();
+		}
+	}
+	
 	public void connect() {
 		Connection con = null;
 		

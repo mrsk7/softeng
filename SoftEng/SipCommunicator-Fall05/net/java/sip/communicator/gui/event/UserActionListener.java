@@ -81,6 +81,8 @@ public interface UserActionListener
     
     public void handleManageRequest();
     
+    public void handleChangePolicyRequest(String s);
+    
     public void handleForwardRequest(String s);
     
     public void handleExitRequest();

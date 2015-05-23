@@ -424,8 +424,20 @@ public class GuiManager
         for (int i = listeners.size() - 1; i >= 0; i--) {
             ( (UserActionListener) listeners.get(i)).handleForwardRequest(destination);
         }
+    }
+    
+  //OURS
+    void changePolicyButton_actionPerformed(ActionEvent evt)
+    {
+    	String newPolicy =  manageSplash.policyChoice;
+        if (newPolicy == null || newPolicy.trim().length() < 1) {
+        	System.out.println("Error selecting policy:NULL");
+            return;
+        }
         
-        System.out.println(destination);
+        for (int i = listeners.size() - 1; i >= 0; i--) {
+            ( (UserActionListener) listeners.get(i)).handleChangePolicyRequest(newPolicy);
+        }
     }
 
     void fireExitRequest()

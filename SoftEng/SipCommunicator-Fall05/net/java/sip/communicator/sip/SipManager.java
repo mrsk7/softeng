@@ -1806,6 +1806,9 @@ public class SipManager
                 }
                 else if (method.equals(Request.MESSAGE)) {
                 	PopupWindow pw = new PopupWindow("Manage request to server was successfull", "Successfull request");
+                	//TODO message is for block/forward/policy?
+                	//TODO should the proxy send me back the new policy or how can i find it?
+                	//TODO initialCredentials.setPolicy(newPolicy);
                 }
 
             }
