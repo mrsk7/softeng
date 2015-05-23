@@ -1408,17 +1408,40 @@ public class Proxy implements SipListener  {
     	if (word[0].equals("BLOCK") || word[0].equals("FORWARD") || word[0].equals("CHANGE")) {
     		try{
     	    	String toURI = new String(word[1]);
-	    		MessageFactory messageFactory=this.getMessageFactory();            
-	            Response response=messageFactory.createResponse(Response.OK,request);
+	    		MessageFactory messageFactory=this.getMessageFactory();  
+	    		Response response = null;
 	            String fromURI= request.getHeader("From").toString().split("<sip:")[1].split("@")[0];
-	            if (serverTransaction!=null)
-	                serverTransaction.sendResponse(response);
-	            else sipProvider.sendResponse(response);
 		        if (word[0].equals("BLOCK")) {
-		        	connObj.block(fromURI,toURI) ;
+		        	try {
+						connObj.block(fromURI,toURI);
+						response=messageFactory.createResponse(Response.OK,request);
+						
+					} catch (SQLException e) {
+						System.out.println("Error inserting "
+								+ "blocked user in database. Response will be SERVER_INTERNAL_ERROR");
+						response=messageFactory.createResponse(Response.SERVER_INTERNAL_ERROR,request);
+					}
+		        	finally {
+			        	if (serverTransaction!=null)
+			                serverTransaction.sendResponse(response);
+			            else sipProvider.sendResponse(response);
+		        	}
 		        }
 		        else if (word[0].equals("FORWARD")){
-		        	connObj.forward(fromURI,toURI) ;
+		        	try {
+						connObj.forward(fromURI,toURI) ;
+						response=messageFactory.createResponse(Response.OK,request);
+						
+					} catch (SQLException e) {
+						System.out.println("Error inserting "
+								+ "forward user in database. Response will be SERVER_INTERNAL_ERROR");
+						response=messageFactory.createResponse(Response.SERVER_INTERNAL_ERROR,request);
+					}
+		        	finally {
+			        	if (serverTransaction!=null)
+			                serverTransaction.sendResponse(response);
+			            else sipProvider.sendResponse(response);
+		        	}
 		        }
 	    	}
     		catch (SipException ex) {

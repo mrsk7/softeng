@@ -113,7 +113,7 @@ class PhoneFrame
     BoxLayout boxLayout21 = new BoxLayout(videoPane, BoxLayout.Y_AXIS);
     Border border15;
 
-    private GuiManager guiManCallback = null;
+    GuiManager guiManCallback = null;
     BorderLayout borderLayout4 = new BorderLayout();
     JPanel dialPanel = new JPanel();
     JButton dialButton = new JButton();

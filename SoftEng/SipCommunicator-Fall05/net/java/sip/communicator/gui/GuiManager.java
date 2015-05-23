@@ -404,30 +404,28 @@ public class GuiManager
     
     void blockingButton_actionPerformed(ActionEvent evt)
     {
-    	String callee = phoneFrame.contactBox.getSelectedItem().toString();
-        if (callee == null || callee.trim().length() < 1) {
+    	String blockee =  manageSplash.userNameTextField.getText();
+        if (blockee == null || blockee.trim().length() < 1) {
             return;
         }
         
         for (int i = listeners.size() - 1; i >= 0; i--) {
-            ( (UserActionListener) listeners.get(i)).handleBlockRequest(callee);
+            ( (UserActionListener) listeners.get(i)).handleBlockRequest(blockee);
         }
-        
-        System.out.println(callee);
-    }
+            }
     //OURS
     void forwardButton_actionPerformed(ActionEvent evt)
     {
-    	String callee = phoneFrame.contactBox.getSelectedItem().toString();
-        if (callee == null || callee.trim().length() < 1) {
+    	String destination =  manageSplash.userNameTextField.getText();
+        if (destination == null || destination.trim().length() < 1) {
             return;
         }
         
         for (int i = listeners.size() - 1; i >= 0; i--) {
-            ( (UserActionListener) listeners.get(i)).handleForwardRequest(callee);
+            ( (UserActionListener) listeners.get(i)).handleForwardRequest(destination);
         }
         
-        System.out.println(callee);
+        System.out.println(destination);
     }
 
     void fireExitRequest()
@@ -687,7 +685,7 @@ public class GuiManager
             }
         });
        /* 
-        phoneFrame.blockingButton.addActionListener(new ActionListener()
+        manageSplash.blockingButton.addActionListener(new ActionListener()
         {
             public void actionPerformed(ActionEvent evt)
             {
@@ -696,7 +694,7 @@ public class GuiManager
         });
         
       //OURS
-        phoneFrame.forwardButton.addActionListener(new ActionListener()
+        manageSplash.forwardButton.addActionListener(new ActionListener()
         {
             public void actionPerformed(ActionEvent evt)
             {
@@ -735,7 +733,7 @@ public class GuiManager
     }
 
     public void manageAccount(String[] policyList,String policy) {
-    	manageSplash = new ManageSplash(phoneFrame, true, policyList, policy);
+    	manageSplash = new ManageSplash(phoneFrame, true, policyList, policy,this);
     	manageSplash.show();
     }
     

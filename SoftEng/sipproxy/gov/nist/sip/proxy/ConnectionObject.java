@@ -53,18 +53,13 @@ public class ConnectionObject {
 		createTables();
 	}
 	
-	public void block(String blocker, String ebloki){
+	public void block(String blocker, String ebloki) throws SQLException{
 		Statement s;
-		try{
-			s = con.createStatement();
-			s.executeUpdate(" INSERT INTO blockTable (blocker,blocked)" +
-							" VALUES " +
-							" ('" + blocker + "', '" + ebloki + "')"
-							);
-		}
-		catch (SQLException exc) {
-			System.out.println ("Cannot insert block");
-		}
+		s = con.createStatement();
+		s.executeUpdate(" INSERT INTO blockTable (blocker,blocked)" +
+						" VALUES " +
+						" ('" + blocker + "', '" + ebloki + "')"
+						);
 	}
 	
 	public boolean hasLoop(String from, String to){
@@ -142,26 +137,17 @@ public class ConnectionObject {
 		
 	}
 	
-	public boolean forward(String from, String to){
+	public void forward(String from, String to) throws SQLException{
 		Statement s;
-		try{
-			s = con.createStatement();
-			if (!hasLoop(from,to)){
-				s.executeUpdate(" INSERT INTO forwardTable (departure,destination)" +
-								" VALUES " +
-								" ('" + from + "', '" + to + "')"
-								);
-				 s.close();
-				return true;
+		s = con.createStatement();
+		try {
+			if (!hasLoop(from, to)) {
+				s.executeUpdate(" INSERT INTO forwardTable (departure,destination)"
+						+ " VALUES " + " ('" + from + "', '" + to + "')");
 			}
-			 s.close();
+		} finally {
+			s.close();
 		}
-		catch (SQLException exc) {
-			
-			System.out.println ("Cannot insert block");
-		}
-		
-		return false;
 	}
 	
 	public void connect() {
@@ -179,7 +165,6 @@ public class ConnectionObject {
 			System.out.println ("Cannot connect to database server");
 		}
 		this.con = con;
-		System.out.println("Connection succesfull");
 	}
 	
 	public void startCallTimer(String callID,String caller,String callee,Date startTime) {

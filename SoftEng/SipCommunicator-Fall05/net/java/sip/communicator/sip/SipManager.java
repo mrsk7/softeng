@@ -1805,7 +1805,7 @@ public class SipManager
                     watcher.processSubscribeOK(clientTransaction, response);
                 }
                 else if (method.equals(Request.MESSAGE)) {
-                	// TODO
+                	PopupWindow pw = new PopupWindow("Manage request to server was successfull", "Successfull request");
                 }
 
             }
@@ -2085,8 +2085,11 @@ public class SipManager
                 fireUnknownMessageReceived(response);
             }
             else if (response.getStatusCode() == Response.SERVER_INTERNAL_ERROR) {
-                /** @todo add proper request handling */
-                fireUnknownMessageReceived(response);
+                //OURS
+            	if (method.equals(Request.MESSAGE)) {
+            		PopupWindow pw = new PopupWindow("Server Error: Request unsuccessfull."
+            				+ "Try again later" , "Server Internal Error");
+            	}
             }
             else if (response.getStatusCode() == Response.SERVER_TIMEOUT) {
                 /** @todo add proper request handling */

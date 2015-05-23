@@ -41,20 +41,23 @@ public class ManageSplash extends JDialog
     protected JButton cancelButton = null;
     protected String[] policyList = null;
     protected String currentPolicy = null;
+    protected GuiManager guiManCallback = null;
+    
+
+    
     /**
      * Command string for a cancel action (e.g., a button).
      * This string is never presented to the user and should
      * not be internationalized.
      */
     private String CMD_CANCEL = "cmd.cancel" /*NOI18N*/;
-    private String CMD_BLOCK = "cmd.block";
-    private String CMD_FORWARD = "cmd.forward";
     private String CMD_CHANGE = "cmd.change";
 
 
-    public ManageSplash(Frame parent, boolean modal, String[] policyList,String currentPolicy)
+    public ManageSplash(Frame parent, boolean modal, String[] policyList,String currentPolicy,GuiManager gui)
     {
         super(parent, modal);
+        guiManCallback = gui;
       //  initResources();
         this.policyList = policyList;
         this.currentPolicy = currentPolicy;
@@ -62,7 +65,7 @@ public class ManageSplash extends JDialog
         pack();
         centerWindow();
     }
-    
+   
     private void centerWindow()
     {
         Rectangle screen = new Rectangle(
@@ -100,7 +103,7 @@ public class ManageSplash extends JDialog
 
         // Accessibility -- all frames, dialogs, and applets should
         // have a description
-        getAccessibleContext().setAccessibleDescription("Manage Spalsh");
+        getAccessibleContext().setAccessibleDescription("Manage Splash");
 
 
         JPanel centerPane = new JPanel();
@@ -161,7 +164,7 @@ public class ManageSplash extends JDialog
         buttonPanel.setLayout(new BoxLayout(buttonPanel, 0));
         blockingButton = new JButton();
         blockingButton.setText("Block");
-        blockingButton.setActionCommand(CMD_BLOCK);
+        //blockingButton.setActionCommand(CMD_BLOCK);
         blockingButton.addActionListener(new ActionListener()
         {
             public void actionPerformed(ActionEvent event)
@@ -173,7 +176,7 @@ public class ManageSplash extends JDialog
             	}
             	
             	else  {
-            		dialogDone(event);
+            		guiManCallback.blockingButton_actionPerformed(event);
             	}
        
             	
@@ -187,7 +190,7 @@ public class ManageSplash extends JDialog
         
         forwardButton = new JButton();
         forwardButton.setText("Forward");
-        forwardButton.setActionCommand(CMD_FORWARD);
+       // forwardButton.setActionCommand(CMD_FORWARD);
         forwardButton.addActionListener(new ActionListener()
         {
             public void actionPerformed(ActionEvent event)
@@ -198,7 +201,7 @@ public class ManageSplash extends JDialog
             	
             	}
             	else  {
-            		dialogDone(event);
+            		guiManCallback.forwardButton_actionPerformed(event);
             	}
        
             	
@@ -352,15 +355,6 @@ public class ManageSplash extends JDialog
         else if (cmd.equals(CMD_CANCEL)) {
             setVisible(false);
         }
-        else if (cmd.equals(CMD_BLOCK)) {
-        	try
-            {
-            }
-            catch (Exception e)
-            {
-                System.err.println ("Cannot connect to database server");
-            }
-        }
         else if (cmd.equals(CMD_CHANGE)) {
         	policyChoice = (String) policyBox.getSelectedItem();
         	if (currentPolicy.equals(policyChoice)) {
@@ -373,6 +367,8 @@ public class ManageSplash extends JDialog
         
         //dispose();
     } // dialogDone()
+    
+    
 
 } // class ManageSplash
     
