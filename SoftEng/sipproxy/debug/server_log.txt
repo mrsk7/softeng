@@ -9142,3 +9142,1352 @@ Content-Length: 0
 ]]>
 </message>
 
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= 192.168.1.4
+javax.sip.STACK_NAME= nist-proxy
+javax.sip.ROUTER_PATH= gov.nist.sip.proxy.router.ProxyRouter
+javax.sip.OUTBOUND_PROXY= null
+javax.sip.RETRANSMISSION_FILTER= on
+-->
+<description
+ logDescription="nist-proxy"
+ name="192.168.1.4" />
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432578965509" 
+isSender="false" 
+transactionId="z9hg4bk876fd02417eac17cd358466ccf6ab5d7" 
+callId="9f8edfef73aa86d22ed608c85e9b744e@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="102" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: 9f8edfef73aa86d22ed608c85e9b744e@192.168.1.4
+CSeq: 1 MESSAGE
+From: "KLOUP" <sip:New@192.168.1.4:4000;transport=udp>;tag=12674827
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK876fd02417eac17cd358466ccf6ab5d7
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 22
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432578966015" 
+isSender="false" 
+transactionId="z9hg4bk876fd02417eac17cd358466ccf6ab5d7" 
+callId="9f8edfef73aa86d22ed608c85e9b744e@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="203" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: 9f8edfef73aa86d22ed608c85e9b744e@192.168.1.4
+CSeq: 1 MESSAGE
+From: "KLOUP" <sip:New@192.168.1.4:4000;transport=udp>;tag=12674827
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK876fd02417eac17cd358466ccf6ab5d7
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 22
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432578966096" 
+isSender="true" 
+transactionId="z9hg4bk876fd02417eac17cd358466ccf6ab5d7" 
+callId="9f8edfef73aa86d22ed608c85e9b744e@192.168.1.4" 
+firstLine="SIP/2.0 202 Accepted" 
+debugLine="257" 
+>
+<![CDATA[SIP/2.0 202 Accepted
+Call-ID: 9f8edfef73aa86d22ed608c85e9b744e@192.168.1.4
+CSeq: 1 MESSAGE
+From: "KLOUP" <sip:New@192.168.1.4:4000;transport=udp>;tag=12674827
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK876fd02417eac17cd358466ccf6ab5d7
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432578966186" 
+isSender="true" 
+transactionId="z9hg4bk876fd02417eac17cd358466ccf6ab5d7" 
+callId="9f8edfef73aa86d22ed608c85e9b744e@192.168.1.4" 
+firstLine="SIP/2.0 400 Bad request" 
+debugLine="319" 
+>
+<![CDATA[SIP/2.0 400 Bad request
+Call-ID: 9f8edfef73aa86d22ed608c85e9b744e@192.168.1.4
+CSeq: 1 MESSAGE
+From: "KLOUP" <sip:New@192.168.1.4:4000;transport=udp>;tag=12674827
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK876fd02417eac17cd358466ccf6ab5d7
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= 192.168.1.4
+javax.sip.STACK_NAME= nist-proxy
+javax.sip.ROUTER_PATH= gov.nist.sip.proxy.router.ProxyRouter
+javax.sip.OUTBOUND_PROXY= null
+javax.sip.RETRANSMISSION_FILTER= on
+-->
+<description
+ logDescription="nist-proxy"
+ name="192.168.1.4" />
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= 192.168.1.4
+javax.sip.STACK_NAME= nist-proxy
+javax.sip.ROUTER_PATH= gov.nist.sip.proxy.router.ProxyRouter
+javax.sip.OUTBOUND_PROXY= null
+javax.sip.RETRANSMISSION_FILTER= on
+-->
+<description
+ logDescription="nist-proxy"
+ name="192.168.1.4" />
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432579387822" 
+isSender="false" 
+transactionId="z9hg4bke18cd618beae492506afd4020b1ee731" 
+callId="122e717b018b75312135c3db6fe9fb58@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="102" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: 122e717b018b75312135c3db6fe9fb58@192.168.1.4
+CSeq: 1 MESSAGE
+From: "KLOUP" <sip:Nick@192.168.1.4:4000;transport=udp>;tag=12674827
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bKe18cd618beae492506afd4020b1ee731
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 28
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432579388323" 
+isSender="false" 
+transactionId="z9hg4bke18cd618beae492506afd4020b1ee731" 
+callId="122e717b018b75312135c3db6fe9fb58@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="203" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: 122e717b018b75312135c3db6fe9fb58@192.168.1.4
+CSeq: 1 MESSAGE
+From: "KLOUP" <sip:Nick@192.168.1.4:4000;transport=udp>;tag=12674827
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bKe18cd618beae492506afd4020b1ee731
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 28
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432579388372" 
+isSender="true" 
+transactionId="z9hg4bke18cd618beae492506afd4020b1ee731" 
+callId="122e717b018b75312135c3db6fe9fb58@192.168.1.4" 
+firstLine="SIP/2.0 202 Accepted" 
+debugLine="257" 
+>
+<![CDATA[SIP/2.0 202 Accepted
+Call-ID: 122e717b018b75312135c3db6fe9fb58@192.168.1.4
+CSeq: 1 MESSAGE
+From: "KLOUP" <sip:Nick@192.168.1.4:4000;transport=udp>;tag=12674827
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bKe18cd618beae492506afd4020b1ee731
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432579388452" 
+isSender="true" 
+transactionId="z9hg4bke18cd618beae492506afd4020b1ee731" 
+callId="122e717b018b75312135c3db6fe9fb58@192.168.1.4" 
+firstLine="SIP/2.0 400 Bad request" 
+debugLine="319" 
+>
+<![CDATA[SIP/2.0 400 Bad request
+Call-ID: 122e717b018b75312135c3db6fe9fb58@192.168.1.4
+CSeq: 1 MESSAGE
+From: "KLOUP" <sip:Nick@192.168.1.4:4000;transport=udp>;tag=12674827
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bKe18cd618beae492506afd4020b1ee731
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432579388626" 
+isSender="false" 
+transactionId="z9hg4bk5992699ae785ddb729feeb54deae4e4a" 
+callId="29d9afeb0d718517f8680c1a5f7612fa@192.168.1.4" 
+firstLine="REGISTER sip:192.168.1.4:5060;transport=udp SIP/2.0" 
+debugLine="422" 
+>
+<![CDATA[REGISTER sip:192.168.1.4:5060;transport=udp SIP/2.0
+Call-ID: 29d9afeb0d718517f8680c1a5f7612fa@192.168.1.4
+CSeq: 1 REGISTER
+From: "KLOUP" <sip:Nick@192.168.1.4:4000;transport=udp>;tag=12674827
+To: "KLOUP" <sip:Nick@192.168.1.4:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK5992699ae785ddb729feeb54deae4e4a
+Max-Forwards: 70
+Pwd: Terkenes
+Expires: 3600
+Contact: "KLOUP" <sip:192.168.1.4:5060;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432579388757" 
+isSender="true" 
+transactionId="z9hg4bk5992699ae785ddb729feeb54deae4e4a" 
+callId="29d9afeb0d718517f8680c1a5f7612fa@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="486" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 29d9afeb0d718517f8680c1a5f7612fa@192.168.1.4
+CSeq: 1 REGISTER
+From: "KLOUP" <sip:Nick@192.168.1.4:4000;transport=udp>;tag=12674827
+To: "KLOUP" <sip:Nick@192.168.1.4:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK5992699ae785ddb729feeb54deae4e4a
+Max-Forwards: 70
+Contact: "KLOUP" <sip:192.168.1.4:5060;transport=udp>;expires=3600
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432579410216" 
+isSender="false" 
+transactionId="z9hg4bkb2402cee64b3432785f3b2653f3f880c" 
+callId="e327efb47c954f81530479004b69785a@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="593" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: e327efb47c954f81530479004b69785a@192.168.1.4
+CSeq: 1 MESSAGE
+From: "KLOUP" <sip:Nick@192.168.1.4:4000;transport=udp>;tag=12674827
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bKb2402cee64b3432785f3b2653f3f880c
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 7
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432579410338" 
+isSender="true" 
+transactionId="z9hg4bkb2402cee64b3432785f3b2653f3f880c" 
+callId="e327efb47c954f81530479004b69785a@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="650" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: e327efb47c954f81530479004b69785a@192.168.1.4
+CSeq: 1 MESSAGE
+From: "KLOUP" <sip:Nick@192.168.1.4:4000;transport=udp>;tag=12674827
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bKb2402cee64b3432785f3b2653f3f880c
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432579436739" 
+isSender="false" 
+transactionId="z9hg4bkb27327c01a5a4ed56b23aec8434562d6" 
+callId="4e7373a666af06b1c73b133bac623483@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="751" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: 4e7373a666af06b1c73b133bac623483@192.168.1.4
+CSeq: 1 MESSAGE
+From: "KLOUP" <sip:Nick@192.168.1.4:4000;transport=udp>;tag=12674827
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bKb27327c01a5a4ed56b23aec8434562d6
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 9
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432579436839" 
+isSender="true" 
+transactionId="z9hg4bkb27327c01a5a4ed56b23aec8434562d6" 
+callId="4e7373a666af06b1c73b133bac623483@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="813" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 4e7373a666af06b1c73b133bac623483@192.168.1.4
+CSeq: 1 MESSAGE
+From: "KLOUP" <sip:Nick@192.168.1.4:4000;transport=udp>;tag=12674827
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bKb27327c01a5a4ed56b23aec8434562d6
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432579443979" 
+isSender="false" 
+transactionId="z9hg4bk9d0650667fe399c96cf6afcc10d4eda3" 
+callId="697c9ba8caa840167421be80a73ec5df@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="918" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: 697c9ba8caa840167421be80a73ec5df@192.168.1.4
+CSeq: 1 MESSAGE
+From: "KLOUP" <sip:Nick@192.168.1.4:4000;transport=udp>;tag=12674827
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK9d0650667fe399c96cf6afcc10d4eda3
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 9
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432579444121" 
+isSender="true" 
+transactionId="z9hg4bk9d0650667fe399c96cf6afcc10d4eda3" 
+callId="697c9ba8caa840167421be80a73ec5df@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="976" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 697c9ba8caa840167421be80a73ec5df@192.168.1.4
+CSeq: 1 MESSAGE
+From: "KLOUP" <sip:Nick@192.168.1.4:4000;transport=udp>;tag=12674827
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK9d0650667fe399c96cf6afcc10d4eda3
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432579450444" 
+isSender="false" 
+transactionId="z9hg4bk53d737c5652ca44315a9285a884c8c51" 
+callId="fe83b322c09254e0e8704338983c85b5@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="1082" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: fe83b322c09254e0e8704338983c85b5@192.168.1.4
+CSeq: 1 MESSAGE
+From: "KLOUP" <sip:Nick@192.168.1.4:4000;transport=udp>;tag=12674827
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK53d737c5652ca44315a9285a884c8c51
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 11
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432579450586" 
+isSender="true" 
+transactionId="z9hg4bk53d737c5652ca44315a9285a884c8c51" 
+callId="fe83b322c09254e0e8704338983c85b5@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="1139" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: fe83b322c09254e0e8704338983c85b5@192.168.1.4
+CSeq: 1 MESSAGE
+From: "KLOUP" <sip:Nick@192.168.1.4:4000;transport=udp>;tag=12674827
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK53d737c5652ca44315a9285a884c8c51
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:43976" 
+to="192.168.1.4:4000" 
+time="1432579492786" 
+isSender="false" 
+transactionId="z9hg4bkda7b251615f0e07ba2ce295d96042800" 
+callId="a682477195854a1450db6e188a6b7998@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="1240" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: a682477195854a1450db6e188a6b7998@192.168.1.4
+CSeq: 1 MESSAGE
+From: "KLOUP" <sip:Takeo@192.168.1.4:4000;transport=udp>;tag=22505839
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:43976;branch=z9hG4bKda7b251615f0e07ba2ce295d96042800
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 24
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:43976" 
+time="1432579492927" 
+isSender="true" 
+transactionId="z9hg4bkda7b251615f0e07ba2ce295d96042800" 
+callId="a682477195854a1450db6e188a6b7998@192.168.1.4" 
+firstLine="SIP/2.0 202 Accepted" 
+debugLine="1302" 
+>
+<![CDATA[SIP/2.0 202 Accepted
+Call-ID: a682477195854a1450db6e188a6b7998@192.168.1.4
+CSeq: 1 MESSAGE
+From: "KLOUP" <sip:Takeo@192.168.1.4:4000;transport=udp>;tag=22505839
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:43976;branch=z9hG4bKda7b251615f0e07ba2ce295d96042800
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:43976" 
+to="192.168.1.4:4000" 
+time="1432579493169" 
+isSender="false" 
+transactionId="z9hg4bk098083d8dea307edec1088514ac21e26" 
+callId="7f42dcbf7487d5b4f9cc94386add9cfe@192.168.1.4" 
+firstLine="REGISTER sip:192.168.1.4:5060;transport=udp SIP/2.0" 
+debugLine="1405" 
+>
+<![CDATA[REGISTER sip:192.168.1.4:5060;transport=udp SIP/2.0
+Call-ID: 7f42dcbf7487d5b4f9cc94386add9cfe@192.168.1.4
+CSeq: 1 REGISTER
+From: "KLOUP" <sip:Takeo@192.168.1.4:4000;transport=udp>;tag=22505839
+To: "KLOUP" <sip:Takeo@192.168.1.4:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.4:43976;branch=z9hG4bK098083d8dea307edec1088514ac21e26
+Max-Forwards: 70
+Pwd: 123
+Expires: 3600
+Contact: "KLOUP" <sip:192.168.1.4:43976;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:43976" 
+time="1432579493270" 
+isSender="true" 
+transactionId="z9hg4bk098083d8dea307edec1088514ac21e26" 
+callId="7f42dcbf7487d5b4f9cc94386add9cfe@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="1469" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 7f42dcbf7487d5b4f9cc94386add9cfe@192.168.1.4
+CSeq: 1 REGISTER
+From: "KLOUP" <sip:Takeo@192.168.1.4:4000;transport=udp>;tag=22505839
+To: "KLOUP" <sip:Takeo@192.168.1.4:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.4:43976;branch=z9hG4bK098083d8dea307edec1088514ac21e26
+Max-Forwards: 70
+Contact: "KLOUP" <sip:192.168.1.4:43976;transport=udp>;expires=3600
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:43976" 
+to="192.168.1.4:4000" 
+time="1432579503625" 
+isSender="false" 
+transactionId="z9hg4bk0b990f936dba3a2d4617425c4f446358" 
+callId="c064558c5ab2d1267db7c1a402d4ac2b@192.168.1.4" 
+firstLine="INVITE sip:Nick@192.168.1.4:4000 SIP/2.0" 
+debugLine="1580" 
+>
+<![CDATA[INVITE sip:Nick@192.168.1.4:4000 SIP/2.0
+Call-ID: c064558c5ab2d1267db7c1a402d4ac2b@192.168.1.4
+CSeq: 1 INVITE
+From: "KLOUP" <sip:Takeo@192.168.1.4:4000;transport=udp>;tag=22505839
+To: <sip:Nick@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:43976;branch=z9hG4bK0b990f936dba3a2d4617425c4f446358
+Max-Forwards: 70
+Contact: "KLOUP" <sip:192.168.1.4:43976;transport=udp>
+Content-Type: application/sdp
+Content-Length: 157
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432579503808" 
+isSender="true" 
+transactionId="z9hg4bk3b8d8d779d1953da38ac03e16b7b75e7" 
+callId="c064558c5ab2d1267db7c1a402d4ac2b@192.168.1.4" 
+firstLine="INVITE sip:192.168.1.4:5060 SIP/2.0" 
+debugLine="1747" 
+>
+<![CDATA[INVITE sip:192.168.1.4:5060 SIP/2.0
+Call-ID: c064558c5ab2d1267db7c1a402d4ac2b@192.168.1.4
+CSeq: 1 INVITE
+From: "KLOUP" <sip:Takeo@192.168.1.4:4000;transport=udp>;tag=22505839
+To: <sip:Nick@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:4000;branch=z9hG4bK3b8d8d779d1953da38ac03e16b7b75e7,SIP/2.0/UDP 192.168.1.4:43976;branch=z9hG4bK0b990f936dba3a2d4617425c4f446358
+Max-Forwards: 69
+Contact: "KLOUP" <sip:192.168.1.4:43976;transport=udp>
+Content-Type: application/sdp
+Record-Route: <sip:192.168.1.4:4000>
+Content-Length: 157
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:43976" 
+time="1432579503879" 
+isSender="true" 
+transactionId="z9hg4bk0b990f936dba3a2d4617425c4f446358" 
+callId="c064558c5ab2d1267db7c1a402d4ac2b@192.168.1.4" 
+firstLine="SIP/2.0 100 Trying" 
+debugLine="1817" 
+>
+<![CDATA[SIP/2.0 100 Trying
+Call-ID: c064558c5ab2d1267db7c1a402d4ac2b@192.168.1.4
+CSeq: 1 INVITE
+From: "KLOUP" <sip:Takeo@192.168.1.4:4000;transport=udp>;tag=22505839
+To: <sip:Nick@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:43976;branch=z9hG4bK0b990f936dba3a2d4617425c4f446358
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432579504029" 
+isSender="false" 
+statusMessage="normal processing" 
+transactionId="z9hg4bk3b8d8d779d1953da38ac03e16b7b75e7" 
+firstLine="SIP/2.0 100 Trying" 
+callId="c064558c5ab2d1267db7c1a402d4ac2b@192.168.1.4" 
+debugLine="1868" 
+>
+<![CDATA[SIP/2.0 100 Trying
+Call-ID: c064558c5ab2d1267db7c1a402d4ac2b@192.168.1.4
+CSeq: 1 INVITE
+From: "KLOUP" <sip:Takeo@192.168.1.4:4000;transport=udp>;tag=22505839
+To: <sip:Nick@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:4000;branch=z9hG4bK3b8d8d779d1953da38ac03e16b7b75e7,SIP/2.0/UDP 192.168.1.4:43976;branch=z9hG4bK0b990f936dba3a2d4617425c4f446358
+Max-Forwards: 69
+Record-Route: <sip:192.168.1.4:4000>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432579504833" 
+isSender="false" 
+statusMessage="normal processing" 
+transactionId="z9hg4bk3b8d8d779d1953da38ac03e16b7b75e7" 
+firstLine="SIP/2.0 180 Ringing" 
+callId="c064558c5ab2d1267db7c1a402d4ac2b@192.168.1.4" 
+debugLine="1987" 
+>
+<![CDATA[SIP/2.0 180 Ringing
+Call-ID: c064558c5ab2d1267db7c1a402d4ac2b@192.168.1.4
+CSeq: 1 INVITE
+From: "KLOUP" <sip:Takeo@192.168.1.4:4000;transport=udp>;tag=22505839
+To: <sip:Nick@192.168.1.4:4000>;tag=454929
+Via: SIP/2.0/UDP 192.168.1.4:4000;branch=z9hG4bK3b8d8d779d1953da38ac03e16b7b75e7,SIP/2.0/UDP 192.168.1.4:43976;branch=z9hG4bK0b990f936dba3a2d4617425c4f446358
+Max-Forwards: 69
+Record-Route: <sip:192.168.1.4:4000>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:43976" 
+time="1432579504843" 
+isSender="true" 
+transactionId="z9hg4bk0b990f936dba3a2d4617425c4f446358" 
+callId="c064558c5ab2d1267db7c1a402d4ac2b@192.168.1.4" 
+firstLine="SIP/2.0 180 Ringing" 
+debugLine="2096" 
+>
+<![CDATA[SIP/2.0 180 Ringing
+Call-ID: c064558c5ab2d1267db7c1a402d4ac2b@192.168.1.4
+CSeq: 1 INVITE
+From: "KLOUP" <sip:Takeo@192.168.1.4:4000;transport=udp>;tag=22505839
+To: <sip:Nick@192.168.1.4:4000>;tag=454929
+Via: SIP/2.0/UDP 192.168.1.4:43976;branch=z9hG4bK0b990f936dba3a2d4617425c4f446358
+Max-Forwards: 69
+Record-Route: <sip:192.168.1.4:4000>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432579517546" 
+isSender="false" 
+statusMessage="normal processing" 
+transactionId="z9hg4bk3b8d8d779d1953da38ac03e16b7b75e7" 
+firstLine="SIP/2.0 200 OK" 
+callId="c064558c5ab2d1267db7c1a402d4ac2b@192.168.1.4" 
+debugLine="2232" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: c064558c5ab2d1267db7c1a402d4ac2b@192.168.1.4
+CSeq: 1 INVITE
+From: "KLOUP" <sip:Takeo@192.168.1.4:4000;transport=udp>;tag=22505839
+To: <sip:Nick@192.168.1.4:4000>;tag=454929
+Via: SIP/2.0/UDP 192.168.1.4:4000;branch=z9hG4bK3b8d8d779d1953da38ac03e16b7b75e7,SIP/2.0/UDP 192.168.1.4:43976;branch=z9hG4bK0b990f936dba3a2d4617425c4f446358
+Max-Forwards: 69
+Record-Route: <sip:192.168.1.4:4000>
+Content-Type: application/sdp
+Contact: "KLOUP" <sip:192.168.1.4:5060;transport=udp>
+Content-Length: 157
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:43976" 
+time="1432579517556" 
+isSender="true" 
+transactionId="z9hg4bk0b990f936dba3a2d4617425c4f446358" 
+callId="c064558c5ab2d1267db7c1a402d4ac2b@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="2385" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: c064558c5ab2d1267db7c1a402d4ac2b@192.168.1.4
+CSeq: 1 INVITE
+From: "KLOUP" <sip:Takeo@192.168.1.4:4000;transport=udp>;tag=22505839
+To: <sip:Nick@192.168.1.4:4000>;tag=454929
+Via: SIP/2.0/UDP 192.168.1.4:43976;branch=z9hG4bK0b990f936dba3a2d4617425c4f446358
+Max-Forwards: 69
+Record-Route: <sip:192.168.1.4:4000>
+Content-Type: application/sdp
+Contact: "KLOUP" <sip:192.168.1.4:5060;transport=udp>
+Content-Length: 157
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:43976" 
+to="192.168.1.4:4000" 
+time="1432579517608" 
+isSender="false" 
+transactionId="24870447" 
+callId="c064558c5ab2d1267db7c1a402d4ac2b@192.168.1.4" 
+firstLine="ACK sip:192.168.1.4:4000;transport=udp SIP/2.0" 
+debugLine="2511" 
+>
+<![CDATA[ACK sip:192.168.1.4:4000;transport=udp SIP/2.0
+Call-ID: c064558c5ab2d1267db7c1a402d4ac2b@192.168.1.4
+CSeq: 1 ACK
+From: "KLOUP" <sip:Takeo@192.168.1.4:4000;transport=udp>;tag=22505839
+To: <sip:Nick@192.168.1.4:4000>;tag=454929
+Via: SIP/2.0/UDP 192.168.1.4:43976;branch=39322e3136382e312e343a343339373
+Max-Forwards: 70
+Route: "KLOUP" <sip:192.168.1.4:5060;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432579517841" 
+isSender="true" 
+transactionId="z9hg4bkbfbc66a14639a8caeb76005af0c2fa93" 
+callId="c064558c5ab2d1267db7c1a402d4ac2b@192.168.1.4" 
+firstLine="ACK sip:192.168.1.4:5060 SIP/2.0" 
+debugLine="2745" 
+>
+<![CDATA[ACK sip:192.168.1.4:5060 SIP/2.0
+Call-ID: c064558c5ab2d1267db7c1a402d4ac2b@192.168.1.4
+CSeq: 1 ACK
+From: "KLOUP" <sip:Takeo@192.168.1.4:4000;transport=udp>;tag=22505839
+To: <sip:Nick@192.168.1.4:4000>;tag=454929
+Via: SIP/2.0/UDP 192.168.1.4:4000;branch=z9hG4bKbfbc66a14639a8caeb76005af0c2fa93,SIP/2.0/UDP 192.168.1.4:43976;branch=39322e3136382e312e343a343339373
+Max-Forwards: 69
+Route: "KLOUP" <sip:192.168.1.4:5060;transport=udp>
+Record-Route: <sip:192.168.1.4:4000>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432579528144" 
+isSender="false" 
+transactionId="z9hg4bk6e715cfb7765d4ee4fd040fc76cbb998" 
+callId="c064558c5ab2d1267db7c1a402d4ac2b@192.168.1.4" 
+firstLine="BYE sip:192.168.1.4:4000;transport=udp SIP/2.0" 
+debugLine="2894" 
+>
+<![CDATA[BYE sip:192.168.1.4:4000;transport=udp SIP/2.0
+Call-ID: c064558c5ab2d1267db7c1a402d4ac2b@192.168.1.4
+CSeq: 1 BYE
+To: "KLOUP" <sip:Takeo@192.168.1.4:4000;transport=udp>;tag=22505839
+From: <sip:Nick@192.168.1.4:4000>;tag=454929
+Max-Forwards: 69
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK6e715cfb7765d4ee4fd040fc76cbb998
+Route: "KLOUP" <sip:192.168.1.4:43976;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:43976" 
+time="1432579528435" 
+isSender="true" 
+transactionId="z9hg4bkf1f15ddd6e740bb0c7c6051d751e034a" 
+callId="c064558c5ab2d1267db7c1a402d4ac2b@192.168.1.4" 
+firstLine="BYE sip:192.168.1.4:4000;transport=udp SIP/2.0" 
+debugLine="3041" 
+>
+<![CDATA[BYE sip:192.168.1.4:4000;transport=udp SIP/2.0
+Call-ID: c064558c5ab2d1267db7c1a402d4ac2b@192.168.1.4
+CSeq: 1 BYE
+To: "KLOUP" <sip:Takeo@192.168.1.4:4000;transport=udp>;tag=22505839
+From: <sip:Nick@192.168.1.4:4000>;tag=454929
+Max-Forwards: 69
+Via: SIP/2.0/UDP 192.168.1.4:4000;branch=z9hG4bKf1f15ddd6e740bb0c7c6051d751e034a,SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK6e715cfb7765d4ee4fd040fc76cbb998
+Route: "KLOUP" <sip:192.168.1.4:43976;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:43976" 
+to="192.168.1.4:4000" 
+time="1432579528517" 
+isSender="false" 
+statusMessage="normal processing" 
+transactionId="z9hg4bkf1f15ddd6e740bb0c7c6051d751e034a" 
+firstLine="SIP/2.0 200 OK" 
+callId="c064558c5ab2d1267db7c1a402d4ac2b@192.168.1.4" 
+debugLine="3105" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: c064558c5ab2d1267db7c1a402d4ac2b@192.168.1.4
+CSeq: 1 BYE
+To: "KLOUP" <sip:Takeo@192.168.1.4:4000;transport=udp>;tag=22505839
+From: <sip:Nick@192.168.1.4:4000>;tag=454929
+Max-Forwards: 69
+Via: SIP/2.0/UDP 192.168.1.4:4000;branch=z9hG4bKf1f15ddd6e740bb0c7c6051d751e034a,SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK6e715cfb7765d4ee4fd040fc76cbb998
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432579528527" 
+isSender="true" 
+transactionId="z9hg4bk6e715cfb7765d4ee4fd040fc76cbb998" 
+callId="c064558c5ab2d1267db7c1a402d4ac2b@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="3225" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: c064558c5ab2d1267db7c1a402d4ac2b@192.168.1.4
+CSeq: 1 BYE
+To: "KLOUP" <sip:Takeo@192.168.1.4:4000;transport=udp>;tag=22505839
+From: <sip:Nick@192.168.1.4:4000>;tag=454929
+Max-Forwards: 69
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK6e715cfb7765d4ee4fd040fc76cbb998
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:43976" 
+to="192.168.1.4:4000" 
+time="1432579576807" 
+isSender="false" 
+transactionId="z9hg4bkc7c4471f98de339f97badd28c4e648be" 
+callId="b0f473844d3e5b38a5e4df26bc417b40@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="3359" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: b0f473844d3e5b38a5e4df26bc417b40@192.168.1.4
+CSeq: 1 MESSAGE
+From: "KLOUP" <sip:Takeo@192.168.1.4:4000;transport=udp>;tag=22505839
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:43976;branch=z9hG4bKc7c4471f98de339f97badd28c4e648be
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 7
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:43976" 
+time="1432579576909" 
+isSender="true" 
+transactionId="z9hg4bkc7c4471f98de339f97badd28c4e648be" 
+callId="b0f473844d3e5b38a5e4df26bc417b40@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="3413" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: b0f473844d3e5b38a5e4df26bc417b40@192.168.1.4
+CSeq: 1 MESSAGE
+From: "KLOUP" <sip:Takeo@192.168.1.4:4000;transport=udp>;tag=22505839
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:43976;branch=z9hG4bKc7c4471f98de339f97badd28c4e648be
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432579705260" 
+isSender="false" 
+transactionId="z9hg4bk5e84f89d26f12db021f94c5f4df87c68" 
+callId="29d9afeb0d718517f8680c1a5f7612fa@192.168.1.4" 
+firstLine="REGISTER sip:192.168.1.4:5060;transport=udp SIP/2.0" 
+debugLine="3516" 
+>
+<![CDATA[REGISTER sip:192.168.1.4:5060;transport=udp SIP/2.0
+Call-ID: 29d9afeb0d718517f8680c1a5f7612fa@192.168.1.4
+CSeq: 2 REGISTER
+From: "KLOUP" <sip:Nick@192.168.1.4:4000;transport=udp>;tag=12674827
+To: "KLOUP" <sip:Nick@192.168.1.4:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK5e84f89d26f12db021f94c5f4df87c68
+Max-Forwards: 70
+Pwd: Terkenes
+Expires: 0
+Contact: "KLOUP" <sip:192.168.1.4:5060;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432579705436" 
+isSender="true" 
+transactionId="z9hg4bk5e84f89d26f12db021f94c5f4df87c68" 
+callId="29d9afeb0d718517f8680c1a5f7612fa@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="3580" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 29d9afeb0d718517f8680c1a5f7612fa@192.168.1.4
+CSeq: 2 REGISTER
+From: "KLOUP" <sip:Nick@192.168.1.4:4000;transport=udp>;tag=12674827
+To: "KLOUP" <sip:Nick@192.168.1.4:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK5e84f89d26f12db021f94c5f4df87c68
+Max-Forwards: 70
+Expires: 0
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:43976" 
+to="192.168.1.4:4000" 
+time="1432579729978" 
+isSender="false" 
+transactionId="z9hg4bkd3eb978de758615947e76a0097471902" 
+callId="27bd9c5232047517f31f9610128ec485@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="3682" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: 27bd9c5232047517f31f9610128ec485@192.168.1.4
+CSeq: 1 MESSAGE
+From: "KLOUP" <sip:Takeo@192.168.1.4:4000;transport=udp>;tag=22505839
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:43976;branch=z9hG4bKd3eb978de758615947e76a0097471902
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 8
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:43976" 
+time="1432579730070" 
+isSender="true" 
+transactionId="z9hg4bkd3eb978de758615947e76a0097471902" 
+callId="27bd9c5232047517f31f9610128ec485@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="3744" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 27bd9c5232047517f31f9610128ec485@192.168.1.4
+CSeq: 1 MESSAGE
+From: "KLOUP" <sip:Takeo@192.168.1.4:4000;transport=udp>;tag=22505839
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:43976;branch=z9hG4bKd3eb978de758615947e76a0097471902
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:43976" 
+to="192.168.1.4:4000" 
+time="1432579780144" 
+isSender="false" 
+transactionId="z9hg4bkeb360a0cbb4e504ab889ddf6be7b5a4e" 
+callId="7f42dcbf7487d5b4f9cc94386add9cfe@192.168.1.4" 
+firstLine="REGISTER sip:192.168.1.4:5060;transport=udp SIP/2.0" 
+debugLine="3852" 
+>
+<![CDATA[REGISTER sip:192.168.1.4:5060;transport=udp SIP/2.0
+Call-ID: 7f42dcbf7487d5b4f9cc94386add9cfe@192.168.1.4
+CSeq: 2 REGISTER
+From: "KLOUP" <sip:Takeo@192.168.1.4:4000;transport=udp>;tag=22505839
+To: "KLOUP" <sip:Takeo@192.168.1.4:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.4:43976;branch=z9hG4bKeb360a0cbb4e504ab889ddf6be7b5a4e
+Max-Forwards: 70
+Pwd: 123
+Expires: 0
+Contact: "KLOUP" <sip:192.168.1.4:43976;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:43976" 
+time="1432579780258" 
+isSender="true" 
+transactionId="z9hg4bkeb360a0cbb4e504ab889ddf6be7b5a4e" 
+callId="7f42dcbf7487d5b4f9cc94386add9cfe@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="3911" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 7f42dcbf7487d5b4f9cc94386add9cfe@192.168.1.4
+CSeq: 2 REGISTER
+From: "KLOUP" <sip:Takeo@192.168.1.4:4000;transport=udp>;tag=22505839
+To: "KLOUP" <sip:Takeo@192.168.1.4:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.4:43976;branch=z9hG4bKeb360a0cbb4e504ab889ddf6be7b5a4e
+Max-Forwards: 70
+Expires: 0
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432579793729" 
+isSender="false" 
+transactionId="z9hg4bk61ed27fecb58df26cc52f089c262bd45" 
+callId="3e7bb89fcd3a405adea09edc22910b37@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="4013" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: 3e7bb89fcd3a405adea09edc22910b37@192.168.1.4
+CSeq: 1 MESSAGE
+From: "KLOUP" <sip:New@192.168.1.4:4000;transport=udp>;tag=12674827
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK61ed27fecb58df26cc52f089c262bd45
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 22
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432579793848" 
+isSender="true" 
+transactionId="z9hg4bk61ed27fecb58df26cc52f089c262bd45" 
+callId="3e7bb89fcd3a405adea09edc22910b37@192.168.1.4" 
+firstLine="SIP/2.0 202 Accepted" 
+debugLine="4075" 
+>
+<![CDATA[SIP/2.0 202 Accepted
+Call-ID: 3e7bb89fcd3a405adea09edc22910b37@192.168.1.4
+CSeq: 1 MESSAGE
+From: "KLOUP" <sip:New@192.168.1.4:4000;transport=udp>;tag=12674827
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK61ed27fecb58df26cc52f089c262bd45
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432579794100" 
+isSender="false" 
+transactionId="z9hg4bk7f1e600c2b91051d4b76b4c6e3bf3429" 
+callId="240720cc557ec0e7b3faddce14d27164@192.168.1.4" 
+firstLine="REGISTER sip:192.168.1.4:5060;transport=udp SIP/2.0" 
+debugLine="4178" 
+>
+<![CDATA[REGISTER sip:192.168.1.4:5060;transport=udp SIP/2.0
+Call-ID: 240720cc557ec0e7b3faddce14d27164@192.168.1.4
+CSeq: 1 REGISTER
+From: "KLOUP" <sip:New@192.168.1.4:4000;transport=udp>;tag=12674827
+To: "KLOUP" <sip:New@192.168.1.4:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK7f1e600c2b91051d4b76b4c6e3bf3429
+Max-Forwards: 70
+Pwd: 123
+Expires: 3600
+Contact: "KLOUP" <sip:192.168.1.4:5060;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432579794201" 
+isSender="true" 
+transactionId="z9hg4bk7f1e600c2b91051d4b76b4c6e3bf3429" 
+callId="240720cc557ec0e7b3faddce14d27164@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="4242" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 240720cc557ec0e7b3faddce14d27164@192.168.1.4
+CSeq: 1 REGISTER
+From: "KLOUP" <sip:New@192.168.1.4:4000;transport=udp>;tag=12674827
+To: "KLOUP" <sip:New@192.168.1.4:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK7f1e600c2b91051d4b76b4c6e3bf3429
+Max-Forwards: 70
+Contact: "KLOUP" <sip:192.168.1.4:5060;transport=udp>;expires=3600
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432579802130" 
+isSender="false" 
+transactionId="z9hg4bk8f494c48280a488d43a5e8935649ce2c" 
+callId="d5f4e6fa6abd93d2cf63467d8379b839@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="4347" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: d5f4e6fa6abd93d2cf63467d8379b839@192.168.1.4
+CSeq: 1 MESSAGE
+From: "KLOUP" <sip:New@192.168.1.4:4000;transport=udp>;tag=12674827
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK8f494c48280a488d43a5e8935649ce2c
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 7
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432579802262" 
+isSender="true" 
+transactionId="z9hg4bk8f494c48280a488d43a5e8935649ce2c" 
+callId="d5f4e6fa6abd93d2cf63467d8379b839@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="4406" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: d5f4e6fa6abd93d2cf63467d8379b839@192.168.1.4
+CSeq: 1 MESSAGE
+From: "KLOUP" <sip:New@192.168.1.4:4000;transport=udp>;tag=12674827
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK8f494c48280a488d43a5e8935649ce2c
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432579948523" 
+isSender="false" 
+transactionId="z9hg4bk12e06a471ff097d3a76aa343e06ce2d7" 
+callId="240720cc557ec0e7b3faddce14d27164@192.168.1.4" 
+firstLine="REGISTER sip:192.168.1.4:5060;transport=udp SIP/2.0" 
+debugLine="4509" 
+>
+<![CDATA[REGISTER sip:192.168.1.4:5060;transport=udp SIP/2.0
+Call-ID: 240720cc557ec0e7b3faddce14d27164@192.168.1.4
+CSeq: 2 REGISTER
+From: "KLOUP" <sip:New@192.168.1.4:4000;transport=udp>;tag=12674827
+To: "KLOUP" <sip:New@192.168.1.4:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK12e06a471ff097d3a76aa343e06ce2d7
+Max-Forwards: 70
+Pwd: 123
+Expires: 0
+Contact: "KLOUP" <sip:192.168.1.4:5060;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432579948648" 
+isSender="true" 
+transactionId="z9hg4bk12e06a471ff097d3a76aa343e06ce2d7" 
+callId="240720cc557ec0e7b3faddce14d27164@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="4573" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 240720cc557ec0e7b3faddce14d27164@192.168.1.4
+CSeq: 2 REGISTER
+From: "KLOUP" <sip:New@192.168.1.4:4000;transport=udp>;tag=12674827
+To: "KLOUP" <sip:New@192.168.1.4:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK12e06a471ff097d3a76aa343e06ce2d7
+Max-Forwards: 70
+Expires: 0
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432579965575" 
+isSender="false" 
+transactionId="z9hg4bk4f720d80f4853c4b5de02c979183fa42" 
+callId="ae7c3beecece852033617f58298b300a@192.168.1.4" 
+firstLine="REGISTER sip:192.168.1.4:5060;transport=udp SIP/2.0" 
+debugLine="4677" 
+>
+<![CDATA[REGISTER sip:192.168.1.4:5060;transport=udp SIP/2.0
+Call-ID: ae7c3beecece852033617f58298b300a@192.168.1.4
+CSeq: 1 REGISTER
+From: "KLOUP" <sip:New@192.168.1.4:4000;transport=udp>;tag=16333464
+To: "KLOUP" <sip:New@192.168.1.4:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK4f720d80f4853c4b5de02c979183fa42
+Max-Forwards: 70
+Pwd: 123
+Expires: 3600
+Contact: "KLOUP" <sip:192.168.1.4:5060;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432579965696" 
+isSender="true" 
+transactionId="z9hg4bk4f720d80f4853c4b5de02c979183fa42" 
+callId="ae7c3beecece852033617f58298b300a@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="4741" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: ae7c3beecece852033617f58298b300a@192.168.1.4
+CSeq: 1 REGISTER
+From: "KLOUP" <sip:New@192.168.1.4:4000;transport=udp>;tag=16333464
+To: "KLOUP" <sip:New@192.168.1.4:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK4f720d80f4853c4b5de02c979183fa42
+Max-Forwards: 70
+Contact: "KLOUP" <sip:192.168.1.4:5060;transport=udp>;expires=3600
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432579980730" 
+isSender="false" 
+transactionId="z9hg4bk96970cc29abd2305dd098638ed216932" 
+callId="ae7c3beecece852033617f58298b300a@192.168.1.4" 
+firstLine="REGISTER sip:192.168.1.4:5060;transport=udp SIP/2.0" 
+debugLine="4851" 
+>
+<![CDATA[REGISTER sip:192.168.1.4:5060;transport=udp SIP/2.0
+Call-ID: ae7c3beecece852033617f58298b300a@192.168.1.4
+CSeq: 2 REGISTER
+From: "KLOUP" <sip:New@192.168.1.4:4000;transport=udp>;tag=16333464
+To: "KLOUP" <sip:New@192.168.1.4:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK96970cc29abd2305dd098638ed216932
+Max-Forwards: 70
+Pwd: 123
+Expires: 0
+Contact: "KLOUP" <sip:192.168.1.4:5060;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432579980850" 
+isSender="true" 
+transactionId="z9hg4bk96970cc29abd2305dd098638ed216932" 
+callId="ae7c3beecece852033617f58298b300a@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="4909" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: ae7c3beecece852033617f58298b300a@192.168.1.4
+CSeq: 2 REGISTER
+From: "KLOUP" <sip:New@192.168.1.4:4000;transport=udp>;tag=16333464
+To: "KLOUP" <sip:New@192.168.1.4:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK96970cc29abd2305dd098638ed216932
+Max-Forwards: 70
+Expires: 0
+Content-Length: 0
+
+]]>
+</message>
+

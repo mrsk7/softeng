@@ -1528,7 +1528,7 @@ public class Proxy implements SipListener  {
     	else if (word[0].equals("SIGNUP")) {
     		try {
 				String[] credentials = word[1].split(":");
-				System.out.println("SIGNING " +credentials[0]+credentials[1]);
+				System.out.println(credentials[0]+credentials[1]);
 				int result = connObj.checkAndSignup(credentials);
 				
 				MessageFactory messageFactory=this.getMessageFactory();

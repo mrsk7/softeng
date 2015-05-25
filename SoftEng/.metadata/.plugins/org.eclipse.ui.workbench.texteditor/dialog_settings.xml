@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="payFie" key="selection"/>
+		<item value="BLOCK" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="BLOCK"/>
+			<item value="CANCEL"/>
+			<item value="cancel"/>
+			<item value="JP"/>
 			<item value="payFie"/>
 			<item value="192.168.1.2"/>
 			<item value="192.168.1"/>
 			<item value="BAD_REQUEST"/>
-			<item value="192.168"/>
-			<item value="dialPanel"/>
-			<item value="blockingButton"/>
-			<item value="border20"/>
 		</list>
 		<list key="replacehistory">
 			<item value="147.102.232.27"/>

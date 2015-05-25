@@ -1405,7 +1405,7 @@ public class Proxy implements SipListener  {
     public void processMessage(Request request , ServerTransaction serverTransaction , SipProvider sipProvider) {
     	String msg = new String(request.getRawContent());
     	String[] word = msg.split(" ");
-    	if (word[0].equals("BLOCK") || word[0].equals("FORWARD") || word[0].equals("POLICY") || word[0].equals("UNBLOCK") || word[0].equals("UNFORWARD") || word[0].equals("PAY")) {
+    	if (word[0].equals("BLOCK") || word[0].equals("FORWARD") || word[0].equals("POLICY")) {
     		try{
     	    	String toURI = new String(word[1]);
 	    		MessageFactory messageFactory=this.getMessageFactory();  
@@ -1528,7 +1528,7 @@ public class Proxy implements SipListener  {
     	else if (word[0].equals("SIGNUP")) {
     		try {
 				String[] credentials = word[1].split(":");
-				System.out.println("SIGNING " +credentials[0]+credentials[1]);
+				System.out.println(credentials);
 				int result = connObj.checkAndSignup(credentials);
 				
 				MessageFactory messageFactory=this.getMessageFactory();
