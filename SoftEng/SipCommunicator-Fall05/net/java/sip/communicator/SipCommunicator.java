@@ -422,6 +422,20 @@ public class SipCommunicator
         	}
     }
     
+    public void handleCheckRequest()
+    {
+        	MessageProcessing msgPrcs = new MessageProcessing(sipManager);
+        	String message = "CHECK ";
+        	try{
+        		msgPrcs.sendMessage(sipManager.getRegistrarAddress(), message.getBytes(), "text/plain", null);
+        	}
+        	catch (CommunicationsException exc) {
+                console.showException("Could not forward number!\nError was: "
+                        + exc.getMessage(),
+                        exc);
+        	}
+    }
+    
     public void handleUnblockRequest(String number)
     {
         	MessageProcessing msgPrcs = new MessageProcessing(sipManager);

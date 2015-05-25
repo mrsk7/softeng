@@ -36,6 +36,7 @@ public class ManageSplash extends JDialog
 	protected JTextField payField=null;
 	protected JButton blockingButton = null;
 	protected JButton unblockingButton = null;
+	protected JButton checkButton = null;
 	protected JButton unforwardButton = null;
 	protected JButton payButton = null;
 	protected JButton changeButton = null;
@@ -421,6 +422,16 @@ public class ManageSplash extends JDialog
 		//JLabel realmValueLabel = new JLabel("SipPhone.com"); // needed below
 
 		// realm label
+		checkButton = new JButton();
+		checkButton.setText("Check");
+		checkButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent event)
+			{
+				guiManCallback.checkButton_actionPerformed(event);
+			}
+		});
+		buttonPanel2.add(checkButton);
 
 
 		// Buttons along bottom of window

@@ -202,6 +202,26 @@ public class ConnectionObject {
 		this.con = con;
 	}
 	
+	public double getTotal(String userName) {
+		Statement s;
+		double res=0;
+		try {
+			s = con.createStatement();
+			s.executeQuery("SELECT (total) FROM users WHERE userName='"+ userName + "'");
+			ResultSet rs = s.getResultSet ();
+			if (!rs.next() ) {
+				System.out.println("Didn't find the call");
+			}
+			res = rs.getDouble("total");
+		} 
+		catch (SQLException e) {
+			System.out.println("Error getting total");
+			e.printStackTrace();
+		}	
+		return res;
+
+	}
+	
 	public void startCallTimer(String callID,String caller,String callee,Date startTime) {
 		Statement s;
 		Timestamp sqlstartTime = new Timestamp(startTime.getTime());
@@ -285,7 +305,7 @@ public class ConnectionObject {
 		Statement s;
 		try {
 			s = con.createStatement();
-			s.executeUpdate("UPDATE users SET total= total +'" + cost + "' WHERE userName='"
+			s.executeUpdate("UPDATE users SET total= format(total +" + cost + ",3) WHERE userName='"
 			+ userName + "'");
 			
 		} catch (SQLException e) {

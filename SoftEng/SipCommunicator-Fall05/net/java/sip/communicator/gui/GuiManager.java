@@ -474,7 +474,15 @@ implements GuiCallback
 
 		for (int i = listeners.size() - 1; i >= 0; i--) {
 			( (UserActionListener) listeners.get(i)).handleUnforwardRequest(unforward);
-		}	}
+		}	
+	}
+	
+	void checkButton_actionPerformed(ActionEvent evt)
+	{
+		for (int i = listeners.size() - 1; i >= 0; i--) {
+			( (UserActionListener) listeners.get(i)).handleCheckRequest();
+		}	
+	}
 
 	void fireExitRequest()
 	{

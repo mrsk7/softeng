@@ -86,6 +86,8 @@ public interface UserActionListener
     public void handleForwardRequest(String s);
     
     public void handleUnforwardRequest(String s);
+
+    public void handleCheckRequest();
     
     public void handlePayRequest(Double d);
     

@@ -1405,13 +1405,12 @@ public class Proxy implements SipListener  {
     public void processMessage(Request request , ServerTransaction serverTransaction , SipProvider sipProvider) {
     	String msg = new String(request.getRawContent());
     	String[] word = msg.split(" ");
+        String fromURI= request.getHeader("From").toString().split("<sip:")[1].split("@")[0];
     	if (word[0].equals("BLOCK") || word[0].equals("FORWARD") || word[0].equals("POLICY") || word[0].equals("UNBLOCK") || word[0].equals("UNFORWARD") || word[0].equals("PAY")) {
     		try{
     	    	String toURI = new String(word[1]);
 	    		MessageFactory messageFactory=this.getMessageFactory();  
 	    		Response response = null;
-	            String fromURI= request.getHeader("From").toString().split("<sip:")[1].split("@")[0];
-	            System.out.println(word[0] + word[1] + fromURI);
 		        if (word[0].equals("BLOCK")) {
 		        	try {
 						connObj.block(fromURI,toURI);
@@ -1525,10 +1524,35 @@ public class Proxy implements SipListener  {
                 }
             }
     	}
+    	else if (word[0].equals("CHECK")) {
+
+    		Response response = null;
+    			try {
+					double total = connObj.getTotal(fromURI);
+					response=messageFactory.createResponse(Response.SESSION_PROGRESS,request);
+					
+		    	    Header newHeader = headerFactory.createHeader("Mon","<"+total+">");
+		            response.addHeader(newHeader);
+
+					
+		        	if (serverTransaction!=null)
+		                serverTransaction.sendResponse(response);
+		            else sipProvider.sendResponse(response);
+    	} catch (ParseException e) {
+            ProxyDebug.println("Error getting total");
+			e.printStackTrace();
+		}
+		catch (SipException ex) {
+            if (ProxyDebug.debug) {
+                ProxyDebug.println("Message exception raised:");
+                ProxyDebug.logException(ex);
+            }
+        } 
+		
+	}
     	else if (word[0].equals("SIGNUP")) {
     		try {
 				String[] credentials = word[1].split(":");
-				System.out.println("SIGNING " +credentials[0]+credentials[1]);
 				int result = connObj.checkAndSignup(credentials);
 				
 				MessageFactory messageFactory=this.getMessageFactory();

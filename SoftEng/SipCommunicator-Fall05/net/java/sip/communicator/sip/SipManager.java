@@ -71,6 +71,8 @@ import net.java.sip.communicator.sip.event.*;
 import net.java.sip.communicator.sip.security.*;
 import net.java.sip.communicator.sip.simple.*;
 
+import gov.nist.javax.sip.header.*;
+
 import java.net.InetSocketAddress;
 
 
@@ -1843,6 +1845,15 @@ public class SipManager
 					}
                 }
             }
+
+            else if (response.getStatusCode() == Response.SESSION_PROGRESS) {
+            	if (method.equals(Request.MESSAGE)){
+            		String amount = ((SIPHeader) response.getHeader("Mon")).getHeaderValue();
+            		amount= amount.split("<")[1].split(">")[0];
+            		Double amountd = Double.parseDouble(amount);
+            		new PopupWindow("Your current balance is " + amountd + " €." , "Account balance");
+            	}
+            }
             //TRYING
             else if (response.getStatusCode() == Response.TRYING
                      //process all provisional responses here
@@ -2108,8 +2119,7 @@ public class SipManager
                 fireUnknownMessageReceived(response);
             }
             else if (response.getStatusCode() == Response.SESSION_PROGRESS) {
-                /** @todo add proper request handling */
-                fireUnknownMessageReceived(response);
+
             }
             else if (response.getStatusCode() ==
                      Response.TEMPORARILY_UNAVAILABLE) {
