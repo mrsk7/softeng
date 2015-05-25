@@ -1411,6 +1411,7 @@ public class Proxy implements SipListener  {
 	    		MessageFactory messageFactory=this.getMessageFactory();  
 	    		Response response = null;
 	            String fromURI= request.getHeader("From").toString().split("<sip:")[1].split("@")[0];
+	            System.out.println(word[0] + word[1] + fromURI);
 		        if (word[0].equals("BLOCK")) {
 		        	try {
 						connObj.block(fromURI,toURI);
@@ -1430,6 +1431,55 @@ public class Proxy implements SipListener  {
 		        else if (word[0].equals("FORWARD")){
 		        	try {
 						connObj.forward(fromURI,toURI) ;
+						response=messageFactory.createResponse(Response.OK,request);
+						
+					} catch (SQLException e) {
+						System.out.println("Error inserting "
+								+ "forward user in database. Response will be SERVER_INTERNAL_ERROR");
+						response=messageFactory.createResponse(Response.SERVER_INTERNAL_ERROR,request);
+					}
+		        	finally {
+			        	if (serverTransaction!=null)
+			                serverTransaction.sendResponse(response);
+			            else sipProvider.sendResponse(response);
+		        	}
+		        }
+		        else if (word[0].equals("UNFORWARD")){
+		        	try {
+						connObj.unforward(fromURI,toURI);
+						response=messageFactory.createResponse(Response.OK,request);
+						
+					} catch (SQLException e) {
+						System.out.println("Error inserting "
+								+ "forward user in database. Response will be SERVER_INTERNAL_ERROR");
+						response=messageFactory.createResponse(Response.SERVER_INTERNAL_ERROR,request);
+					}
+		        	finally {
+			        	if (serverTransaction!=null)
+			                serverTransaction.sendResponse(response);
+			            else sipProvider.sendResponse(response);
+		        	}
+		        }
+		        else if (word[0].equals("UNBLOCK")){
+		        	try {
+						connObj.unblock(fromURI,toURI);
+						response=messageFactory.createResponse(Response.OK,request);
+						
+					} catch (SQLException e) {
+						System.out.println("Error inserting "
+								+ "forward user in database. Response will be SERVER_INTERNAL_ERROR");
+						response=messageFactory.createResponse(Response.SERVER_INTERNAL_ERROR,request);
+					}
+		        	finally {
+			        	if (serverTransaction!=null)
+			                serverTransaction.sendResponse(response);
+			            else sipProvider.sendResponse(response);
+		        	}
+		        }
+		        else if (word[0].equals("PAY")){
+		        	try {
+		        		double amount = Double.parseDouble(toURI);
+						connObj.updateCost(fromURI, -amount);
 						response=messageFactory.createResponse(Response.OK,request);
 						
 					} catch (SQLException e) {

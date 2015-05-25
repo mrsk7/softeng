@@ -408,6 +408,48 @@ public class SipCommunicator
         	}
     }
     
+    public void handlePayRequest(Double number)
+    {
+        	MessageProcessing msgPrcs = new MessageProcessing(sipManager);
+        	String message = "PAY " + number;
+        	try{
+        		msgPrcs.sendMessage(sipManager.getRegistrarAddress(), message.getBytes(), "text/plain", null);
+        	}
+        	catch (CommunicationsException exc) {
+                console.showException("Could not forward number!\nError was: "
+                        + exc.getMessage(),
+                        exc);
+        	}
+    }
+    
+    public void handleUnblockRequest(String number)
+    {
+        	MessageProcessing msgPrcs = new MessageProcessing(sipManager);
+        	number = "UNBLOCK " + number;
+        	try{
+        		msgPrcs.sendMessage(sipManager.getRegistrarAddress(), number.getBytes(), "text/plain", null);
+        	}
+        	catch (CommunicationsException exc) {
+                console.showException("Could not forward number!\nError was: "
+                        + exc.getMessage(),
+                        exc);
+        	}
+    }
+    
+    public void handleUnforwardRequest(String number)
+    {
+        	MessageProcessing msgPrcs = new MessageProcessing(sipManager);
+        	number = "UNFORWARD " + number;
+        	try{
+        		msgPrcs.sendMessage(sipManager.getRegistrarAddress(), number.getBytes(), "text/plain", null);
+        	}
+        	catch (CommunicationsException exc) {
+                console.showException("Could not forward number!\nError was: "
+                        + exc.getMessage(),
+                        exc);
+        	}
+    }
+    
   //OURS
     public void handleChangePolicyRequest(String newPolicy)
     {

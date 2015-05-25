@@ -85,6 +85,12 @@ public interface UserActionListener
     
     public void handleForwardRequest(String s);
     
+    public void handleUnforwardRequest(String s);
+    
+    public void handlePayRequest(Double d);
+    
+    public void handleUnblockRequest(String s);
+    
     public void handleExitRequest();
 
 /** @todo remove after testing */

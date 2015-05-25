@@ -150,6 +150,30 @@ public class ConnectionObject {
 		}
 	}
 	
+	public void unforward(String from, String to) throws SQLException{
+		Statement s;
+		s = con.createStatement();
+		try {
+			if (!hasLoop(from, to)) {
+				s.executeUpdate(" DELETE FROM forwardTable"
+						+ " WHERE " + "departure ='" + from + "' AND destination = '" + to + "'");
+			}
+		} finally {
+			s.close();
+		}
+	}
+	
+	public void unblock(String from, String to) throws SQLException{
+		Statement s;
+		s = con.createStatement();
+		try {
+			s.executeUpdate(" DELETE FROM blockTable"
+					+ " WHERE " + "blocker ='" + from + "' AND blocked = '" + to + "'");
+		} finally {
+			s.close();
+		}
+	}
+	
 	public void changePolicy(String userName, String policy) throws SQLException{
 		Statement s;
 		s = con.createStatement();
@@ -257,7 +281,7 @@ public class ConnectionObject {
 	}
 	
 	
-	public void updateCost(String userName,double cost) {
+	public void updateCost(String userName,double cost) throws SQLException{
 		Statement s;
 		try {
 			s = con.createStatement();
@@ -268,9 +292,8 @@ public class ConnectionObject {
 			// TODO Auto-generated catch block
 			System.out.println("Error updating cost");
 			e.printStackTrace();
-		}
-			
-} 
+		}		
+	} 
 	
 
 	
