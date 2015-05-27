@@ -62,10 +62,12 @@ import java.awt.*;
 import java.awt.geom.*;
 import java.awt.event.*;
 import java.util.*;
+
 import javax.swing.*;
+
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
-import net.java.sip.communicator.common.Utils;
+
 import net.java.sip.communicator.common.*;
 
 //import samples.accessory.StringGridBagLayout;
@@ -125,13 +127,15 @@ public class AuthenticationSplash
     private JButton helpButton = null;
     private Frame myparent = null;
     private RegistrationSplash reg = null;
+    private String[] availablePolicies = null;
 
     /**
      * Creates new form AuthenticationSplash
      */
-    public AuthenticationSplash(Frame parent, boolean modal)
+    public AuthenticationSplash(Frame parent, boolean modal,String[] availablePolicies)
     {
         super(parent, modal);
+        this.availablePolicies= availablePolicies;
         initResources();
         initComponents();
         pack();
@@ -493,7 +497,7 @@ public class AuthenticationSplash
         //OURS
         else if (cmd.equals(CMD_SIGNUP)) {
         	flag = 1;
-        	reg = new RegistrationSplash(myparent,true);
+        	reg = new RegistrationSplash(myparent,true,availablePolicies);
         	reg.setVisible(true);
         	userName= reg.userName;
         	password = reg.password;
@@ -522,8 +526,8 @@ public class AuthenticationSplash
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(false);
-
-        AuthenticationSplash dialog = new AuthenticationSplash(frame, true);
+        String[] policies = {};
+        AuthenticationSplash dialog = new AuthenticationSplash(frame, true,policies);
         dialog.addWindowListener(new WindowAdapter()
         {
             public void windowClosing(WindowEvent event)

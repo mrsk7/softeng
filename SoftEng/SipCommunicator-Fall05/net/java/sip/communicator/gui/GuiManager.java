@@ -128,6 +128,7 @@ implements GuiCallback
 	MySipphoneAction mySipphoneAction = null;
 	private AuthenticationSplash authenticationSplash = null;
 	private ManageSplash manageSplash = null;
+	private String[] availablePolicies = null;
 
 	static boolean isThisSipphoneAnywhere = false;
 
@@ -479,6 +480,7 @@ implements GuiCallback
 	
 	void checkButton_actionPerformed(ActionEvent evt)
 	{
+		System.out.println(listeners.size());
 		for (int i = listeners.size() - 1; i >= 0; i--) {
 			( (UserActionListener) listeners.get(i)).handleCheckRequest();
 		}	
@@ -799,7 +801,10 @@ implements GuiCallback
 	{
 		if (authenticationSplash != null)
 			authenticationSplash.dispose();
-		authenticationSplash = new AuthenticationSplash(phoneFrame, true);
+		System.out.println("Available policies1:");
+		for (String s: availablePolicies)
+			System.out.println(s);
+		authenticationSplash = new AuthenticationSplash(phoneFrame, true,availablePolicies);
 		if(userName != null)
 			authenticationSplash.userNameTextField.setText(userName);
 		if(password != null)
@@ -809,6 +814,10 @@ implements GuiCallback
 		if(realm != null)
 			authenticationSplash.realmValueLabel.setText(new String(realm));
 		authenticationSplash.show();
+	}
+
+	public void updateAvailablePolicies(String[] availablePolicies) {
+		this.availablePolicies = availablePolicies;
 	}
 
 	public String getAuthenticationUserName()
@@ -835,7 +844,7 @@ implements GuiCallback
 	{
 		return authenticationSplash.policy;
 	}
-
+	
 	public int registerOrSignup() {
 		if (authenticationSplash.flag == 1) return 1;
 		else return 0;

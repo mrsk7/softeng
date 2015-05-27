@@ -103,6 +103,8 @@ public class SipCommunicator
     protected SipManager               sipManager               = null;
     protected SimpleContactList        simpleContactList        = null;
     protected PresenceStatusController presenceStatusController = null;
+    protected String[] availablePolicies = null;
+    private int policyFlag = 0;
 
     protected Integer unregistrationLock = new Integer(0);
 
@@ -196,6 +198,9 @@ public class SipCommunicator
                 return;
             }
             try {
+            	policyFlag = 0;
+            	sipManager.getPoliciesFromProxy();
+            	while (policyFlag == 0) ;
                 sipManager.startRegisterProcess();
             }
             catch (CommunicationsException exc) {
@@ -366,17 +371,12 @@ public class SipCommunicator
         }
     }
 //OURS
-    
-    public String[] getPoliciesFromProxy() {
-    	String[] ret= {"Basic","Premium"};
-    	return ret;
-    }
-    
-    
+        
     public void handleManageRequest()
     {
     	UserCredentials uc = sipManager.getCredentials();
-    	String[] policyList = getPoliciesFromProxy();
+    	String[] policyList = availablePolicies;
+    	System.out.println("Policies are:" + policyList[0] + " " + policyList[1]);
     	guiManager.manageAccount(policyList,uc.getPolicy());
 }
     
@@ -427,6 +427,7 @@ public class SipCommunicator
         	MessageProcessing msgPrcs = new MessageProcessing(sipManager);
         	String message = "CHECK ";
         	try{
+        		System.out.println("fuck");
         		msgPrcs.sendMessage(sipManager.getRegistrarAddress(), message.getBytes(), "text/plain", null);
         	}
         	catch (CommunicationsException exc) {
@@ -698,6 +699,12 @@ public class SipCommunicator
         finally {
             console.logExit();
         }
+    }
+    
+    public void policesReceived(String[] policies) {
+    	policyFlag = 1;
+    	availablePolicies = policies;
+    	guiManager.updateAvailablePolicies(availablePolicies);
     }
 
     public void messageReceived(MessageEvent evt)

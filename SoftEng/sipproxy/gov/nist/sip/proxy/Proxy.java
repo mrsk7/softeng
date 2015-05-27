@@ -135,7 +135,7 @@ public class Proxy implements SipListener  {
     public Proxy(String confFile) throws Exception{
 
     	this.connObj = new ConnectionObject();
-    	this.billingObj = new BillingObject();
+    	this.billingObj = new BillingObject(connObj);
     	
     	this.listeningPoints = new LinkedList();
         if (confFile==null) {
@@ -1406,15 +1406,20 @@ public class Proxy implements SipListener  {
     	String msg = new String(request.getRawContent());
     	String[] word = msg.split(" ");
         String fromURI= request.getHeader("From").toString().split("<sip:")[1].split("@")[0];
+        System.out.println(word[0] + fromURI);
     	if (word[0].equals("BLOCK") || word[0].equals("FORWARD") || word[0].equals("POLICY") || word[0].equals("UNBLOCK") || word[0].equals("UNFORWARD") || word[0].equals("PAY")) {
     		try{
     	    	String toURI = new String(word[1]);
 	    		MessageFactory messageFactory=this.getMessageFactory();  
 	    		Response response = null;
+	    		Header manageHeader; 
+    			
 		        if (word[0].equals("BLOCK")) {
 		        	try {
 						connObj.block(fromURI,toURI);
 						response=messageFactory.createResponse(Response.OK,request);
+						manageHeader = headerFactory.createHeader("Manage","block" + ":" + toURI);
+		    			response.addHeader(manageHeader);
 						
 					} catch (SQLException e) {
 						System.out.println("Error inserting "
@@ -1431,6 +1436,8 @@ public class Proxy implements SipListener  {
 		        	try {
 						connObj.forward(fromURI,toURI) ;
 						response=messageFactory.createResponse(Response.OK,request);
+						manageHeader = headerFactory.createHeader("Manage","forward" + ":" + toURI);
+		    			response.addHeader(manageHeader);
 						
 					} catch (SQLException e) {
 						System.out.println("Error inserting "
@@ -1447,6 +1454,8 @@ public class Proxy implements SipListener  {
 		        	try {
 						connObj.unforward(fromURI,toURI);
 						response=messageFactory.createResponse(Response.OK,request);
+						manageHeader = headerFactory.createHeader("Manage","unforward" + ":" + toURI);
+		    			response.addHeader(manageHeader);
 						
 					} catch (SQLException e) {
 						System.out.println("Error inserting "
@@ -1463,7 +1472,8 @@ public class Proxy implements SipListener  {
 		        	try {
 						connObj.unblock(fromURI,toURI);
 						response=messageFactory.createResponse(Response.OK,request);
-						
+						manageHeader = headerFactory.createHeader("Manage","unblock" + ":" + toURI);
+		    			response.addHeader(manageHeader);
 					} catch (SQLException e) {
 						System.out.println("Error inserting "
 								+ "forward user in database. Response will be SERVER_INTERNAL_ERROR");
@@ -1480,6 +1490,8 @@ public class Proxy implements SipListener  {
 		        		double amount = Double.parseDouble(toURI);
 						connObj.updateCost(fromURI, -amount);
 						response=messageFactory.createResponse(Response.OK,request);
+						manageHeader = headerFactory.createHeader("Manage","pay" + ":" + toURI);
+		    			response.addHeader(manageHeader);
 						
 					} catch (SQLException e) {
 						System.out.println("Error inserting "
@@ -1498,6 +1510,8 @@ public class Proxy implements SipListener  {
 		        		String userName = fromURI;
 						connObj.changePolicy(userName,policy);
 						response=messageFactory.createResponse(Response.OK,request);
+						manageHeader = headerFactory.createHeader("Manage","change" + ":" + policy);
+		    			response.addHeader(manageHeader);
 						
 					} catch (SQLException e) {
 						System.out.println("Error updating "
@@ -1525,36 +1539,60 @@ public class Proxy implements SipListener  {
             }
     	}
     	else if (word[0].equals("CHECK")) {
+    		try {
+    			Response response = null;
+    			double total = connObj.getTotal(fromURI);
+    			response=messageFactory.createResponse(Response.ALTERNATIVE_SERVICE,request);
 
-    		Response response = null;
-    			try {
-					double total = connObj.getTotal(fromURI);
-					response=messageFactory.createResponse(Response.SESSION_PROGRESS,request);
-					
-		    	    Header newHeader = headerFactory.createHeader("Mon","<"+total+">");
-		            response.addHeader(newHeader);
+    			Header newHeader = headerFactory.createHeader("Mon","<"+total+">");
+    			response.addHeader(newHeader);
 
-					
-		        	if (serverTransaction!=null)
-		                serverTransaction.sendResponse(response);
-		            else sipProvider.sendResponse(response);
-    	} catch (ParseException e) {
-            ProxyDebug.println("Error getting total");
-			e.printStackTrace();
-		}
-		catch (SipException ex) {
-            if (ProxyDebug.debug) {
-                ProxyDebug.println("Message exception raised:");
-                ProxyDebug.logException(ex);
-            }
-        } 
-		
-	}
+    			if (serverTransaction!=null)
+    				serverTransaction.sendResponse(response);
+    			else sipProvider.sendResponse(response);
+    		} catch (ParseException e) {
+    			ProxyDebug.println("Error getting total");
+    			e.printStackTrace();
+    		}
+    		catch (SipException ex) {
+    			if (ProxyDebug.debug) {
+    				ProxyDebug.println("Message exception raised:");
+    				ProxyDebug.logException(ex);
+    			}
+    		} 
+    	}
+    	else if (word[0].equals("GETPOLICIES")) {
+    		String[] allpolicies = connObj.getAllPolicies();
+    		StringBuilder sb= new StringBuilder();
+    		for (String s: allpolicies) {
+    			sb.append(s + ":");
+    		}
+    		String joined = sb.toString();
+    		try {
+				MessageFactory messageFactory=this.getMessageFactory();
+				Response response = messageFactory.createResponse(Response.OK,request);
+				Header allPoliciesHeader = headerFactory.createHeader("Policies",joined);
+	            response.addHeader(allPoliciesHeader);
+	            System.out.println("Sending policy request" + joined);
+				if (serverTransaction!=null)
+	                serverTransaction.sendResponse(response);
+	            else sipProvider.sendResponse(response);
+				
+			} catch (ParseException e) {
+                ProxyDebug.println("Error signing up new user");
+				e.printStackTrace();
+			}
+    		catch (SipException ex) {
+                if (ProxyDebug.debug) {
+                    ProxyDebug.println("Message exception raised:");
+                    ProxyDebug.logException(ex);
+                }
+            } 
+    	}
     	else if (word[0].equals("SIGNUP")) {
     		try {
 				String[] credentials = word[1].split(":");
 				int result = connObj.checkAndSignup(credentials);
-				
 				MessageFactory messageFactory=this.getMessageFactory();
 				Response response=null;
 				if (result==1) response = messageFactory.createResponse(Response.ACCEPTED,request);
@@ -1633,6 +1671,19 @@ public class Proxy implements SipListener  {
             e.printStackTrace();
         }
     }
+
+	public String[] getPolicies() {
+		String[] ret = connObj.getAllPolicies();
+		return ret;
+	}
+
+	public boolean addPolicy(String name,String init, String costPer) {
+		   return connObj.addPolicy(name,init,costPer);
+	   }
+
+	public boolean deletePolicy(String policy) {
+			return connObj.deletePolicy(policy);
+	}
     
 }
 

@@ -215,6 +215,7 @@ class RegisterProcessing
 
             //From
             FromHeader fromHeader = sipManCallback.getFromHeader();
+            System.out.println("fromHeader is " + fromHeader.toString());
             Address fromAddress = fromHeader.getAddress();
             sipManCallback.fireRegistering(fromAddress.toString());
             //Request URI

@@ -98,4 +98,6 @@ public interface CommunicationsListener
 //    public void callEnded(CommunicationsEvent evt);
 
 	public void receivedForwardMessage(String newTo);
+
+	public void policesReceived(String[] policyList);
 }

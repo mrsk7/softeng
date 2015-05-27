@@ -11,8 +11,8 @@ import java.awt.geom.*;
 import java.awt.event.*;
 import java.sql.DriverManager;
 import java.util.*;
-import javax.swing.*;
 
+import javax.swing.*;
 
 import java.awt.BorderLayout;
 import java.awt.Component;
@@ -30,8 +30,8 @@ import java.awt.Rectangle;
 import java.awt.Toolkit;
 
 import net.java.sip.communicator.common.*;
+
 import java.sql.*;
-//import net.java.sip.communicator.gui.AuthenticationSplash.FocusTraversalPol;
 
 import jmapps.ui.MessageDialog;
 
@@ -47,6 +47,7 @@ public class RegistrationSplash extends JDialog
     JPasswordField passwordTextField = null;
     JComboBox policylist = null;
     String policyChoice = null;
+    String[] policies = null;
 
 
     private JButton registerButton = null;
@@ -60,9 +61,10 @@ public class RegistrationSplash extends JDialog
     private String CMD_CANCEL = "cmd.cancel" /*NOI18N*/;
     private String CMD_REGISTER = "cmd.register";
 
-    public RegistrationSplash(Frame parent, boolean modal)
+    public RegistrationSplash(Frame parent, boolean modal,String[] availablePolicies)
     {
         super(parent, modal);
+        this.policies=availablePolicies;
       //  initResources();
         initComponents();
         pack();
@@ -199,8 +201,10 @@ public class RegistrationSplash extends JDialog
         
         //OURS
         //Added policies option button
-        String[] policies = {"Basic","Premium"};
-        policylist = new JComboBox(policies);
+        if (policies.length == 0)
+        	policylist=new JComboBox<>();
+        else 
+        	policylist = new JComboBox(policies);
         policylist.setSelectedIndex(0);
         policylist.addActionListener(null);
         JLabel policyLabel = new JLabel();
