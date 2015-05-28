@@ -20,6 +20,7 @@ public class ListenerProxy {
    
     protected Process rmiregistryProcess;
     protected TracesViewer tracesViewer;
+    protected PolicySplash ps =null;
     
     public boolean isProxyStarted() {
         return PROXY_STARTED;
@@ -182,6 +183,46 @@ public class ListenerProxy {
         }
     }
     
+    public void policyActionPerformed(ActionEvent evt) {
+    	Proxy proxy=proxyLauncher.getProxy();
+    	String[] policies = proxy.getPolicies();
+    	ps = new PolicySplash(proxyLauncher,true,this,policies);
+    	ps.show();
+    	
+    }
+    
+    public void addButton_actionPerformed(ActionEvent evt) {
+    	Proxy proxy=proxyLauncher.getProxy();
+    	String name = ps.name.getText();
+    	String starting = ps.starting.getText();
+    	String cost = ps.costPer.getText();
+		if (proxy.addPolicy(name,starting,cost) == false) {
+			PopupWindow popw = new PopupWindow("Error inserting new policy. Check if policy "
+					+ "is already used", "Database error");
+		}
+		else {
+			PopupWindow popw = new PopupWindow("Successfully inserted new policy","New policy added");
+			String[] policies = proxy.getPolicies();
+			ps.dispose();
+	    	ps = new PolicySplash(proxyLauncher,true,this,policies);
+	    	ps.show();
+		}    	
+    }
+    
+    public void deleteButton_actionPerformed(ActionEvent evt) {
+    	Proxy proxy=proxyLauncher.getProxy();
+    	String policy = ps.policyChoice;
+		if (proxy.deletePolicy(policy) == false) {
+			PopupWindow popw = new PopupWindow("Error deleting policy", "Database error");
+		}
+		else {
+			PopupWindow popw = new PopupWindow("Successfully deleted policy","Policy deleted");
+			String[] policies = proxy.getPolicies();
+			ps.dispose();
+	    	ps = new PolicySplash(proxyLauncher,true,this,policies);
+	    	ps.show();
+		}    	
+    }
  
    public void traceViewerActionPerformed(ActionEvent evt){
         try{

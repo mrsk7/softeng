@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.Date;
 
 public class ConnectionObject {
@@ -41,6 +42,12 @@ public class ConnectionObject {
 		           	+ "id INT UNSIGNED NOT NULL AUTO_INCREMENT,"
 		           	+ "PRIMARY KEY (id),"
 		           	+ "caller CHAR(40), callee CHAR(40), callid CHAR(40),startTime CHAR(40),endTime CHAR(40))");
+			s.executeUpdate ("DROP TABLE IF EXISTS policyTable");
+			s.executeUpdate (
+					"CREATE TABLE policyTable ("
+		           	+ "id INT UNSIGNED NOT NULL AUTO_INCREMENT,"
+		           	+ "PRIMARY KEY (id),"
+		           	+ "name CHAR(40), initCost CHAR(40), costPerSec CHAR(40))");
 		     s.close();
 		}
 		catch (SQLException exc) {
@@ -154,10 +161,12 @@ public class ConnectionObject {
 		Statement s;
 		s = con.createStatement();
 		try {
+			int rows = 0;;
 			if (!hasLoop(from, to)) {
-				s.executeUpdate(" DELETE FROM forwardTable"
+				rows = s.executeUpdate(" DELETE FROM forwardTable"
 						+ " WHERE " + "departure ='" + from + "' AND destination = '" + to + "'");
 			}
+			if (rows==0) throw new SQLException("Didn't find user to unfollow");
 		} finally {
 			s.close();
 		}
@@ -167,9 +176,11 @@ public class ConnectionObject {
 		Statement s;
 		s = con.createStatement();
 		try {
-			s.executeUpdate(" DELETE FROM blockTable"
+			int rows = s.executeUpdate(" DELETE FROM blockTable"
 					+ " WHERE " + "blocker ='" + from + "' AND blocked = '" + to + "'");
-		} finally {
+			if (rows==0) throw new SQLException("Didn't find user to block");
+		} 
+		finally {
 			s.close();
 		}
 	}
@@ -210,7 +221,7 @@ public class ConnectionObject {
 			s.executeQuery("SELECT (total) FROM users WHERE userName='"+ userName + "'");
 			ResultSet rs = s.getResultSet ();
 			if (!rs.next() ) {
-				System.out.println("Didn't find the call");
+				System.out.println("Empty set in getTotal");
 			}
 			res = rs.getDouble("total");
 		} 
@@ -300,6 +311,31 @@ public class ConnectionObject {
 		return policy;
 	}
 	
+	public String[] getAllPolicies() {
+		Statement s;
+		ArrayList<String> list = new ArrayList<String>();
+		try {
+			s = con.createStatement();
+			s.executeQuery("SELECT * FROM policyTable");
+			ResultSet rs = s.getResultSet ();
+			String name;
+			while (rs.next()) {
+				name = rs.getString("name");
+				list.add(name);
+			}		
+		}
+		catch (SQLException e) {
+			System.out.println("Error getting all policies");
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		String[] ret = new String[list.size()];
+		ret = list.toArray(ret);
+		for(String str:ret) 
+			System.out.println(str);
+		return ret;
+	}
+	
 	
 	public void updateCost(String userName,double cost) throws SQLException{
 		Statement s;
@@ -342,7 +378,6 @@ public class ConnectionObject {
 			e.printStackTrace();
 		}
 		return duration;
-
 	}
 	
 	public void disconnect() {
@@ -403,4 +438,94 @@ public class ConnectionObject {
 		}
 		return res;
 	}
+
+	public double getInitCost(String policy) {
+		Statement s;
+		double ret = 0;
+		try {
+			s = con.createStatement();
+			s.executeQuery ("SELECT initCost FROM policyTable "
+			       			+ "WHERE name='"+ policy +"'");	
+			ResultSet rs = s.getResultSet ();
+			if (!rs.next())
+			{
+			   System.out.println ("Error, cannot find policy");
+			   s.close();
+			   return (double) -1;
+			}
+			s.close();
+			ret = new Double(rs.getString("initCost"));
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return ret;
+	}
+	
+	public double getCostPer(String policy) {
+		Statement s;
+		double ret = 0;
+		try {
+			s = con.createStatement();
+			s.executeQuery ("SELECT costPerSec FROM policyTable "
+			       			+ "WHERE name='"+ policy +"'");	
+			ResultSet rs = s.getResultSet ();
+			if (!rs.next())
+			{
+			   System.out.println ("Error, cannot find policy");
+			   s.close();
+			   return (double) -1;
+			}
+			s.close();
+			ret = new Double(rs.getString("costPerSec"));
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return ret;
+	}
+
+	public boolean addPolicy(String name, String init, String costPer) {
+		Statement s;
+		try {
+			s = con.createStatement();
+			s.executeQuery ("SELECT * FROM policyTable "
+           			+ "WHERE name='"+ name + "'");
+			ResultSet rs = s.getResultSet ();
+			if (rs.next()) {
+				s.close();
+				return false;
+			}
+			s.executeUpdate(" INSERT INTO policyTable (name,initCost,costPerSec)" +
+					" VALUES " +
+					" ('" + name + "', '" + init + "', '" + costPer + "')");
+			 s.close();
+			 
+			
+		} catch (SQLException e) {
+			System.out.println ("CANNOT Insert new policy");
+			e.printStackTrace();
+			return false;
+		}
+		return true;
+	}
+	
+	public boolean deletePolicy(String policy) {
+		Statement s;
+		try {
+			s = con.createStatement();
+			s.executeUpdate("DELETE FROM policyTable " +
+					"WHERE name='"
+			+ policy + "'");
+			 s.close();
+		} catch (SQLException e) {
+			System.out.println ("CANNOT delete  policy");
+			e.printStackTrace();
+			return false;
+		}
+		return true;
+	}
+	
 }

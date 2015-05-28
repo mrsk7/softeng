@@ -4,17 +4,25 @@
 		<item value="960" key="dialogWidth"/>
 		<item value="718" key="dialogHeight"/>
 		<list key="orderedProviders">
+			<item value="org.eclipse.ui.preferences"/>
 		</list>
 		<list key="textArray">
+			<item value="workspace"/>
 		</list>
 		<list key="orderedElements">
+			<item value="org.eclipse.ui.preferencePages.Workspace"/>
 		</list>
 		<list key="textEntries">
+			<item value="1"/>
 		</list>
 	</section>
-	<section name="ZipFileImportWizard">
+	<section name="WorkbenchPreferenceDialogSettings">
+		<item value="68" key="DIALOG_Y_ORIGIN"/>
+		<item value="491" key="DIALOG_X_ORIGIN"/>
 	</section>
 	<section name="NewWizardAction">
+	</section>
+	<section name="ZipFileImportWizard">
 	</section>
 	<section name="ImportExportAction">
 		<item value="org.eclipse.ui.wizards.import.ExternalProject" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>

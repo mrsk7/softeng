@@ -28,6 +28,7 @@ import javax.swing.AbstractButton;
 import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
+import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -40,6 +41,7 @@ import javax.swing.JScrollPane;
 import javax.swing.border.BevelBorder;
 import javax.swing.border.Border;
 import javax.swing.border.EtchedBorder;
+import javax.imageio.ImageIO;
 /**
  *
  * @author  olivier
@@ -64,6 +66,7 @@ public class ProxyLauncher extends JFrame{
     
     protected JButton proxyButton;
     protected JButton traceViewerButton;
+    protected JButton policyButton;
     
     protected RegistrationsList registrationsList;
     protected Configuration configuration;
@@ -152,7 +155,7 @@ public class ProxyLauncher extends JFrame{
         container.setBackground(containerBackGroundColor);
         
         // width, size:
-        setSize(350,400);
+        setSize(500,571);
         setLocation(0,0);
         addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent e) {
@@ -293,6 +296,26 @@ public class ProxyLauncher extends JFrame{
         traceViewerButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                   listenerProxy.traceViewerActionPerformed(evt);
+            } 
+          }
+        );
+        
+        
+        //OURS
+        /* Add Policy button. On click creates a new spash screen */
+                
+        ImageIcon acon = new ImageIcon(getClass().getResource("./dollar.png"));
+        policyButton = new JButton("Policies",acon);
+        policyButton.setFont(new Font ("Dialog", 1, 14));
+        policyButton.setFocusPainted(false);
+        policyButton.setBackground(buttonBackGroundColor);
+        policyButton.setBorder(buttonBorder);
+        policyButton.setVerticalAlignment(AbstractButton.CENTER);
+        policyButton.setHorizontalAlignment(AbstractButton.CENTER);
+        secondPanel.add(policyButton);
+        policyButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
+                  listenerProxy.policyActionPerformed(evt);
             } 
           }
         );

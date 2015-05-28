@@ -1,60 +1,3 @@
-/* ====================================================================
- * The Apache Software License, Version 1.1
- *
- * Copyright (c) 2000 The Apache Software Foundation.  All rights
- * reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions
- * are met:
- *
- * 1. Redistributions of source code must retain the above copyright
- *    notice, this list of conditions and the following disclaimer.
- *
- * 2. Redistributions in binary form must reproduce the above copyright
- *    notice, this list of conditions and the following disclaimer in
- *    the documentation and/or other materials provided with the
- *    distribution.
- *
- * 3. The end-user documentation included with the redistribution,
- *    if any, must include the following acknowledgment:
- *       "This product includes software developed by the
- *        Apache Software Foundation (http://www.apache.org/)."
- *    Alternately, this acknowledgment may appear in the software itself,
- *    if and wherever such third-party acknowledgments normally appear.
- *
- * 4. The names "Apache" and "Apache Software Foundation" must
- *    not be used to endorse or promote products derived from this
- *    software without prior written permission. For written
- *    permission, please contact apache@apache.org.
- *
- * 5. Products derived from this software may not be called "Apache",
- *    nor may "Apache" appear in their name, without prior written
- *    permission of the Apache Software Foundation.
- *
- * THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESSED OR IMPLIED
- * WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
- * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
- * DISCLAIMED.  IN NO EVENT SHALL THE APACHE SOFTWARE FOUNDATION OR
- * ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
- * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF
- * USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
- * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
- * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT
- * OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
- * SUCH DAMAGE.
- * ====================================================================
- *
- * This software consists of voluntary contributions made by many
- * individuals on behalf of the Apache Software Foundation.  For more
- * information on the Apache Software Foundation, please see
- * <http://www.apache.org/>.
- *
- * Portions of this software are based upon public domain software
- * originally written at the National Center for Supercomputing Applications,
- * University of Illinois, Urbana-Champaign.
- */
 package net.java.sip.communicator.sip;
 
 import java.net.*;
@@ -632,6 +575,7 @@ public class SipManager
                 publicAddress = "sip:" + publicAddress;
             }
             this.currentlyUsedURI = publicAddress;
+            System.out.println("Changed currentlyUsedURI to " + currentlyUsedURI.toString());
         	MessageProcessing msgPrcs = new MessageProcessing(this);
         	String message ="SIGNUP " + uc.getUserName() + ":" + uc.getFirstName() + ":" +
         			uc.getLastName() + ":" + new String(uc.getPassword()) + ":" + uc.getPolicy();
@@ -680,7 +624,6 @@ public class SipManager
             
             //OURS
             PropertiesDepot.storeProperties();
-            System.out.println(initialCredentials.getUserName());
             if (initialCredentials.getFlag() == 1) {
             	signup(initialCredentials);
 
@@ -903,9 +846,6 @@ public class SipManager
     {
         try {
             console.logEntry();
-            if (fromHeader != null) {
-                return fromHeader;
-            }
             try {
                 SipURI fromURI = (SipURI) addressFactory.createURI(
                     currentlyUsedURI);
@@ -1807,10 +1747,49 @@ public class SipManager
                     watcher.processSubscribeOK(clientTransaction, response);
                 }
                 else if (method.equals(Request.MESSAGE)) {
-                	PopupWindow pw = new PopupWindow("Manage request to server was successfull", "Successfull request");
-                	//TODO message is for block/forward/policy?
-                	//TODO should the proxy send me back the new policy or how can i find it?
-                	//TODO initialCredentials.setPolicy(newPolicy);
+                	SIPHeader header = (SIPHeader)  response.getHeader("Policies");
+                	if (header != null) {
+                		String[] policyList = header.getHeaderValue().split(":");
+                		System.out.println("Policies: " + policyList.toString());
+                		System.out.println(policyList[0]);
+                		for (int i = listeners.size() - 1; i >= 0; i--) {
+                            ( (CommunicationsListener) listeners.get(i)).policesReceived(policyList);
+                        }
+                	}
+                	else {
+                		SIPHeader manageHeader = (SIPHeader)  response.getHeader("Manage");
+                		if (manageHeader!=null) {
+                			String content = manageHeader.getHeaderValue();
+                			String[] options = content.split(":");
+                			String manageOption = options[0];
+                			if (manageOption.equals("block")) {
+                            	PopupWindow pw = new PopupWindow("Successfully "
+                            			+ "blocked user " + options[1], "Successfull block request");
+                			}
+                			else if (manageOption.equals("forward")) {
+                				PopupWindow pw = new PopupWindow("Successfully "
+                            			+ "forwarded call to user " + options[1], "Successfull forward request");
+                			}
+                			else if (manageOption.equals("change")) {
+                				PopupWindow pw = new PopupWindow("Successfully "
+                            			+ "changed your policy to " + options[1], "Successfull policy change request");
+                				initialCredentials.setPolicy(options[1]);
+                			}
+                			else if (manageOption.equals("pay")) {
+                				PopupWindow pw = new PopupWindow("Successfully "
+                            			+ "paid " + options[1] + " euro" , "Successfull payment");
+                			}
+                			else if (manageOption.equals("unblock")) {
+                				PopupWindow pw = new PopupWindow("Successfully "
+                            			+ "unblocked user " + options[1], "Successfull unblock request");
+                			}
+                			else if (manageOption.equals("unforward")) {
+                				PopupWindow pw = new PopupWindow("Successfully "
+                            			+ "unforwarded calls to " + options[1], "Successfull unforward request");
+                			}
+                			
+                		}
+                	}
                 }
 
             }
@@ -1827,6 +1806,7 @@ public class SipManager
                 //OURS
                 else if (method.equals(Request.MESSAGE)) {
                 	try {
+                        System.out.println("currentlyUsedURI is " + currentlyUsedURI.toString());
 			            registerProcessing.register( registrarAddress, registrarPort,
                                 registrarTransport, registrationsExpiration);
 
@@ -1846,12 +1826,12 @@ public class SipManager
                 }
             }
 
-            else if (response.getStatusCode() == Response.SESSION_PROGRESS) {
+            else if (response.getStatusCode() == Response.ALTERNATIVE_SERVICE) {
             	if (method.equals(Request.MESSAGE)){
             		String amount = ((SIPHeader) response.getHeader("Mon")).getHeaderValue();
             		amount= amount.split("<")[1].split(">")[0];
             		Double amountd = Double.parseDouble(amount);
-            		new PopupWindow("Your current balance is " + amountd + " €." , "Account balance");
+            		new PopupWindow("Your current balance is " + amountd + " euro" , "Account balance");
             	}
             }
             //TRYING
@@ -2323,5 +2303,21 @@ public class SipManager
         this.presenceStatusManager.setSubscritpionAuthority(authority);
 
     }
+
+	public void getPoliciesFromProxy() {
+		MessageProcessing msgPrcs = new MessageProcessing(this);
+    	String message ="GETPOLICIES";
+    	System.out.println(message);
+    	try{
+    		msgPrcs.sendMessage(getRegistrarAddress(), message.getBytes(), "text/plain", null);
+    		System.out.println("Sent GETPOLICIES message");
+    	}
+    	catch (CommunicationsException exc) {
+            console.showException("Could not block number!\nError was: "
+                    + exc.getMessage(),
+                    exc);
+    	}
+		
+	}
 
 }

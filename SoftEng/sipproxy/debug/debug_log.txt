@@ -47591,3 +47591,24 @@ Content-Length: 0
 <![CDATA[ 
 Done processing Message REGISTER sip:192.168.1.4:5060;transport=udp SIP/2.0
 
+<debug>
+<![CDATA[ 
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= 192.168.1.4
+javax.sip.IP_ADDRESS= nist-proxy
+javax.sip.ROUTER_PATH= gov.nist.sip.proxy.router.ProxyRouter
+javax.sip.OUTBOUND_PROXY= null
+javax.sip.RETRANSMISSION_FILTER= on
+gov.nist.javax.sip.CACHE_CLIENT_CONNECTIONS= null
+gov.nist.javax.sip.CACHE_SERVER_CONNECTIONS= null
+gov.nist.javax.sip.REENTRANT_LISTENER= null
+gov.nist.javax.sip.THREAD_POOL_SIZE= 20
+
+ ]]>
+</debug>
+<description
+ logDescription="nist-proxy"
+ name="192.168.1.4" />
+
+<debug>
+<![CDATA[ 
