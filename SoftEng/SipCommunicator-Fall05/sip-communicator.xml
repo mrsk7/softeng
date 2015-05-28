@@ -32,17 +32,17 @@
         <sip>
             <PUBLIC_ADDRESS value="sip:Takeo"/>
             <TRANSPORT value=""/>
-            <REGISTRAR_ADDRESS value="192.168.1.4:4000"/>
-            <USER_NAME value="No"/>
+            <REGISTRAR_ADDRESS value="192.168.1.2:4000"/>
+            <USER_NAME value="kostaras"/>
             <STACK_PATH value="gov.nist"/>
             <PREFERRED_LOCAL_PORT value="5060"/>
-            <DISPLAY_NAME value="KLOUP"/>
+            <DISPLAY_NAME value="test"/>
             <REGISTRAR_TRANSPORT value="UDP"/>
             <REGISTRATIONS_EXPIRATION value="3600"/>
             <REGISTRAR_PORT value="5060"/>
 
-            <DEFAULT_DOMAIN_NAME value="192.168.1.4:4000"/>
-            <DEFAULT_AUTHENTICATION_REALM value="192.168.1.4:4000"/>
+            <DEFAULT_DOMAIN_NAME value="192.168.1.2:4000"/>
+            <DEFAULT_AUTHENTICATION_REALM value="192.168.1.2:4000"/>
             <WAIT_UNREGISTGRATION_FOR value="1100"/>
             <SAME_USER_EVERYWHERE value="true"/>
             <simple>
@@ -85,7 +85,7 @@ net.java.sip.communicator.gui.PASSWORD_LABEL=Password:
         </gui>
         <common>
             <PREFERRED_NETWORK_INTERFACE value="Atheros AR8121/AR8113/AR8114 PCI-E Ethernet Controller(NDIS6.20)"/>
-            <PREFERRED_NETWORK_ADDRESS value="192.168.1.4"/>
+            <PREFERRED_NETWORK_ADDRESS value="192.168.1.2"/>
         </common>
 
 
@@ -114,10 +114,10 @@ net.java.sip.communicator.gui.PASSWORD_LABEL=Password:
 </gov>
 <javax>
     <sip>
-        <IP_ADDRESS value="192.168.1.4"/>
+        <IP_ADDRESS value="192.168.1.2"/>
         <STACK_NAME value="sip-communicator"/>
         <ROUTER_PATH value="net.java.sip.communicator.sip.SipCommRouter"/>
-        <OUTBOUND_PROXY value="192.168.1.4:4000/udp"/>
+        <OUTBOUND_PROXY value="192.168.1.2:4000/udp"/>
         <RETRANSMISSON_FILTER value=""/>
         <EXTENSION_METHODS value=""/>
         <RETRANSMISSION_FILTER value="true"/>
