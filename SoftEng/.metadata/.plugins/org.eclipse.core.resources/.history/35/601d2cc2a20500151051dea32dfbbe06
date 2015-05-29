@@ -1,0 +1,538 @@
+package gov.nist.sip.proxy;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.Date;
+
+public class ConnectionObject {
+	
+	protected Connection con;
+	
+	public void createTables() {
+		Statement s;
+		try {
+			s = con.createStatement();
+			s.executeUpdate ("DROP TABLE IF EXISTS blockTable");
+			s.executeUpdate (
+						"CREATE TABLE blockTable ("
+			           	+ "id INT UNSIGNED NOT NULL AUTO_INCREMENT,"
+			           	+ "PRIMARY KEY (id),"
+			           	+ "blocker CHAR(40), blocked CHAR(40))");
+			s.executeUpdate ("DROP TABLE IF EXISTS users");
+			s.executeUpdate (
+						"CREATE TABLE users ("
+			           	+ "id INT UNSIGNED NOT NULL AUTO_INCREMENT,"
+			           	+ "PRIMARY KEY (id),"
+			           	+ "userName CHAR(40), password CHAR(40) ,firstName CHAR(40), "
+			           	+ "lastName CHAR(40), total REAL, policy CHAR(40))");
+			s.executeUpdate ("DROP TABLE IF EXISTS forwardTable");
+			s.executeUpdate (
+					"CREATE TABLE forwardTable ("
+		           	+ "id INT UNSIGNED NOT NULL AUTO_INCREMENT,"
+		           	+ "PRIMARY KEY (id),"
+		           	+ "departure CHAR(40), destination CHAR(40))");
+			s.executeUpdate ("DROP TABLE IF EXISTS callTable");
+			s.executeUpdate (
+					"CREATE TABLE callTable ("
+		           	+ "id INT UNSIGNED NOT NULL AUTO_INCREMENT,"
+		           	+ "PRIMARY KEY (id),"
+		           	+ "caller CHAR(40), callee CHAR(40), callid CHAR(40),startTime CHAR(40),endTime CHAR(40))");
+			s.executeUpdate ("DROP TABLE IF EXISTS policyTable");
+			s.executeUpdate (
+					"CREATE TABLE policyTable ("
+		           	+ "id INT UNSIGNED NOT NULL AUTO_INCREMENT,"
+		           	+ "PRIMARY KEY (id),"
+		           	+ "name CHAR(40), initCost CHAR(40), costPerSec CHAR(40))");
+		     s.close();
+		}
+		catch (SQLException exc) {
+			System.out.println ("Cannot create TABLE");
+		}
+	}
+
+	public ConnectionObject() {
+		connect();
+		createTables();
+	}
+	
+	public void block(String blocker, String ebloki) throws SQLException{
+		Statement s;
+		s = con.createStatement();
+		s.executeUpdate(" INSERT INTO blockTable (blocker,blocked)" +
+						" VALUES " +
+						" ('" + blocker + "', '" + ebloki + "')"
+						);
+	}
+	
+	public boolean hasLoop(String from, String to){
+		Statement s;
+		boolean res=false;
+		try{
+			s = con.createStatement();
+			s.executeQuery ("SELECT * FROM forwardTable "
+	       			+ "WHERE departure='"+ to +"' AND destination = '"+from+"'");
+			ResultSet rs = s.getResultSet ();
+			if (rs.next ()){ 
+				res= true;    	
+			}		
+			else res= false;
+			rs.close ();
+			s.close ();
+		} catch (SQLException exc) {
+			System.out.println ("Cannot check for loops");
+		}
+		return res;
+	}
+	
+	public int checkAndSignup(String[] credentials) {
+		String userName = credentials[0];
+		String firstName = credentials[1];
+		String lastName = credentials[2];
+		String password = credentials[3];
+		String policy = credentials[4];
+		Statement s;
+		try {
+			s = con.createStatement();
+
+			s.executeQuery ("SELECT * FROM users "
+					+ "WHERE userName='"+ userName +"'");
+			ResultSet rs = s.getResultSet ();
+			if (rs.next ()) {
+				 s.close();
+				return 0;
+			}
+			
+			s.executeUpdate(" INSERT INTO users (userName,firstName,lastName,password,total,policy)" +
+					" VALUES " +
+					" ('" + userName + "', '" + firstName + "', '" + lastName + "', '" + password + 
+					"',0,'" + policy +"')");
+			 s.close();
+			 
+			
+		} catch (SQLException e) {
+			System.out.println ("CANNOT Insert signed user");
+			e.printStackTrace();
+		}
+		return 1;
+		
+	}
+	
+	
+	public boolean isSigned(String userName, String password) {
+		Statement s;
+		try {
+			s = con.createStatement();
+			System.out.println(userName + " " + password);
+			s.executeQuery ("SELECT password FROM users WHERE " + "userName='"+userName+"' AND password='"+ password+"'");	
+			ResultSet rs = s.getResultSet ();
+			if (!rs.next ()) {
+				System.out.println("Not in databasessss");
+				s.close();
+				return false;
+			}
+		} catch (SQLException e) {
+			System.out.println("Exception");
+
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return true;
+		
+	}
+	
+	public int forward(String from, String to) throws SQLException{
+		Statement s;
+		s = con.createStatement();
+		try {
+			s.executeQuery("SELECT * FROM forwardTable WHERE departure='"+from+"'");
+			ResultSet rs = s.getResultSet();
+			if (rs.next()) {
+				return 0;
+			}
+			if (!hasLoop(from, to)) {
+				s.executeUpdate(" INSERT INTO forwardTable (departure,destination)"
+						+ " VALUES " + " ('" + from + "', '" + to + "')");
+			}
+		} finally {
+			s.close();
+		}
+		return 1;
+	}
+	
+	public void unforward(String from, String to) throws SQLException{
+		Statement s;
+		s = con.createStatement();
+		try {
+			int rows = 0;;
+			if (!hasLoop(from, to)) {
+				rows = s.executeUpdate(" DELETE FROM forwardTable"
+						+ " WHERE " + "departure ='" + from + "' AND destination = '" + to + "'");
+			}
+			if (rows==0) throw new SQLException("Didn't find user to unfollow");
+		} finally {
+			s.close();
+		}
+	}
+	
+	public void unblock(String from, String to) throws SQLException{
+		Statement s;
+		s = con.createStatement();
+		try {
+			int rows = s.executeUpdate(" DELETE FROM blockTable"
+					+ " WHERE " + "blocker ='" + from + "' AND blocked = '" + to + "'");
+			if (rows==0) throw new SQLException("Didn't find user to block");
+		} 
+		finally {
+			s.close();
+		}
+	}
+	
+	public void changePolicy(String userName, String policy) throws SQLException{
+		Statement s;
+		s = con.createStatement();
+		try {
+			s.executeUpdate("UPDATE users SET policy='" + policy + "' WHERE userName='"
+					+ userName + "'");
+		} finally {
+			s.close();
+		}
+	}
+	
+	public void connect() {
+		Connection con = null;
+		
+		try {
+	        System.out.println("Connecting to Database Server ...");
+	        String url = "jdbc:mysql://83.212.112.64:3306/test";
+	        String user = "p";
+	        String password = "1";
+	        con = DriverManager.getConnection(url, user, password);
+		}
+		catch (Exception e) 
+		{
+			System.out.println ("Cannot connect to database server");
+		}
+		this.con = con;
+	}
+	
+	public double getTotal(String userName) {
+		Statement s;
+		double res=0;
+		try {
+			s = con.createStatement();
+			s.executeQuery("SELECT (total) FROM users WHERE userName='"+ userName + "'");
+			ResultSet rs = s.getResultSet ();
+			if (!rs.next() ) {
+				System.out.println("Empty set in getTotal");
+			}
+			res = rs.getDouble("total");
+		} 
+		catch (SQLException e) {
+			System.out.println("Error getting total");
+			e.printStackTrace();
+		}	
+		return res;
+
+	}
+	
+	public void startCallTimer(String callID,String caller,String callee,Date startTime) {
+		Statement s;
+		Timestamp sqlstartTime = new Timestamp(startTime.getTime());
+		try {
+			s = con.createStatement();
+			s.executeUpdate("INSERT INTO callTable (caller,"
+						+ "callee, callid, startTime) VALUES "
+						+ "('"+ caller+"', '"+callee+"', '"+callID+"' , '"+ sqlstartTime +"')" );
+		} catch (SQLException e) {
+			System.out.println("Error inserting startTime to callTable");
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public void endCallTimer(String callID,Date endTime) {
+		Statement s;
+		Timestamp sqlendTime = new Timestamp(endTime.getTime());
+		try {
+			s = con.createStatement();
+			s.executeUpdate("UPDATE callTable SET endTime='" + sqlendTime + "' WHERE callid='"
+					+ callID + "'");
+		} catch (SQLException e) {
+			System.out.println("Error inserting endTime to callTable");
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public String getUsername(String callid) {
+		Statement s;
+		String caller = null;
+		try {
+			s = con.createStatement();
+			s.executeQuery("SELECT * FROM callTable "
+						+ "WHERE callid = '" + callid + "'");
+			ResultSet rs = s.getResultSet ();
+			if (!rs.next() ) {
+				System.out.println("Didn't find the call");
+			}
+			caller = rs.getString("caller");
+			
+		}
+		catch (SQLException e) {
+			System.out.println("Error updating total");
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return caller;
+	}
+	
+	public String getPolicy(String userName) {
+		Statement s;
+		String policy = null;
+		try {
+			s = con.createStatement();
+			s.executeQuery("SELECT * FROM users "
+					+ "WHERE userName = '" + userName + "'");
+			ResultSet rs = s.getResultSet ();
+			if (!rs.next() ) {
+				System.out.println("Didn't find the user");
+			}
+			policy = rs.getString("policy");
+			
+			if (rs.next()) {
+				System.out.println("Found Second user");
+				return null;
+			}
+			
+		}
+		catch (SQLException e) {
+			System.out.println("Error updating total");
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return policy;
+	}
+	
+	public String[] getAllPolicies() {
+		Statement s;
+		ArrayList<String> list = new ArrayList<String>();
+		try {
+			s = con.createStatement();
+			s.executeQuery("SELECT * FROM policyTable");
+			ResultSet rs = s.getResultSet ();
+			String name;
+			while (rs.next()) {
+				name = rs.getString("name");
+				list.add(name);
+			}		
+		}
+		catch (SQLException e) {
+			System.out.println("Error getting all policies");
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		String[] ret = new String[list.size()];
+		ret = list.toArray(ret);
+		for(String str:ret) 
+			System.out.println(str);
+		return ret;
+	}
+	
+	
+	public void updateCost(String userName,double cost) throws SQLException{
+		Statement s;
+		try {
+			s = con.createStatement();
+			s.executeUpdate("UPDATE users SET total= format(total +" + cost + ",3) WHERE userName='"
+			+ userName + "'");
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			System.out.println("Error updating cost");
+			e.printStackTrace();
+		}		
+	} 
+	
+
+	
+	public long getCallDuration(String callID) {
+		Statement s;
+		long duration =0;
+		try {
+			s = con.createStatement();
+			s.executeQuery("SELECT * FROM callTable "
+						+ "WHERE callid = '" + callID + "'");
+			ResultSet rs = s.getResultSet ();
+			if (!rs.next() ) {
+				System.out.println("Didn't find the call");
+				return -1;
+			}
+			Date start = new Date(rs.getTimestamp("startTime").getTime());
+			Date end = new Date(rs.getTimestamp("endTime").getTime());
+			duration = (end.getTime() - start.getTime())/1000;
+			if (rs.next()) {
+				System.out.println("Found Second call");
+				return -1;
+			}
+		} catch (SQLException e) {
+			System.out.println("Error calculating duration");
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return duration;
+	}
+	
+	public void disconnect() {
+		try {
+			if (con != null) {
+	            con.close();
+	        }
+		}
+		catch (SQLException ex) {
+			System.out.println("Cannot disconnect from database server");
+		}
+	}
+	
+	public String forwardUser(String to) {
+		Statement s;
+		String newTo = null;
+		try {
+			s = con.createStatement();
+			s.executeQuery ("SELECT destination FROM forwardTable "
+			       			+ "WHERE departure='"+ to +"'");	
+			ResultSet rs = s.getResultSet ();
+			if (rs.next ())
+			{
+			   newTo = rs.getString ("destination");
+			   //System.out.println ("forwardedTo = " + forwardedTo);
+			}
+			else return null;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return newTo;
+	}
+	
+	
+	public boolean isBlocked(String blocker,String blocked) {
+		Statement s,st;
+		boolean res = false;
+		try {
+			s = con.createStatement();
+			st = con.createStatement();
+
+			s.executeQuery ("SELECT * FROM blockTable "
+           			+ "WHERE blocker='"+ blocker +"' AND blocked = '"+blocked+"'");
+			st.executeQuery ("SELECT * FROM blockTable "
+           			+ "WHERE blocker='"+ blocked +"' AND blocked = '"+blocker+"'");
+			ResultSet rs = s.getResultSet ();
+			ResultSet rst = st.getResultSet ();
+			if (rs.next () || rst.next()){ 
+				res= true;    	
+			}		
+			else res= false;
+			rs.close ();
+			s.close ();
+		}
+		catch (SQLException exc) {
+			System.out.println ("Cannot check block");
+		}
+		return res;
+	}
+
+	public double getInitCost(String policy) {
+		Statement s;
+		double ret = 0;
+		try {
+			s = con.createStatement();
+			s.executeQuery ("SELECT initCost FROM policyTable "
+			       			+ "WHERE name='"+ policy +"'");	
+			ResultSet rs = s.getResultSet ();
+			if (!rs.next())
+			{
+			   System.out.println ("Error, cannot find policy");
+			   s.close();
+			   return (double) -1;
+			}
+			s.close();
+			ret = new Double(rs.getString("initCost"));
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return ret;
+	}
+	
+	public double getCostPer(String policy) {
+		Statement s;
+		double ret = 0;
+		try {
+			s = con.createStatement();
+			s.executeQuery ("SELECT costPerSec FROM policyTable "
+			       			+ "WHERE name='"+ policy +"'");	
+			ResultSet rs = s.getResultSet ();
+			if (!rs.next())
+			{
+			   System.out.println ("Error, cannot find policy");
+			   s.close();
+			   return (double) -1;
+			}
+			s.close();
+			ret = new Double(rs.getString("costPerSec"));
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return ret;
+	}
+
+	public boolean addPolicy(String name, String init, String costPer) {
+		Statement s;
+		try {
+			s = con.createStatement();
+			s.executeQuery ("SELECT * FROM policyTable "
+           			+ "WHERE name='"+ name + "'");
+			ResultSet rs = s.getResultSet ();
+			if (rs.next()) {
+				s.close();
+				return false;
+			}
+			s.executeUpdate(" INSERT INTO policyTable (name,initCost,costPerSec)" +
+					" VALUES " +
+					" ('" + name + "', '" + init + "', '" + costPer + "')");
+			 s.close();
+			 
+			
+		} catch (SQLException e) {
+			System.out.println ("CANNOT Insert new policy");
+			e.printStackTrace();
+			return false;
+		}
+		return true;
+	}
+	
+	public boolean deletePolicy(String policy) {
+		Statement s;
+		try {
+			s = con.createStatement();
+			s.executeUpdate("DELETE FROM policyTable " +
+					"WHERE name='"
+			+ policy + "'");
+			 s.close();
+		} catch (SQLException e) {
+			System.out.println ("CANNOT delete  policy");
+			e.printStackTrace();
+			return false;
+		}
+		return true;
+	}
+	
+}

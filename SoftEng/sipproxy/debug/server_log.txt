@@ -12617,3 +12617,4281 @@ Content-Length: 0
 ]]>
 </message>
 
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= 192.168.1.4
+javax.sip.STACK_NAME= nist-proxy
+javax.sip.ROUTER_PATH= gov.nist.sip.proxy.router.ProxyRouter
+javax.sip.OUTBOUND_PROXY= null
+javax.sip.RETRANSMISSION_FILTER= on
+-->
+<description
+ logDescription="nist-proxy"
+ name="192.168.1.4" />
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= 192.168.1.4
+javax.sip.STACK_NAME= nist-proxy
+javax.sip.ROUTER_PATH= gov.nist.sip.proxy.router.ProxyRouter
+javax.sip.OUTBOUND_PROXY= null
+javax.sip.RETRANSMISSION_FILTER= on
+-->
+<description
+ logDescription="nist-proxy"
+ name="192.168.1.4" />
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= 192.168.1.2
+javax.sip.STACK_NAME= nist-proxy
+javax.sip.ROUTER_PATH= gov.nist.sip.proxy.router.ProxyRouter
+javax.sip.OUTBOUND_PROXY= null
+javax.sip.RETRANSMISSION_FILTER= on
+-->
+<description
+ logDescription="nist-proxy"
+ name="192.168.1.2" />
+
+<message
+from="192.168.1.2:5060" 
+to="192.168.1.2:4000" 
+time="1432839569811" 
+isSender="false" 
+transactionId="z9hg4bkf0927c7dcb3c24b930af3e26e49ca1f9" 
+callId="ed63cc6b6a1467e7d815b74fb7e32c17@192.168.1.2" 
+firstLine="MESSAGE sip:192.168.1.2:4000@192.168.1.2:4000 SIP/2.0" 
+debugLine="102" 
+>
+<![CDATA[MESSAGE sip:192.168.1.2:4000@192.168.1.2:4000 SIP/2.0
+Call-ID: ed63cc6b6a1467e7d815b74fb7e32c17@192.168.1.2
+CSeq: 1 MESSAGE
+From: "test" <sip:Takeo;transport=udp>;tag=10832100
+To: <sip:192.168.1.2:4000@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:5060;branch=z9hG4bKf0927c7dcb3c24b930af3e26e49ca1f9
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 11
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:5060" 
+time="1432839569981" 
+isSender="true" 
+transactionId="z9hg4bkf0927c7dcb3c24b930af3e26e49ca1f9" 
+callId="ed63cc6b6a1467e7d815b74fb7e32c17@192.168.1.2" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="157" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: ed63cc6b6a1467e7d815b74fb7e32c17@192.168.1.2
+CSeq: 1 MESSAGE
+From: "test" <sip:Takeo;transport=udp>;tag=10832100
+To: <sip:192.168.1.2:4000@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:5060;branch=z9hG4bKf0927c7dcb3c24b930af3e26e49ca1f9
+Max-Forwards: 70
+Policies: 
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:5060" 
+to="192.168.1.2:4000" 
+time="1432839611023" 
+isSender="false" 
+transactionId="z9hg4bk59cabf0db0b5ae5df1d18fc7cdfc8358" 
+callId="25a88cf1ac32e2902a20b067f03fe758@192.168.1.2" 
+firstLine="MESSAGE sip:192.168.1.2:4000@192.168.1.2:4000 SIP/2.0" 
+debugLine="259" 
+>
+<![CDATA[MESSAGE sip:192.168.1.2:4000@192.168.1.2:4000 SIP/2.0
+Call-ID: 25a88cf1ac32e2902a20b067f03fe758@192.168.1.2
+CSeq: 1 MESSAGE
+From: "test" <sip:Takeo;transport=udp>;tag=1436506
+To: <sip:192.168.1.2:4000@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:5060;branch=z9hG4bK59cabf0db0b5ae5df1d18fc7cdfc8358
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 11
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:5060" 
+time="1432839611087" 
+isSender="true" 
+transactionId="z9hg4bk59cabf0db0b5ae5df1d18fc7cdfc8358" 
+callId="25a88cf1ac32e2902a20b067f03fe758@192.168.1.2" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="322" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 25a88cf1ac32e2902a20b067f03fe758@192.168.1.2
+CSeq: 1 MESSAGE
+From: "test" <sip:Takeo;transport=udp>;tag=1436506
+To: <sip:192.168.1.2:4000@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:5060;branch=z9hG4bK59cabf0db0b5ae5df1d18fc7cdfc8358
+Max-Forwards: 70
+Policies: a:b:
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:5060" 
+to="192.168.1.2:4000" 
+time="1432839641480" 
+isSender="false" 
+transactionId="z9hg4bkef3f0119149901d1220b4232a5b62a98" 
+callId="09fe37521367f8086ed72ea052cd8426@192.168.1.2" 
+firstLine="MESSAGE sip:192.168.1.2:4000@192.168.1.2:4000 SIP/2.0" 
+debugLine="424" 
+>
+<![CDATA[MESSAGE sip:192.168.1.2:4000@192.168.1.2:4000 SIP/2.0
+Call-ID: 09fe37521367f8086ed72ea052cd8426@192.168.1.2
+CSeq: 1 MESSAGE
+From: "test" <sip:ok@192.168.1.2:4000;transport=udp>;tag=1436506
+To: <sip:192.168.1.2:4000@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:5060;branch=z9hG4bKef3f0119149901d1220b4232a5b62a98
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 21
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:5060" 
+time="1432839641594" 
+isSender="true" 
+transactionId="z9hg4bkef3f0119149901d1220b4232a5b62a98" 
+callId="09fe37521367f8086ed72ea052cd8426@192.168.1.2" 
+firstLine="SIP/2.0 202 Accepted" 
+debugLine="486" 
+>
+<![CDATA[SIP/2.0 202 Accepted
+Call-ID: 09fe37521367f8086ed72ea052cd8426@192.168.1.2
+CSeq: 1 MESSAGE
+From: "test" <sip:ok@192.168.1.2:4000;transport=udp>;tag=1436506
+To: <sip:192.168.1.2:4000@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:5060;branch=z9hG4bKef3f0119149901d1220b4232a5b62a98
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:5060" 
+to="192.168.1.2:4000" 
+time="1432839641609" 
+isSender="false" 
+transactionId="z9hg4bk8bcf16df993e54b1d06689f8c6108683" 
+callId="71f3f18c24d8739721210d378e7a0edd@192.168.1.2" 
+firstLine="REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0" 
+debugLine="597" 
+>
+<![CDATA[REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0
+Call-ID: 71f3f18c24d8739721210d378e7a0edd@192.168.1.2
+CSeq: 1 REGISTER
+From: "test" <sip:ok@192.168.1.2:4000;transport=udp>;tag=1436506
+To: "test" <sip:ok@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:5060;branch=z9hG4bK8bcf16df993e54b1d06689f8c6108683
+Max-Forwards: 70
+Pwd: michali
+Expires: 3600
+Contact: "test" <sip:192.168.1.2:5060;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:5060" 
+time="1432839641678" 
+isSender="true" 
+transactionId="z9hg4bk8bcf16df993e54b1d06689f8c6108683" 
+callId="71f3f18c24d8739721210d378e7a0edd@192.168.1.2" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="653" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 71f3f18c24d8739721210d378e7a0edd@192.168.1.2
+CSeq: 1 REGISTER
+From: "test" <sip:ok@192.168.1.2:4000;transport=udp>;tag=1436506
+To: "test" <sip:ok@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:5060;branch=z9hG4bK8bcf16df993e54b1d06689f8c6108683
+Max-Forwards: 70
+Contact: "test" <sip:192.168.1.2:5060;transport=udp>;expires=3600
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:5060" 
+to="192.168.1.2:4000" 
+time="1432839649007" 
+isSender="false" 
+transactionId="z9hg4bk59ddefc7d80fec922d6774bcd855732e" 
+callId="457f0ca3a7a8767a6748436888eba131@192.168.1.2" 
+firstLine="MESSAGE sip:192.168.1.2:4000@192.168.1.2:4000 SIP/2.0" 
+debugLine="755" 
+>
+<![CDATA[MESSAGE sip:192.168.1.2:4000@192.168.1.2:4000 SIP/2.0
+Call-ID: 457f0ca3a7a8767a6748436888eba131@192.168.1.2
+CSeq: 1 MESSAGE
+From: "test" <sip:ok@192.168.1.2:4000;transport=udp>;tag=1436506
+To: <sip:192.168.1.2:4000@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:5060;branch=z9hG4bK59ddefc7d80fec922d6774bcd855732e
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 8
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:5060" 
+time="1432839649091" 
+isSender="true" 
+transactionId="z9hg4bk59ddefc7d80fec922d6774bcd855732e" 
+callId="457f0ca3a7a8767a6748436888eba131@192.168.1.2" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="818" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 457f0ca3a7a8767a6748436888eba131@192.168.1.2
+CSeq: 1 MESSAGE
+From: "test" <sip:ok@192.168.1.2:4000;transport=udp>;tag=1436506
+To: <sip:192.168.1.2:4000@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:5060;branch=z9hG4bK59ddefc7d80fec922d6774bcd855732e
+Max-Forwards: 70
+Manage: change:b
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:5060" 
+to="192.168.1.2:4000" 
+time="1432839662798" 
+isSender="false" 
+transactionId="z9hg4bkfc4a6d75e1c6abf2ff46485fdbf28310" 
+callId="862fff6719cfe3dd8bf709b536f62a45@192.168.1.2" 
+firstLine="MESSAGE sip:192.168.1.2:4000@192.168.1.2:4000 SIP/2.0" 
+debugLine="920" 
+>
+<![CDATA[MESSAGE sip:192.168.1.2:4000@192.168.1.2:4000 SIP/2.0
+Call-ID: 862fff6719cfe3dd8bf709b536f62a45@192.168.1.2
+CSeq: 1 MESSAGE
+From: "test" <sip:ok@192.168.1.2:4000;transport=udp>;tag=1436506
+To: <sip:192.168.1.2:4000@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:5060;branch=z9hG4bKfc4a6d75e1c6abf2ff46485fdbf28310
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 12
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:5060" 
+time="1432839662882" 
+isSender="true" 
+transactionId="z9hg4bkfc4a6d75e1c6abf2ff46485fdbf28310" 
+callId="862fff6719cfe3dd8bf709b536f62a45@192.168.1.2" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="983" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 862fff6719cfe3dd8bf709b536f62a45@192.168.1.2
+CSeq: 1 MESSAGE
+From: "test" <sip:ok@192.168.1.2:4000;transport=udp>;tag=1436506
+To: <sip:192.168.1.2:4000@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:5060;branch=z9hG4bKfc4a6d75e1c6abf2ff46485fdbf28310
+Max-Forwards: 70
+Manage: block:kostas
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:5060" 
+to="192.168.1.2:4000" 
+time="1432839664936" 
+isSender="false" 
+transactionId="z9hg4bk4cb013deebe7a59bdceb20ee53ba8bc8" 
+callId="67cc510b80f7e1efe33ebd688b5a42bf@192.168.1.2" 
+firstLine="MESSAGE sip:192.168.1.2:4000@192.168.1.2:4000 SIP/2.0" 
+debugLine="1093" 
+>
+<![CDATA[MESSAGE sip:192.168.1.2:4000@192.168.1.2:4000 SIP/2.0
+Call-ID: 67cc510b80f7e1efe33ebd688b5a42bf@192.168.1.2
+CSeq: 1 MESSAGE
+From: "test" <sip:ok@192.168.1.2:4000;transport=udp>;tag=1436506
+To: <sip:192.168.1.2:4000@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:5060;branch=z9hG4bK4cb013deebe7a59bdceb20ee53ba8bc8
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 14
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:5060" 
+time="1432839665056" 
+isSender="true" 
+transactionId="z9hg4bk4cb013deebe7a59bdceb20ee53ba8bc8" 
+callId="67cc510b80f7e1efe33ebd688b5a42bf@192.168.1.2" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="1148" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 67cc510b80f7e1efe33ebd688b5a42bf@192.168.1.2
+CSeq: 1 MESSAGE
+From: "test" <sip:ok@192.168.1.2:4000;transport=udp>;tag=1436506
+To: <sip:192.168.1.2:4000@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:5060;branch=z9hG4bK4cb013deebe7a59bdceb20ee53ba8bc8
+Max-Forwards: 70
+Manage: forward:kostas
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:9248" 
+to="192.168.1.2:4000" 
+time="1432839696154" 
+isSender="false" 
+transactionId="z9hg4bke0ecdc70ec2c775f3679904dcdf2a842" 
+callId="daea313e5253d9ac945a09fb1fa4aa1d@192.168.1.2" 
+firstLine="MESSAGE sip:192.168.1.2:4000@192.168.1.2:4000 SIP/2.0" 
+debugLine="1250" 
+>
+<![CDATA[MESSAGE sip:192.168.1.2:4000@192.168.1.2:4000 SIP/2.0
+Call-ID: daea313e5253d9ac945a09fb1fa4aa1d@192.168.1.2
+CSeq: 1 MESSAGE
+From: "test" <sip:Takeo;transport=udp>;tag=2890524
+To: <sip:192.168.1.2:4000@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:9248;branch=z9hG4bKe0ecdc70ec2c775f3679904dcdf2a842
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 11
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:9248" 
+time="1432839696219" 
+isSender="true" 
+transactionId="z9hg4bke0ecdc70ec2c775f3679904dcdf2a842" 
+callId="daea313e5253d9ac945a09fb1fa4aa1d@192.168.1.2" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="1313" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: daea313e5253d9ac945a09fb1fa4aa1d@192.168.1.2
+CSeq: 1 MESSAGE
+From: "test" <sip:Takeo;transport=udp>;tag=2890524
+To: <sip:192.168.1.2:4000@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:9248;branch=z9hG4bKe0ecdc70ec2c775f3679904dcdf2a842
+Max-Forwards: 70
+Policies: a:b:
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:9248" 
+to="192.168.1.2:4000" 
+time="1432839704526" 
+isSender="false" 
+transactionId="z9hg4bk33a722a84adc034c3a62a2067d9f2bed" 
+callId="9505c61d442adccc5471ee04bc365855@192.168.1.2" 
+firstLine="MESSAGE sip:192.168.1.2:4000@192.168.1.2:4000 SIP/2.0" 
+debugLine="1415" 
+>
+<![CDATA[MESSAGE sip:192.168.1.2:4000@192.168.1.2:4000 SIP/2.0
+Call-ID: 9505c61d442adccc5471ee04bc365855@192.168.1.2
+CSeq: 1 MESSAGE
+From: "test" <sip:kostas@192.168.1.2:4000;transport=udp>;tag=2890524
+To: <sip:192.168.1.2:4000@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:9248;branch=z9hG4bK33a722a84adc034c3a62a2067d9f2bed
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 19
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:9248" 
+time="1432839704635" 
+isSender="true" 
+transactionId="z9hg4bk33a722a84adc034c3a62a2067d9f2bed" 
+callId="9505c61d442adccc5471ee04bc365855@192.168.1.2" 
+firstLine="SIP/2.0 202 Accepted" 
+debugLine="1477" 
+>
+<![CDATA[SIP/2.0 202 Accepted
+Call-ID: 9505c61d442adccc5471ee04bc365855@192.168.1.2
+CSeq: 1 MESSAGE
+From: "test" <sip:kostas@192.168.1.2:4000;transport=udp>;tag=2890524
+To: <sip:192.168.1.2:4000@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:9248;branch=z9hG4bK33a722a84adc034c3a62a2067d9f2bed
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:9248" 
+to="192.168.1.2:4000" 
+time="1432839704647" 
+isSender="false" 
+transactionId="z9hg4bk490fafbfd6baea9f0e7d90c90029ff44" 
+callId="4784569ba4c9088d0748b75f3bb51988@192.168.1.2" 
+firstLine="REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0" 
+debugLine="1580" 
+>
+<![CDATA[REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0
+Call-ID: 4784569ba4c9088d0748b75f3bb51988@192.168.1.2
+CSeq: 1 REGISTER
+From: "test" <sip:kostas@192.168.1.2:4000;transport=udp>;tag=2890524
+To: "test" <sip:kostas@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:9248;branch=z9hG4bK490fafbfd6baea9f0e7d90c90029ff44
+Max-Forwards: 70
+Pwd: 2
+Expires: 3600
+Contact: "test" <sip:192.168.1.2:9248;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:9248" 
+time="1432839704715" 
+isSender="true" 
+transactionId="z9hg4bk490fafbfd6baea9f0e7d90c90029ff44" 
+callId="4784569ba4c9088d0748b75f3bb51988@192.168.1.2" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="1644" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 4784569ba4c9088d0748b75f3bb51988@192.168.1.2
+CSeq: 1 REGISTER
+From: "test" <sip:kostas@192.168.1.2:4000;transport=udp>;tag=2890524
+To: "test" <sip:kostas@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:9248;branch=z9hG4bK490fafbfd6baea9f0e7d90c90029ff44
+Max-Forwards: 70
+Contact: "test" <sip:192.168.1.2:9248;transport=udp>;expires=3600
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:5750" 
+to="192.168.1.2:4000" 
+time="1432839718230" 
+isSender="false" 
+transactionId="z9hg4bk569f578f285b023887d47b03cdaf640a" 
+callId="42608b855eeb3e84f98ad290da17ad73@192.168.1.2" 
+firstLine="MESSAGE sip:192.168.1.2:4000@192.168.1.2:4000 SIP/2.0" 
+debugLine="1746" 
+>
+<![CDATA[MESSAGE sip:192.168.1.2:4000@192.168.1.2:4000 SIP/2.0
+Call-ID: 42608b855eeb3e84f98ad290da17ad73@192.168.1.2
+CSeq: 1 MESSAGE
+From: "test" <sip:Takeo;transport=udp>;tag=14759614
+To: <sip:192.168.1.2:4000@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:5750;branch=z9hG4bK569f578f285b023887d47b03cdaf640a
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 11
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:5750" 
+time="1432839718288" 
+isSender="true" 
+transactionId="z9hg4bk569f578f285b023887d47b03cdaf640a" 
+callId="42608b855eeb3e84f98ad290da17ad73@192.168.1.2" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="1809" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 42608b855eeb3e84f98ad290da17ad73@192.168.1.2
+CSeq: 1 MESSAGE
+From: "test" <sip:Takeo;transport=udp>;tag=14759614
+To: <sip:192.168.1.2:4000@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:5750;branch=z9hG4bK569f578f285b023887d47b03cdaf640a
+Max-Forwards: 70
+Policies: a:b:
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:5750" 
+to="192.168.1.2:4000" 
+time="1432839724216" 
+isSender="false" 
+transactionId="z9hg4bk9df041109c2fc85331c203a76cec8d25" 
+callId="6dd5b5170ae0ff23a005b93d409ba9bf@192.168.1.2" 
+firstLine="MESSAGE sip:192.168.1.2:4000@192.168.1.2:4000 SIP/2.0" 
+debugLine="1918" 
+>
+<![CDATA[MESSAGE sip:192.168.1.2:4000@192.168.1.2:4000 SIP/2.0
+Call-ID: 6dd5b5170ae0ff23a005b93d409ba9bf@192.168.1.2
+CSeq: 1 MESSAGE
+From: "test" <sip:spiros@192.168.1.2:4000;transport=udp>;tag=14759614
+To: <sip:192.168.1.2:4000@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:5750;branch=z9hG4bK9df041109c2fc85331c203a76cec8d25
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 21
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:5750" 
+time="1432839724322" 
+isSender="true" 
+transactionId="z9hg4bk9df041109c2fc85331c203a76cec8d25" 
+callId="6dd5b5170ae0ff23a005b93d409ba9bf@192.168.1.2" 
+firstLine="SIP/2.0 202 Accepted" 
+debugLine="1973" 
+>
+<![CDATA[SIP/2.0 202 Accepted
+Call-ID: 6dd5b5170ae0ff23a005b93d409ba9bf@192.168.1.2
+CSeq: 1 MESSAGE
+From: "test" <sip:spiros@192.168.1.2:4000;transport=udp>;tag=14759614
+To: <sip:192.168.1.2:4000@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:5750;branch=z9hG4bK9df041109c2fc85331c203a76cec8d25
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:5750" 
+to="192.168.1.2:4000" 
+time="1432839724332" 
+isSender="false" 
+transactionId="z9hg4bk212d955bd69ad763deacab407c874fe8" 
+callId="f885f1e67e18875ed8eaad224ad4cee9@192.168.1.2" 
+firstLine="REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0" 
+debugLine="2076" 
+>
+<![CDATA[REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0
+Call-ID: f885f1e67e18875ed8eaad224ad4cee9@192.168.1.2
+CSeq: 1 REGISTER
+From: "test" <sip:spiros@192.168.1.2:4000;transport=udp>;tag=14759614
+To: "test" <sip:spiros@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:5750;branch=z9hG4bK212d955bd69ad763deacab407c874fe8
+Max-Forwards: 70
+Pwd: saf
+Expires: 3600
+Contact: "test" <sip:192.168.1.2:5750;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:5750" 
+time="1432839724400" 
+isSender="true" 
+transactionId="z9hg4bk212d955bd69ad763deacab407c874fe8" 
+callId="f885f1e67e18875ed8eaad224ad4cee9@192.168.1.2" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="2140" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: f885f1e67e18875ed8eaad224ad4cee9@192.168.1.2
+CSeq: 1 REGISTER
+From: "test" <sip:spiros@192.168.1.2:4000;transport=udp>;tag=14759614
+To: "test" <sip:spiros@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:5750;branch=z9hG4bK212d955bd69ad763deacab407c874fe8
+Max-Forwards: 70
+Contact: "test" <sip:192.168.1.2:5750;transport=udp>;expires=3600
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:5750" 
+to="192.168.1.2:4000" 
+time="1432839740577" 
+isSender="false" 
+transactionId="z9hg4bk9bc3c50738653e0dd47f1fd9f91482a9" 
+callId="20123b1fbefe9e3a21525f5064391141@192.168.1.2" 
+firstLine="INVITE sip:ok@192.168.1.2:4000 SIP/2.0" 
+debugLine="2250" 
+>
+<![CDATA[INVITE sip:ok@192.168.1.2:4000 SIP/2.0
+Call-ID: 20123b1fbefe9e3a21525f5064391141@192.168.1.2
+CSeq: 1 INVITE
+From: "test" <sip:spiros@192.168.1.2:4000;transport=udp>;tag=14759614
+To: <sip:ok@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:5750;branch=z9hG4bK9bc3c50738653e0dd47f1fd9f91482a9
+Max-Forwards: 70
+Contact: "test" <sip:192.168.1.2:5750;transport=udp>
+Content-Type: application/sdp
+Content-Length: 147
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:5750" 
+time="1432839740611" 
+isSender="true" 
+transactionId="z9hg4bk9bc3c50738653e0dd47f1fd9f91482a9" 
+callId="20123b1fbefe9e3a21525f5064391141@192.168.1.2" 
+firstLine="SIP/2.0 181 Call is being forwarded" 
+debugLine="2320" 
+>
+<![CDATA[SIP/2.0 181 Call is being forwarded
+Call-ID: 20123b1fbefe9e3a21525f5064391141@192.168.1.2
+CSeq: 1 INVITE
+From: "test" <sip:spiros@192.168.1.2:4000;transport=udp>;tag=14759614
+To: <sip:ok@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:5750;branch=z9hG4bK9bc3c50738653e0dd47f1fd9f91482a9
+Max-Forwards: 70
+Fwd: <sip:kostas@192.168.1.2:4000>
+Content-Type: text/plain
+Content-Length: 147
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:5750" 
+to="192.168.1.2:4000" 
+time="1432839741450" 
+isSender="false" 
+transactionId="z9hg4bk2b9cdf0307db677b8ab9cc649b5c6038" 
+callId="2c0cc7f57f00da9a0ccd791e4d95254f@192.168.1.2" 
+firstLine="INVITE sip:kostas@192.168.1.2:4000 SIP/2.0" 
+debugLine="2431" 
+>
+<![CDATA[INVITE sip:kostas@192.168.1.2:4000 SIP/2.0
+Call-ID: 2c0cc7f57f00da9a0ccd791e4d95254f@192.168.1.2
+CSeq: 1 INVITE
+From: "test" <sip:spiros@192.168.1.2:4000;transport=udp>;tag=14759614
+To: <sip:kostas@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:5750;branch=z9hG4bK2b9cdf0307db677b8ab9cc649b5c6038
+Max-Forwards: 70
+Contact: "test" <sip:192.168.1.2:5750;transport=udp>
+Content-Type: application/sdp
+Content-Length: 147
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:9248" 
+time="1432839741558" 
+isSender="true" 
+transactionId="z9hg4bk0d8ae67bc9a133c4a592da04a48eed23" 
+callId="2c0cc7f57f00da9a0ccd791e4d95254f@192.168.1.2" 
+firstLine="INVITE sip:192.168.1.2:9248 SIP/2.0" 
+debugLine="2597" 
+>
+<![CDATA[INVITE sip:192.168.1.2:9248 SIP/2.0
+Call-ID: 2c0cc7f57f00da9a0ccd791e4d95254f@192.168.1.2
+CSeq: 1 INVITE
+From: "test" <sip:spiros@192.168.1.2:4000;transport=udp>;tag=14759614
+To: <sip:kostas@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:4000;branch=z9hG4bK0d8ae67bc9a133c4a592da04a48eed23,SIP/2.0/UDP 192.168.1.2:5750;branch=z9hG4bK2b9cdf0307db677b8ab9cc649b5c6038
+Max-Forwards: 69
+Contact: "test" <sip:192.168.1.2:5750;transport=udp>
+Content-Type: application/sdp
+Record-Route: <sip:192.168.1.2:4000>
+Content-Length: 147
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:5750" 
+time="1432839741684" 
+isSender="true" 
+transactionId="z9hg4bk2b9cdf0307db677b8ab9cc649b5c6038" 
+callId="2c0cc7f57f00da9a0ccd791e4d95254f@192.168.1.2" 
+firstLine="SIP/2.0 100 Trying" 
+debugLine="2667" 
+>
+<![CDATA[SIP/2.0 100 Trying
+Call-ID: 2c0cc7f57f00da9a0ccd791e4d95254f@192.168.1.2
+CSeq: 1 INVITE
+From: "test" <sip:spiros@192.168.1.2:4000;transport=udp>;tag=14759614
+To: <sip:kostas@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:5750;branch=z9hG4bK2b9cdf0307db677b8ab9cc649b5c6038
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:9248" 
+to="192.168.1.2:4000" 
+time="1432839741769" 
+isSender="false" 
+statusMessage="normal processing" 
+transactionId="z9hg4bk0d8ae67bc9a133c4a592da04a48eed23" 
+firstLine="SIP/2.0 100 Trying" 
+callId="2c0cc7f57f00da9a0ccd791e4d95254f@192.168.1.2" 
+debugLine="2718" 
+>
+<![CDATA[SIP/2.0 100 Trying
+Call-ID: 2c0cc7f57f00da9a0ccd791e4d95254f@192.168.1.2
+CSeq: 1 INVITE
+From: "test" <sip:spiros@192.168.1.2:4000;transport=udp>;tag=14759614
+To: <sip:kostas@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:4000;branch=z9hG4bK0d8ae67bc9a133c4a592da04a48eed23,SIP/2.0/UDP 192.168.1.2:5750;branch=z9hG4bK2b9cdf0307db677b8ab9cc649b5c6038
+Max-Forwards: 69
+Record-Route: <sip:192.168.1.2:4000>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:9248" 
+to="192.168.1.2:4000" 
+time="1432839741772" 
+isSender="false" 
+statusMessage="normal processing" 
+transactionId="z9hg4bk0d8ae67bc9a133c4a592da04a48eed23" 
+firstLine="SIP/2.0 180 Ringing" 
+callId="2c0cc7f57f00da9a0ccd791e4d95254f@192.168.1.2" 
+debugLine="2835" 
+>
+<![CDATA[SIP/2.0 180 Ringing
+Call-ID: 2c0cc7f57f00da9a0ccd791e4d95254f@192.168.1.2
+CSeq: 1 INVITE
+From: "test" <sip:spiros@192.168.1.2:4000;transport=udp>;tag=14759614
+To: <sip:kostas@192.168.1.2:4000>;tag=32850875
+Via: SIP/2.0/UDP 192.168.1.2:4000;branch=z9hG4bK0d8ae67bc9a133c4a592da04a48eed23,SIP/2.0/UDP 192.168.1.2:5750;branch=z9hG4bK2b9cdf0307db677b8ab9cc649b5c6038
+Max-Forwards: 69
+Record-Route: <sip:192.168.1.2:4000>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:9248" 
+to="192.168.1.2:4000" 
+time="1432839741775" 
+isSender="false" 
+statusMessage="normal processing" 
+transactionId="z9hg4bk0d8ae67bc9a133c4a592da04a48eed23" 
+firstLine="SIP/2.0 180 Ringing" 
+callId="2c0cc7f57f00da9a0ccd791e4d95254f@192.168.1.2" 
+debugLine="2866" 
+>
+<![CDATA[SIP/2.0 180 Ringing
+Call-ID: 2c0cc7f57f00da9a0ccd791e4d95254f@192.168.1.2
+CSeq: 1 INVITE
+From: "test" <sip:spiros@192.168.1.2:4000;transport=udp>;tag=14759614
+To: <sip:kostas@192.168.1.2:4000>;tag=32850875
+Via: SIP/2.0/UDP 192.168.1.2:4000;branch=z9hG4bK0d8ae67bc9a133c4a592da04a48eed23,SIP/2.0/UDP 192.168.1.2:5750;branch=z9hG4bK2b9cdf0307db677b8ab9cc649b5c6038
+Max-Forwards: 69
+Record-Route: <sip:192.168.1.2:4000>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:5750" 
+time="1432839741778" 
+isSender="true" 
+transactionId="z9hg4bk2b9cdf0307db677b8ab9cc649b5c6038" 
+callId="2c0cc7f57f00da9a0ccd791e4d95254f@192.168.1.2" 
+firstLine="SIP/2.0 180 Ringing" 
+debugLine="2978" 
+>
+<![CDATA[SIP/2.0 180 Ringing
+Call-ID: 2c0cc7f57f00da9a0ccd791e4d95254f@192.168.1.2
+CSeq: 1 INVITE
+From: "test" <sip:spiros@192.168.1.2:4000;transport=udp>;tag=14759614
+To: <sip:kostas@192.168.1.2:4000>;tag=32850875
+Via: SIP/2.0/UDP 192.168.1.2:5750;branch=z9hG4bK2b9cdf0307db677b8ab9cc649b5c6038
+Max-Forwards: 69
+Record-Route: <sip:192.168.1.2:4000>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:9248" 
+to="192.168.1.2:4000" 
+time="1432839746998" 
+isSender="false" 
+statusMessage="normal processing" 
+transactionId="z9hg4bk0d8ae67bc9a133c4a592da04a48eed23" 
+firstLine="SIP/2.0 200 OK" 
+callId="2c0cc7f57f00da9a0ccd791e4d95254f@192.168.1.2" 
+debugLine="3097" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 2c0cc7f57f00da9a0ccd791e4d95254f@192.168.1.2
+CSeq: 1 INVITE
+From: "test" <sip:spiros@192.168.1.2:4000;transport=udp>;tag=14759614
+To: <sip:kostas@192.168.1.2:4000>;tag=32850875
+Via: SIP/2.0/UDP 192.168.1.2:4000;branch=z9hG4bK0d8ae67bc9a133c4a592da04a48eed23,SIP/2.0/UDP 192.168.1.2:5750;branch=z9hG4bK2b9cdf0307db677b8ab9cc649b5c6038
+Max-Forwards: 69
+Record-Route: <sip:192.168.1.2:4000>
+Content-Type: application/sdp
+Contact: "test" <sip:192.168.1.2:9248;transport=udp>
+Content-Length: 147
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:5750" 
+time="1432839747003" 
+isSender="true" 
+transactionId="z9hg4bk2b9cdf0307db677b8ab9cc649b5c6038" 
+callId="2c0cc7f57f00da9a0ccd791e4d95254f@192.168.1.2" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="3249" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 2c0cc7f57f00da9a0ccd791e4d95254f@192.168.1.2
+CSeq: 1 INVITE
+From: "test" <sip:spiros@192.168.1.2:4000;transport=udp>;tag=14759614
+To: <sip:kostas@192.168.1.2:4000>;tag=32850875
+Via: SIP/2.0/UDP 192.168.1.2:5750;branch=z9hG4bK2b9cdf0307db677b8ab9cc649b5c6038
+Max-Forwards: 69
+Record-Route: <sip:192.168.1.2:4000>
+Content-Type: application/sdp
+Contact: "test" <sip:192.168.1.2:9248;transport=udp>
+Content-Length: 147
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:5750" 
+to="192.168.1.2:4000" 
+time="1432839747014" 
+isSender="false" 
+transactionId="1424180979" 
+callId="2c0cc7f57f00da9a0ccd791e4d95254f@192.168.1.2" 
+firstLine="ACK sip:192.168.1.2:4000;transport=udp SIP/2.0" 
+debugLine="3375" 
+>
+<![CDATA[ACK sip:192.168.1.2:4000;transport=udp SIP/2.0
+Call-ID: 2c0cc7f57f00da9a0ccd791e4d95254f@192.168.1.2
+CSeq: 1 ACK
+From: "test" <sip:spiros@192.168.1.2:4000;transport=udp>;tag=14759614
+To: <sip:kostas@192.168.1.2:4000>;tag=32850875
+Via: SIP/2.0/UDP 192.168.1.2:5750;branch=3139322e3136382e312e323a3537353
+Max-Forwards: 70
+Route: "test" <sip:192.168.1.2:9248;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:9248" 
+time="1432839747161" 
+isSender="true" 
+transactionId="z9hg4bk7c82c839a834b78a20c6f2ea86e90caa" 
+callId="2c0cc7f57f00da9a0ccd791e4d95254f@192.168.1.2" 
+firstLine="ACK sip:192.168.1.2:9248 SIP/2.0" 
+debugLine="3491" 
+>
+<![CDATA[ACK sip:192.168.1.2:9248 SIP/2.0
+Call-ID: 2c0cc7f57f00da9a0ccd791e4d95254f@192.168.1.2
+CSeq: 1 ACK
+From: "test" <sip:spiros@192.168.1.2:4000;transport=udp>;tag=14759614
+To: <sip:kostas@192.168.1.2:4000>;tag=32850875
+Via: SIP/2.0/UDP 192.168.1.2:4000;branch=z9hG4bK7c82c839a834b78a20c6f2ea86e90caa,SIP/2.0/UDP 192.168.1.2:5750;branch=3139322e3136382e312e323a3537353
+Max-Forwards: 69
+Route: "test" <sip:192.168.1.2:9248;transport=udp>
+Record-Route: <sip:192.168.1.2:4000>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:9248" 
+to="192.168.1.2:4000" 
+time="1432839754060" 
+isSender="false" 
+transactionId="z9hg4bk08ea865013b7379dd72d5d2311a0bad5" 
+callId="2c0cc7f57f00da9a0ccd791e4d95254f@192.168.1.2" 
+firstLine="BYE sip:192.168.1.2:4000;transport=udp SIP/2.0" 
+debugLine="3640" 
+>
+<![CDATA[BYE sip:192.168.1.2:4000;transport=udp SIP/2.0
+Call-ID: 2c0cc7f57f00da9a0ccd791e4d95254f@192.168.1.2
+CSeq: 1 BYE
+To: "test" <sip:spiros@192.168.1.2:4000;transport=udp>;tag=14759614
+From: <sip:kostas@192.168.1.2:4000>;tag=32850875
+Max-Forwards: 69
+Via: SIP/2.0/UDP 192.168.1.2:9248;branch=z9hG4bK08ea865013b7379dd72d5d2311a0bad5
+Route: "test" <sip:192.168.1.2:5750;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:9248" 
+to="192.168.1.2:4000" 
+time="1432839754064" 
+isSender="false" 
+transactionId="z9hg4bkb95be3d9ad2631ce82134a97ac12cc50" 
+callId="4784569ba4c9088d0748b75f3bb51988@192.168.1.2" 
+firstLine="REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0" 
+debugLine="3749" 
+>
+<![CDATA[REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0
+Call-ID: 4784569ba4c9088d0748b75f3bb51988@192.168.1.2
+CSeq: 2 REGISTER
+From: "test" <sip:kostas@192.168.1.2:4000;transport=udp>;tag=2890524
+To: "test" <sip:kostas@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:9248;branch=z9hG4bKb95be3d9ad2631ce82134a97ac12cc50
+Max-Forwards: 70
+Pwd: 2
+Expires: 0
+Contact: "test" <sip:192.168.1.2:9248;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:5750" 
+time="1432839754326" 
+isSender="true" 
+transactionId="z9hg4bk2018820cc4753eb8a0449847a6a1ebae" 
+callId="2c0cc7f57f00da9a0ccd791e4d95254f@192.168.1.2" 
+firstLine="BYE sip:192.168.1.2:4000;transport=udp SIP/2.0" 
+debugLine="3891" 
+>
+<![CDATA[BYE sip:192.168.1.2:4000;transport=udp SIP/2.0
+Call-ID: 2c0cc7f57f00da9a0ccd791e4d95254f@192.168.1.2
+CSeq: 1 BYE
+To: "test" <sip:spiros@192.168.1.2:4000;transport=udp>;tag=14759614
+From: <sip:kostas@192.168.1.2:4000>;tag=32850875
+Max-Forwards: 69
+Via: SIP/2.0/UDP 192.168.1.2:4000;branch=z9hG4bK2018820cc4753eb8a0449847a6a1ebae,SIP/2.0/UDP 192.168.1.2:9248;branch=z9hG4bK08ea865013b7379dd72d5d2311a0bad5
+Route: "test" <sip:192.168.1.2:5750;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:9248" 
+time="1432839754402" 
+isSender="true" 
+transactionId="z9hg4bkb95be3d9ad2631ce82134a97ac12cc50" 
+callId="4784569ba4c9088d0748b75f3bb51988@192.168.1.2" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="3968" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 4784569ba4c9088d0748b75f3bb51988@192.168.1.2
+CSeq: 2 REGISTER
+From: "test" <sip:kostas@192.168.1.2:4000;transport=udp>;tag=2890524
+To: "test" <sip:kostas@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:9248;branch=z9hG4bKb95be3d9ad2631ce82134a97ac12cc50
+Max-Forwards: 70
+Expires: 0
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:5750" 
+time="1432839754824" 
+isSender="true" 
+transactionId="z9hg4bk2018820cc4753eb8a0449847a6a1ebae" 
+callId="2c0cc7f57f00da9a0ccd791e4d95254f@192.168.1.2" 
+firstLine="BYE sip:192.168.1.2:4000;transport=udp SIP/2.0" 
+debugLine="4025" 
+>
+<![CDATA[BYE sip:192.168.1.2:4000;transport=udp SIP/2.0
+Call-ID: 2c0cc7f57f00da9a0ccd791e4d95254f@192.168.1.2
+CSeq: 1 BYE
+To: "test" <sip:spiros@192.168.1.2:4000;transport=udp>;tag=14759614
+From: <sip:kostas@192.168.1.2:4000>;tag=32850875
+Max-Forwards: 69
+Via: SIP/2.0/UDP 192.168.1.2:4000;branch=z9hG4bK2018820cc4753eb8a0449847a6a1ebae,SIP/2.0/UDP 192.168.1.2:9248;branch=z9hG4bK08ea865013b7379dd72d5d2311a0bad5
+Route: "test" <sip:192.168.1.2:5750;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:5750" 
+time="1432839755824" 
+isSender="true" 
+transactionId="z9hg4bk2018820cc4753eb8a0449847a6a1ebae" 
+callId="2c0cc7f57f00da9a0ccd791e4d95254f@192.168.1.2" 
+firstLine="BYE sip:192.168.1.2:4000;transport=udp SIP/2.0" 
+debugLine="4081" 
+>
+<![CDATA[BYE sip:192.168.1.2:4000;transport=udp SIP/2.0
+Call-ID: 2c0cc7f57f00da9a0ccd791e4d95254f@192.168.1.2
+CSeq: 1 BYE
+To: "test" <sip:spiros@192.168.1.2:4000;transport=udp>;tag=14759614
+From: <sip:kostas@192.168.1.2:4000>;tag=32850875
+Max-Forwards: 69
+Via: SIP/2.0/UDP 192.168.1.2:4000;branch=z9hG4bK2018820cc4753eb8a0449847a6a1ebae,SIP/2.0/UDP 192.168.1.2:9248;branch=z9hG4bK08ea865013b7379dd72d5d2311a0bad5
+Route: "test" <sip:192.168.1.2:5750;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:5750" 
+time="1432839757824" 
+isSender="true" 
+transactionId="z9hg4bk2018820cc4753eb8a0449847a6a1ebae" 
+callId="2c0cc7f57f00da9a0ccd791e4d95254f@192.168.1.2" 
+firstLine="BYE sip:192.168.1.2:4000;transport=udp SIP/2.0" 
+debugLine="4139" 
+>
+<![CDATA[BYE sip:192.168.1.2:4000;transport=udp SIP/2.0
+Call-ID: 2c0cc7f57f00da9a0ccd791e4d95254f@192.168.1.2
+CSeq: 1 BYE
+To: "test" <sip:spiros@192.168.1.2:4000;transport=udp>;tag=14759614
+From: <sip:kostas@192.168.1.2:4000>;tag=32850875
+Max-Forwards: 69
+Via: SIP/2.0/UDP 192.168.1.2:4000;branch=z9hG4bK2018820cc4753eb8a0449847a6a1ebae,SIP/2.0/UDP 192.168.1.2:9248;branch=z9hG4bK08ea865013b7379dd72d5d2311a0bad5
+Route: "test" <sip:192.168.1.2:5750;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:5750" 
+time="1432839761824" 
+isSender="true" 
+transactionId="z9hg4bk2018820cc4753eb8a0449847a6a1ebae" 
+callId="2c0cc7f57f00da9a0ccd791e4d95254f@192.168.1.2" 
+firstLine="BYE sip:192.168.1.2:4000;transport=udp SIP/2.0" 
+debugLine="4201" 
+>
+<![CDATA[BYE sip:192.168.1.2:4000;transport=udp SIP/2.0
+Call-ID: 2c0cc7f57f00da9a0ccd791e4d95254f@192.168.1.2
+CSeq: 1 BYE
+To: "test" <sip:spiros@192.168.1.2:4000;transport=udp>;tag=14759614
+From: <sip:kostas@192.168.1.2:4000>;tag=32850875
+Max-Forwards: 69
+Via: SIP/2.0/UDP 192.168.1.2:4000;branch=z9hG4bK2018820cc4753eb8a0449847a6a1ebae,SIP/2.0/UDP 192.168.1.2:9248;branch=z9hG4bK08ea865013b7379dd72d5d2311a0bad5
+Route: "test" <sip:192.168.1.2:5750;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:5750" 
+time="1432839765824" 
+isSender="true" 
+transactionId="z9hg4bk2018820cc4753eb8a0449847a6a1ebae" 
+callId="2c0cc7f57f00da9a0ccd791e4d95254f@192.168.1.2" 
+firstLine="BYE sip:192.168.1.2:4000;transport=udp SIP/2.0" 
+debugLine="4263" 
+>
+<![CDATA[BYE sip:192.168.1.2:4000;transport=udp SIP/2.0
+Call-ID: 2c0cc7f57f00da9a0ccd791e4d95254f@192.168.1.2
+CSeq: 1 BYE
+To: "test" <sip:spiros@192.168.1.2:4000;transport=udp>;tag=14759614
+From: <sip:kostas@192.168.1.2:4000>;tag=32850875
+Max-Forwards: 69
+Via: SIP/2.0/UDP 192.168.1.2:4000;branch=z9hG4bK2018820cc4753eb8a0449847a6a1ebae,SIP/2.0/UDP 192.168.1.2:9248;branch=z9hG4bK08ea865013b7379dd72d5d2311a0bad5
+Route: "test" <sip:192.168.1.2:5750;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:5750" 
+time="1432839769824" 
+isSender="true" 
+transactionId="z9hg4bk2018820cc4753eb8a0449847a6a1ebae" 
+callId="2c0cc7f57f00da9a0ccd791e4d95254f@192.168.1.2" 
+firstLine="BYE sip:192.168.1.2:4000;transport=udp SIP/2.0" 
+debugLine="4325" 
+>
+<![CDATA[BYE sip:192.168.1.2:4000;transport=udp SIP/2.0
+Call-ID: 2c0cc7f57f00da9a0ccd791e4d95254f@192.168.1.2
+CSeq: 1 BYE
+To: "test" <sip:spiros@192.168.1.2:4000;transport=udp>;tag=14759614
+From: <sip:kostas@192.168.1.2:4000>;tag=32850875
+Max-Forwards: 69
+Via: SIP/2.0/UDP 192.168.1.2:4000;branch=z9hG4bK2018820cc4753eb8a0449847a6a1ebae,SIP/2.0/UDP 192.168.1.2:9248;branch=z9hG4bK08ea865013b7379dd72d5d2311a0bad5
+Route: "test" <sip:192.168.1.2:5750;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:5750" 
+to="192.168.1.2:4000" 
+time="1432839771060" 
+isSender="false" 
+transactionId="z9hg4bkfa7a9be95753e972a2676901256c35af" 
+callId="f885f1e67e18875ed8eaad224ad4cee9@192.168.1.2" 
+firstLine="REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0" 
+debugLine="4435" 
+>
+<![CDATA[REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0
+Call-ID: f885f1e67e18875ed8eaad224ad4cee9@192.168.1.2
+CSeq: 2 REGISTER
+From: "test" <sip:spiros@192.168.1.2:4000;transport=udp>;tag=14759614
+To: "test" <sip:spiros@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:5750;branch=z9hG4bKfa7a9be95753e972a2676901256c35af
+Max-Forwards: 70
+Pwd: saf
+Expires: 0
+Contact: "test" <sip:192.168.1.2:5750;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:5750" 
+time="1432839771130" 
+isSender="true" 
+transactionId="z9hg4bkfa7a9be95753e972a2676901256c35af" 
+callId="f885f1e67e18875ed8eaad224ad4cee9@192.168.1.2" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="4493" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: f885f1e67e18875ed8eaad224ad4cee9@192.168.1.2
+CSeq: 2 REGISTER
+From: "test" <sip:spiros@192.168.1.2:4000;transport=udp>;tag=14759614
+To: "test" <sip:spiros@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:5750;branch=z9hG4bKfa7a9be95753e972a2676901256c35af
+Max-Forwards: 70
+Expires: 0
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:5750" 
+time="1432839773824" 
+isSender="true" 
+transactionId="z9hg4bk2018820cc4753eb8a0449847a6a1ebae" 
+callId="2c0cc7f57f00da9a0ccd791e4d95254f@192.168.1.2" 
+firstLine="BYE sip:192.168.1.2:4000;transport=udp SIP/2.0" 
+debugLine="4555" 
+>
+<![CDATA[BYE sip:192.168.1.2:4000;transport=udp SIP/2.0
+Call-ID: 2c0cc7f57f00da9a0ccd791e4d95254f@192.168.1.2
+CSeq: 1 BYE
+To: "test" <sip:spiros@192.168.1.2:4000;transport=udp>;tag=14759614
+From: <sip:kostas@192.168.1.2:4000>;tag=32850875
+Max-Forwards: 69
+Via: SIP/2.0/UDP 192.168.1.2:4000;branch=z9hG4bK2018820cc4753eb8a0449847a6a1ebae,SIP/2.0/UDP 192.168.1.2:9248;branch=z9hG4bK08ea865013b7379dd72d5d2311a0bad5
+Route: "test" <sip:192.168.1.2:5750;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:5750" 
+time="1432839777832" 
+isSender="true" 
+transactionId="z9hg4bk2018820cc4753eb8a0449847a6a1ebae" 
+callId="2c0cc7f57f00da9a0ccd791e4d95254f@192.168.1.2" 
+firstLine="BYE sip:192.168.1.2:4000;transport=udp SIP/2.0" 
+debugLine="4617" 
+>
+<![CDATA[BYE sip:192.168.1.2:4000;transport=udp SIP/2.0
+Call-ID: 2c0cc7f57f00da9a0ccd791e4d95254f@192.168.1.2
+CSeq: 1 BYE
+To: "test" <sip:spiros@192.168.1.2:4000;transport=udp>;tag=14759614
+From: <sip:kostas@192.168.1.2:4000>;tag=32850875
+Max-Forwards: 69
+Via: SIP/2.0/UDP 192.168.1.2:4000;branch=z9hG4bK2018820cc4753eb8a0449847a6a1ebae,SIP/2.0/UDP 192.168.1.2:9248;branch=z9hG4bK08ea865013b7379dd72d5d2311a0bad5
+Route: "test" <sip:192.168.1.2:5750;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:32859" 
+to="192.168.1.2:4000" 
+time="1432839778558" 
+isSender="false" 
+transactionId="z9hg4bk5857bc6557f63ac2e0a3b6159449e9a7" 
+callId="2b27a0fcdb130cb09ba4fc97731cf25b@192.168.1.2" 
+firstLine="MESSAGE sip:192.168.1.2:4000@192.168.1.2:4000 SIP/2.0" 
+debugLine="4718" 
+>
+<![CDATA[MESSAGE sip:192.168.1.2:4000@192.168.1.2:4000 SIP/2.0
+Call-ID: 2b27a0fcdb130cb09ba4fc97731cf25b@192.168.1.2
+CSeq: 1 MESSAGE
+From: "test" <sip:Takeo;transport=udp>;tag=6535361
+To: <sip:192.168.1.2:4000@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:32859;branch=z9hG4bK5857bc6557f63ac2e0a3b6159449e9a7
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 11
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:32859" 
+time="1432839778621" 
+isSender="true" 
+transactionId="z9hg4bk5857bc6557f63ac2e0a3b6159449e9a7" 
+callId="2b27a0fcdb130cb09ba4fc97731cf25b@192.168.1.2" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="4781" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 2b27a0fcdb130cb09ba4fc97731cf25b@192.168.1.2
+CSeq: 1 MESSAGE
+From: "test" <sip:Takeo;transport=udp>;tag=6535361
+To: <sip:192.168.1.2:4000@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:32859;branch=z9hG4bK5857bc6557f63ac2e0a3b6159449e9a7
+Max-Forwards: 70
+Policies: a:b:
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:5750" 
+time="1432839781832" 
+isSender="true" 
+transactionId="z9hg4bk2018820cc4753eb8a0449847a6a1ebae" 
+callId="2c0cc7f57f00da9a0ccd791e4d95254f@192.168.1.2" 
+firstLine="BYE sip:192.168.1.2:4000;transport=udp SIP/2.0" 
+debugLine="4846" 
+>
+<![CDATA[BYE sip:192.168.1.2:4000;transport=udp SIP/2.0
+Call-ID: 2c0cc7f57f00da9a0ccd791e4d95254f@192.168.1.2
+CSeq: 1 BYE
+To: "test" <sip:spiros@192.168.1.2:4000;transport=udp>;tag=14759614
+From: <sip:kostas@192.168.1.2:4000>;tag=32850875
+Max-Forwards: 69
+Via: SIP/2.0/UDP 192.168.1.2:4000;branch=z9hG4bK2018820cc4753eb8a0449847a6a1ebae,SIP/2.0/UDP 192.168.1.2:9248;branch=z9hG4bK08ea865013b7379dd72d5d2311a0bad5
+Route: "test" <sip:192.168.1.2:5750;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:5750" 
+time="1432839785832" 
+isSender="true" 
+transactionId="z9hg4bk2018820cc4753eb8a0449847a6a1ebae" 
+callId="2c0cc7f57f00da9a0ccd791e4d95254f@192.168.1.2" 
+firstLine="BYE sip:192.168.1.2:4000;transport=udp SIP/2.0" 
+debugLine="4908" 
+>
+<![CDATA[BYE sip:192.168.1.2:4000;transport=udp SIP/2.0
+Call-ID: 2c0cc7f57f00da9a0ccd791e4d95254f@192.168.1.2
+CSeq: 1 BYE
+To: "test" <sip:spiros@192.168.1.2:4000;transport=udp>;tag=14759614
+From: <sip:kostas@192.168.1.2:4000>;tag=32850875
+Max-Forwards: 69
+Via: SIP/2.0/UDP 192.168.1.2:4000;branch=z9hG4bK2018820cc4753eb8a0449847a6a1ebae,SIP/2.0/UDP 192.168.1.2:9248;branch=z9hG4bK08ea865013b7379dd72d5d2311a0bad5
+Route: "test" <sip:192.168.1.2:5750;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:32859" 
+to="192.168.1.2:4000" 
+time="1432839789311" 
+isSender="false" 
+transactionId="z9hg4bk18d5fe9f4c8d452281b5a87d0863319b" 
+callId="2c8a0e5624f4f6f1ef90e49afbc52481@192.168.1.2" 
+firstLine="MESSAGE sip:192.168.1.2:4000@192.168.1.2:4000 SIP/2.0" 
+debugLine="5056" 
+>
+<![CDATA[MESSAGE sip:192.168.1.2:4000@192.168.1.2:4000 SIP/2.0
+Call-ID: 2c8a0e5624f4f6f1ef90e49afbc52481@192.168.1.2
+CSeq: 1 MESSAGE
+From: "test" <sip:kostas@192.168.1.2:4000;transport=udp>;tag=6535361
+To: <sip:192.168.1.2:4000@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:32859;branch=z9hG4bK18d5fe9f4c8d452281b5a87d0863319b
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 19
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:32859" 
+time="1432839789407" 
+isSender="true" 
+transactionId="z9hg4bk18d5fe9f4c8d452281b5a87d0863319b" 
+callId="2c8a0e5624f4f6f1ef90e49afbc52481@192.168.1.2" 
+firstLine="SIP/2.0 400 Bad request" 
+debugLine="5118" 
+>
+<![CDATA[SIP/2.0 400 Bad request
+Call-ID: 2c8a0e5624f4f6f1ef90e49afbc52481@192.168.1.2
+CSeq: 1 MESSAGE
+From: "test" <sip:kostas@192.168.1.2:4000;transport=udp>;tag=6535361
+To: <sip:192.168.1.2:4000@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:32859;branch=z9hG4bK18d5fe9f4c8d452281b5a87d0863319b
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:32859" 
+to="192.168.1.2:4000" 
+time="1432839793862" 
+isSender="false" 
+transactionId="z9hg4bk6f79a82f5779f11b9378692e6c64a036" 
+callId="3ef120cedf14b264f7d991a142c31f25@192.168.1.2" 
+firstLine="REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0" 
+debugLine="5229" 
+>
+<![CDATA[REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0
+Call-ID: 3ef120cedf14b264f7d991a142c31f25@192.168.1.2
+CSeq: 1 REGISTER
+From: "test" <sip:kostas@192.168.1.2:4000;transport=udp>;tag=6535361
+To: "test" <sip:kostas@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:32859;branch=z9hG4bK6f79a82f5779f11b9378692e6c64a036
+Max-Forwards: 70
+Pwd: a
+Expires: 3600
+Contact: "test" <sip:192.168.1.2:32859;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:32859" 
+time="1432839793924" 
+isSender="true" 
+transactionId="z9hg4bk6f79a82f5779f11b9378692e6c64a036" 
+callId="3ef120cedf14b264f7d991a142c31f25@192.168.1.2" 
+firstLine="SIP/2.0 400 Bad request" 
+debugLine="5284" 
+>
+<![CDATA[SIP/2.0 400 Bad request
+Call-ID: 3ef120cedf14b264f7d991a142c31f25@192.168.1.2
+CSeq: 1 REGISTER
+From: "test" <sip:kostas@192.168.1.2:4000;transport=udp>;tag=6535361
+To: "test" <sip:kostas@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:32859;branch=z9hG4bK6f79a82f5779f11b9378692e6c64a036
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:32859" 
+to="192.168.1.2:4000" 
+time="1432839801073" 
+isSender="false" 
+transactionId="z9hg4bke9c40c4d7fd19ef46301e365ae920c01" 
+callId="d9d59c2ea87830ca755b5b0857184fef@192.168.1.2" 
+firstLine="MESSAGE sip:192.168.1.2:4000@192.168.1.2:4000 SIP/2.0" 
+debugLine="5392" 
+>
+<![CDATA[MESSAGE sip:192.168.1.2:4000@192.168.1.2:4000 SIP/2.0
+Call-ID: d9d59c2ea87830ca755b5b0857184fef@192.168.1.2
+CSeq: 1 MESSAGE
+From: "test" <sip:kostaras@192.168.1.2:4000;transport=udp>;tag=6535361
+To: <sip:192.168.1.2:4000@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:32859;branch=z9hG4bKe9c40c4d7fd19ef46301e365ae920c01
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 21
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:32859" 
+time="1432839801179" 
+isSender="true" 
+transactionId="z9hg4bke9c40c4d7fd19ef46301e365ae920c01" 
+callId="d9d59c2ea87830ca755b5b0857184fef@192.168.1.2" 
+firstLine="SIP/2.0 202 Accepted" 
+debugLine="5447" 
+>
+<![CDATA[SIP/2.0 202 Accepted
+Call-ID: d9d59c2ea87830ca755b5b0857184fef@192.168.1.2
+CSeq: 1 MESSAGE
+From: "test" <sip:kostaras@192.168.1.2:4000;transport=udp>;tag=6535361
+To: <sip:192.168.1.2:4000@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:32859;branch=z9hG4bKe9c40c4d7fd19ef46301e365ae920c01
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:32859" 
+to="192.168.1.2:4000" 
+time="1432839801189" 
+isSender="false" 
+transactionId="z9hg4bkd330a3828fe86b0a4ca05439e6e3adb0" 
+callId="dd4d8c6f6c7fae2ff0ca7a528471ba7f@192.168.1.2" 
+firstLine="REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0" 
+debugLine="5558" 
+>
+<![CDATA[REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0
+Call-ID: dd4d8c6f6c7fae2ff0ca7a528471ba7f@192.168.1.2
+CSeq: 1 REGISTER
+From: "test" <sip:kostaras@192.168.1.2:4000;transport=udp>;tag=6535361
+To: "test" <sip:kostaras@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:32859;branch=z9hG4bKd330a3828fe86b0a4ca05439e6e3adb0
+Max-Forwards: 70
+Pwd: b
+Expires: 3600
+Contact: "test" <sip:192.168.1.2:32859;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:32859" 
+time="1432839801253" 
+isSender="true" 
+transactionId="z9hg4bkd330a3828fe86b0a4ca05439e6e3adb0" 
+callId="dd4d8c6f6c7fae2ff0ca7a528471ba7f@192.168.1.2" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="5614" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: dd4d8c6f6c7fae2ff0ca7a528471ba7f@192.168.1.2
+CSeq: 1 REGISTER
+From: "test" <sip:kostaras@192.168.1.2:4000;transport=udp>;tag=6535361
+To: "test" <sip:kostaras@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:32859;branch=z9hG4bKd330a3828fe86b0a4ca05439e6e3adb0
+Max-Forwards: 70
+Contact: "test" <sip:192.168.1.2:32859;transport=udp>;expires=3600
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:5060" 
+to="192.168.1.2:4000" 
+time="1432839819559" 
+isSender="false" 
+transactionId="z9hg4bkdef61f3cd3fa0223581567aa4c59167f" 
+callId="9bb03880f5a4c5f6e7ef0a4cbd22546f@192.168.1.2" 
+firstLine="MESSAGE sip:192.168.1.2:4000@192.168.1.2:4000 SIP/2.0" 
+debugLine="5716" 
+>
+<![CDATA[MESSAGE sip:192.168.1.2:4000@192.168.1.2:4000 SIP/2.0
+Call-ID: 9bb03880f5a4c5f6e7ef0a4cbd22546f@192.168.1.2
+CSeq: 1 MESSAGE
+From: "test" <sip:ok@192.168.1.2:4000;transport=udp>;tag=1436506
+To: <sip:192.168.1.2:4000@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:5060;branch=z9hG4bKdef61f3cd3fa0223581567aa4c59167f
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 14
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:5060" 
+time="1432839819640" 
+isSender="true" 
+transactionId="z9hg4bkdef61f3cd3fa0223581567aa4c59167f" 
+callId="9bb03880f5a4c5f6e7ef0a4cbd22546f@192.168.1.2" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="5779" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 9bb03880f5a4c5f6e7ef0a4cbd22546f@192.168.1.2
+CSeq: 1 MESSAGE
+From: "test" <sip:ok@192.168.1.2:4000;transport=udp>;tag=1436506
+To: <sip:192.168.1.2:4000@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:5060;branch=z9hG4bKdef61f3cd3fa0223581567aa4c59167f
+Max-Forwards: 70
+Manage: block:kostaras
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:32859" 
+to="192.168.1.2:4000" 
+time="1432839829023" 
+isSender="false" 
+transactionId="z9hg4bkfe572f962218bf628edc16ed3137f2d8" 
+callId="3b2e4d3a2b748c91ddb4c3579cdefa26@192.168.1.2" 
+firstLine="INVITE sip:ok@192.168.1.2:4000 SIP/2.0" 
+debugLine="5897" 
+>
+<![CDATA[INVITE sip:ok@192.168.1.2:4000 SIP/2.0
+Call-ID: 3b2e4d3a2b748c91ddb4c3579cdefa26@192.168.1.2
+CSeq: 1 INVITE
+From: "test" <sip:kostaras@192.168.1.2:4000;transport=udp>;tag=6535361
+To: <sip:ok@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:32859;branch=z9hG4bKfe572f962218bf628edc16ed3137f2d8
+Max-Forwards: 70
+Contact: "test" <sip:192.168.1.2:32859;transport=udp>
+Content-Type: application/sdp
+Content-Length: 147
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:32859" 
+time="1432839829053" 
+isSender="true" 
+transactionId="z9hg4bkfe572f962218bf628edc16ed3137f2d8" 
+callId="3b2e4d3a2b748c91ddb4c3579cdefa26@192.168.1.2" 
+firstLine="SIP/2.0 181 Call is being forwarded" 
+debugLine="5959" 
+>
+<![CDATA[SIP/2.0 181 Call is being forwarded
+Call-ID: 3b2e4d3a2b748c91ddb4c3579cdefa26@192.168.1.2
+CSeq: 1 INVITE
+From: "test" <sip:kostaras@192.168.1.2:4000;transport=udp>;tag=6535361
+To: <sip:ok@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:32859;branch=z9hG4bKfe572f962218bf628edc16ed3137f2d8
+Max-Forwards: 70
+Fwd: <sip:kostas@192.168.1.2:4000>
+Content-Type: text/plain
+Content-Length: 147
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:32859" 
+to="192.168.1.2:4000" 
+time="1432839829757" 
+isSender="false" 
+transactionId="z9hg4bk23056e00f3987952f103407f8cd899f9" 
+callId="3543768d384dffef2ef13f08f297b798@192.168.1.2" 
+firstLine="INVITE sip:kostas@192.168.1.2:4000 SIP/2.0" 
+debugLine="6070" 
+>
+<![CDATA[INVITE sip:kostas@192.168.1.2:4000 SIP/2.0
+Call-ID: 3543768d384dffef2ef13f08f297b798@192.168.1.2
+CSeq: 1 INVITE
+From: "test" <sip:kostaras@192.168.1.2:4000;transport=udp>;tag=6535361
+To: <sip:kostas@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:32859;branch=z9hG4bK23056e00f3987952f103407f8cd899f9
+Max-Forwards: 70
+Contact: "test" <sip:192.168.1.2:32859;transport=udp>
+Content-Type: application/sdp
+Content-Length: 147
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:32859" 
+time="1432839829790" 
+isSender="true" 
+transactionId="z9hg4bk23056e00f3987952f103407f8cd899f9" 
+callId="3543768d384dffef2ef13f08f297b798@192.168.1.2" 
+firstLine="SIP/2.0 480 Temporarily Unavailable" 
+debugLine="6197" 
+>
+<![CDATA[SIP/2.0 480 Temporarily Unavailable
+Call-ID: 3543768d384dffef2ef13f08f297b798@192.168.1.2
+CSeq: 1 INVITE
+From: "test" <sip:kostaras@192.168.1.2:4000;transport=udp>;tag=6535361
+To: <sip:kostas@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:32859;branch=z9hG4bK23056e00f3987952f103407f8cd899f9
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:32859" 
+to="192.168.1.2:4000" 
+time="1432839829793" 
+isSender="false" 
+transactionId="z9hg4bk23056e00f3987952f103407f8cd899f9" 
+callId="3543768d384dffef2ef13f08f297b798@192.168.1.2" 
+firstLine="ACK sip:kostas@192.168.1.2:4000 SIP/2.0" 
+debugLine="6256" 
+>
+<![CDATA[ACK sip:kostas@192.168.1.2:4000 SIP/2.0
+Call-ID: 3543768d384dffef2ef13f08f297b798@192.168.1.2
+CSeq: 1 ACK
+From: "test" <sip:kostaras@192.168.1.2:4000;transport=udp>;tag=6535361
+To: <sip:kostas@192.168.1.2:4000>
+Via: SIP/2.0/UDP 192.168.1.2:32859;branch=z9hG4bK23056e00f3987952f103407f8cd899f9
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:32859" 
+to="192.168.1.2:4000" 
+time="1432839838076" 
+isSender="false" 
+transactionId="z9hg4bkc00e54fd7c88c63c43762dc1e422f77f" 
+callId="dd4d8c6f6c7fae2ff0ca7a528471ba7f@192.168.1.2" 
+firstLine="REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0" 
+debugLine="6379" 
+>
+<![CDATA[REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0
+Call-ID: dd4d8c6f6c7fae2ff0ca7a528471ba7f@192.168.1.2
+CSeq: 2 REGISTER
+From: "test" <sip:kostaras@192.168.1.2:4000;transport=udp>;tag=6535361
+To: "test" <sip:kostaras@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:32859;branch=z9hG4bKc00e54fd7c88c63c43762dc1e422f77f
+Max-Forwards: 70
+Pwd: b
+Expires: 0
+Contact: "test" <sip:192.168.1.2:32859;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:32859" 
+time="1432839838152" 
+isSender="true" 
+transactionId="z9hg4bkc00e54fd7c88c63c43762dc1e422f77f" 
+callId="dd4d8c6f6c7fae2ff0ca7a528471ba7f@192.168.1.2" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="6435" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: dd4d8c6f6c7fae2ff0ca7a528471ba7f@192.168.1.2
+CSeq: 2 REGISTER
+From: "test" <sip:kostaras@192.168.1.2:4000;transport=udp>;tag=6535361
+To: "test" <sip:kostaras@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:32859;branch=z9hG4bKc00e54fd7c88c63c43762dc1e422f77f
+Max-Forwards: 70
+Expires: 0
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:5060" 
+to="192.168.1.2:4000" 
+time="1432839839484" 
+isSender="false" 
+transactionId="z9hg4bkb71f6a17495b2830e954c474fdb0da09" 
+callId="71f3f18c24d8739721210d378e7a0edd@192.168.1.2" 
+firstLine="REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0" 
+debugLine="6539" 
+>
+<![CDATA[REGISTER sip:192.168.1.2:5060;transport=udp SIP/2.0
+Call-ID: 71f3f18c24d8739721210d378e7a0edd@192.168.1.2
+CSeq: 2 REGISTER
+From: "test" <sip:ok@192.168.1.2:4000;transport=udp>;tag=1436506
+To: "test" <sip:ok@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:5060;branch=z9hG4bKb71f6a17495b2830e954c474fdb0da09
+Max-Forwards: 70
+Pwd: michali
+Expires: 0
+Contact: "test" <sip:192.168.1.2:5060;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.2:4000" 
+to="192.168.1.2:5060" 
+time="1432839839555" 
+isSender="true" 
+transactionId="z9hg4bkb71f6a17495b2830e954c474fdb0da09" 
+callId="71f3f18c24d8739721210d378e7a0edd@192.168.1.2" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="6603" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 71f3f18c24d8739721210d378e7a0edd@192.168.1.2
+CSeq: 2 REGISTER
+From: "test" <sip:ok@192.168.1.2:4000;transport=udp>;tag=1436506
+To: "test" <sip:ok@192.168.1.2:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.2:5060;branch=z9hG4bKb71f6a17495b2830e954c474fdb0da09
+Max-Forwards: 70
+Expires: 0
+Content-Length: 0
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= 192.168.1.2
+javax.sip.STACK_NAME= nist-proxy
+javax.sip.ROUTER_PATH= gov.nist.sip.proxy.router.ProxyRouter
+javax.sip.OUTBOUND_PROXY= null
+javax.sip.RETRANSMISSION_FILTER= on
+-->
+<description
+ logDescription="nist-proxy"
+ name="192.168.1.2" />
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= 192.168.1.4
+javax.sip.STACK_NAME= nist-proxy
+javax.sip.ROUTER_PATH= gov.nist.sip.proxy.router.ProxyRouter
+javax.sip.OUTBOUND_PROXY= null
+javax.sip.RETRANSMISSION_FILTER= on
+-->
+<description
+ logDescription="nist-proxy"
+ name="192.168.1.4" />
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432862045232" 
+isSender="false" 
+transactionId="z9hg4bkb10e9131a5a06fb5f2be4b859122b2f3" 
+callId="e608c87d2ce571c53dd2774bc8305296@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="102" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: e608c87d2ce571c53dd2774bc8305296@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:Takeo;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bKb10e9131a5a06fb5f2be4b859122b2f3
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 11
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432862045714" 
+isSender="true" 
+transactionId="z9hg4bkb10e9131a5a06fb5f2be4b859122b2f3" 
+callId="e608c87d2ce571c53dd2774bc8305296@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="157" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: e608c87d2ce571c53dd2774bc8305296@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:Takeo;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bKb10e9131a5a06fb5f2be4b859122b2f3
+Max-Forwards: 70
+Policies: 
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432862045724" 
+isSender="false" 
+transactionId="z9hg4bkb10e9131a5a06fb5f2be4b859122b2f3" 
+callId="e608c87d2ce571c53dd2774bc8305296@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="259" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: e608c87d2ce571c53dd2774bc8305296@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:Takeo;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bKb10e9131a5a06fb5f2be4b859122b2f3
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 11
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432862045823" 
+isSender="true" 
+transactionId="z9hg4bkb10e9131a5a06fb5f2be4b859122b2f3" 
+callId="e608c87d2ce571c53dd2774bc8305296@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="322" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: e608c87d2ce571c53dd2774bc8305296@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:Takeo;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bKb10e9131a5a06fb5f2be4b859122b2f3
+Max-Forwards: 70
+Policies: 
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432862093618" 
+isSender="false" 
+transactionId="z9hg4bka4e5215f573aa5b3f94d5181e58cf97d" 
+callId="fcc18e1534a9f89489527608ca9dcdbd@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="424" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: fcc18e1534a9f89489527608ca9dcdbd@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:Takeo;transport=udp>;tag=33316792
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bKa4e5215f573aa5b3f94d5181e58cf97d
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 11
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432862093709" 
+isSender="true" 
+transactionId="z9hg4bka4e5215f573aa5b3f94d5181e58cf97d" 
+callId="fcc18e1534a9f89489527608ca9dcdbd@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="487" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: fcc18e1534a9f89489527608ca9dcdbd@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:Takeo;transport=udp>;tag=33316792
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bKa4e5215f573aa5b3f94d5181e58cf97d
+Max-Forwards: 70
+Policies: Tomato:
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432862101099" 
+isSender="false" 
+transactionId="z9hg4bk3f23066f272627daf52e0e081b0aa98d" 
+callId="640c6323bd40b9e17211c0a462ccf91c@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="589" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: 640c6323bd40b9e17211c0a462ccf91c@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=33316792
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK3f23066f272627daf52e0e081b0aa98d
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 23
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432862101240" 
+isSender="true" 
+transactionId="z9hg4bk3f23066f272627daf52e0e081b0aa98d" 
+callId="640c6323bd40b9e17211c0a462ccf91c@192.168.1.4" 
+firstLine="SIP/2.0 202 Accepted" 
+debugLine="651" 
+>
+<![CDATA[SIP/2.0 202 Accepted
+Call-ID: 640c6323bd40b9e17211c0a462ccf91c@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=33316792
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK3f23066f272627daf52e0e081b0aa98d
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432862101270" 
+isSender="false" 
+transactionId="z9hg4bkaaa0e1c8544364e555984ec3e7b8c9dd" 
+callId="d2cd6ef382690e1c6ee049f19e7788d3@192.168.1.4" 
+firstLine="REGISTER sip:192.168.1.4:5060;transport=udp SIP/2.0" 
+debugLine="754" 
+>
+<![CDATA[REGISTER sip:192.168.1.4:5060;transport=udp SIP/2.0
+Call-ID: d2cd6ef382690e1c6ee049f19e7788d3@192.168.1.4
+CSeq: 1 REGISTER
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=33316792
+To: "test" <sip:New@192.168.1.4:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bKaaa0e1c8544364e555984ec3e7b8c9dd
+Max-Forwards: 70
+Pwd: 123
+Expires: 3600
+Contact: "test" <sip:192.168.1.4:5060;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432862101392" 
+isSender="true" 
+transactionId="z9hg4bkaaa0e1c8544364e555984ec3e7b8c9dd" 
+callId="d2cd6ef382690e1c6ee049f19e7788d3@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="818" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: d2cd6ef382690e1c6ee049f19e7788d3@192.168.1.4
+CSeq: 1 REGISTER
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=33316792
+To: "test" <sip:New@192.168.1.4:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bKaaa0e1c8544364e555984ec3e7b8c9dd
+Max-Forwards: 70
+Contact: "test" <sip:192.168.1.4:5060;transport=udp>;expires=3600
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432862138227" 
+isSender="false" 
+transactionId="z9hg4bk3f2653db832d6ed9d7e63cbe8f4f464b" 
+callId="d2cd6ef382690e1c6ee049f19e7788d3@192.168.1.4" 
+firstLine="REGISTER sip:192.168.1.4:5060;transport=udp SIP/2.0" 
+debugLine="927" 
+>
+<![CDATA[REGISTER sip:192.168.1.4:5060;transport=udp SIP/2.0
+Call-ID: d2cd6ef382690e1c6ee049f19e7788d3@192.168.1.4
+CSeq: 2 REGISTER
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=33316792
+To: "test" <sip:New@192.168.1.4:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK3f2653db832d6ed9d7e63cbe8f4f464b
+Max-Forwards: 70
+Pwd: 123
+Expires: 0
+Contact: "test" <sip:192.168.1.4:5060;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432862138358" 
+isSender="true" 
+transactionId="z9hg4bk3f2653db832d6ed9d7e63cbe8f4f464b" 
+callId="d2cd6ef382690e1c6ee049f19e7788d3@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="986" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: d2cd6ef382690e1c6ee049f19e7788d3@192.168.1.4
+CSeq: 2 REGISTER
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=33316792
+To: "test" <sip:New@192.168.1.4:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK3f2653db832d6ed9d7e63cbe8f4f464b
+Max-Forwards: 70
+Expires: 0
+Content-Length: 0
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= 192.168.1.4
+javax.sip.STACK_NAME= nist-proxy
+javax.sip.ROUTER_PATH= gov.nist.sip.proxy.router.ProxyRouter
+javax.sip.OUTBOUND_PROXY= null
+javax.sip.RETRANSMISSION_FILTER= on
+-->
+<description
+ logDescription="nist-proxy"
+ name="192.168.1.4" />
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432862173391" 
+isSender="false" 
+transactionId="z9hg4bk32c8d9e29c7acdc31a48c7155b471a7b" 
+callId="183191ea5a1106fc6a9aca9f82854a64@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="102" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: 183191ea5a1106fc6a9aca9f82854a64@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:Takeo;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK32c8d9e29c7acdc31a48c7155b471a7b
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 11
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432862173873" 
+isSender="true" 
+transactionId="z9hg4bk32c8d9e29c7acdc31a48c7155b471a7b" 
+callId="183191ea5a1106fc6a9aca9f82854a64@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="157" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 183191ea5a1106fc6a9aca9f82854a64@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:Takeo;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK32c8d9e29c7acdc31a48c7155b471a7b
+Max-Forwards: 70
+Policies: Basic:
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432862173893" 
+isSender="false" 
+transactionId="z9hg4bk32c8d9e29c7acdc31a48c7155b471a7b" 
+callId="183191ea5a1106fc6a9aca9f82854a64@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="259" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: 183191ea5a1106fc6a9aca9f82854a64@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:Takeo;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK32c8d9e29c7acdc31a48c7155b471a7b
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 11
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432862174036" 
+isSender="true" 
+transactionId="z9hg4bk32c8d9e29c7acdc31a48c7155b471a7b" 
+callId="183191ea5a1106fc6a9aca9f82854a64@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="322" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 183191ea5a1106fc6a9aca9f82854a64@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:Takeo;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK32c8d9e29c7acdc31a48c7155b471a7b
+Max-Forwards: 70
+Policies: Basic:
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432862179671" 
+isSender="false" 
+transactionId="z9hg4bk7be0da8ab950dc6493f8bfe66de2c03d" 
+callId="ef04caa3c87945b92397aeaa032a04b7@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="424" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: ef04caa3c87945b92397aeaa032a04b7@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK7be0da8ab950dc6493f8bfe66de2c03d
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 22
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432862179813" 
+isSender="true" 
+transactionId="z9hg4bk7be0da8ab950dc6493f8bfe66de2c03d" 
+callId="ef04caa3c87945b92397aeaa032a04b7@192.168.1.4" 
+firstLine="SIP/2.0 202 Accepted" 
+debugLine="486" 
+>
+<![CDATA[SIP/2.0 202 Accepted
+Call-ID: ef04caa3c87945b92397aeaa032a04b7@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK7be0da8ab950dc6493f8bfe66de2c03d
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432862179864" 
+isSender="false" 
+transactionId="z9hg4bk566fc37dbe13455539aef38ebab97e72" 
+callId="b1124f18b2df946c119fb115bd6ca643@192.168.1.4" 
+firstLine="REGISTER sip:192.168.1.4:5060;transport=udp SIP/2.0" 
+debugLine="589" 
+>
+<![CDATA[REGISTER sip:192.168.1.4:5060;transport=udp SIP/2.0
+Call-ID: b1124f18b2df946c119fb115bd6ca643@192.168.1.4
+CSeq: 1 REGISTER
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=8056047
+To: "test" <sip:New@192.168.1.4:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK566fc37dbe13455539aef38ebab97e72
+Max-Forwards: 70
+Pwd: 123
+Expires: 3600
+Contact: "test" <sip:192.168.1.4:5060;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432862179975" 
+isSender="true" 
+transactionId="z9hg4bk566fc37dbe13455539aef38ebab97e72" 
+callId="b1124f18b2df946c119fb115bd6ca643@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="653" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: b1124f18b2df946c119fb115bd6ca643@192.168.1.4
+CSeq: 1 REGISTER
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=8056047
+To: "test" <sip:New@192.168.1.4:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK566fc37dbe13455539aef38ebab97e72
+Max-Forwards: 70
+Contact: "test" <sip:192.168.1.4:5060;transport=udp>;expires=3600
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432862226717" 
+isSender="false" 
+transactionId="z9hg4bk03258c309ccf58b88d680e6b59f7e7b2" 
+callId="b1124f18b2df946c119fb115bd6ca643@192.168.1.4" 
+firstLine="REGISTER sip:192.168.1.4:5060;transport=udp SIP/2.0" 
+debugLine="763" 
+>
+<![CDATA[REGISTER sip:192.168.1.4:5060;transport=udp SIP/2.0
+Call-ID: b1124f18b2df946c119fb115bd6ca643@192.168.1.4
+CSeq: 2 REGISTER
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=8056047
+To: "test" <sip:New@192.168.1.4:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK03258c309ccf58b88d680e6b59f7e7b2
+Max-Forwards: 70
+Pwd: 123
+Expires: 0
+Contact: "test" <sip:192.168.1.4:5060;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432862226838" 
+isSender="true" 
+transactionId="z9hg4bk03258c309ccf58b88d680e6b59f7e7b2" 
+callId="b1124f18b2df946c119fb115bd6ca643@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="821" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: b1124f18b2df946c119fb115bd6ca643@192.168.1.4
+CSeq: 2 REGISTER
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=8056047
+To: "test" <sip:New@192.168.1.4:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK03258c309ccf58b88d680e6b59f7e7b2
+Max-Forwards: 70
+Expires: 0
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432862229537" 
+isSender="false" 
+transactionId="z9hg4bk46d90d20b136af5dd80a0fe9e2477d43" 
+callId="bf4f6ff90eeaf27cb7671970979d8640@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="923" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: bf4f6ff90eeaf27cb7671970979d8640@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:Takeo;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK46d90d20b136af5dd80a0fe9e2477d43
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 11
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432862229639" 
+isSender="true" 
+transactionId="z9hg4bk46d90d20b136af5dd80a0fe9e2477d43" 
+callId="bf4f6ff90eeaf27cb7671970979d8640@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="986" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: bf4f6ff90eeaf27cb7671970979d8640@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:Takeo;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK46d90d20b136af5dd80a0fe9e2477d43
+Max-Forwards: 70
+Policies: Basic:
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432862233443" 
+isSender="false" 
+transactionId="z9hg4bk20917a9efb8828e7c5ce0edde31f9732" 
+callId="1fa9628afd028b60e63b6792f5ed1a44@192.168.1.4" 
+firstLine="REGISTER sip:192.168.1.4:5060;transport=udp SIP/2.0" 
+debugLine="1097" 
+>
+<![CDATA[REGISTER sip:192.168.1.4:5060;transport=udp SIP/2.0
+Call-ID: 1fa9628afd028b60e63b6792f5ed1a44@192.168.1.4
+CSeq: 1 REGISTER
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=8056047
+To: "test" <sip:New@192.168.1.4:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK20917a9efb8828e7c5ce0edde31f9732
+Max-Forwards: 70
+Pwd: 123
+Expires: 3600
+Contact: "test" <sip:192.168.1.4:5060;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432862233550" 
+isSender="true" 
+transactionId="z9hg4bk20917a9efb8828e7c5ce0edde31f9732" 
+callId="1fa9628afd028b60e63b6792f5ed1a44@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="1154" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 1fa9628afd028b60e63b6792f5ed1a44@192.168.1.4
+CSeq: 1 REGISTER
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=8056047
+To: "test" <sip:New@192.168.1.4:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK20917a9efb8828e7c5ce0edde31f9732
+Max-Forwards: 70
+Contact: "test" <sip:192.168.1.4:5060;transport=udp>;expires=3600
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432862238378" 
+isSender="false" 
+transactionId="z9hg4bked39f1dbe5d3995ca1cefd3009af430e" 
+callId="c3113e74284f1cba95bbefc73e4dcf00@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="1256" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: c3113e74284f1cba95bbefc73e4dcf00@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bKed39f1dbe5d3995ca1cefd3009af430e
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 6
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432862238460" 
+isSender="true" 
+transactionId="z9hg4bked39f1dbe5d3995ca1cefd3009af430e" 
+callId="c3113e74284f1cba95bbefc73e4dcf00@192.168.1.4" 
+firstLine="SIP/2.0 380 Alternative service" 
+debugLine="1319" 
+>
+<![CDATA[SIP/2.0 380 Alternative service
+Call-ID: c3113e74284f1cba95bbefc73e4dcf00@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bKed39f1dbe5d3995ca1cefd3009af430e
+Max-Forwards: 70
+Mon: <0.0>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432862245310" 
+isSender="false" 
+transactionId="z9hg4bk54ba4a8230e98c8cc38817a41514aea9" 
+callId="e78072e41280f43f44077caeed34d370@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="1425" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: e78072e41280f43f44077caeed34d370@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK54ba4a8230e98c8cc38817a41514aea9
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 7
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432862245411" 
+isSender="true" 
+transactionId="z9hg4bk54ba4a8230e98c8cc38817a41514aea9" 
+callId="e78072e41280f43f44077caeed34d370@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="1484" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: e78072e41280f43f44077caeed34d370@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK54ba4a8230e98c8cc38817a41514aea9
+Max-Forwards: 70
+Manage: pay:1.0
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432862252523" 
+isSender="false" 
+transactionId="z9hg4bk09eadc565c26949957a6cbc51da39289" 
+callId="967f5a02b42ccb70a19f33058b67b285@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="1586" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: 967f5a02b42ccb70a19f33058b67b285@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK09eadc565c26949957a6cbc51da39289
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 7
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432862252624" 
+isSender="true" 
+transactionId="z9hg4bk09eadc565c26949957a6cbc51da39289" 
+callId="967f5a02b42ccb70a19f33058b67b285@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="1649" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 967f5a02b42ccb70a19f33058b67b285@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK09eadc565c26949957a6cbc51da39289
+Max-Forwards: 70
+Manage: block:A
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432862257787" 
+isSender="false" 
+transactionId="z9hg4bke3523ff1a03e7978c2cea7f1d6075926" 
+callId="dd1452a3436cda448189ac68117792ec@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="1758" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: dd1452a3436cda448189ac68117792ec@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bKe3523ff1a03e7978c2cea7f1d6075926
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 9
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432862257899" 
+isSender="true" 
+transactionId="z9hg4bke3523ff1a03e7978c2cea7f1d6075926" 
+callId="dd1452a3436cda448189ac68117792ec@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="1814" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: dd1452a3436cda448189ac68117792ec@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bKe3523ff1a03e7978c2cea7f1d6075926
+Max-Forwards: 70
+Manage: unblock:A
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432862261252" 
+isSender="false" 
+transactionId="z9hg4bk358e2d20ad7b7f743c7cabc4cba9df20" 
+callId="c21e5d85b2c75010607436e7c18df715@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="1916" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: c21e5d85b2c75010607436e7c18df715@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK358e2d20ad7b7f743c7cabc4cba9df20
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 9
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432862261394" 
+isSender="true" 
+transactionId="z9hg4bk358e2d20ad7b7f743c7cabc4cba9df20" 
+callId="c21e5d85b2c75010607436e7c18df715@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="1979" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: c21e5d85b2c75010607436e7c18df715@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK358e2d20ad7b7f743c7cabc4cba9df20
+Max-Forwards: 70
+Manage: forward:A
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432862263311" 
+isSender="false" 
+transactionId="z9hg4bk53dc75c70865ec754e77c225710c4c0e" 
+callId="76cbdd8cf210905653915ed4ef912b12@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="2081" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: 76cbdd8cf210905653915ed4ef912b12@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK53dc75c70865ec754e77c225710c4c0e
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 9
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432862263442" 
+isSender="true" 
+transactionId="z9hg4bk53dc75c70865ec754e77c225710c4c0e" 
+callId="76cbdd8cf210905653915ed4ef912b12@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="2144" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 76cbdd8cf210905653915ed4ef912b12@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK53dc75c70865ec754e77c225710c4c0e
+Max-Forwards: 70
+Manage: forward:A
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432862270037" 
+isSender="false" 
+transactionId="z9hg4bkcdd9130ba5c245da4e72cc1ec5b55a18" 
+callId="1fa9628afd028b60e63b6792f5ed1a44@192.168.1.4" 
+firstLine="REGISTER sip:192.168.1.4:5060;transport=udp SIP/2.0" 
+debugLine="2254" 
+>
+<![CDATA[REGISTER sip:192.168.1.4:5060;transport=udp SIP/2.0
+Call-ID: 1fa9628afd028b60e63b6792f5ed1a44@192.168.1.4
+CSeq: 2 REGISTER
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=8056047
+To: "test" <sip:New@192.168.1.4:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bKcdd9130ba5c245da4e72cc1ec5b55a18
+Max-Forwards: 70
+Pwd: 123
+Expires: 0
+Contact: "test" <sip:192.168.1.4:5060;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432862270148" 
+isSender="true" 
+transactionId="z9hg4bkcdd9130ba5c245da4e72cc1ec5b55a18" 
+callId="1fa9628afd028b60e63b6792f5ed1a44@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="2312" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 1fa9628afd028b60e63b6792f5ed1a44@192.168.1.4
+CSeq: 2 REGISTER
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=8056047
+To: "test" <sip:New@192.168.1.4:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bKcdd9130ba5c245da4e72cc1ec5b55a18
+Max-Forwards: 70
+Expires: 0
+Content-Length: 0
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= 192.168.1.4
+javax.sip.STACK_NAME= nist-proxy
+javax.sip.ROUTER_PATH= gov.nist.sip.proxy.router.ProxyRouter
+javax.sip.OUTBOUND_PROXY= null
+javax.sip.RETRANSMISSION_FILTER= on
+-->
+<description
+ logDescription="nist-proxy"
+ name="192.168.1.4" />
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432862977400" 
+isSender="false" 
+transactionId="z9hg4bk2e936b890e510d95eb622ce1d5e20076" 
+callId="9e01b3c44f53bb3b7efb07c41c7a14cc@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="102" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: 9e01b3c44f53bb3b7efb07c41c7a14cc@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:Takeo;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK2e936b890e510d95eb622ce1d5e20076
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 11
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432862977900" 
+isSender="false" 
+transactionId="z9hg4bk2e936b890e510d95eb622ce1d5e20076" 
+callId="9e01b3c44f53bb3b7efb07c41c7a14cc@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="203" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: 9e01b3c44f53bb3b7efb07c41c7a14cc@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:Takeo;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK2e936b890e510d95eb622ce1d5e20076
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 11
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432862977961" 
+isSender="true" 
+transactionId="z9hg4bk2e936b890e510d95eb622ce1d5e20076" 
+callId="9e01b3c44f53bb3b7efb07c41c7a14cc@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="258" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 9e01b3c44f53bb3b7efb07c41c7a14cc@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:Takeo;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK2e936b890e510d95eb622ce1d5e20076
+Max-Forwards: 70
+Policies: 
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432862978055" 
+isSender="true" 
+transactionId="z9hg4bk2e936b890e510d95eb622ce1d5e20076" 
+callId="9e01b3c44f53bb3b7efb07c41c7a14cc@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="322" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 9e01b3c44f53bb3b7efb07c41c7a14cc@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:Takeo;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK2e936b890e510d95eb622ce1d5e20076
+Max-Forwards: 70
+Policies: 
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432863004493" 
+isSender="false" 
+transactionId="z9hg4bk620910e487ff073656153f99702aacb8" 
+callId="c9c4bf405d51a53b609f243815d32a3e@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="432" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: c9c4bf405d51a53b609f243815d32a3e@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:Takeo;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK620910e487ff073656153f99702aacb8
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 11
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432863004604" 
+isSender="true" 
+transactionId="z9hg4bk620910e487ff073656153f99702aacb8" 
+callId="c9c4bf405d51a53b609f243815d32a3e@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="487" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: c9c4bf405d51a53b609f243815d32a3e@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:Takeo;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK620910e487ff073656153f99702aacb8
+Max-Forwards: 70
+Policies: New:
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432863010083" 
+isSender="false" 
+transactionId="z9hg4bk93589348f8f9f8a0bb101cc389b9c0bb" 
+callId="0843ac9a656492cedac1e69b14a5d245@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="597" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: 0843ac9a656492cedac1e69b14a5d245@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:A@192.168.1.4:4000;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK93589348f8f9f8a0bb101cc389b9c0bb
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 18
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432863010247" 
+isSender="true" 
+transactionId="z9hg4bk93589348f8f9f8a0bb101cc389b9c0bb" 
+callId="0843ac9a656492cedac1e69b14a5d245@192.168.1.4" 
+firstLine="SIP/2.0 202 Accepted" 
+debugLine="651" 
+>
+<![CDATA[SIP/2.0 202 Accepted
+Call-ID: 0843ac9a656492cedac1e69b14a5d245@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:A@192.168.1.4:4000;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK93589348f8f9f8a0bb101cc389b9c0bb
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432863010287" 
+isSender="false" 
+transactionId="z9hg4bkdc0bcfc9db628b7c07a3420be2d50a70" 
+callId="0d693650f809f14178d0bb1016991aa4@192.168.1.4" 
+firstLine="REGISTER sip:192.168.1.4:5060;transport=udp SIP/2.0" 
+debugLine="759" 
+>
+<![CDATA[REGISTER sip:192.168.1.4:5060;transport=udp SIP/2.0
+Call-ID: 0d693650f809f14178d0bb1016991aa4@192.168.1.4
+CSeq: 1 REGISTER
+From: "test" <sip:A@192.168.1.4:4000;transport=udp>;tag=8056047
+To: "test" <sip:A@192.168.1.4:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bKdc0bcfc9db628b7c07a3420be2d50a70
+Max-Forwards: 70
+Pwd: 123
+Expires: 3600
+Contact: "test" <sip:192.168.1.4:5060;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432863010399" 
+isSender="true" 
+transactionId="z9hg4bkdc0bcfc9db628b7c07a3420be2d50a70" 
+callId="0d693650f809f14178d0bb1016991aa4@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="818" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 0d693650f809f14178d0bb1016991aa4@192.168.1.4
+CSeq: 1 REGISTER
+From: "test" <sip:A@192.168.1.4:4000;transport=udp>;tag=8056047
+To: "test" <sip:A@192.168.1.4:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bKdc0bcfc9db628b7c07a3420be2d50a70
+Max-Forwards: 70
+Contact: "test" <sip:192.168.1.4:5060;transport=udp>;expires=3600
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432863013604" 
+isSender="false" 
+transactionId="z9hg4bkbd6c2ea76f326562c4899f6f59e317e0" 
+callId="ec8cc05c0bc594321a04b9aca033beba@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="928" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: ec8cc05c0bc594321a04b9aca033beba@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:A@192.168.1.4:4000;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bKbd6c2ea76f326562c4899f6f59e317e0
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 9
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432863013775" 
+isSender="true" 
+transactionId="z9hg4bkbd6c2ea76f326562c4899f6f59e317e0" 
+callId="ec8cc05c0bc594321a04b9aca033beba@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="983" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: ec8cc05c0bc594321a04b9aca033beba@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:A@192.168.1.4:4000;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bKbd6c2ea76f326562c4899f6f59e317e0
+Max-Forwards: 70
+Manage: forward:A
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432863015938" 
+isSender="false" 
+transactionId="z9hg4bk1fb97514dc884f420324666d07e3fdd8" 
+callId="2fad7d4074b433bbd1844244d1ab21f1@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="1085" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: 2fad7d4074b433bbd1844244d1ab21f1@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:A@192.168.1.4:4000;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK1fb97514dc884f420324666d07e3fdd8
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 9
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432863016018" 
+isSender="true" 
+transactionId="z9hg4bk1fb97514dc884f420324666d07e3fdd8" 
+callId="2fad7d4074b433bbd1844244d1ab21f1@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="1148" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 2fad7d4074b433bbd1844244d1ab21f1@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:A@192.168.1.4:4000;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK1fb97514dc884f420324666d07e3fdd8
+Max-Forwards: 70
+Manage: foralready:A
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432863027563" 
+isSender="false" 
+transactionId="z9hg4bke8838b9cd58126ab87e254b3d182b99d" 
+callId="c28139b23d88b914db8b61b720986991@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="1250" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: c28139b23d88b914db8b61b720986991@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:A@192.168.1.4:4000;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bKe8838b9cd58126ab87e254b3d182b99d
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 11
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432863027665" 
+isSender="true" 
+transactionId="z9hg4bke8838b9cd58126ab87e254b3d182b99d" 
+callId="c28139b23d88b914db8b61b720986991@192.168.1.4" 
+firstLine="SIP/2.0 500 Server Internal Error" 
+debugLine="1312" 
+>
+<![CDATA[SIP/2.0 500 Server Internal Error
+Call-ID: c28139b23d88b914db8b61b720986991@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:A@192.168.1.4:4000;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bKe8838b9cd58126ab87e254b3d182b99d
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432863034906" 
+isSender="false" 
+transactionId="z9hg4bk6195120a8414d3f45da912fc471e4c82" 
+callId="355a07bfb51e243ae303e444a378e125@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="1413" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: 355a07bfb51e243ae303e444a378e125@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:A@192.168.1.4:4000;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK6195120a8414d3f45da912fc471e4c82
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 11
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432863034989" 
+isSender="true" 
+transactionId="z9hg4bk6195120a8414d3f45da912fc471e4c82" 
+callId="355a07bfb51e243ae303e444a378e125@192.168.1.4" 
+firstLine="SIP/2.0 500 Server Internal Error" 
+debugLine="1475" 
+>
+<![CDATA[SIP/2.0 500 Server Internal Error
+Call-ID: 355a07bfb51e243ae303e444a378e125@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:A@192.168.1.4:4000;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK6195120a8414d3f45da912fc471e4c82
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432863036876" 
+isSender="false" 
+transactionId="z9hg4bk3e3fa88026da598a13c9e4d23497953b" 
+callId="2c5b2fd14067bad032ae409adaec69c9@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="1576" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: 2c5b2fd14067bad032ae409adaec69c9@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:A@192.168.1.4:4000;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK3e3fa88026da598a13c9e4d23497953b
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 9
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432863036947" 
+isSender="true" 
+transactionId="z9hg4bk3e3fa88026da598a13c9e4d23497953b" 
+callId="2c5b2fd14067bad032ae409adaec69c9@192.168.1.4" 
+firstLine="SIP/2.0 500 Server Internal Error" 
+debugLine="1638" 
+>
+<![CDATA[SIP/2.0 500 Server Internal Error
+Call-ID: 2c5b2fd14067bad032ae409adaec69c9@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:A@192.168.1.4:4000;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK3e3fa88026da598a13c9e4d23497953b
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432863039974" 
+isSender="false" 
+transactionId="z9hg4bk253c37f1e883fdcf4278e0617e580122" 
+callId="79176764af4d04f36e3a933d0b0f5e16@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="1739" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: 79176764af4d04f36e3a933d0b0f5e16@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:A@192.168.1.4:4000;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK253c37f1e883fdcf4278e0617e580122
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 11
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432863040080" 
+isSender="true" 
+transactionId="z9hg4bk253c37f1e883fdcf4278e0617e580122" 
+callId="79176764af4d04f36e3a933d0b0f5e16@192.168.1.4" 
+firstLine="SIP/2.0 500 Server Internal Error" 
+debugLine="1801" 
+>
+<![CDATA[SIP/2.0 500 Server Internal Error
+Call-ID: 79176764af4d04f36e3a933d0b0f5e16@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:A@192.168.1.4:4000;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK253c37f1e883fdcf4278e0617e580122
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432863063508" 
+isSender="false" 
+transactionId="z9hg4bk5d2d46739c40eeb59a02596ca25fedf6" 
+callId="aceae29ce2718e600cc98141e0f31de6@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="1907" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: aceae29ce2718e600cc98141e0f31de6@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:A@192.168.1.4:4000;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK5d2d46739c40eeb59a02596ca25fedf6
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 11
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432863063590" 
+isSender="true" 
+transactionId="z9hg4bk5d2d46739c40eeb59a02596ca25fedf6" 
+callId="aceae29ce2718e600cc98141e0f31de6@192.168.1.4" 
+firstLine="SIP/2.0 500 Server Internal Error" 
+debugLine="1964" 
+>
+<![CDATA[SIP/2.0 500 Server Internal Error
+Call-ID: aceae29ce2718e600cc98141e0f31de6@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:A@192.168.1.4:4000;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK5d2d46739c40eeb59a02596ca25fedf6
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432863141873" 
+isSender="false" 
+transactionId="z9hg4bk135c8a22ef846b0ac12acdcf69851ac0" 
+callId="0d693650f809f14178d0bb1016991aa4@192.168.1.4" 
+firstLine="REGISTER sip:192.168.1.4:5060;transport=udp SIP/2.0" 
+debugLine="2067" 
+>
+<![CDATA[REGISTER sip:192.168.1.4:5060;transport=udp SIP/2.0
+Call-ID: 0d693650f809f14178d0bb1016991aa4@192.168.1.4
+CSeq: 2 REGISTER
+From: "test" <sip:A@192.168.1.4:4000;transport=udp>;tag=8056047
+To: "test" <sip:A@192.168.1.4:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK135c8a22ef846b0ac12acdcf69851ac0
+Max-Forwards: 70
+Pwd: 123
+Expires: 0
+Contact: "test" <sip:192.168.1.4:5060;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432863141994" 
+isSender="true" 
+transactionId="z9hg4bk135c8a22ef846b0ac12acdcf69851ac0" 
+callId="0d693650f809f14178d0bb1016991aa4@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="2131" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 0d693650f809f14178d0bb1016991aa4@192.168.1.4
+CSeq: 2 REGISTER
+From: "test" <sip:A@192.168.1.4:4000;transport=udp>;tag=8056047
+To: "test" <sip:A@192.168.1.4:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK135c8a22ef846b0ac12acdcf69851ac0
+Max-Forwards: 70
+Expires: 0
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432863155969" 
+isSender="false" 
+transactionId="z9hg4bk3d309c4ae49016dd020f60255ae1fffd" 
+callId="83f3f42664dcb5a3e7fa78fc115e0589@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="2233" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: 83f3f42664dcb5a3e7fa78fc115e0589@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:Takeo;transport=udp>;tag=33316792
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK3d309c4ae49016dd020f60255ae1fffd
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 11
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432863156070" 
+isSender="true" 
+transactionId="z9hg4bk3d309c4ae49016dd020f60255ae1fffd" 
+callId="83f3f42664dcb5a3e7fa78fc115e0589@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="2296" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 83f3f42664dcb5a3e7fa78fc115e0589@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:Takeo;transport=udp>;tag=33316792
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK3d309c4ae49016dd020f60255ae1fffd
+Max-Forwards: 70
+Policies: New:
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432863161782" 
+isSender="false" 
+transactionId="z9hg4bkfbc224626f2c0e13634438375648955e" 
+callId="c8d91332ed2e12ff3bfd819be3e4bfe8@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="2398" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: c8d91332ed2e12ff3bfd819be3e4bfe8@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=33316792
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bKfbc224626f2c0e13634438375648955e
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 20
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432863161918" 
+isSender="true" 
+transactionId="z9hg4bkfbc224626f2c0e13634438375648955e" 
+callId="c8d91332ed2e12ff3bfd819be3e4bfe8@192.168.1.4" 
+firstLine="SIP/2.0 202 Accepted" 
+debugLine="2460" 
+>
+<![CDATA[SIP/2.0 202 Accepted
+Call-ID: c8d91332ed2e12ff3bfd819be3e4bfe8@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=33316792
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bKfbc224626f2c0e13634438375648955e
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432863161977" 
+isSender="false" 
+transactionId="z9hg4bk76ab4ecc7340533c4102ae4af697323e" 
+callId="fbb1dd46b6399566dae3f366bc2a8f71@192.168.1.4" 
+firstLine="REGISTER sip:192.168.1.4:5060;transport=udp SIP/2.0" 
+debugLine="2563" 
+>
+<![CDATA[REGISTER sip:192.168.1.4:5060;transport=udp SIP/2.0
+Call-ID: fbb1dd46b6399566dae3f366bc2a8f71@192.168.1.4
+CSeq: 1 REGISTER
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=33316792
+To: "test" <sip:New@192.168.1.4:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK76ab4ecc7340533c4102ae4af697323e
+Max-Forwards: 70
+Pwd: 123
+Expires: 3600
+Contact: "test" <sip:192.168.1.4:5060;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432863162077" 
+isSender="true" 
+transactionId="z9hg4bk76ab4ecc7340533c4102ae4af697323e" 
+callId="fbb1dd46b6399566dae3f366bc2a8f71@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="2627" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: fbb1dd46b6399566dae3f366bc2a8f71@192.168.1.4
+CSeq: 1 REGISTER
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=33316792
+To: "test" <sip:New@192.168.1.4:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK76ab4ecc7340533c4102ae4af697323e
+Max-Forwards: 70
+Contact: "test" <sip:192.168.1.4:5060;transport=udp>;expires=3600
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432863165398" 
+isSender="false" 
+transactionId="z9hg4bka2ab83328ae8c75c489599fa7eb9cf24" 
+callId="f151c71868c687be8b41cc0a09d6db09@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="2737" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: f151c71868c687be8b41cc0a09d6db09@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=33316792
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bKa2ab83328ae8c75c489599fa7eb9cf24
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 9
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432863165570" 
+isSender="true" 
+transactionId="z9hg4bka2ab83328ae8c75c489599fa7eb9cf24" 
+callId="f151c71868c687be8b41cc0a09d6db09@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="2792" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: f151c71868c687be8b41cc0a09d6db09@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=33316792
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bKa2ab83328ae8c75c489599fa7eb9cf24
+Max-Forwards: 70
+Manage: forward:A
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432863167573" 
+isSender="false" 
+transactionId="z9hg4bk4fd02237a1955b4c68601937d4914ade" 
+callId="3cfcdeba586bcba5a2cab4a6777942e8@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="2894" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: 3cfcdeba586bcba5a2cab4a6777942e8@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=33316792
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK4fd02237a1955b4c68601937d4914ade
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 9
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432863167654" 
+isSender="true" 
+transactionId="z9hg4bk4fd02237a1955b4c68601937d4914ade" 
+callId="3cfcdeba586bcba5a2cab4a6777942e8@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="2957" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 3cfcdeba586bcba5a2cab4a6777942e8@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=33316792
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK4fd02237a1955b4c68601937d4914ade
+Max-Forwards: 70
+Manage: foralready:A
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432863169537" 
+isSender="false" 
+transactionId="z9hg4bk1a33abef271c1adf2724453b020cd9d1" 
+callId="31337213a71596be91cda117d379e84c@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="3059" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: 31337213a71596be91cda117d379e84c@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=33316792
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK1a33abef271c1adf2724453b020cd9d1
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 11
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432863169678" 
+isSender="true" 
+transactionId="z9hg4bk1a33abef271c1adf2724453b020cd9d1" 
+callId="31337213a71596be91cda117d379e84c@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="3122" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 31337213a71596be91cda117d379e84c@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=33316792
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK1a33abef271c1adf2724453b020cd9d1
+Max-Forwards: 70
+Manage: unforward:A
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432863171981" 
+isSender="false" 
+transactionId="z9hg4bk3e183b96193c2b94aba52c31d1b602e2" 
+callId="a17e727d8196b9b5152f4b36ef541c19@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="3227" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: a17e727d8196b9b5152f4b36ef541c19@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=33316792
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK3e183b96193c2b94aba52c31d1b602e2
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 9
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432863172062" 
+isSender="true" 
+transactionId="z9hg4bk3e183b96193c2b94aba52c31d1b602e2" 
+callId="a17e727d8196b9b5152f4b36ef541c19@192.168.1.4" 
+firstLine="SIP/2.0 500 Server Internal Error" 
+debugLine="3286" 
+>
+<![CDATA[SIP/2.0 500 Server Internal Error
+Call-ID: a17e727d8196b9b5152f4b36ef541c19@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=33316792
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK3e183b96193c2b94aba52c31d1b602e2
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432863174215" 
+isSender="false" 
+transactionId="z9hg4bk305c6427613abf83b57008f93706a3e4" 
+callId="2b93a36157411aca444ca676c1310329@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="3387" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: 2b93a36157411aca444ca676c1310329@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=33316792
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK305c6427613abf83b57008f93706a3e4
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 7
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432863174316" 
+isSender="true" 
+transactionId="z9hg4bk305c6427613abf83b57008f93706a3e4" 
+callId="2b93a36157411aca444ca676c1310329@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="3450" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 2b93a36157411aca444ca676c1310329@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=33316792
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK305c6427613abf83b57008f93706a3e4
+Max-Forwards: 70
+Manage: block:A
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432863176118" 
+isSender="false" 
+transactionId="z9hg4bk7e7a5d09086baced22e0df6c3e16f053" 
+callId="490fee6a86a998af608ef9b4b1668f57@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="3552" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: 490fee6a86a998af608ef9b4b1668f57@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=33316792
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK7e7a5d09086baced22e0df6c3e16f053
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 9
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432863176220" 
+isSender="true" 
+transactionId="z9hg4bk7e7a5d09086baced22e0df6c3e16f053" 
+callId="490fee6a86a998af608ef9b4b1668f57@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="3615" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 490fee6a86a998af608ef9b4b1668f57@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=33316792
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK7e7a5d09086baced22e0df6c3e16f053
+Max-Forwards: 70
+Manage: unblock:A
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432863178565" 
+isSender="false" 
+transactionId="z9hg4bk3f2361e17cfe54abe7af9ad236e9440a" 
+callId="4ca1513491cb992e20a04e1282f450dc@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="3721" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: 4ca1513491cb992e20a04e1282f450dc@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=33316792
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK3f2361e17cfe54abe7af9ad236e9440a
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 9
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432863178646" 
+isSender="true" 
+transactionId="z9hg4bk3f2361e17cfe54abe7af9ad236e9440a" 
+callId="4ca1513491cb992e20a04e1282f450dc@192.168.1.4" 
+firstLine="SIP/2.0 500 Server Internal Error" 
+debugLine="3779" 
+>
+<![CDATA[SIP/2.0 500 Server Internal Error
+Call-ID: 4ca1513491cb992e20a04e1282f450dc@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=33316792
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK3f2361e17cfe54abe7af9ad236e9440a
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432863403148" 
+isSender="false" 
+transactionId="z9hg4bk211bf75567fc76e6c1f5c5a8f4b060dc" 
+callId="f858213d35b81288abc44531531fefa7@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="3886" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: f858213d35b81288abc44531531fefa7@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=33316792
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK211bf75567fc76e6c1f5c5a8f4b060dc
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 6
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432863403230" 
+isSender="true" 
+transactionId="z9hg4bk211bf75567fc76e6c1f5c5a8f4b060dc" 
+callId="f858213d35b81288abc44531531fefa7@192.168.1.4" 
+firstLine="SIP/2.0 380 Alternative service" 
+debugLine="3943" 
+>
+<![CDATA[SIP/2.0 380 Alternative service
+Call-ID: f858213d35b81288abc44531531fefa7@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=33316792
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK211bf75567fc76e6c1f5c5a8f4b060dc
+Max-Forwards: 70
+Mon: <0.0>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432863408214" 
+isSender="false" 
+transactionId="z9hg4bk381c949e0e2d3f6239853e96d2ed83c3" 
+callId="fbb1dd46b6399566dae3f366bc2a8f71@192.168.1.4" 
+firstLine="REGISTER sip:192.168.1.4:5060;transport=udp SIP/2.0" 
+debugLine="4050" 
+>
+<![CDATA[REGISTER sip:192.168.1.4:5060;transport=udp SIP/2.0
+Call-ID: fbb1dd46b6399566dae3f366bc2a8f71@192.168.1.4
+CSeq: 2 REGISTER
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=33316792
+To: "test" <sip:New@192.168.1.4:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK381c949e0e2d3f6239853e96d2ed83c3
+Max-Forwards: 70
+Pwd: 123
+Expires: 0
+Contact: "test" <sip:192.168.1.4:5060;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432863408352" 
+isSender="true" 
+transactionId="z9hg4bk381c949e0e2d3f6239853e96d2ed83c3" 
+callId="fbb1dd46b6399566dae3f366bc2a8f71@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="4111" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: fbb1dd46b6399566dae3f366bc2a8f71@192.168.1.4
+CSeq: 2 REGISTER
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=33316792
+To: "test" <sip:New@192.168.1.4:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK381c949e0e2d3f6239853e96d2ed83c3
+Max-Forwards: 70
+Expires: 0
+Content-Length: 0
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= 192.168.1.4
+javax.sip.STACK_NAME= nist-proxy
+javax.sip.ROUTER_PATH= gov.nist.sip.proxy.router.ProxyRouter
+javax.sip.OUTBOUND_PROXY= null
+javax.sip.RETRANSMISSION_FILTER= on
+-->
+<description
+ logDescription="nist-proxy"
+ name="192.168.1.4" />
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432863450671" 
+isSender="false" 
+transactionId="z9hg4bk7a8048262a9bc555f7df040cdd783f20" 
+callId="30f12ec05ecb84cccc391b28abb86646@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="102" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: 30f12ec05ecb84cccc391b28abb86646@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:Takeo;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK7a8048262a9bc555f7df040cdd783f20
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 11
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432863451132" 
+isSender="true" 
+transactionId="z9hg4bk7a8048262a9bc555f7df040cdd783f20" 
+callId="30f12ec05ecb84cccc391b28abb86646@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="157" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 30f12ec05ecb84cccc391b28abb86646@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:Takeo;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK7a8048262a9bc555f7df040cdd783f20
+Max-Forwards: 70
+Policies: Basic:
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432863451280" 
+isSender="false" 
+transactionId="z9hg4bk7a8048262a9bc555f7df040cdd783f20" 
+callId="30f12ec05ecb84cccc391b28abb86646@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="267" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: 30f12ec05ecb84cccc391b28abb86646@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:Takeo;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK7a8048262a9bc555f7df040cdd783f20
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 11
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432863451358" 
+isSender="true" 
+transactionId="z9hg4bk7a8048262a9bc555f7df040cdd783f20" 
+callId="30f12ec05ecb84cccc391b28abb86646@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="322" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 30f12ec05ecb84cccc391b28abb86646@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:Takeo;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK7a8048262a9bc555f7df040cdd783f20
+Max-Forwards: 70
+Policies: Basic:
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432863457673" 
+isSender="false" 
+transactionId="z9hg4bkc85d14d7c415647b0956a8c75c53b876" 
+callId="7e2dbd3c5129299fee0ce5e99128f4ba@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="424" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: 7e2dbd3c5129299fee0ce5e99128f4ba@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bKc85d14d7c415647b0956a8c75c53b876
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 22
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432863457809" 
+isSender="true" 
+transactionId="z9hg4bkc85d14d7c415647b0956a8c75c53b876" 
+callId="7e2dbd3c5129299fee0ce5e99128f4ba@192.168.1.4" 
+firstLine="SIP/2.0 202 Accepted" 
+debugLine="486" 
+>
+<![CDATA[SIP/2.0 202 Accepted
+Call-ID: 7e2dbd3c5129299fee0ce5e99128f4ba@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bKc85d14d7c415647b0956a8c75c53b876
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432863457854" 
+isSender="false" 
+transactionId="z9hg4bk089cacdb519f70befacbe09f8cc13205" 
+callId="9849fe7501a1c809fc3d3d6c5a7dc143@192.168.1.4" 
+firstLine="REGISTER sip:192.168.1.4:5060;transport=udp SIP/2.0" 
+debugLine="589" 
+>
+<![CDATA[REGISTER sip:192.168.1.4:5060;transport=udp SIP/2.0
+Call-ID: 9849fe7501a1c809fc3d3d6c5a7dc143@192.168.1.4
+CSeq: 1 REGISTER
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=8056047
+To: "test" <sip:New@192.168.1.4:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK089cacdb519f70befacbe09f8cc13205
+Max-Forwards: 70
+Pwd: 123
+Expires: 3600
+Contact: "test" <sip:192.168.1.4:5060;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432863457971" 
+isSender="true" 
+transactionId="z9hg4bk089cacdb519f70befacbe09f8cc13205" 
+callId="9849fe7501a1c809fc3d3d6c5a7dc143@192.168.1.4" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="653" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 9849fe7501a1c809fc3d3d6c5a7dc143@192.168.1.4
+CSeq: 1 REGISTER
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=8056047
+To: "test" <sip:New@192.168.1.4:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK089cacdb519f70befacbe09f8cc13205
+Max-Forwards: 70
+Contact: "test" <sip:192.168.1.4:5060;transport=udp>;expires=3600
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432863467327" 
+isSender="false" 
+transactionId="z9hg4bka04dc5468dd2b508a7d17f7321abe0c6" 
+callId="9a34b18b6eaa9ad374d03bb306509218@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="755" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: 9a34b18b6eaa9ad374d03bb306509218@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bKa04dc5468dd2b508a7d17f7321abe0c6
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 9
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432863467381" 
+isSender="true" 
+transactionId="z9hg4bka04dc5468dd2b508a7d17f7321abe0c6" 
+callId="9a34b18b6eaa9ad374d03bb306509218@192.168.1.4" 
+firstLine="SIP/2.0 500 Server Internal Error" 
+debugLine="817" 
+>
+<![CDATA[SIP/2.0 500 Server Internal Error
+Call-ID: 9a34b18b6eaa9ad374d03bb306509218@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bKa04dc5468dd2b508a7d17f7321abe0c6
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:5060" 
+to="192.168.1.4:4000" 
+time="1432863471922" 
+isSender="false" 
+transactionId="z9hg4bk45cc172abcac2bc2a70d342c109eb411" 
+callId="65047be250e2c94da76c0e979fc201cb@192.168.1.4" 
+firstLine="MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0" 
+debugLine="925" 
+>
+<![CDATA[MESSAGE sip:192.168.1.4:4000@192.168.1.4:4000 SIP/2.0
+Call-ID: 65047be250e2c94da76c0e979fc201cb@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK45cc172abcac2bc2a70d342c109eb411
+Max-Forwards: 70
+Content-Type: text/plain
+Event:  presence
+Content-Length: 11
+
+]]>
+</message>
+
+<message
+from="192.168.1.4:4000" 
+to="192.168.1.4:5060" 
+time="1432863472003" 
+isSender="true" 
+transactionId="z9hg4bk45cc172abcac2bc2a70d342c109eb411" 
+callId="65047be250e2c94da76c0e979fc201cb@192.168.1.4" 
+firstLine="SIP/2.0 500 Server Internal Error" 
+debugLine="980" 
+>
+<![CDATA[SIP/2.0 500 Server Internal Error
+Call-ID: 65047be250e2c94da76c0e979fc201cb@192.168.1.4
+CSeq: 1 MESSAGE
+From: "test" <sip:New@192.168.1.4:4000;transport=udp>;tag=8056047
+To: <sip:192.168.1.4:4000@192.168.1.4:4000>
+Via: SIP/2.0/UDP 192.168.1.4:5060;branch=z9hG4bK45cc172abcac2bc2a70d342c109eb411
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+

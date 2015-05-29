@@ -26,11 +26,7 @@ import gov.nist.sip.proxy.presenceserver.*;
 import gov.nist.sip.proxy.router.*;
 import gov.nist.javax.sip.header.*;
 
-//ifdef SIMULATION
-/*
-import sim.java.net.*;
-//endif
-*/
+
 
 
 /** Proxy Entry point.
@@ -1434,10 +1430,16 @@ public class Proxy implements SipListener  {
 		        }
 		        else if (word[0].equals("FORWARD")){
 		        	try {
-						connObj.forward(fromURI,toURI) ;
-						response=messageFactory.createResponse(Response.OK,request);
-						manageHeader = headerFactory.createHeader("Manage","forward" + ":" + toURI);
-		    			response.addHeader(manageHeader);
+						if (connObj.forward(fromURI,toURI) ==1){
+							response=messageFactory.createResponse(Response.OK,request);
+							manageHeader = headerFactory.createHeader("Manage","forward" + ":" + toURI);
+							response.addHeader(manageHeader);
+						}
+						else {
+							response=messageFactory.createResponse(Response.OK,request);
+							manageHeader = headerFactory.createHeader("Manage","foralready" + ":" + toURI);
+							response.addHeader(manageHeader);
+						}
 						
 					} catch (SQLException e) {
 						System.out.println("Error inserting "

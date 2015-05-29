@@ -63,6 +63,7 @@ public class ConnectionObject {
 	public void block(String blocker, String ebloki) throws SQLException{
 		Statement s;
 		s = con.createStatement();
+		if (blocker.equals(ebloki)) throw new SQLException("Trying to block yourself !?!");
 		s.executeUpdate(" INSERT INTO blockTable (blocker,blocked)" +
 						" VALUES " +
 						" ('" + blocker + "', '" + ebloki + "')"
@@ -122,6 +123,7 @@ public class ConnectionObject {
 		
 	}
 	
+	
 	public boolean isSigned(String userName, String password) {
 		Statement s;
 		try {
@@ -144,10 +146,16 @@ public class ConnectionObject {
 		
 	}
 	
-	public void forward(String from, String to) throws SQLException{
+	public int forward(String from, String to) throws SQLException{
 		Statement s;
 		s = con.createStatement();
 		try {
+			if (from.equals(to)) throw new SQLException("Trying to forward yourself");
+			s.executeQuery("SELECT * FROM forwardTable WHERE departure='"+from+"'");
+			ResultSet rs = s.getResultSet();
+			if (rs.next()) {
+				return 0;
+			}
 			if (!hasLoop(from, to)) {
 				s.executeUpdate(" INSERT INTO forwardTable (departure,destination)"
 						+ " VALUES " + " ('" + from + "', '" + to + "')");
@@ -155,12 +163,14 @@ public class ConnectionObject {
 		} finally {
 			s.close();
 		}
+		return 1;
 	}
 	
 	public void unforward(String from, String to) throws SQLException{
 		Statement s;
 		s = con.createStatement();
 		try {
+			if (from.equals(to)) throw new SQLException("Trying to unforward yourself");
 			int rows = 0;;
 			if (!hasLoop(from, to)) {
 				rows = s.executeUpdate(" DELETE FROM forwardTable"
